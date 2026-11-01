@@ -1,0 +1,9 @@
+model,feature_set,threshold,validation_macro_f1,selected
+speed_trend_rule,history_rule,-0.8,0.4121245334958795,False
+speed_trend_rule,history_rule,-0.6,0.4713682055867866,True
+speed_trend_rule,history_rule,-0.4,0.41348032654954525,False
+speed_trend_rule,history_rule,-0.2,0.37881891107697563,False
+speed_trend_rule,history_rule,-0.1,0.3722048529452453,False
+speed_trend_rule,history_rule,0.0,0.36803604689479685,False
+speed_trend_rule,history_rule,0.1,0.3648165682123054,False
+speed_trend_rule,history_rule,0.2,0.35990854975851955,False

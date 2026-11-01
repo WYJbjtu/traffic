@@ -17,7 +17,9 @@ def calendar_features(events: pd.DataFrame, holidays: pd.DataFrame) -> pd.DataFr
     ``holidays`` must preserve the official publication availability of each
     holiday row. A holiday contributes only when its ``available_at`` is no later
     than the event prediction time. ``local_date`` is interpreted as a Hong Kong
-    civil date, never as a UTC timestamp.
+    civil date, never as a UTC timestamp. Staging must supply complete annual
+    editions. A known edition for another year cannot establish a negative;
+    adjacent-day indicators require the edition for that day's year separately.
     """
     validate_events(events)
     require_columns(
@@ -45,7 +47,16 @@ def calendar_features(events: pd.DataFrame, holidays: pd.DataFrame) -> pd.DataFr
         same = known_dates.eq(local_date)
         before = known_dates.eq(local_date + pd.Timedelta(days=1))
         after = known_dates.eq(local_date - pd.Timedelta(days=1))
-        source_observed = bool(len(known))
+        covered_years = {date.year for date in known_dates}
+        source_observed = local_date.year in covered_years
+        before_observed = (local_date + pd.Timedelta(days=1)).year in covered_years
+        after_observed = (local_date - pd.Timedelta(days=1)).year in covered_years
+        # Include only editions relevant to today's and adjacent-day features.
+        relevant_years = {
+            local_date.year, (local_date + pd.Timedelta(days=1)).year,
+            (local_date - pd.Timedelta(days=1)).year,
+        }
+        relevant = known.loc[known_dates.map(lambda date: date.year in relevant_years)]
         angle_hour = 2 * math.pi * (when.hour * 60 + when.minute) / (24 * 60)
         angle_dow = 2 * math.pi * when.dayofweek / 7
         rows.append({
@@ -57,12 +68,12 @@ def calendar_features(events: pd.DataFrame, holidays: pd.DataFrame) -> pd.DataFr
             "dow_cos": math.cos(angle_dow),
             "is_weekend": when.dayofweek >= 5,
             "is_public_holiday": bool(same.any()) if source_observed else pd.NA,
-            "is_day_before_holiday": bool(before.any()) if source_observed else pd.NA,
-            "is_day_after_holiday": bool(after.any()) if source_observed else pd.NA,
+            "is_day_before_holiday": bool(before.any()) if before_observed else pd.NA,
+            "is_day_after_holiday": bool(after.any()) if after_observed else pd.NA,
             "holiday_count": int(same.sum()) if source_observed else pd.NA,
             "calendar_source_observed": source_observed,
             "calendar_max_source_available_at": (
-                known.available_at.max() if source_observed else pd.NaT
+                relevant.available_at.max() if len(relevant) else pd.NaT
             ),
         })
     result = pd.DataFrame(rows)

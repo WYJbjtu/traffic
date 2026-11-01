@@ -127,6 +127,32 @@ def test_calendar_uses_civil_date_and_publication_availability() -> None:
     assert row.calendar_max_source_available_at < row.prediction_time
 
 
+def test_calendar_old_year_does_not_establish_current_year_coverage() -> None:
+    source = holidays().iloc[:1].copy()
+    source["local_date"] = "2025-01-01"
+    row = calendar_features(events(), source).iloc[0]
+    assert not row.calendar_source_observed
+    assert pd.isna(row.is_public_holiday) and pd.isna(row.holiday_count)
+    assert pd.isna(row.is_day_before_holiday)
+    assert row.calendar_max_source_available_at <= row.prediction_time
+    # Yesterday belongs to an available annual edition.
+    assert not row.is_day_after_holiday
+
+
+def test_calendar_cross_year_neighbor_requires_its_own_available_edition() -> None:
+    event = events().assign(prediction_time=pd.DatetimeIndex([
+        pd.Timestamp("2025-12-31T11:00:00", tz=HKT)
+    ]))
+    source = holidays().iloc[:2].copy()
+    source["local_date"] = ["2025-01-01", "2026-01-01"]
+    source.loc[source.index[1], "available_at"] = pd.Timestamp("2026-01-01", tz=HKT)
+    row = calendar_features(event, source).iloc[0]
+    assert row.calendar_source_observed and not row.is_public_holiday
+    assert pd.isna(row.is_day_before_holiday)
+    source.loc[source.index[1], "available_at"] = pd.Timestamp("2025-12-01", tz=HKT)
+    assert calendar_features(event, source).iloc[0].is_day_before_holiday
+
+
 def test_weather_is_backward_and_availability_aware() -> None:
     row = weather_features(events(), weather(), max_age=pd.Timedelta(hours=2)).iloc[0]
     assert row.temperature_c == 20.0

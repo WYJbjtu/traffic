@@ -90,7 +90,7 @@ def test_supervised_metrics_are_long_form() -> None:
     predictions = train_supervised(dataset(), CONTRACT, RULES, kind="logistic").predictions
     metrics = evaluate_predictions(predictions, version_column="model_version")
     assert set(metrics.metric_name) == {
-        "accuracy", "precision", "recall", "f1", "balanced_accuracy",
+        "accuracy", "precision", "recall", "f1", "macro_f1", "balanced_accuracy",
         "roc_auc", "pr_auc", "brier_score", "log_loss",
     }
     assert metrics.n_missing_feature.eq(0).all()

@@ -1,0 +1,21 @@
+{
+  "base_commit": "bb4170a55a4da7cb0298b0ffaa06afa6281d4abe",
+  "repository_tests": {
+    "command": "uv run --locked --no-sync pytest",
+    "passed": 145,
+    "warnings": 1,
+    "seconds": 57.51,
+    "warning": "Existing Starlette testclient dependency deprecation."
+  },
+  "notebook": {
+    "executed_code_cells": 7,
+    "embedded_figures": 4,
+    "error_outputs": 0
+  },
+  "historical_source_reverification": {
+    "checks": 237,
+    "status": "passed",
+    "requires_local_inputs": true
+  },
+  "note": "No model was retrained during packaging; historical engine is 4fd706e, current base includes merged PRs 7 and 8."
+}

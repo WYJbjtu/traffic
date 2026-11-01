@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": 476,
+  "event_contract": {
+    "rows": 7597,
+    "events": 7597,
+    "purged": 0,
+    "known_label_15m": 6954,
+    "known_label_30m": 6799,
+    "known_label_60m": 6611
+  },
+  "metric_rows_recomputed": 420,
+  "fitted_prediction_rows_recomputed": 67990,
+  "calendar_changed_rows_by_feature": {
+    "hour_sin": 0,
+    "hour_cos": 0,
+    "dow_sin": 0,
+    "dow_cos": 0,
+    "is_weekend": 0,
+    "is_public_holiday": 0,
+    "is_day_before_holiday": 0,
+    "is_day_after_holiday": 0
+  },
+  "note": "Read-only review of existing exploratory results; no retraining or scientific approval. This does not resolve the proposal's recovery-start vs confirmation target mismatch."
+}

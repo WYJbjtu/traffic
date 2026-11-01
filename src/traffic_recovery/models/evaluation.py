@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import pandas as pd
-from sklearn.metrics import average_precision_score, brier_score_loss, log_loss, roc_auc_score
+from sklearn.metrics import average_precision_score, brier_score_loss, f1_score, log_loss, roc_auc_score
 
 
 def _metric(
@@ -57,6 +57,10 @@ def evaluate_predictions(predictions: pd.DataFrame, *, version_column: str) -> p
         f1_denominator = 2 * tp + fp + fn
         _metric(rows, common, "f1", 2 * tp / f1_denominator if f1_denominator else None,
                 None if f1_denominator else "no_positive_labels_or_predictions")
+        # Fixed binary classes match the proposal and Tianhao's saved reports.
+        _metric(rows, common, "macro_f1", float(f1_score(
+            y, pred, average="macro", labels=[0, 1], zero_division=0,
+        )))
         if y.nunique() == 2:
             _metric(rows, common, "balanced_accuracy",
                     ((tn / (tn + fp)) + (tp / (tp + fn))) / 2)

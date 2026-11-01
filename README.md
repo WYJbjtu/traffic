@@ -1,5 +1,13 @@
 # Hong Kong Traffic Recovery Prediction
 
+## Tianhao / Fairy-6b：真实30分钟实验与可视化（2026-11-01）
+
+- [新重跑 Notebook：代码、ROC/PR、混淆矩阵、特征组提升、系数](notebooks/03_Tianhao_真实重跑与模型可视化.ipynb)（GitHub可直接预览，第10节起为训练结果）。
+- [轻量离线核验 Notebook](notebooks/02_Tianhao_真实模型与外部特征实验.ipynb) 与 [实验说明/复现](experiments/tianhao/README.md)。
+- [结果与图表索引](experiments/tianhao/rerun_20261101/README.md)；[proposal核查与修复](docs/tianhao_proposal_review.md)。
+
+**EXPLORATORY — NOT APPROVED AS FINAL RESULTS**：基于7597个暂定车道事件、6799个已知30分钟标签，14个比较臂。目标是恢复确认，与proposal恢复开始仍有差异；空间实验未完成。不包含大型原始数据、模型文件或缓存。
+
 ## Long-window data handoff (2023–September 2026)
 
 The [long-window data handoff](docs/long_window_data.md) covers 1,369 days, 24 selected lane units and 7,597 provisional recovery events. This is separate from the **73-event October 2026 short pilot** below. Use `configs/long_window.json` and a separate data root; do not mix their event tables or fitted references. See [data access and prepared-package instructions](docs/long_window_data_access.md). Large datasets are not committed to Git. Download the **[prepared dataset (~1.67 GB)](https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/tag/data-long-window-2023-2026-v1)** from Releases; the release includes usage instructions and SHA-256 verification.
@@ -229,3 +237,11 @@ prediction unit, reference/availability rules and event-separated temporal split
 Manually verify detector matches and reconcile network versions before any spatial
 ablation. See the milestone-2 recommendation before authorizing a local baseline.
 Optional context features still require separate source verification.
+
+## Tianhao / Fairy-6b exploratory long-window experiment
+
+The [executed results notebook](notebooks/02_Tianhao_真实模型与外部特征实验.ipynb)
+and [reproduction guide](experiments/tianhao/README.md) add real 30-minute
+logistic/tree experiments, official calendar/weather integration and small,
+checksummed prediction/metric artifacts. These are exploratory results with
+provisional confirmation labels; scientific approval and spatial inputs remain pending.

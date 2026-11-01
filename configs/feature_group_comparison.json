@@ -16,6 +16,7 @@
   "comparison_split": "test",
   "metrics": {
     "balanced_accuracy": "higher",
+    "macro_f1": "higher",
     "f1": "higher",
     "roc_auc": "higher",
     "pr_auc": "higher",

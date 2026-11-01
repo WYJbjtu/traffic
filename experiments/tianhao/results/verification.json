@@ -1,0 +1,1192 @@
+{
+  "status": "passed",
+  "checks": 237,
+  "results": [
+    {
+      "check": "output SHA256: benchmarks.json",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: supervised_models.json",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: feature_group_comparisons.csv",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: metrics_summary.csv",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: interpretation.csv",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: predeclared_plan.json",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: confusion_matrices.csv",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: tuning.csv",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: metrics.csv",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: model_summaries.json",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: trend_rule_tuning.csv",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: experiment_contract.json",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: fitted_pipelines.joblib",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: event_feature_audit.parquet",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: predictions.parquet",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: test_error_audit.parquet",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: event_features.parquet",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: error_groups.csv",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "output SHA256: feature_missingness.csv",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "cohort rows and unique IDs",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "known-label count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "prediction arms",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history+flow/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history+flow/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history+flow/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history+flow/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history+flow/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history+flow/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history+flow/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history+flow/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history+flow/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history+flow+calendar/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history+flow+calendar/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history+flow+calendar/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history+flow+calendar/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history+flow+calendar/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history+flow+calendar/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history+flow+calendar/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history+flow+calendar/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history+flow+calendar/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history+flow+calendar+weather/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history+flow+calendar+weather/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history+flow+calendar+weather/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history+flow+calendar+weather/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history+flow+calendar+weather/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history+flow+calendar+weather/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: decision_tree/local+history+flow+calendar+weather/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: decision_tree/local+history+flow+calendar+weather/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: decision_tree/local+history+flow+calendar+weather/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history+flow/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history+flow/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history+flow/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history+flow/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history+flow/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history+flow/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history+flow/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history+flow/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history+flow/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history+flow+calendar/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history+flow+calendar/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history+flow+calendar/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history+flow+calendar/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history+flow+calendar/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history+flow+calendar/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history+flow+calendar/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history+flow+calendar/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history+flow+calendar/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history+flow+calendar+weather/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history+flow+calendar+weather/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history+flow+calendar+weather/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history+flow+calendar+weather/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history+flow+calendar+weather/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history+flow+calendar+weather/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: logistic_regression/local+history+flow+calendar+weather/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: logistic_regression/local+history+flow+calendar+weather/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: logistic_regression/local+history+flow+calendar+weather/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: majority_class/none/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: majority_class/none/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: majority_class/none/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: majority_class/none/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: majority_class/none/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: majority_class/none/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: majority_class/none/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: majority_class/none/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: majority_class/none/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: speed_ratio_rule/local_speed_ratio/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: speed_ratio_rule/local_speed_ratio/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: speed_ratio_rule/local_speed_ratio/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: speed_ratio_rule/local_speed_ratio/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: speed_ratio_rule/local_speed_ratio/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: speed_ratio_rule/local_speed_ratio/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: speed_ratio_rule/local_speed_ratio/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: speed_ratio_rule/local_speed_ratio/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: speed_ratio_rule/local_speed_ratio/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: speed_trend_rule/history_rule/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: speed_trend_rule/history_rule/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: speed_trend_rule/history_rule/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: speed_trend_rule/history_rule/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: speed_trend_rule/history_rule/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: speed_trend_rule/history_rule/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: speed_trend_rule/history_rule/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: speed_trend_rule/history_rule/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: speed_trend_rule/history_rule/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: train_prevalence/none/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: train_prevalence/none/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: train_prevalence/none/test",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: train_prevalence/none/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: train_prevalence/none/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: train_prevalence/none/train",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "paired cohort: train_prevalence/none/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "macro-F1 recompute: train_prevalence/none/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "balanced accuracy recompute: train_prevalence/none/validation",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "watermark <= prediction: feature_max_available_at",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "watermark <= prediction: speed_trend_max_available_at",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "watermark <= prediction: flow_features_available_at",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "watermark <= prediction: calendar_max_source_available_at",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "watermark <= prediction: weather_features_available_at",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw time: temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw time: wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: a1be8743b14f9ffa69d5",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: a1be8743b14f9ffa69d5/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: a1be8743b14f9ffa69d5/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: fd526d064674c4e749be",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: fd526d064674c4e749be/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: fd526d064674c4e749be/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: 3d9ab0133496aa92780e",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 3d9ab0133496aa92780e/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 3d9ab0133496aa92780e/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: be8223376f4bf2c973bd",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: be8223376f4bf2c973bd/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: be8223376f4bf2c973bd/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: 3f6353f8de8ce31cef57",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 3f6353f8de8ce31cef57/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 3f6353f8de8ce31cef57/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: 38af7ec8158fae89b0a4",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 38af7ec8158fae89b0a4/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 38af7ec8158fae89b0a4/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: 1f2f90e459b02fae668c",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 1f2f90e459b02fae668c/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 1f2f90e459b02fae668c/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: b84964bee1f0a266a1c4",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: b84964bee1f0a266a1c4/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: b84964bee1f0a266a1c4/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: 74f2cb5f51c482359543",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 74f2cb5f51c482359543/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 74f2cb5f51c482359543/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: fe614896340a08a93be3",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: fe614896340a08a93be3/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: fe614896340a08a93be3/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "offline/conflict measurements masked: 5f388fb3638944da5ec7",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 5f388fb3638944da5ec7/volume_count",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "raw flow recomputation: 5f388fb3638944da5ec7/occupancy_pct",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: a1be8743b14f9ffa69d5/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: a1be8743b14f9ffa69d5/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: 0b0171d2ee7d74d10314/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: 0b0171d2ee7d74d10314/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: 3ef795e81a16b4089865/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: 3ef795e81a16b4089865/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: e412f57c35d9efa21ee7/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: e412f57c35d9efa21ee7/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: 28f4e657107727c0252f/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: 28f4e657107727c0252f/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: 5f388fb3638944da5ec7/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: 5f388fb3638944da5ec7/temperature",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: a1be8743b14f9ffa69d5/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: a1be8743b14f9ffa69d5/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: 0b0171d2ee7d74d10314/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: 0b0171d2ee7d74d10314/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: 3ef795e81a16b4089865/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: 3ef795e81a16b4089865/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: e412f57c35d9efa21ee7/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: e412f57c35d9efa21ee7/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: 28f4e657107727c0252f/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: 28f4e657107727c0252f/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather member hash: 5f388fb3638944da5ec7/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "weather raw value: 5f388fb3638944da5ec7/wind",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: logistic/local",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only scaling: local",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: logistic/local",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: tree/local",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: tree/local",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: logistic/local+history",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only scaling: local+history",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: logistic/local+history",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: tree/local+history",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: tree/local+history",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: logistic/local+history+flow",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only scaling: local+history+flow",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: logistic/local+history+flow",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: tree/local+history+flow",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: tree/local+history+flow",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: logistic/local+history+flow+calendar",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only scaling: local+history+flow+calendar",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: logistic/local+history+flow+calendar",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: tree/local+history+flow+calendar",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: tree/local+history+flow+calendar",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: logistic/local+history+flow+calendar+weather",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only scaling: local+history+flow+calendar+weather",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: logistic/local+history+flow+calendar+weather",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "train-only imputation: tree/local+history+flow+calendar+weather",
+      "status": "passed",
+      "detail": ""
+    },
+    {
+      "check": "saved pipeline reproduces predictions: tree/local+history+flow+calendar+weather",
+      "status": "passed",
+      "detail": ""
+    }
+  ],
+  "note": "Source hashes, temporal checks, paired cohorts and output recomputation; not scientific approval."
+}

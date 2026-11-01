@@ -1,5 +1,7 @@
 """SYNTHETIC contract tests; no rows are research observations."""
 from pathlib import Path
+from dataclasses import replace
+import json
 
 import pandas as pd
 import pytest
@@ -92,3 +94,34 @@ def test_validation_manifest_hashes_exact_inputs(tmp_path: Path) -> None:
     assert len(manifest["events"]["sha256"]) == 64
     assert manifest["contract_version"] == CONTRACT.version
     assert manifest["validation"]["events"] == 4
+
+
+def test_monotonicity_checks_known_labels_across_missing_horizons() -> None:
+    frame = events()
+    frame.loc[0, ["label_15m", "label_30m", "label_60m"]] = [1, pd.NA, 0]
+    with pytest.raises(ValueError, match="monotone"):
+        validate_event_table(frame, CONTRACT)
+    frame.loc[0, "label_60m"] = 1
+    validate_event_table(frame, CONTRACT)
+
+
+@pytest.mark.parametrize("feature", [
+    "label_30m", "reason_30m", "recovery_time", "outcome_maturity_at", "split_proposal",
+])
+def test_configured_feature_groups_cannot_bypass_outcome_guard(feature: str) -> None:
+    # Exercise the training entry point, which previously bypassed select_model_rows.
+    from traffic_recovery.models.supervised import SupervisedRules, train_supervised
+
+    contract = replace(CONTRACT, feature_groups={"local": (feature,)})
+    rules = SupervisedRules.from_path(ROOT / "configs/supervised_models.json")
+    with pytest.raises(ValueError, match="Outcome columns"):
+        train_supervised(events(), contract, rules, kind="tree")
+
+
+def test_contract_loader_rejects_outcome_features(tmp_path: Path) -> None:
+    payload = json.loads((ROOT / "configs/experiment_contract.json").read_text())
+    payload["feature_groups"]["local"].append("recovery_time")
+    path = tmp_path / "contract.json"
+    path.write_text(json.dumps(payload), encoding="utf-8")
+    with pytest.raises(ValueError, match="Outcome columns"):
+        ExperimentContract.from_path(path)

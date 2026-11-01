@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "code_cells": 22,
+  "error_outputs": 0,
+  "embedded_pngs": 10,
+  "shared_notebook_sha256": "7644f17955e269de412a9f9d9463bcda238090eb1df19ec46f2887dcd75e9ec0",
+  "note": "All sharing-version cells actually reexecuted against verified cached real sources; only machine-specific output text paths normalized afterward.",
+  "predictions_match_included_rerun": true,
+  "tests": {
+    "passed": 157,
+    "warnings": 1,
+    "warning": "Starlette/httpx deprecation"
+  }
+}

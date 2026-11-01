@@ -66,7 +66,7 @@ def test_metrics_are_long_form_and_rule_scores_are_not_probabilities() -> None:
     predictions = benchmark_predictions(dataset(), CONTRACT, RULES)
     metrics = evaluate_benchmarks(predictions)
     assert set(metrics.metric_name) == {
-        "accuracy", "precision", "recall", "f1", "balanced_accuracy",
+        "accuracy", "precision", "recall", "f1", "macro_f1", "balanced_accuracy",
         "roc_auc", "pr_auc", "brier_score", "log_loss",
     }
     rule_probability_metrics = metrics.loc[
@@ -105,7 +105,7 @@ def test_benchmark_files_write_predictions_metrics_and_manifest(tmp_path: Path) 
         manifest_path=manifest_path,
     )
     assert manifest["predictions"]["rows"] == 72
-    assert manifest["metrics"]["rows"] == 243
+    assert manifest["metrics"]["rows"] == 270
     assert manifest["run"]["run_id"]
     assert manifest["run"]["lock"]["sha256"]
     assert predictions_path.is_file() and metrics_path.is_file() and manifest_path.is_file()

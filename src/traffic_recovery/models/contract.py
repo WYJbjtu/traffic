@@ -8,6 +8,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from datetime import datetime, timezone
 import json
+from itertools import combinations
 from pathlib import Path
 import platform
 from typing import Iterable
@@ -22,7 +23,21 @@ OUTCOME_PREFIXES = ("label_", "reason_")
 OUTCOME_COLUMNS = {
     "recovery_time", "recovery_available_at", "followup_end",
     "termination_reason", "episode_separated_at",
+    "outcome_maturity_at", "split", "split_proposal",
 }
+
+
+def _validate_feature_groups(groups: dict[str, tuple[str, ...]]) -> None:
+    """Reject outcomes even if a caller accidentally declares them as features."""
+    features = [feature for columns in groups.values() for feature in columns]
+    forbidden = [
+        feature for feature in features
+        if feature in OUTCOME_COLUMNS or feature.startswith(OUTCOME_PREFIXES)
+    ]
+    if forbidden:
+        raise ValueError(f"Outcome columns cannot be features: {sorted(set(forbidden))}")
+    if len(features) != len(set(features)):
+        raise ValueError("Feature names must be unique across groups")
 
 
 @dataclass(frozen=True)
@@ -54,6 +69,7 @@ class ExperimentContract:
         groups = {
             name: tuple(columns) for name, columns in payload["feature_groups"].items()
         }
+        _validate_feature_groups(groups)
         horizons = tuple(int(value) for value in payload["horizons_minutes"])
         if not horizons or tuple(sorted(set(horizons))) != horizons:
             raise ValueError("Horizons must be unique and increasing")
@@ -99,6 +115,8 @@ def _require_aware_hkt(series: pd.Series, name: str) -> None:
 
 def validate_event_table(frame: pd.DataFrame, contract: ExperimentContract) -> dict[str, int]:
     """Validate keys, labels, splits, availability and leakage boundaries."""
+    # Direct dataclass construction must obey the same guard as JSON loading.
+    _validate_feature_groups(contract.feature_groups)
     labels = [f"label_{horizon}m" for horizon in contract.horizons]
     required = {"event_id", "prediction_time", "split", *labels}
     missing = required - set(frame.columns)
@@ -119,7 +137,7 @@ def validate_event_table(frame: pd.DataFrame, contract: ExperimentContract) -> d
         invalid = frame[label].dropna().loc[lambda values: ~values.isin([0, 1])]
         if len(invalid):
             raise ValueError(f"{label} must contain only 0, 1 or missing")
-    for shorter, longer in zip(labels, labels[1:]):
+    for shorter, longer in combinations(labels, 2):
         known = frame[shorter].notna() & frame[longer].notna()
         if (frame.loc[known, shorter] > frame.loc[known, longer]).any():
             raise ValueError("Known within-horizon labels must be monotone")

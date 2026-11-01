@@ -2,6 +2,11 @@
 
 **Report date:** 2026-10-30
 
+**Historical snapshot:** This report describes the PR #5 implementation milestone.
+Later local real-data experiments and the 2026-11-01 proposal/code review are
+documented in [tianhao_proposal_review.md](tianhao_proposal_review.md). Statements
+below about uncommitted work or unavailable empirical outputs refer to report time.
+
 **Scope:** collaboration setup, external context integration, experiment contract,
 model dataset assembly, benchmarks, supervised models, feature-group comparison,
 and experiment handoff.
