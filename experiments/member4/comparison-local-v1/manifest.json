@@ -1,0 +1,328 @@
+{
+  "manifest_version": "feature-group-comparison-manifest-v1",
+  "created_at": "2026-11-01T08:45:29.367591+00:00",
+  "comparison_version": "member4-local-only-v1",
+  "scientific_approval": "pending_team_review",
+  "dataset": {
+    "path": "experiments/member4/event_features.parquet",
+    "sha256": "f163c732ba05e00e23802cb3cc390f8c5a8c034975a0ef3524674a3278c346b8"
+  },
+  "dataset_manifest": {
+    "path": "experiments/member4/model-dataset-manifest.json",
+    "sha256": "ead21c375450673e10d2f558b8145b664b427ea3eb4cd888b9cc17fd3e91ad74",
+    "validation": {
+      "rows": 7597,
+      "events": 7597,
+      "purged": 0,
+      "known_label_15m": 6954,
+      "known_label_30m": 6799,
+      "known_label_60m": 6611,
+      "dataset_version": "member4-long-window-local-v1",
+      "scientific_approval": "pending_team_review",
+      "feature_groups": {
+        "local": [
+          "speed_kmh",
+          "speed_ratio",
+          "baseline_kmh",
+          "valid_slots",
+          "onset_observed_minutes"
+        ]
+      }
+    }
+  },
+  "configs": {
+    "contract": {
+      "path": "experiments/member4/experiment_contract_local.json",
+      "sha256": "5e4adbd8ffedf796318ec843d98334f85f31b2fb1faacb281a57cf67202261ca"
+    },
+    "benchmarks": {
+      "path": "configs/benchmarks.json",
+      "sha256": "bcb2e9182d3be61c9770a7d8ee140b03e462c163fd4d566220e096f75ff82e46"
+    },
+    "supervised": {
+      "path": "configs/supervised_models.json",
+      "sha256": "212444b2f9b9b986e0393b9cbb21b91b0ed953f56eec8acf14a69a6d6d914f38"
+    },
+    "comparison": {
+      "path": "experiments/member4/comparison_local.json",
+      "sha256": "70e3967acf148bc5390276f44ef38b2781a2136e220730ff414328571f7f26a3"
+    }
+  },
+  "outputs": {
+    "predictions": {
+      "path": "experiments/member4/comparison-local-v1/predictions.parquet",
+      "sha256": "2ad65c5ae44477d55aaf66b08a5c792fdfbafe3d6c841716c8b51a0c16efe21f"
+    },
+    "metrics": {
+      "path": "experiments/member4/comparison-local-v1/metrics.csv",
+      "sha256": "31b0aae174c992856d9daec2f352a652a06786a8a9f70a9aebef0c2c56639548"
+    },
+    "comparisons": {
+      "path": "experiments/member4/comparison-local-v1/feature-group-comparisons.csv",
+      "sha256": "816d7cee1f267603e00eb45df1d9c9dd1d17aab6727200a5eaa0ef8b7251d995"
+    },
+    "tuning": {
+      "path": "experiments/member4/comparison-local-v1/tuning.csv",
+      "sha256": "a416add955ac98ff96fa3d384158d4e6b99cf79a6377d644bf3b7ee36c1f0306"
+    },
+    "interpretation": {
+      "path": "experiments/member4/comparison-local-v1/interpretation.csv",
+      "sha256": "81cb3ea7ee69e57fb5d8ccd23b2805401a6c87e875735e025237a58a4138328b"
+    },
+    "report": {
+      "path": "experiments/member4/comparison-local-v1/report.md",
+      "sha256": "97cdca6dd11adbec0bc1d99105d63e58da898723ea743aa6b827c6f2cd4e24e2"
+    },
+    "tree_figures": [
+      {
+        "path": "experiments/member4/comparison-local-v1/tree-figures/local-15m.png",
+        "sha256": "2d36ad954d93c346860cdfe20de3fb809c14f8356a2d512ceb06d697026187ea"
+      },
+      {
+        "path": "experiments/member4/comparison-local-v1/tree-figures/local-30m.png",
+        "sha256": "7549ab7022712b613de2ee50190685b2bec817fef7f4db72052a01a2e60e43b7"
+      },
+      {
+        "path": "experiments/member4/comparison-local-v1/tree-figures/local-60m.png",
+        "sha256": "d59a909b6d8a3ff07e1a883a610413c3977eab0be3595ec9d066c0c41666071a"
+      }
+    ]
+  },
+  "rows": {
+    "predictions": 142548,
+    "metrics": 567,
+    "comparisons": 72,
+    "tuning": 210,
+    "interpretation": 60
+  },
+  "comparison_cohort": {
+    "policy": "known-label rows with observed speed_ratio for every compared model",
+    "input_rows": 7597,
+    "retained_rows": 7597,
+    "excluded_missing_speed_ratio_by_split": {
+      "train": 0,
+      "validation": 0,
+      "test": 0
+    }
+  },
+  "summaries": [
+    {
+      "feature_set": "local",
+      "model_kind": "logistic",
+      "horizon_min": 15,
+      "parameters": {
+        "C": 10.0,
+        "class_weight": null
+      },
+      "validation_log_loss": 0.5210780291393601,
+      "train_rows": 3503,
+      "validation_rows": 2055,
+      "test_rows": 1396,
+      "refit_after_selection": false
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "logistic",
+      "horizon_min": 30,
+      "parameters": {
+        "C": 10.0,
+        "class_weight": null
+      },
+      "validation_log_loss": 0.6859667610174129,
+      "train_rows": 3428,
+      "validation_rows": 2008,
+      "test_rows": 1363,
+      "refit_after_selection": false
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "logistic",
+      "horizon_min": 60,
+      "parameters": {
+        "C": 10.0,
+        "class_weight": null
+      },
+      "validation_log_loss": 0.5854023106591939,
+      "train_rows": 3328,
+      "validation_rows": 1962,
+      "test_rows": 1321,
+      "refit_after_selection": false
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "tree",
+      "horizon_min": 15,
+      "parameters": {
+        "max_depth": 2,
+        "min_samples_leaf": 1,
+        "class_weight": null
+      },
+      "validation_log_loss": 0.522484166354084,
+      "train_rows": 3503,
+      "validation_rows": 2055,
+      "test_rows": 1396,
+      "refit_after_selection": false,
+      "tree_depth": 2,
+      "tree_leaves": 4,
+      "tree_text": "|--- numeric__baseline_kmh <= 73.50\n|   |--- numeric__baseline_kmh <= 72.00\n|   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  72.00\n|   |   |--- class: 0\n|--- numeric__baseline_kmh >  73.50\n|   |--- numeric__speed_kmh <= 13.75\n|   |   |--- class: 0\n|   |--- numeric__speed_kmh >  13.75\n|   |   |--- class: 0\n"
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "tree",
+      "horizon_min": 30,
+      "parameters": {
+        "max_depth": 4,
+        "min_samples_leaf": 10,
+        "class_weight": null
+      },
+      "validation_log_loss": 0.6671429028698426,
+      "train_rows": 3428,
+      "validation_rows": 2008,
+      "test_rows": 1363,
+      "refit_after_selection": false,
+      "tree_depth": 4,
+      "tree_leaves": 15,
+      "tree_text": "|--- numeric__baseline_kmh <= 73.50\n|   |--- numeric__baseline_kmh <= 60.00\n|   |   |--- numeric__speed_ratio <= 0.13\n|   |   |   |--- class: 1\n|   |   |--- numeric__speed_ratio >  0.13\n|   |   |   |--- numeric__speed_ratio <= 0.25\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.25\n|   |   |   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  60.00\n|   |   |--- numeric__baseline_kmh <= 72.00\n|   |   |   |--- numeric__speed_ratio <= 0.11\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.11\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__baseline_kmh >  72.00\n|   |   |   |--- numeric__speed_kmh <= 16.25\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_kmh >  16.25\n|   |   |   |   |--- class: 1\n|--- numeric__baseline_kmh >  73.50\n|   |--- numeric__baseline_kmh <= 76.00\n|   |   |--- numeric__valid_slots <= 9.00\n|   |   |   |--- numeric__speed_kmh <= 23.75\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_kmh >  23.75\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__valid_slots >  9.00\n|   |   |   |--- numeric__speed_ratio <= 0.43\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.43\n|   |   |   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  76.00\n|   |   |--- numeric__baseline_kmh <= 87.75\n|   |   |   |--- numeric__speed_kmh <= 29.75\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_kmh >  29.75\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__baseline_kmh >  87.75\n|   |   |   |--- numeric__speed_ratio <= 0.26\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.26\n|   |   |   |   |--- class: 0\n"
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "tree",
+      "horizon_min": 60,
+      "parameters": {
+        "max_depth": 4,
+        "min_samples_leaf": 5,
+        "class_weight": null
+      },
+      "validation_log_loss": 0.5467335907042012,
+      "train_rows": 3328,
+      "validation_rows": 1962,
+      "test_rows": 1321,
+      "refit_after_selection": false,
+      "tree_depth": 4,
+      "tree_leaves": 16,
+      "tree_text": "|--- numeric__baseline_kmh <= 73.50\n|   |--- numeric__baseline_kmh <= 60.00\n|   |   |--- numeric__speed_ratio <= 0.12\n|   |   |   |--- numeric__speed_ratio <= 0.09\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_ratio >  0.09\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__speed_ratio >  0.12\n|   |   |   |--- numeric__speed_kmh <= 16.75\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_kmh >  16.75\n|   |   |   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  60.00\n|   |   |--- numeric__speed_ratio <= 0.41\n|   |   |   |--- numeric__baseline_kmh <= 72.00\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__baseline_kmh >  72.00\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__speed_ratio >  0.41\n|   |   |   |--- numeric__baseline_kmh <= 63.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  63.00\n|   |   |   |   |--- class: 1\n|--- numeric__baseline_kmh >  73.50\n|   |--- numeric__baseline_kmh <= 81.00\n|   |   |--- numeric__valid_slots <= 9.00\n|   |   |   |--- numeric__speed_ratio <= 0.08\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_ratio >  0.08\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__valid_slots >  9.00\n|   |   |   |--- numeric__speed_kmh <= 28.25\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_kmh >  28.25\n|   |   |   |   |--- class: 1\n|   |--- numeric__baseline_kmh >  81.00\n|   |   |--- numeric__baseline_kmh <= 87.75\n|   |   |   |--- numeric__speed_ratio <= 0.06\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.06\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__baseline_kmh >  87.75\n|   |   |   |--- numeric__speed_ratio <= 0.22\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_ratio >  0.22\n|   |   |   |   |--- class: 0\n"
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "rf",
+      "horizon_min": 15,
+      "parameters": {
+        "n_estimators": 300,
+        "max_depth": 4,
+        "min_samples_leaf": 5,
+        "class_weight": null
+      },
+      "validation_log_loss": 0.5143907202790484,
+      "train_rows": 3503,
+      "validation_rows": 2055,
+      "test_rows": 1396,
+      "refit_after_selection": false
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "rf",
+      "horizon_min": 30,
+      "parameters": {
+        "n_estimators": 300,
+        "max_depth": 8,
+        "min_samples_leaf": 5,
+        "class_weight": null
+      },
+      "validation_log_loss": 0.6554081352590757,
+      "train_rows": 3428,
+      "validation_rows": 2008,
+      "test_rows": 1363,
+      "refit_after_selection": false
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "rf",
+      "horizon_min": 60,
+      "parameters": {
+        "n_estimators": 300,
+        "max_depth": 8,
+        "min_samples_leaf": 5,
+        "class_weight": null
+      },
+      "validation_log_loss": 0.5558360305323368,
+      "train_rows": 3328,
+      "validation_rows": 1962,
+      "test_rows": 1321,
+      "refit_after_selection": false
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "hgb",
+      "horizon_min": 15,
+      "parameters": {
+        "max_depth": 3,
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.05,
+        "l2_regularization": 1.0
+      },
+      "validation_log_loss": 0.5134135514552395,
+      "train_rows": 3503,
+      "validation_rows": 2055,
+      "test_rows": 1396,
+      "refit_after_selection": false
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "hgb",
+      "horizon_min": 30,
+      "parameters": {
+        "max_depth": 3,
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.05,
+        "l2_regularization": 0.0
+      },
+      "validation_log_loss": 0.6548094930882257,
+      "train_rows": 3428,
+      "validation_rows": 2008,
+      "test_rows": 1363,
+      "refit_after_selection": false
+    },
+    {
+      "feature_set": "local",
+      "model_kind": "hgb",
+      "horizon_min": 60,
+      "parameters": {
+        "max_depth": 3,
+        "max_leaf_nodes": 15,
+        "learning_rate": 0.05,
+        "l2_regularization": 1.0
+      },
+      "validation_log_loss": 0.5607676942057459,
+      "train_rows": 3328,
+      "validation_rows": 1962,
+      "test_rows": 1321,
+      "refit_after_selection": false
+    }
+  ],
+  "run": {
+    "run_id": "20261101T084450.501016Z-3de3c3c44083",
+    "started_at": "2026-11-01T08:44:50.501016+00:00",
+    "recorded_at": "2026-11-01T08:45:29.437142+00:00",
+    "runtime_seconds": 38.9376960999798,
+    "seed": 42,
+    "split_boundaries": {
+      "validation_start": "2025-01-01T00:00:00+08:00",
+      "test_start": "2026-01-01T00:00:00+08:00",
+      "test_end": "2026-10-01T00:00:00+08:00"
+    },
+    "lock": {
+      "path": "uv.lock",
+      "sha256": "f7905a181a3f054bcd242ebefaeccd111e698d55b5586b16ec49b24c463cdfc2",
+      "status": "present"
+    },
+    "git": {
+      "commit": "bb4170a55a4da7cb0298b0ffaa06afa6281d4abe",
+      "dirty": true
+    },
+    "python": "3.12.14"
+  },
+  "software": {
+    "pandas": "2.3.3",
+    "scikit_learn": "1.9.1"
+  }
+}

@@ -1,0 +1,5 @@
+# Rebuildable intermediate artifacts (large binaries) stay local.
+prepared/
+event_features.parquet
+event_features_hf.parquet
+__pycache__/
