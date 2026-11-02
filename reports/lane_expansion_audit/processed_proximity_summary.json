@@ -1,0 +1,9 @@
+{
+  "radius_m": 100,
+  "candidate_detector_ids": 426,
+  "candidate_segment_ids": 1316,
+  "candidate_pairs": 2291,
+  "raw_processed_same_time_agreement": null,
+  "historical_version_approved": false,
+  "warning": "Distance-only review leads; no historical road version/turn/direction validation or raw/processed independence claim"
+}
