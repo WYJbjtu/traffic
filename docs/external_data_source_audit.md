@@ -2,6 +2,10 @@
 
 **Audit date:** 2026-10-28
 
+This is the historical short-pilot feasibility audit. For sources actually used
+in the 2023–2026 long-window experiment, measured coverage and exclusions, see
+[the 2026-11-02 external data handoff](tianhao_external_data_handoff.md).
+
 **Scope:** official Hong Kong sources for calendar/public holidays, weather,
 incidents/roadworks and major events. This is a source-feasibility decision, not
 evidence that any feature has already been integrated or validated.

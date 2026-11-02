@@ -10,9 +10,10 @@ from sklearn.metrics import f1_score, confusion_matrix
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'src'))
 from traffic_recovery.models.evaluation import evaluate_predictions
+from traffic_recovery.models.artifact_integrity import verify_manifest_files
 RESULTS = Path(__file__).resolve().parent / 'results'
 
-def verify():
+def verify(*, strict_snapshot=False):
     checks = 0
     def check(condition, description):
         nonlocal checks
@@ -54,17 +55,22 @@ def verify():
         cells = json.loads(notebook.read_text(encoding='utf-8'))['cells']
         check(not any(o.get('output_type') == 'error' for c in cells for o in c.get('outputs', [])), 'Notebook contains no error output')
     package_manifest = RESULTS / 'package_manifest.json'
+    integrity = None
     if package_manifest.exists():
-        for name, expected in json.loads(package_manifest.read_text(encoding='utf-8'))['sha256'].items():
-            with (ROOT / name).open('rb') as stream:
-                check(hashlib.file_digest(stream, 'sha256').hexdigest() == expected, 'Package hash: ' + name)
-    return {'status': 'passed', 'checks': checks, 'prediction_rows': len(pred), 'arms': 14, 'note': 'Offline output checks only; source-time checks remain in the historical real-run verification. No scientific approval.'}
+        integrity = verify_manifest_files(
+            ROOT, json.loads(package_manifest.read_text(encoding='utf-8'))['sha256'],
+            immutable_prefixes=('experiments/tianhao/results', 'experiments/tianhao/rerun_20261101'),
+            strict_snapshot=strict_snapshot,
+        )
+        checks += integrity['verified_artifacts']
+    return {'status': 'passed', 'checks': checks, 'prediction_rows': len(pred), 'arms': 14, 'integrity': integrity, 'note': 'Offline output checks only; source-time checks remain in the historical real-run verification. No scientific approval.'}
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--write-report', action='store_true')
+    parser.add_argument('--strict-snapshot', action='store_true', help='Reject recorded source/document drift as well as artifact changes.')
     args = parser.parse_args()
-    result = verify()
+    result = verify(strict_snapshot=args.strict_snapshot)
     if args.write_report:
         (RESULTS / 'review_validation.json').write_text(json.dumps(result, indent=2), encoding='utf-8')
     print(json.dumps(result, indent=2))

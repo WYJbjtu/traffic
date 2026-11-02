@@ -1,6 +1,6 @@
 """Offline verification of the shared 2026-11-01 real-data rerun."""
 from pathlib import Path
-import hashlib
+import argparse
 import json
 import sys
 import numpy as np
@@ -10,9 +10,10 @@ from sklearn.metrics import confusion_matrix
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / 'src'))
 from traffic_recovery.models.evaluation import evaluate_predictions
+from traffic_recovery.models.artifact_integrity import verify_manifest_files
 
 
-def verify() -> dict[str, object]:
+def verify(*, strict_snapshot: bool = False) -> dict[str, object]:
     """Verify included artifacts and paired results without raw data or training."""
     base = Path(__file__).resolve().parent
     result = base / 'rerun_20261101'
@@ -25,9 +26,12 @@ def verify() -> dict[str, object]:
         checks += 1
 
     manifest = json.loads((base / 'share_manifest.json').read_text(encoding='utf-8'))
-    for name, expected in manifest['sha256'].items():
-        with (ROOT / name).open('rb') as stream:
-            check(hashlib.file_digest(stream, 'sha256').hexdigest() == expected, 'Share SHA256: ' + name)
+    integrity = verify_manifest_files(
+        ROOT, manifest['sha256'],
+        immutable_prefixes=('experiments/tianhao/results', 'experiments/tianhao/rerun_20261101'),
+        strict_snapshot=strict_snapshot,
+    )
+    checks += integrity['verified_artifacts']
     pred = pd.read_parquet(result / 'predictions.parquet')
     old = pd.read_parquet(base / 'results/predictions.parquet')
     keys = ['model', 'feature_set', 'split', 'event_id', 'horizon_min']
@@ -57,9 +61,12 @@ def verify() -> dict[str, object]:
     check([c['execution_count'] for c in code] == list(range(1, 23)), '22 executed code cells')
     check(not any(o.get('output_type') == 'error' for c in code for o in c.get('outputs', [])), 'No notebook errors')
     check(sum('image/png' in o.get('data', {}) for c in code for o in c.get('outputs', [])) == 10, '10 embedded figures')
-    return {'status': 'passed', 'checks': checks, 'prediction_rows': len(pred), 'arms': 14,
+    return {'status': 'passed', 'checks': checks, 'prediction_rows': len(pred), 'arms': 14, 'integrity': integrity,
             'note': 'Offline consistency checks only; no scientific approval or independent new test cohort.'}
 
 
 if __name__ == '__main__':
-    print(json.dumps(verify(), indent=2))
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--strict-snapshot', action='store_true', help='Reject recorded source/document drift as well as artifact changes.')
+    args = parser.parse_args()
+    print(json.dumps(verify(strict_snapshot=args.strict_snapshot), indent=2))

@@ -1,5 +1,12 @@
 # External context feature integration v1
 
+**Measured long-window handoff (2026-11-02):**
+[Tianhao external data sources, coverage and exclusions](tianhao_external_data_handoff.md)
+records the actual annual government holiday editions, King's Park temperature/wind
+and separate full-cohort/known-label missingness. The generic pilot feasibility
+decisions below do not imply that incidents, rainfall or major events were used
+in that long-window experiment.
+
 The implemented adapters build prediction-time-safe features from preserved source
 tables. Source feasibility and official citations are recorded in
 [`external_data_source_audit.md`](external_data_source_audit.md); tolerances and

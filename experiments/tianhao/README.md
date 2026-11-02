@@ -1,5 +1,20 @@
 # Tianhao Wu / Fairy-6b：长期真实数据实验
 
+## 2026-11-02：核验修复、双方统一比较和外部数据交接
+
+- [统一比较与混淆矩阵](../../reports/tianhao_followup_20261102/comparison/README.md)：从双方已有预测重算，保留实验、特征、时限及split，补齐Member4的Macro-F1，不训练或重新选模型。
+- [实际外部来源、覆盖/缺失与排除说明](../../docs/tianhao_external_data_handoff.md)：分别列出全部事件和已知30分钟标签事件的分母，含逐split天气缺失率。
+- 默认核验严格检查旧 `results/` 和 `rerun_20261101/` 的不可变产物；旧清单记录的README、当前代码和Notebook变化列在 `integrity.workspace_changes` 中，不再令结果核验失败。它不认证当前源代码等于原发布代码，也不代表科学批准。原manifest与结果哈希不改写。
+- 可加 `--strict-snapshot` 要求清单中的源代码/文档哈希也匹配；在后续main上源文件已改变时应失败。核对原发布时快照可在冻结提交 `8374dfbec594e1a6392ef356f6b7062c6e65d6bb` 上使用该版本原来的核验脚本。
+
+```text
+uv run --locked python experiments/tianhao/verify_review.py
+uv run --locked python experiments/tianhao/verify_shared_results.py
+uv run --locked python experiments/tianhao/compare_saved_runs.py --output-dir reports/local/unified-comparison-new
+```
+
+比较目录必须尚不存在，避免覆盖旧证据。外部覆盖的完整重算需要原始本地audit，命令和哈希见交接说明。过去记录的645/631是当时的文件级检查计数；新核验输出将源码诊断与结果文件计数分开，检查数相应改变。
+
 **EXPLORATORY — NOT APPROVED AS FINAL RESULTS**
 
 这是 PR #5 之后新增的真实数据实验与外部特征整合。复用仓库已有的 `external.calendar`、数据传输和 `models` 训练/评估函数；另包含本次核查发现的calendar/contract/evaluation保护性修复及回归测试；没有重做队友的事件标签、网络或集成模型。基于主分支已合并的 PR #7/#8 建立独立增量。

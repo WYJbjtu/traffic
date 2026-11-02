@@ -1,0 +1,35 @@
+{
+  "version": "saved-prediction-comparison-v1",
+  "scientific_approval": "pending_team_review",
+  "input_sha256": {
+    "experiments/tianhao/rerun_20261101/predictions.parquet": "452da27baaa2ca43834c1192be9c7e17633febc313fed7d1713a441b3ae50eb4",
+    "experiments/tianhao/rerun_20261101/metrics_summary.csv": "1d0fdc8c48de31c643a8b4c5db977e1b7a608ed144f21f8303ace9ef5eb640fd",
+    "experiments/member4/comparison-hf-v1/predictions.parquet": "716db23b2eee0f7adc58b000b69505e3a328513dff64ae4e936f77853ba954ac",
+    "experiments/member4/comparison-hf-v1/metrics.csv": "a6b389ec60ed2dc0219a9d7774b23470f56a54b7ab3343323b9b5afb9144277c"
+  },
+  "output_sha256": {
+    "common_30m_test.csv": "3fcd594266169e1815d5f4cf047a68ce625a5d7c88392baec2a6ca599cf3731b",
+    "confusion_matrices.csv": "d4f432f5258d65a1ec3d1b3f6da614932723934b5f819ba6870adaa0cf3b2e5d",
+    "tianhao_external_30m_test.csv": "e634dfaf556d71aee5e0fe8af05c3445e9eba6f0a549538cfe6c184bfe6c3053",
+    "metric_reconciliation.csv": "6383ec59c5fc75ed79c2bb91274b682833e3832853b938eec8935b5aded3efdc",
+    "all_metrics.csv": "31282bb9231406ad331d04092233198a36625e1949450a4bb2d343e95f6ca2d8",
+    "README.md": "3948545c3d0b3796350c0475a02af33f7a76c23be849796e054c2a5aa25e785a",
+    "pairing_audit.csv": "a546a2a96c4e3b099e221046f7b619a7afd02290b943cca27fc3fd787cb9be3a"
+  },
+  "metric_groups": 177,
+  "paired_groups": 27,
+  "metric_reconciliation": {
+    "matched_saved_metric": 1635,
+    "new_from_saved_predictions": 135
+  },
+  "code_sha256": {
+    "experiments/tianhao/compare_saved_runs.py": "cc8a852e6977d9d7b072d0c2ba7f711e87cb5e7f1fc3319207ec96de573684a8",
+    "src/traffic_recovery/models/saved_comparison.py": "09505d27fb70c97c18fc57c25f8e2d388ce4800aee0a1412d20afbd993a4bd7d",
+    "src/traffic_recovery/models/evaluation.py": "2e06bf721b2a099d451c0c75bdc61c6af7997f0d6aa574ba4b27c6b2d125271c"
+  },
+  "software": {
+    "python": "3.12.14",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.1"
+  }
+}
