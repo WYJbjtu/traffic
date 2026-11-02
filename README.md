@@ -1,5 +1,15 @@
 # Hong Kong Traffic Recovery Prediction
 
+## Python Research Explorer（2026-11-02）
+
+无需下载长窗口 Release，即可从已保存的真实实验产物启动只读研究展示：
+
+```bash
+uv run --locked --with 'streamlit==1.51.0' --with 'plotly==6.3.1' streamlit run apps/research_explorer.py
+```
+
+七个研究视图、可选本地事件数据接入、来源与科学限制见 [中文交接和运行说明](docs/research_explorer.md)。现有 FastAPI/React 仍独立运行。
+
 ## Tianhao / Fairy-6b：真实30分钟实验与可视化（2026-11-01）
 
 - [新重跑 Notebook：代码、ROC/PR、混淆矩阵、特征组提升、系数](notebooks/03_Tianhao_真实重跑与模型可视化.ipynb)（GitHub可直接预览，第10节起为训练结果）。
