@@ -5,49 +5,48 @@ import argparse, hashlib, io, json, zipfile
 import numpy as np
 import pandas as pd
 import pyarrow.parquet as pq
-from paths import ROOT, BASE, DATA
+from paths import ROOT, BASE, DATA, traffic_file
 PREP = BASE / 'prepared'
-PREP.mkdir(parents=True, exist_ok=True)
 KEY = ['detector_id', 'direction', 'lane_id']
 
-def speed_features():
-    events = pd.read_parquet(DATA / 'processed/derived/events.parquet').sort_values('prediction_time').reset_index(drop=True)
+def speed_features(*, data_dir: Path = DATA, output_dir: Path = PREP) -> None:
+    """Rebuild each lane across arbitrary Parquet row groups, using past bins only."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+    events = pd.read_parquet(traffic_file(data_dir,'events.parquet')).sort_values('prediction_time').reset_index(drop=True)
     rows = []
-    parquet = pq.ParquetFile(DATA / 'processed/derived/cohort_bins.parquet')
-    groups = {k: d for k, d in events.groupby(KEY)}
-    seen = set()
-    for rg in range(parquet.num_row_groups):
-        part = parquet.read_row_group(rg, columns=KEY + ['timestamp', 'available_at', 'speed_kmh', 'usable', 'last_source_available_at']).to_pandas()
-        for key, bins in part.groupby(KEY, sort=False):
-            if key not in groups:
-                continue
-            assert key not in seen, 'Lane spans multiple rowgroups; use a lane-level scanner instead'
-            seen.add(key)
-            bins = bins.sort_values('timestamp').set_index('timestamp')
-            assert bins.index.is_unique
-            for event in groups[key].itertuples():
-                end = event.onset_confirmed_at
-                index = pd.date_range(end - pd.Timedelta(minutes=15), end, freq='5min')
-                window = bins.reindex(index)
-                valid = window.usable.fillna(False).astype(bool) & window.speed_kmh.notna() & window.available_at.le(event.prediction_time) & window.last_source_available_at.le(event.prediction_time)
-                ratio = window.speed_kmh.where(valid) / event.baseline_kmh
-                complete = bool(valid.all())
-                observed = window.loc[valid, 'available_at']
-                rows.append({'event_id': event.event_id, 'prediction_time': event.prediction_time, 'speed_change_15m_ratio': float(ratio.iloc[-1] - ratio.iloc[0]) if complete else np.nan, 'speed_mean_15m_ratio': float(ratio.mean()) if complete else np.nan, 'speed_slope_15m_ratio_per_min': float(np.polyfit(np.arange(4) * 5, ratio, 1)[0]) if complete else np.nan, 'speed_trend_observed_bins': int(valid.sum()), 'speed_trend_window_end': end, 'speed_trend_max_available_at': observed.max() if len(observed) else pd.NaT})
-        print(f'Speed rowgroup {rg + 1}/{parquet.num_row_groups}', flush=True)
+    columns = KEY + ['timestamp', 'available_at', 'speed_kmh', 'usable', 'last_source_available_at']
+    for key, lane_events in events.groupby(KEY, sort=False):
+        bins = pq.read_table(traffic_file(data_dir,'cohort_bins.parquet'), columns=columns,
+                             filters=[(column, '=', value) for column, value in zip(KEY, key)]).to_pandas()
+        bins = bins.sort_values('timestamp').set_index('timestamp')
+        if not bins.index.is_unique:
+            raise ValueError(f'Duplicate lane bin timestamps: {key}')
+        for event in lane_events.itertuples():
+            end = event.onset_confirmed_at
+            window = bins.reindex(pd.date_range(end-pd.Timedelta(minutes=15), end, freq='5min'))
+            valid = window.usable.astype('boolean').fillna(False).astype(bool) & window.speed_kmh.notna() & window.available_at.le(event.prediction_time) & window.last_source_available_at.le(event.prediction_time)
+            ratio = window.speed_kmh.where(valid) / event.baseline_kmh
+            complete = bool(valid.all())
+            rows.append(dict(event_id=event.event_id, prediction_time=event.prediction_time,
+                speed_change_15m_ratio=float(ratio.iloc[-1]-ratio.iloc[0]) if complete else np.nan,
+                speed_mean_15m_ratio=float(ratio.mean()) if complete else np.nan,
+                speed_slope_15m_ratio_per_min=float(np.polyfit(np.arange(4)*5, ratio, 1)[0]) if complete else np.nan,
+                speed_trend_observed_bins=int(valid.sum()), speed_trend_window_end=end,
+                speed_trend_max_available_at=window.loc[valid, 'available_at'].max()))
+        print(f'Speed lane {key}: {len(lane_events)} events', flush=True)
     features = pd.DataFrame(rows)
-    assert features.event_id.is_unique and set(features.event_id) == set(events.event_id)
-    known = features.speed_trend_max_available_at.notna()
-    assert (features.loc[known, 'speed_trend_max_available_at'] <= features.loc[known, 'prediction_time']).all()
-    features.to_parquet(PREP / 'speed_history_features.parquet', index=False)
-    print('speed complete windows:', int(features.speed_change_15m_ratio.notna().sum()), flush=True)
+    if not features.event_id.is_unique or set(features.event_id) != set(events.event_id):
+        raise ValueError('Speed features do not cover the exact event cohort')
+    features.to_parquet(output_dir / 'speed_history_features.parquet', index=False)
 
-def flow_features():
-    events = pd.read_parquet(DATA / 'processed/derived/events.parquet')
+def flow_features(*, data_dir: Path = DATA, source_cache: Path | None = None, output_dir: Path = PREP) -> None:
+    """Rebuild observed 30s flow/occupancy summaries, including midnight windows."""
+    output_dir.mkdir(parents=True, exist_ok=True)
+    events = pd.read_parquet(traffic_file(data_dir,'events.parquet'))
     events['feature_date'] = events.onset_confirmed_at.dt.strftime('%Y%m%d')
-    path = BASE / 'sources/traffic_prepared.zip'
+    path = (source_cache if source_cache is not None else BASE / 'sources') / 'traffic_prepared.zip'
     rows = []
-    manifest = json.loads((DATA / 'SHARED_DATA_MANIFEST.json').read_text(encoding='utf-8'))['files']
+    manifest = json.loads((data_dir / 'SHARED_DATA_MANIFEST.json').read_text(encoding='utf-8'))['files']
     with zipfile.ZipFile(path) as z:
         for j, (date, day_events) in enumerate(events.groupby('feature_date'), 1):
             member = f'processed/derived/cleaned-{date}.parquet'
@@ -63,7 +62,7 @@ def flow_features():
                 daily = pd.concat([pd.read_parquet(io.BytesIO(prior_payload)), daily], ignore_index=True)
                 assert not daily.duplicated(KEY + ['timestamp']).any(), 'Unexpected overlap between cleaned day partitions'
             if j == 1:
-                (PREP / 'cleaned_daily_schema.json').write_text(json.dumps({c: str(t) for c, t in daily.dtypes.items()}, indent=2), encoding='utf-8')
+                (output_dir / 'cleaned_daily_schema.json').write_text(json.dumps({c: str(t) for c, t in daily.dtypes.items()}, indent=2), encoding='utf-8')
                 print('Daily schema:', daily.columns.tolist(), flush=True)
             available_col = 'available_at' if 'available_at' in daily else 'archive_time'
             if available_col not in daily:
@@ -85,7 +84,7 @@ def flow_features():
     assert features.event_id.is_unique and len(features) == len(events)
     known = features.flow_max_available_at.notna()
     assert (features.loc[known, 'flow_max_available_at'] <= features.loc[known, 'prediction_time']).all()
-    features.to_parquet(PREP / 'flow_occupancy_features.parquet', index=False)
+    features.to_parquet(output_dir / 'flow_occupancy_features.parquet', index=False)
     print('Flow/occupancy features:', features.shape, flush=True)
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

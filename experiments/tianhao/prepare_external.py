@@ -6,24 +6,42 @@ import argparse, csv, hashlib, io, json, re, sys, zipfile
 from urllib.parse import urlencode
 import numpy as np
 import pandas as pd
-from bs4 import BeautifulSoup
-from paths import ROOT, BASE, DATA
+from html.parser import HTMLParser
+from paths import ROOT, BASE, DATA, traffic_file
 SOURCES = BASE / 'sources'
 PREP = BASE / 'prepared'
-PREP.mkdir(parents=True, exist_ok=True)
 sys.path.insert(0, str(ROOT / 'src'))
 from traffic_recovery.external.calendar import calendar_features
 
-def events():
-    return pd.read_parquet(DATA / 'processed/derived/events.parquet')
+class _HolidayHTML(HTMLParser):
+    """Read table cells and page evidence using only the Python standard library."""
+    def __init__(self) -> None:
+        super().__init__(); self.rows = []; self.text = []; self.row = None; self.cell = None
+    def handle_starttag(self, tag: str, attrs: list) -> None:
+        if tag == 'tr': self.row = []
+        if tag in ('td', 'th') and self.row is not None: self.cell = []
+    def handle_data(self, data: str) -> None:
+        self.text.append(data.strip())
+        if self.cell is not None: self.cell.append(data)
+    def handle_endtag(self, tag: str) -> None:
+        if tag in ('td', 'th') and self.cell is not None:
+            self.row.append(' '.join(''.join(self.cell).split())); self.cell = None
+        if tag == 'tr' and self.row is not None:
+            self.rows.append(self.row); self.row = None
 
-def holidays():
+
+def events(data_dir: Path = DATA) -> pd.DataFrame:
+    return pd.read_parquet(traffic_file(data_dir,'events.parquet'))
+
+def holidays(*, data_dir: Path = DATA, source_cache: Path = SOURCES, output_dir: Path = PREP) -> None:
+    """Parse published annual editions; derive event-time calendar features."""
+    output_dir.mkdir(parents=True, exist_ok=True)
     rows = []
     editions = []
     for year in range(2023, 2027):
-        path = SOURCES / f'holidays_{year}.html'
-        soup = BeautifulSoup(path.read_bytes(), 'html.parser')
-        text = soup.get_text(' ', strip=True)
+        path = source_cache / f'holidays_{year}.html'
+        page = _HolidayHTML(); page.feed(path.read_text(encoding='utf-8-sig'))
+        text = ' '.join(page.text)
         assert f'General holidays for {year}' in text
         dates = {2023: '2022-05-13', 2024: '2023-05-25', 2025: '2024-05-03', 2026: '2025-05-16'}
         published = pd.Timestamp(dates[year] + ' 11:00', tz='Asia/Hong_Kong')
@@ -32,8 +50,7 @@ def holidays():
         meta = json.loads(path.with_suffix('.html.meta.json').read_text(encoding='utf-8'))
         common = {'available_at': published, 'source_url': meta['requested_url'], 'source_retrieved_at': pd.Timestamp(meta['retrieved_at']), 'source_sha256': meta['sha256']}
         explicit = []
-        for tr in soup.find_all('tr'):
-            cells = [c.get_text(' ', strip=True) for c in tr.find_all(['td', 'th'])]
+        for cells in page.rows:
             if len(cells) != 3 or cells[0] == 'Every Sunday':
                 continue
             if not re.match('^[A-Za-z]+ \\d{1,2}$', cells[1]):
@@ -50,21 +67,23 @@ def holidays():
         editions.append({'year': year, 'published_at': published.isoformat(), 'named_holidays': len(explicit), **{k: str(v) for k, v in common.items()}})
     table = pd.DataFrame(rows)
     assert table.local_date.is_unique
-    table.to_parquet(PREP / 'official_holiday_editions.parquet', index=False)
-    context = calendar_features(events()[['event_id', 'prediction_time']], table)
+    table.to_parquet(output_dir / 'official_holiday_editions.parquet', index=False)
+    context = calendar_features(events(data_dir)[['event_id', 'prediction_time']], table)
     assert context.is_public_holiday.notna().all()
     assert (context.calendar_max_source_available_at <= context.prediction_time).all()
-    context.to_parquet(PREP / 'calendar_event_features.parquet', index=False)
-    (PREP / 'holiday_source_manifest.json').write_text(json.dumps(editions, indent=2), encoding='utf-8')
+    context.to_parquet(output_dir / 'calendar_event_features.parquet', index=False)
+    (output_dir / 'holiday_source_manifest.json').write_text(json.dumps(editions, indent=2), encoding='utf-8')
     print('Official calendar:', len(table), 'holidays;', len(context), 'event features', flush=True)
 
-def weather():
+def weather(*, data_dir: Path = DATA, source_cache: Path = SOURCES, output_dir: Path = PREP) -> None:
+    """Replay archived station observations available before each prediction."""
+    output_dir.mkdir(parents=True, exist_ok=True)
     out = []
     errors = []
     inventories = []
-    event_times = events().prediction_time.astype('int64').to_numpy()
+    event_times = events(data_dir).prediction_time.astype('int64').to_numpy()
     for kind, column, position in [('temperature', 'temperature_c', 2), ('wind', 'wind_speed_kmh', 3)]:
-        paths = sorted(SOURCES.glob(f'{kind}_????????.zip'))
+        paths = sorted(source_cache.glob(f'{kind}_????????.zip'))
         for j, path in enumerate(paths, 1):
             metadata = json.loads(path.with_suffix('.zip.meta.json').read_text(encoding='utf-8'))
             count = 0
@@ -118,8 +137,8 @@ def weather():
                 print(kind, j, '/', len(paths), 'archives parsed', flush=True)
     observations = pd.DataFrame(out)
     observations = observations.sort_values(['kind', 'available_at', 'observed_at', 'source_sha256']).drop_duplicates(['kind', 'available_at', 'observed_at', 'source_sha256'])
-    observations.to_parquet(PREP / 'weather_station_snapshots.parquet', index=False)
-    e = events()[['event_id', 'prediction_time']].sort_values('prediction_time')
+    observations.to_parquet(output_dir / 'weather_station_snapshots.parquet', index=False)
+    e = events(data_dir)[['event_id', 'prediction_time']].sort_values('prediction_time')
     result = e.copy()
     for kind, column in [('temperature', 'temperature_c'), ('wind', 'wind_speed_kmh')]:
         source = observations.loc[observations.kind.eq(kind)].copy()
@@ -141,9 +160,9 @@ def weather():
         populated = result[value].notna()
         assert (result.loc[populated, kind + '_available_at'] <= result.loc[populated, 'prediction_time']).all()
         assert result.loc[populated, kind + '_age_minutes'].between(0, 60).all()
-    result.to_parquet(PREP / 'weather_event_features.parquet', index=False)
-    (PREP / 'weather_parser_exclusions.json').write_text(json.dumps(errors, indent=2), encoding='utf-8')
-    pd.DataFrame(inventories).to_csv(PREP / 'weather_archive_inventory.csv', index=False)
+    result.to_parquet(output_dir / 'weather_event_features.parquet', index=False)
+    (output_dir / 'weather_parser_exclusions.json').write_text(json.dumps(errors, indent=2), encoding='utf-8')
+    pd.DataFrame(inventories).to_csv(output_dir / 'weather_archive_inventory.csv', index=False)
     print('Weather event features:', result.shape, 'temperature known', result.temperature_c.notna().sum(), 'wind known', result.wind_speed_kmh.notna().sum(), flush=True)
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()

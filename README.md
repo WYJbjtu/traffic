@@ -1,5 +1,11 @@
 # Hong Kong Traffic Recovery Prediction
 
+## Tianhao96车道重跑与可复核交付（2026-11-04）
+
+- [已执行Notebook：真实预测、指标、配置和来源核验](notebooks/Tianhao_新版96车道_完整重跑_20261104.ipynb)。默认离线，不依赖作者目录或模型二进制。
+- [审查、复现及main已有时间/天气特征说明](docs/tianhao_release96_review.md)。
+- [SHA-256结果与来源清单](experiments/tianhao/expanded96_20261104/README.md)：224候选、20臂、557160条预测；恢复确认目标、缺flow/空间及既往测试接触限制均保留。
+
 ## Python Research Explorer（2026-11-02）
 
 无需下载长窗口 Release，即可从已保存的真实实验产物启动只读研究展示：

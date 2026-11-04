@@ -2,7 +2,6 @@
 from __future__ import annotations
 from pathlib import Path
 import argparse, concurrent.futures, json, sys, zipfile
-from bs4 import BeautifulSoup
 from paths import ROOT, BASE, DATA
 sys.path.insert(0, str(ROOT / 'src'))
 from traffic_recovery.data.http import EvidenceClient

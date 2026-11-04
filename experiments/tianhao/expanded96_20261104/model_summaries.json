@@ -1,0 +1,282 @@
+[
+  {
+    "model": "logistic_regression",
+    "feature_set": "local",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.5943822764897774,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false
+  },
+  {
+    "model": "decision_tree",
+    "feature_set": "local",
+    "horizon_min": 30,
+    "parameters": {
+      "max_depth": 6,
+      "min_samples_leaf": 10,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.5391929628862278,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "tree_depth": 6,
+    "tree_leaves": 55,
+    "tree_text": "|--- numeric__baseline_kmh <= 60.00\n|   |--- numeric__baseline_kmh <= 49.75\n|   |   |--- numeric__speed_ratio <= 0.22\n|   |   |   |--- class: 0\n|   |   |--- numeric__speed_ratio >  0.22\n|   |   |   |--- numeric__speed_kmh <= 23.25\n|   |   |   |   |--- numeric__speed_ratio <= 0.30\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.24\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.24\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__speed_ratio >  0.30\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.31\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.31\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_kmh >  23.25\n|   |   |   |   |--- numeric__valid_slots <= 9.00\n|   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__valid_slots >  9.00\n|   |   |   |   |   |--- numeric__speed_kmh <= 23.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_kmh >  23.75\n|   |   |   |   |   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  49.75\n|   |   |--- numeric__speed_kmh <= 10.25\n|   |   |   |--- numeric__baseline_kmh <= 57.50\n|   |   |   |   |--- numeric__baseline_kmh <= 55.75\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.14\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.14\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__baseline_kmh >  55.75\n|   |   |   |   |   |--- numeric__valid_slots <= 9.00\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__valid_slots >  9.00\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  57.50\n|   |   |   |   |--- numeric__speed_kmh <= 6.75\n|   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__speed_kmh >  6.75\n|   |   |   |   |   |--- numeric__speed_kmh <= 8.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_kmh >  8.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |--- numeric__speed_kmh >  10.25\n|   |   |   |--- numeric__valid_slots <= 9.00\n|   |   |   |   |--- numeric__speed_ratio <= 0.45\n|   |   |   |   |   |--- numeric__speed_kmh <= 12.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_kmh >  12.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__speed_ratio >  0.45\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.46\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__speed_ratio >  0.46\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__valid_slots >  9.00\n|   |   |   |   |--- numeric__speed_kmh <= 20.75\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.28\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.28\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__speed_kmh >  20.75\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.42\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.42\n|   |   |   |   |   |   |--- class: 0\n|--- numeric__baseline_kmh >  60.00\n|   |--- numeric__baseline_kmh <= 73.50\n|   |   |--- numeric__speed_kmh <= 8.25\n|   |   |   |--- numeric__baseline_kmh <= 70.25\n|   |   |   |   |--- numeric__baseline_kmh <= 65.25\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.10\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.10\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__baseline_kmh >  65.25\n|   |   |   |   |   |--- numeric__baseline_kmh <= 66.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  66.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  70.25\n|   |   |   |   |--- numeric__baseline_kmh <= 71.75\n|   |   |   |   |   |--- numeric__valid_slots <= 7.00\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__valid_slots >  7.00\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__baseline_kmh >  71.75\n|   |   |   |   |   |--- numeric__speed_kmh <= 6.00\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__speed_kmh >  6.00\n|   |   |   |   |   |   |--- class: 1\n|   |   |--- numeric__speed_kmh >  8.25\n|   |   |   |--- numeric__speed_ratio <= 0.18\n|   |   |   |   |--- numeric__speed_ratio <= 0.17\n|   |   |   |   |   |--- numeric__valid_slots <= 8.50\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__valid_slots >  8.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__speed_ratio >  0.17\n|   |   |   |   |   |--- numeric__valid_slots <= 7.00\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__valid_slots >  7.00\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.18\n|   |   |   |   |--- numeric__baseline_kmh <= 72.75\n|   |   |   |   |   |--- numeric__baseline_kmh <= 63.00\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  63.00\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__baseline_kmh >  72.75\n|   |   |   |   |   |--- numeric__speed_kmh <= 18.25\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__speed_kmh >  18.25\n|   |   |   |   |   |   |--- class: 1\n|   |--- numeric__baseline_kmh >  73.50\n|   |   |--- numeric__baseline_kmh <= 86.50\n|   |   |   |--- numeric__baseline_kmh <= 74.75\n|   |   |   |   |--- numeric__speed_ratio <= 0.21\n|   |   |   |   |   |--- numeric__baseline_kmh <= 74.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  74.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__speed_ratio >  0.21\n|   |   |   |   |   |--- numeric__baseline_kmh <= 74.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  74.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  74.75\n|   |   |   |   |--- numeric__baseline_kmh <= 82.75\n|   |   |   |   |   |--- numeric__baseline_kmh <= 80.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  80.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__baseline_kmh >  82.75\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.33\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.33\n|   |   |   |   |   |   |--- class: 1\n|   |   |--- numeric__baseline_kmh >  86.50\n|   |   |   |--- numeric__baseline_kmh <= 95.00\n|   |   |   |   |--- numeric__baseline_kmh <= 89.75\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.13\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.13\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__baseline_kmh >  89.75\n|   |   |   |   |   |--- numeric__baseline_kmh <= 91.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  91.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  95.00\n|   |   |   |   |--- numeric__valid_slots <= 8.50\n|   |   |   |   |   |--- numeric__baseline_kmh <= 112.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  112.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__valid_slots >  8.50\n|   |   |   |   |   |--- numeric__speed_kmh <= 49.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_kmh >  49.75\n|   |   |   |   |   |   |--- class: 0\n"
+  },
+  {
+    "model": "logistic_l1",
+    "feature_set": "local",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 0.01,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.593401110782213,
+    "base_fit_n": 13002,
+    "calibration_n": 0,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "calibration_method": null,
+    "calibration_start": null
+  },
+  {
+    "model": "svm_rbf",
+    "feature_set": "local",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "gamma": 0.1,
+      "class_weight": "balanced"
+    },
+    "validation_log_loss": 0.5540092381505675,
+    "base_fit_n": 8947,
+    "calibration_n": 4055,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "calibration_method": "sigmoid",
+    "calibration_start": "2024-07-01T00:00:00+08:00",
+    "support_vectors": 6478
+  },
+  {
+    "model": "logistic_regression",
+    "feature_set": "local+history",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.564735175823829,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false
+  },
+  {
+    "model": "decision_tree",
+    "feature_set": "local+history",
+    "horizon_min": 30,
+    "parameters": {
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.5436435112298305,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "tree_depth": 4,
+    "tree_leaves": 16,
+    "tree_text": "|--- numeric__speed_slope_15m_ratio_per_min <= -0.03\n|   |--- numeric__baseline_kmh <= 57.50\n|   |   |--- numeric__speed_kmh <= 19.25\n|   |   |   |--- numeric__speed_ratio <= 0.18\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.18\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__speed_kmh >  19.25\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |   |   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  57.50\n|   |   |--- numeric__speed_mean_15m_ratio <= 0.52\n|   |   |   |--- numeric__baseline_kmh <= 73.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  73.50\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__speed_mean_15m_ratio >  0.52\n|   |   |   |--- numeric__baseline_kmh <= 73.50\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__baseline_kmh >  73.50\n|   |   |   |   |--- class: 0\n|--- numeric__speed_slope_15m_ratio_per_min >  -0.03\n|   |--- numeric__baseline_kmh <= 51.50\n|   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.02\n|   |   |   |--- numeric__speed_change_15m_ratio <= -0.26\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_change_15m_ratio >  -0.26\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.02\n|   |   |   |--- numeric__speed_mean_15m_ratio <= 0.59\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_mean_15m_ratio >  0.59\n|   |   |   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  51.50\n|   |   |--- numeric__baseline_kmh <= 87.75\n|   |   |   |--- numeric__baseline_kmh <= 60.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  60.00\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__baseline_kmh >  87.75\n|   |   |   |--- numeric__speed_ratio <= 0.49\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.49\n|   |   |   |   |--- class: 0\n"
+  },
+  {
+    "model": "logistic_l1",
+    "feature_set": "local+history",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 1.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.5647011701813187,
+    "base_fit_n": 13002,
+    "calibration_n": 0,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "calibration_method": null,
+    "calibration_start": null
+  },
+  {
+    "model": "svm_rbf",
+    "feature_set": "local+history",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "gamma": 0.1,
+      "class_weight": "balanced"
+    },
+    "validation_log_loss": 0.5394584537320929,
+    "base_fit_n": 8947,
+    "calibration_n": 4055,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "calibration_method": "sigmoid",
+    "calibration_start": "2024-07-01T00:00:00+08:00",
+    "support_vectors": 5901
+  },
+  {
+    "model": "logistic_regression",
+    "feature_set": "local+history+calendar",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.5581975908083614,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false
+  },
+  {
+    "model": "decision_tree",
+    "feature_set": "local+history+calendar",
+    "horizon_min": 30,
+    "parameters": {
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.5331618822863979,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "tree_depth": 4,
+    "tree_leaves": 16,
+    "tree_text": "|--- numeric__hour_cos <= 0.21\n|   |--- numeric__speed_slope_15m_ratio_per_min <= -0.03\n|   |   |--- numeric__baseline_kmh <= 57.50\n|   |   |   |--- numeric__hour_cos <= -0.41\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__hour_cos >  -0.41\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__baseline_kmh >  57.50\n|   |   |   |--- numeric__baseline_kmh <= 73.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  73.50\n|   |   |   |   |--- class: 0\n|   |--- numeric__speed_slope_15m_ratio_per_min >  -0.03\n|   |   |--- numeric__baseline_kmh <= 49.75\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.03\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.03\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__baseline_kmh >  49.75\n|   |   |   |--- numeric__baseline_kmh <= 80.25\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  80.25\n|   |   |   |   |--- class: 0\n|--- numeric__hour_cos >  0.21\n|   |--- numeric__speed_slope_15m_ratio_per_min <= -0.02\n|   |   |--- numeric__speed_mean_15m_ratio <= 0.51\n|   |   |   |--- numeric__speed_kmh <= 9.75\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_kmh >  9.75\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__speed_mean_15m_ratio >  0.51\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.03\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.03\n|   |   |   |   |--- class: 1\n|   |--- numeric__speed_slope_15m_ratio_per_min >  -0.02\n|   |   |--- numeric__hour_sin <= -0.79\n|   |   |   |--- numeric__hour_sin <= -0.97\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__hour_sin >  -0.97\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__hour_sin >  -0.79\n|   |   |   |--- numeric__speed_ratio <= 0.37\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.37\n|   |   |   |   |--- class: 0\n"
+  },
+  {
+    "model": "logistic_l1",
+    "feature_set": "local+history+calendar",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 1.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.5581675240058667,
+    "base_fit_n": 13002,
+    "calibration_n": 0,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "calibration_method": null,
+    "calibration_start": null
+  },
+  {
+    "model": "svm_rbf",
+    "feature_set": "local+history+calendar",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "gamma": "scale",
+      "class_weight": "balanced"
+    },
+    "validation_log_loss": 0.5229373196140784,
+    "base_fit_n": 8947,
+    "calibration_n": 4055,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "calibration_method": "sigmoid",
+    "calibration_start": "2024-07-01T00:00:00+08:00",
+    "support_vectors": 5587
+  },
+  {
+    "model": "logistic_regression",
+    "feature_set": "local+history+calendar+weather",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.5585417432053134,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false
+  },
+  {
+    "model": "decision_tree",
+    "feature_set": "local+history+calendar+weather",
+    "horizon_min": 30,
+    "parameters": {
+      "max_depth": 6,
+      "min_samples_leaf": 5,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.5202895516648697,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "tree_depth": 6,
+    "tree_leaves": 60,
+    "tree_text": "|--- numeric__hour_cos <= 0.21\n|   |--- numeric__speed_slope_15m_ratio_per_min <= -0.03\n|   |   |--- numeric__baseline_kmh <= 57.50\n|   |   |   |--- numeric__hour_cos <= -0.41\n|   |   |   |   |--- numeric__hour_sin <= -0.67\n|   |   |   |   |   |--- numeric__baseline_kmh <= 55.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  55.75\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__hour_sin >  -0.67\n|   |   |   |   |   |--- numeric__hour_cos <= -0.94\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__hour_cos >  -0.94\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__hour_cos >  -0.41\n|   |   |   |   |--- numeric__hour_cos <= 0.14\n|   |   |   |   |   |--- numeric__speed_mean_15m_ratio <= 0.65\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_mean_15m_ratio >  0.65\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__hour_cos >  0.14\n|   |   |   |   |   |--- numeric__wind_speed_kmh <= 9.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__wind_speed_kmh >  9.50\n|   |   |   |   |   |   |--- class: 1\n|   |   |--- numeric__baseline_kmh >  57.50\n|   |   |   |--- numeric__baseline_kmh <= 73.50\n|   |   |   |   |--- numeric__speed_mean_15m_ratio <= 0.50\n|   |   |   |   |   |--- numeric__baseline_kmh <= 70.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  70.25\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__speed_mean_15m_ratio >  0.50\n|   |   |   |   |   |--- numeric__hour_cos <= -0.47\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__hour_cos >  -0.47\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  73.50\n|   |   |   |   |--- numeric__hour_sin <= 0.74\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.34\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.34\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__hour_sin >  0.74\n|   |   |   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.06\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.06\n|   |   |   |   |   |   |--- class: 0\n|   |--- numeric__speed_slope_15m_ratio_per_min >  -0.03\n|   |   |--- numeric__baseline_kmh <= 49.75\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.03\n|   |   |   |   |--- numeric__hour_sin <= -0.39\n|   |   |   |   |   |--- numeric__speed_mean_15m_ratio <= 0.63\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_mean_15m_ratio >  0.63\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__hour_sin >  -0.39\n|   |   |   |   |   |--- numeric__temperature_c <= 13.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__temperature_c >  13.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.03\n|   |   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.02\n|   |   |   |   |   |--- numeric__speed_change_15m_ratio <= -0.26\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_change_15m_ratio >  -0.26\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.02\n|   |   |   |   |   |--- numeric__temperature_c <= 30.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__temperature_c >  30.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |--- numeric__baseline_kmh >  49.75\n|   |   |   |--- numeric__baseline_kmh <= 80.25\n|   |   |   |   |--- numeric__baseline_kmh <= 63.00\n|   |   |   |   |   |--- numeric__hour_sin <= 0.80\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__hour_sin >  0.80\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__baseline_kmh >  63.00\n|   |   |   |   |   |--- numeric__baseline_kmh <= 73.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  73.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  80.25\n|   |   |   |   |--- numeric__hour_sin <= 0.71\n|   |   |   |   |   |--- numeric__speed_mean_15m_ratio <= 0.57\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_mean_15m_ratio >  0.57\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__hour_sin >  0.71\n|   |   |   |   |   |--- numeric__speed_mean_15m_ratio <= 0.58\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_mean_15m_ratio >  0.58\n|   |   |   |   |   |   |--- class: 0\n|--- numeric__hour_cos >  0.21\n|   |--- numeric__speed_slope_15m_ratio_per_min <= -0.02\n|   |   |--- numeric__speed_mean_15m_ratio <= 0.51\n|   |   |   |--- numeric__speed_kmh <= 9.75\n|   |   |   |   |--- numeric__temperature_c <= 12.95\n|   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__temperature_c >  12.95\n|   |   |   |   |   |--- numeric__baseline_kmh <= 86.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  86.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_kmh >  9.75\n|   |   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.03\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.21\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_ratio >  0.21\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.03\n|   |   |   |   |   |--- numeric__hour_cos <= 0.33\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__hour_cos >  0.33\n|   |   |   |   |   |   |--- class: 1\n|   |   |--- numeric__speed_mean_15m_ratio >  0.51\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.03\n|   |   |   |   |--- numeric__speed_kmh <= 15.75\n|   |   |   |   |   |--- numeric__speed_ratio <= 0.23\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__speed_ratio >  0.23\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__speed_kmh >  15.75\n|   |   |   |   |   |--- numeric__hour_cos <= 0.99\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__hour_cos >  0.99\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.03\n|   |   |   |   |--- numeric__baseline_kmh <= 88.75\n|   |   |   |   |   |--- numeric__temperature_c <= 23.55\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__temperature_c >  23.55\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__baseline_kmh >  88.75\n|   |   |   |   |   |--- numeric__dow_sin <= 0.61\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |   |--- numeric__dow_sin >  0.61\n|   |   |   |   |   |   |--- class: 1\n|   |--- numeric__speed_slope_15m_ratio_per_min >  -0.02\n|   |   |--- numeric__hour_sin <= -0.79\n|   |   |   |--- numeric__hour_cos <= 0.25\n|   |   |   |   |--- numeric__baseline_kmh <= 72.50\n|   |   |   |   |   |--- numeric__dow_sin <= -0.22\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__dow_sin >  -0.22\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__baseline_kmh >  72.50\n|   |   |   |   |   |--- numeric__baseline_kmh <= 79.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  79.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |--- numeric__hour_cos >  0.25\n|   |   |   |   |--- numeric__temperature_c <= 20.65\n|   |   |   |   |   |--- numeric__speed_kmh <= 25.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__speed_kmh >  25.75\n|   |   |   |   |   |   |--- class: 1\n|   |   |   |   |--- numeric__temperature_c >  20.65\n|   |   |   |   |   |--- numeric__baseline_kmh <= 87.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__baseline_kmh >  87.75\n|   |   |   |   |   |   |--- class: 0\n|   |   |--- numeric__hour_sin >  -0.79\n|   |   |   |--- numeric__speed_mean_15m_ratio <= 0.37\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_mean_15m_ratio >  0.37\n|   |   |   |   |--- numeric__dow_sin <= 0.61\n|   |   |   |   |   |--- numeric__wind_speed_kmh <= 7.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__wind_speed_kmh >  7.50\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |--- numeric__dow_sin >  0.61\n|   |   |   |   |   |--- numeric__hour_cos <= 0.95\n|   |   |   |   |   |   |--- class: 0\n|   |   |   |   |   |--- numeric__hour_cos >  0.95\n|   |   |   |   |   |   |--- class: 0\n"
+  },
+  {
+    "model": "logistic_l1",
+    "feature_set": "local+history+calendar+weather",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 0.1,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.558438528158384,
+    "base_fit_n": 13002,
+    "calibration_n": 0,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "calibration_method": null,
+    "calibration_start": null
+  },
+  {
+    "model": "svm_rbf",
+    "feature_set": "local+history+calendar+weather",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "gamma": 0.01,
+      "class_weight": "balanced"
+    },
+    "validation_log_loss": 0.5307254770190492,
+    "base_fit_n": 8947,
+    "calibration_n": 4055,
+    "train_rows": 13002,
+    "validation_rows": 7848,
+    "test_rows": 7008,
+    "refit_after_selection": false,
+    "calibration_method": "sigmoid",
+    "calibration_start": "2024-07-01T00:00:00+08:00",
+    "support_vectors": 6115
+  }
+]
