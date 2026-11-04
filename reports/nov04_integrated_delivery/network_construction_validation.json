@@ -1,0 +1,31 @@
+{
+  "status": "SOURCE HASH AND SQLITE COUNTS VERIFIED; HISTORICAL TOPOLOGY NOT VERIFIED",
+  "source_hashes": {
+    "CENTERLINE.gml": {
+      "path": "data/local/audit-20261019-21/network_centerline.gml",
+      "sha256": "4fad0303e65c759ac7abe8eea3920b3ffcfcd5149c978fa9540bf032933a32c2",
+      "locally_verified": true
+    },
+    "INTERSECTION.gml": {
+      "path": "data/local/pilot/network_http/INTERSECTION.gml",
+      "sha256": "79119240315ea989b18e715d54f7146ff8bcbc9c51aeb91ed46857c0bf72fa5f",
+      "locally_verified": true
+    },
+    "TURN.gml": {
+      "path": "data/local/pilot/network_http/TURN.gml",
+      "sha256": "790ce25722354a796f59becc7c6adf82766ebb4289f96621ef118ed4179a38b0",
+      "locally_verified": true
+    }
+  },
+  "roads_sqlite": 36525,
+  "arcs_sqlite": 48080,
+  "candidate_transition_counts": {
+    "uturn_unverified": 16579,
+    "intersection_supported_candidate": 62625,
+    "turn_restricted": 12818
+  },
+  "source_manifest_sha256": "311bacce3754e40cc32527bc6d6ead7e35c862307bb295923e2f8cd3ca521105",
+  "verified_detector_mappings": 0,
+  "verified_directed_relations": 0,
+  "verification_basis": "No signed mapping/transition approval artifact was supplied to this run; zero *admitted*, not a claim that no valid roads exist."
+}

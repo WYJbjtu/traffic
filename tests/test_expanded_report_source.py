@@ -1,6 +1,6 @@
 """Synthetic path/evidence tests; not research observations."""
 import pytest
-from scripts.report_expanded_january import selection_directory
+from traffic_recovery.data.selection_evidence import selection_directory
 from traffic_recovery.data.http import sha256_file
 
 

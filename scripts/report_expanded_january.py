@@ -15,6 +15,7 @@ from shapely.strtree import STRtree
 
 from traffic_recovery.data.events import UNIT, fit_reference
 from traffic_recovery.data.http import sha256_file
+from traffic_recovery.data.selection_evidence import selection_directory
 
 
 def district_round_robin(eligible: pd.DataFrame, limit: int) -> pd.DataFrame:
@@ -30,17 +31,6 @@ def district_round_robin(eligible: pd.DataFrame, limit: int) -> pd.DataFrame:
         if len(indices)==before:
             raise ValueError('Not enough eligible candidates for geographic alternative')
     return eligible.loc[indices].copy()
-
-
-def selection_directory(result: dict, override: Path | None = None) -> Path:
-    """Locate the original selection evidence without assuming the author's machine."""
-    directory = override if override is not None else Path(result['selection_frozen_from']).parent
-    profile = directory / 'coverage_lane_day.parquet'
-    if not profile.is_file():
-        raise FileNotFoundError(f'Missing frozen selection profile: {profile}; set --selection-directory')
-    if sha256_file(profile) != result['selection_profile_sha256']:
-        raise ValueError('Frozen selection profile checksum mismatch')
-    return directory
 
 
 def report(january: Path, output: Path, *, candidate_config: Path, metadata: Path,
