@@ -1,0 +1,26 @@
+{
+  "captured_at_utc": "2026-11-02T11:26:16.597398+00:00",
+  "execution_main_commit": "4309351ea6c365918adbb5fc6b12c7f37c9dea63",
+  "verified_months": 45,
+  "missing_months": 0,
+  "invalid_months": [],
+  "boundary": {
+    "month": "202610",
+    "path": "raw/202610/raw_202610.zip",
+    "bytes": 30316747,
+    "sha256": "eb22737721613967283fc37379a146b232e308ddd8d8ee66d313516bd923e8ad",
+    "snapshots": 853,
+    "xml_bytes": 607593616,
+    "first_capture": "20261001-0001",
+    "last_capture": "20261001-2357",
+    "validation": "Official monthly byte/member counts; unique in-month captures; first/last XML parsed. Full CRC and row checks occur during ingestion.",
+    "scope": "2026-10-01 capture-day boundary; not an extra evaluation month"
+  },
+  "current_stage": "january426",
+  "full_january_reference_status": "running",
+  "continuity426_status": "pending",
+  "expanded_96_event_count": null,
+  "expanded_96_dataset_status": "pending",
+  "no_model_training": true,
+  "status_semantics": "Snapshot only; a running stage is not a successful result. Live status is on the data owner machine."
+}

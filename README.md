@@ -18,6 +18,10 @@ uv run --locked --with 'streamlit==1.51.0' --with 'plotly==6.3.1' streamlit run 
 
 **EXPLORATORY — NOT APPROVED AS FINAL RESULTS**：基于7597个暂定车道事件、6799个已知30分钟标签，14个比较臂。目标是恢复确认，与proposal恢复开始仍有差异；空间实验未完成。不包含大型原始数据、模型文件或缓存。
 
+## 96-lane expansion execution handoff (November 2, 2026)
+
+The completed [96-lane data access and Chinese handoff](docs/expanded96_data_access.md) provide 35,782,769 five-minute rows and 30,452 recovery events, plus the 426-candidate longitudinal quality report. Download the independent [96-lane Release](https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/tag/data-expanded-96-2023-2026-v1). The older 24-lane / 7,597-event release remains separate. Tests: 178 passed; no models were trained.
+
 ## Long-window data handoff (2023–September 2026)
 
 The [long-window data handoff](docs/long_window_data.md) covers 1,369 days, 24 selected lane units and 7,597 provisional recovery events. This is separate from the **73-event October 2026 short pilot** below. Use `configs/long_window.json` and a separate data root; do not mix their event tables or fitted references. See [data access and prepared-package instructions](docs/long_window_data_access.md). Large datasets are not committed to Git. Download the **[prepared dataset (~1.67 GB)](https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/tag/data-long-window-2023-2026-v1)** from Releases; the release includes usage instructions and SHA-256 verification.

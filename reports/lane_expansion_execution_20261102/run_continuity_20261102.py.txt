@@ -1,0 +1,31 @@
+from pathlib import Path
+from datetime import datetime,timezone
+import subprocess,json,os,sys
+ROOT=Path(__file__).parents[1];PROJECT=ROOT/'project';OUT=ROOT/'expansion'
+os.chdir(PROJECT)
+COMMIT=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
+BASE=[sys.executable,'-u','-m']
+steps=[
+ ('archive_scan',BASE+['scripts.scan_expanded_archives','--source-root',str(ROOT),'--inventory',str(ROOT/'metadata/archive_inventory.json'),'--output',str(OUT/'archive_inventory-v1.csv')],OUT/'archive_inventory-v1.csv'),
+ ('january426',BASE+['scripts.validate_january_references','--root',str(ROOT),'--output',str(OUT/'january426-v1'),'--workers','2'],OUT/'january426-v1/reference_manifest.json'),
+ ('january_report',BASE+['scripts.report_expanded_january','--january',str(OUT/'january426-v1'),'--output',str(OUT/'reports-january426-v1')],OUT/'reports-january426-v1/summary.json'),
+ ('continuity426',BASE+['scripts.profile_expanded_archives','--source-root',str(ROOT),'--inventory',str(ROOT/'metadata/archive_inventory.json'),'--january-reference',str(OUT/'january426-v1'),'--output',str(OUT/'continuity426-v1'),'--workers','2'],OUT/'continuity426-v1/continuity_manifest.json'),
+ ('labels96',BASE+['scripts.label_expanded_96','--profile-root',str(OUT/'continuity426-v1'),'--january-reference',str(OUT/'january426-v1'),'--config','configs/long_window_96_candidate.json','--output',str(OUT/'pilot96-id-order-v1')],OUT/'pilot96-id-order-v1/pilot_manifest.json'),
+ ('tests',[sys.executable,'-m','pytest','-q'],None)]
+state={'main_commit':COMMIT,'started_at_utc':datetime.now(timezone.utc).isoformat(),'stages':[]}
+def status():
+ temp=OUT/'run_status.tmp';temp.write_text(json.dumps(state,indent=2),encoding='utf-8');temp.replace(OUT/'run_status.json')
+for name,command,completed in steps:
+ stage={'name':name,'command':command,'started_at_utc':datetime.now(timezone.utc).isoformat(),'status':'running'}
+ state['current_stage']=name;state['stages'].append(stage);status()
+ print('START',name,flush=True)
+ if completed and completed.exists():
+  raise RuntimeError('Existing output requires review before rerun: '+str(completed))
+ with (OUT/(name+'.log')).open('w',encoding='utf-8') as log:
+  result=subprocess.run(command,stdout=log,stderr=subprocess.STDOUT)
+ stage.update(status='completed' if result.returncode==0 else 'failed',exit_code=result.returncode,finished_at_utc=datetime.now(timezone.utc).isoformat())
+ status()
+ if result.returncode:
+  print('FAILED',name,result.returncode,flush=True);sys.exit(result.returncode)
+ print('COMPLETE',name,flush=True)
+state['status']='all_stages_completed';status();print('ALL_STAGES_COMPLETED',flush=True)

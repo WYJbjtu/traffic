@@ -32,7 +32,19 @@ def district_round_robin(eligible: pd.DataFrame, limit: int) -> pd.DataFrame:
     return eligible.loc[indices].copy()
 
 
-def report(january: Path, output: Path, *, candidate_config: Path, metadata: Path) -> dict:
+def selection_directory(result: dict, override: Path | None = None) -> Path:
+    """Locate the original selection evidence without assuming the author's machine."""
+    directory = override if override is not None else Path(result['selection_frozen_from']).parent
+    profile = directory / 'coverage_lane_day.parquet'
+    if not profile.is_file():
+        raise FileNotFoundError(f'Missing frozen selection profile: {profile}; set --selection-directory')
+    if sha256_file(profile) != result['selection_profile_sha256']:
+        raise ValueError('Frozen selection profile checksum mismatch')
+    return directory
+
+
+def report(january: Path, output: Path, *, candidate_config: Path, metadata: Path,
+           selection: Path | None = None) -> dict:
     """Write lightweight CSV/JSON from checked January result; refuse overwrite."""
     if (output / 'january_reference.csv').exists():
         raise FileExistsError('Use a new report version; original measurements are immutable')
@@ -88,7 +100,8 @@ def report(january: Path, output: Path, *, candidate_config: Path, metadata: Pat
                 'detector_ids':group.detector_id.nunique(),'lane_units':len(group)})
     # First-week vs full-January baseline drift is purely retrospective quality
     # evidence within January, not a feature refit for validation or test.
-    week_paths=[Path('data/local/lane-expansion/source/selection/derived')/f'bins-202301{d:02d}.parquet' for d in range(1,8)]
+    selection_root = selection_directory(result, selection)
+    week_paths=[selection_root/f'bins-202301{d:02d}.parquet' for d in range(1,8)]
     first = pd.read_parquet(week_paths, filters=[[(k,'==',r[k]) for k in UNIT] for _,r in reference.iterrows()],
                             columns=UNIT+['timestamp','available_at','usable','speed_kmh'])
     week=fit_reference(first,fit_start=pd.Timestamp(original['observation_start']).tz_convert('Asia/Hong_Kong'),
@@ -158,8 +171,10 @@ def main() -> None:
     p.add_argument('--output',type=Path,default=Path('reports/lane_expansion_continuity'))
     p.add_argument('--config',type=Path,default=Path('configs/long_window_96_candidate.json'))
     p.add_argument('--metadata',type=Path,default=Path('data/sample/verified/detectors.csv'))
+    p.add_argument('--selection-directory',type=Path,default=None,
+                   help='Original first-week derived directory; defaults to verified reference manifest path')
     a=p.parse_args()
-    print(json.dumps(report(a.january,a.output,candidate_config=a.config,metadata=a.metadata),indent=2))
+    print(json.dumps(report(a.january,a.output,candidate_config=a.config,metadata=a.metadata,selection=a.selection_directory),indent=2))
 
 
 if __name__=='__main__':main()

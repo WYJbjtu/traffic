@@ -1,0 +1,6 @@
+scenario,lane_units,detectors,districts_current_metadata,full_jan_reference_pass,january_reference_bins_min,january_valid_30s_mean,january_usable_5m_mean,missing_lane_days_january,offline_lane_slots_january,conflict_lane_slots_january,new_event_count,train_validation_test_continuity
+Original 24,24,24,6,24,5267,0.7124393294504182,0.744763664874552,96,23435,10,,
+ID-order 48,48,48,7,48,5267,0.7117185166517324,0.7415457922640383,192,53113,22,,
+ID-order 96,96,96,12,96,5267,0.71748291890681,0.7453925384557945,384,60075,45,,
+All January 426,426,426,18,426,2929,0.7643537449307554,0.7954896343412927,1330,257177,150,,
+District-round-robin 96 (current metadata only),96,96,18,96,4283,0.7258426205943845,0.7503558561081243,364,68014,48,,

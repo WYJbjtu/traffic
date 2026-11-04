@@ -1,5 +1,7 @@
 # Long-window data access and separation from the short pilot
 
+The separate [96-lane expanded dataset](expanded96_data_access.md) is now published with 30,452 events. This page documents the original 24-lane package.
+
 This dataset is 2023-01-01 through 2026-09-30 (HKT), 24 selected lane units and 7,597 events. PR #6 is the separate October 7–21, 2026 short pilot with 73 events. Never combine their event tables, cohort/reference fits, configurations or measured results.
 
 Use `configs/long_window.json` and the long-window scripts exclusively for this study. Keep its data root separate from the short pilot root. See [long-window methods](long_window_data.md) and [measured results](../reports/long_window/README.md).
