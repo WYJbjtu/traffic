@@ -21,7 +21,8 @@ ROOT = Path(__file__).resolve().parents[1]
 INK, GREEN, RED, MUTED = "#344A5E", "#6C877B", "#A66B59", "#81878B"
 PALETTE = [INK, GREEN, RED, "#8B8574", "#687F92"]
 NAMES = {"logistic_regression": "Logistic Regression", "decision_tree": "Decision Tree",
-         "random_forest": "Random Forest", "hist_gradient_boosting": "HistGradientBoosting"}
+         "random_forest": "Random Forest", "hist_gradient_boosting": "HistGradientBoosting",
+         "xgboost": "XGBoost", "logistic_l1": "L1 Logistic Regression", "svm_rbf": "RBF SVM"}
 STEPS = ["local", "local+history", "local+history+flow"]
 st.set_page_config(page_title="HK Traffic Recovery | Research Explorer", layout="wide", initial_sidebar_state="collapsed")
 st.markdown("""<style>
@@ -290,6 +291,79 @@ def network():
     st.caption("See docs/spatial_feasibility.md for source hashes, map limitations, grade separations and the 40-row all-null spatial diagnostic. No proximity-derived links are drawn here.")
 
 
+def verified96(page: str, events_path: str, bins_path: str) -> None:
+    """Separate 96-lane saved evidence; never join to legacy 24-lane metrics."""
+    folder = ROOT / "experiments/tianhao/expanded96_20261104"
+    st.warning("96 frozen lane units · recovery_confirmation_v1 (NOT recovery start) · exploratory; historical test exposure. No verified spatial features or source-level volume in this Release.")
+    if page == "Network evidence":
+        st.info("Official geometry: 36,525 segments / 48,080 candidate arcs. Historical detector mapping approvals: 0; verified directed neighbors: 0; spatial-eligible events: 0. Spatial ablation: NO-GO. Candidate proximity is not approval.")
+        st.markdown("See [spatial gate](reports/nov04_integrated_delivery/spatial_gate_decision.md). The old 39-detector map is a different pilot, not a 96-lane map.")
+        return
+    if page == "Methodology":
+        st.write("30-minute confirmed recovery, not Proposal recovery start. Training-only preprocessing; validation-only candidate selection. Weather is a regional station proxy. Flow and spatial experiments are not part of the published 96-lane bundle.")
+        return
+    table = pd.read_csv(folder / "metrics.csv")
+    summary = pd.read_csv(folder / "metrics_summary.csv")
+    if page in ("Overview", "Feature ablation"):
+        st.subheader("Verified published 96-lane experiment · test split")
+        st.caption("30,452 events / 27,858 known labels across splits; 7,008 known test labels; 20 published arms and 557,160 saved predictions. No 24-lane results pooled.")
+        metric = st.selectbox("Metric", ["roc_auc", "pr_auc", "macro_f1", "log_loss"], key="verifiedmetric")
+        selected = summary.loc[summary.split.eq("test") & summary.model.isin(["logistic_regression", "logistic_l1", "svm_rbf", "decision_tree"])].copy()
+        selected["model"] = selected.model.map(NAMES)
+        st.dataframe(selected[["model", "feature_set", "n", metric]], hide_index=True, use_container_width=True)
+        st.markdown("**Member4 96-lane ensemble · separately prepared Local/History matrix**")
+        ensemble = pd.read_csv(ROOT / "reports/nov04_integrated_delivery/model_metrics.csv")
+        metric_col = {"pr_auc": "average_precision"}.get(metric, metric)
+        ours = ensemble.loc[ensemble.split.eq("test") & ensemble.horizon_min.eq(30) & ensemble.model.isin(["random_forest", "xgboost", "hist_gradient_boosting"])]
+        st.dataframe(ours[["model", "feature_set", "n_known", metric_col]], hide_index=True, use_container_width=True)
+        st.caption("Ensemble Calendar/Weather outcomes are NOT RUN until the full authentic feature matrix is rebuilt. Published Calendar combines time and holiday effects; these two preparation pipelines are not interchangeable without event/provenance alignment.")
+        return
+    if page == "Temporal patterns":
+        temporal(events_path)
+        return
+    from sklearn.metrics import precision_recall_curve, roc_curve
+    models = ["logistic_regression", "logistic_l1", "svm_rbf", "decision_tree"]
+    model = st.selectbox("Published 96-lane model", models, format_func=lambda m: NAMES[m], key="v96model")
+    sets = summary.loc[summary.model.eq(model), "feature_set"].drop_duplicates().tolist()
+    feature_set = st.selectbox("Published feature configuration", sets, key="v96set")
+    # Filter at the Parquet level; avoid loading 557,160 rows for a single view.
+    import pyarrow.parquet as pq
+    p = pq.read_table(folder / "predictions.parquet", filters=[("split", "=", "test"),
+        ("model", "=", model), ("feature_set", "=", feature_set)],
+        columns=["event_id", "prediction_time", "y_true", "y_score", "y_pred"]).to_pandas()
+    st.caption(f"Official Release · 96 lanes · test · n={len(p):,} · {NAMES[model]} · {feature_set}")
+    if page == "Event explorer":
+        if not events_path or not bins_path:
+            st.info("Configure the authenticated expanded96 events.parquet and cohort_bins.parquet to see observed as-of speed history; saved predictions alone contain no speeds.")
+        else:
+            event_id = st.selectbox("Test event", p.event_id.astype(str).tolist(), key="v96event")
+            row = p.loc[p.event_id.eq(event_id)].iloc[0]
+            try:
+                event = local_events(events_path).loc[lambda f: f.event_id.eq(event_id)]
+                if len(event) != 1:
+                    raise ValueError("Event absent or duplicate in configured Release")
+                source = event.iloc[0]
+                if source.prediction_time != row.prediction_time or int(source.label_30m) != row.y_true:
+                    raise ValueError("Configured Release truth differs from published prediction")
+                history = event_history(Path(bins_path), source)
+                st.line_chart(history.set_index("timestamp").speed_kmh)
+                st.write(f"Observed confirmation outcome: {row.y_true}; saved score: {row.y_score:.3f}")
+            except (OSError, ValueError, KeyError) as exc:
+                st.error(f"Authenticated event history unavailable: {exc}")
+        return
+    st.subheader("Saved test predictions · ROC / PR and confusion")
+    if p.y_true.nunique() == 2:
+        fpr, tpr, _ = roc_curve(p.y_true, p.y_score)
+        precision, recall, _ = precision_recall_curve(p.y_true, p.y_score)
+        fig = go.Figure()
+        fig.add_scatter(x=fpr, y=tpr, name="ROC")
+        fig.add_scatter(x=recall, y=precision, name="PR")
+        st.plotly_chart(theme(fig), use_container_width=True)
+    matrix = confusion_counts(p)
+    st.plotly_chart(theme(px.imshow(matrix, x=["Pred 0", "Pred 1"], y=["Actual 0", "Actual 1"], text_auto=True)), use_container_width=True)
+    st.dataframe(table.loc[table.model.eq(model) & table.feature_set.eq(feature_set) & table.split.eq("test"), ["metric_name", "metric_value"]], hide_index=True)
+
+
 def methodology():
     section("07", "Methods & limitations", "read the provenance before the score")
     st.markdown('<div class="band">OFFICIAL TD TRAFFIC → COVERAGE FILTER → EVENT CONFIRMATION → PREDICTION-TIME FEATURES → TEMPORAL SPLIT → TRAIN-FITTED MODELS → TEST EVALUATION</div>', unsafe_allow_html=True)
@@ -305,13 +379,16 @@ st.markdown("A Spatiotemporal Machine Learning Study")
 st.markdown('<div class="rule"></div>', unsafe_allow_html=True)
 page = st.radio("Research sections", ["Overview", "Event explorer", "Model laboratory", "Feature ablation", "Temporal patterns", "Network evidence", "Methodology"], horizontal=True, label_visibility="collapsed")
 with st.expander("Data & run configuration · optional local official inputs"):
-    experiment = st.selectbox("Active experiment (never pooled)", ["member4", "tianhao"], format_func=lambda x: "Member4 · 15/30/60m History + Flow" if x == "member4" else "Tianhao · 30m Calendar + Weather rerun")
+    experiment = st.selectbox("Dataset / experiment (never pooled)", ["verified96", "member4", "tianhao"], format_func=lambda x: {"verified96": "Verified published 96 lanes · 30m (L1/SVM/LR/DT)", "member4": "Historical 24 lanes · Member4", "tianhao": "Historical 24 lanes · Tianhao"}[x])
     events_path = st.text_input("Optional local official events.parquet (absolute or repo-relative path)")
     bins_path = st.text_input("Optional local official cohort_bins.parquet (file or directory)")
     def resolve(p: str) -> str:
         return str((ROOT / p).resolve()) if p else ""
     events_path, bins_path = resolve(events_path), resolve(bins_path)
 try:
+    if experiment == "verified96":
+        verified96(page, events_path, bins_path)
+        st.stop()
     m4, p4, meta = artifacts("member4")
     if page == "Overview": overview(m4, p4, meta)
     elif page == "Network evidence": network()

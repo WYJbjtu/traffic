@@ -56,11 +56,13 @@ def verify(*, strict_snapshot: bool = False) -> dict[str, object]:
     for group, part in pred.groupby(['model', 'feature_set', 'split']):
         check(np.array_equal(cm.loc[group, ['tn', 'fp', 'fn', 'tp']].to_numpy(),
                              confusion_matrix(part.y_true, part.y_pred, labels=[0, 1]).ravel()), 'Confusion counts')
-    notebook = json.loads((ROOT / 'notebooks/03_Tianhao_真实重跑与模型可视化.ipynb').read_text(encoding='utf-8'))
+    # The historical 22-cell Notebook is intentionally removed, not rebranded as
+    # a 96-lane run; verify only the current publication's renderable output here.
+    notebook = json.loads((ROOT / 'notebooks/Tianhao_新版96车道_完整重跑_20261104.ipynb').read_text(encoding='utf-8'))
     code = [c for c in notebook['cells'] if c['cell_type'] == 'code']
-    check([c['execution_count'] for c in code] == list(range(1, 23)), '22 executed code cells')
-    check(not any(o.get('output_type') == 'error' for c in code for o in c.get('outputs', [])), 'No notebook errors')
-    check(sum('image/png' in o.get('data', {}) for c in code for o in c.get('outputs', [])) == 10, '10 embedded figures')
+    check([c['execution_count'] for c in code] == list(range(1, 11)), '10 executed canonical code cells')
+    check(not any(o.get('output_type') == 'error' for c in code for o in c.get('outputs', [])), 'No canonical notebook errors')
+    check(sum('image/png' in o.get('data', {}) for c in code for o in c.get('outputs', [])) == 7, '7 canonical embedded figures')
     return {'status': 'passed', 'checks': checks, 'prediction_rows': len(pred), 'arms': 14, 'integrity': integrity,
             'note': 'Offline consistency checks only; no scientific approval or independent new test cohort.'}
 

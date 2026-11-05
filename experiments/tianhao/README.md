@@ -19,7 +19,7 @@ uv run --locked python experiments/tianhao/compare_saved_runs.py --output-dir re
 
 这是 PR #5 之后新增的真实数据实验与外部特征整合。复用仓库已有的 `external.calendar`、数据传输和 `models` 训练/评估函数；另包含本次核查发现的calendar/contract/evaluation保护性修复及回归测试；没有重做队友的事件标签、网络或集成模型。基于主分支已合并的 PR #7/#8 建立独立增量。
 
-先打开 [2026-11-01实际重跑 Notebook](../../notebooks/03_Tianhao_真实重跑与模型可视化.ipynb)（含代码及全部图表；Run All需要下载大文件），或用 [离线核验 Notebook](../../notebooks/02_Tianhao_真实模型与外部特征实验.ipynb)，或阅读 [结果说明](results/report.md)。02号Notebook默认离线核对已保存预测与指标；03号Notebook含实际特征准备和训练，Run All会重新运行。两者均可在GitHub直接预览已有输出。
+现行入口为 [96车道已执行 Notebook](../../notebooks/Tianhao_新版96车道_完整重跑_20261104.ipynb)（默认离线核验；完整重建需要经认证的Release及外部档案），见 [96车道复现说明](expanded96_20261104/README.md)。[历史24车道结果说明](results/report.md)与原始来源清单仍保留作溯源，不与96车道结果混比。
 
 ## 本次包含
 
@@ -39,7 +39,7 @@ uv sync --locked
 uv run --locked python experiments/tianhao/verify_review.py
 uv run --locked python experiments/tianhao/verify_shared_results.py
 uv pip install --python .venv/bin/python -r experiments/tianhao/requirements-notebook.txt
-uv run --locked jupyter lab notebooks/02_Tianhao_真实模型与外部特征实验.ipynb
+uv run --locked jupyter lab notebooks/Tianhao_新版96车道_完整重跑_20261104.ipynb
 ```
 
 Windows 安装可把 `.venv/bin/python` 换成 `.venv/Scripts/python.exe`。可选工具单独列出，不修改全组的 `pyproject.toml` 或锁文件。Notebook 所有代码可重新执行；核心核对脚本不依赖Jupyter。
@@ -81,10 +81,10 @@ uv run --locked python experiments/tianhao/verify_real_run.py
 
 - `rerun_20261101/` 是重新从已校验Release和真实外部来源准备特征、拟合模型后的轻量结果；`results/` 保留原历史运行。
 - 新旧预测的事件、时间、标签、分数与决策均一致；不同运行的版本/manifest字段不能要求逐字节相同。
-- 03号Notebook是仓库可移植版本，全部22个代码单元已执行，10张图已嵌入；机器路径仅在输出文字中作匿名化处理。默认用 `data/local/tianhao_experiment/`，支持 `TIANHAO_WORK_DIR` / `TIANHAO_DATA_DIR`，无需作者目录。
+- 2026-11-01历史分享时曾有22单元/10图的Notebook；该文件已从现行仓库移除。现行96车道Notebook是独立的已执行离线核验入口，不冒充历史Notebook的重跑。
 - 本地原Notebook及HTML、数据ZIP、90个月天气ZIP、完整特征表、拟合模型、缓存和Jupyter运行文件不上传。原始manifest中留在本地的文件/路径仅为历史来源记录；不是可下载附件。
-- `verify_shared_results.py` 无需大数据或拟合模型即可核对新预测指标、配对样本、新旧结果一致性和分享文件哈希。
-- `share_manifest.json` 记录本次交付文件SHA256；`rerun_20261101/shared_notebook_validation.json` 记录仓库版Notebook实际执行核验。`original_*` 记录原本地运行，其Notebook哈希不用于仓库移植版。
+- `verify_shared_results.py` 无需大数据或拟合模型即可核对历史24车道新旧预测、配对样本与分享文件哈希；现行Notebook的渲染检查另行执行。
+- `share_manifest.json` 与 `rerun_20261101/shared_notebook_validation.json` 冻结记录历史分享当时的文件和Notebook核验；被移除的Notebook引用不可追认为当前文件。`original_*` 保留原本地运行证据。
 - 重跑03号Notebook前，按上面的下载/提取命令准备来源；`stage_release.py` 还提取前半部分审查所需的CSV和检测器元数据。运行中不会下载47GB完整原始数据，也不批准标签定义。
 
 代码审查报告在 `docs/tianhao_proposal_review.md`。其中“尚未提交/推送”描述核查当时状态；本分享包在独立PR供小组审阅，尚未合并，不代表科学审批。

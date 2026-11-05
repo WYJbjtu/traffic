@@ -18,8 +18,7 @@ uv run --locked --with 'streamlit==1.51.0' --with 'plotly==6.3.1' streamlit run 
 
 ## Tianhao / Fairy-6b：真实30分钟实验与可视化（2026-11-01）
 
-- [新重跑 Notebook：代码、ROC/PR、混淆矩阵、特征组提升、系数](notebooks/03_Tianhao_真实重跑与模型可视化.ipynb)（GitHub可直接预览，第10节起为训练结果）。
-- [轻量离线核验 Notebook](notebooks/02_Tianhao_真实模型与外部特征实验.ipynb) 与 [实验说明/复现](experiments/tianhao/README.md)。
+- [Tianhao 96车道唯一现行 Notebook：离线核验、ROC/PR、混淆矩阵与复现说明](notebooks/Tianhao_新版96车道_完整重跑_20261104.ipynb)；[实验说明/复现](experiments/tianhao/expanded96_20261104/README.md)。历史24车道结果与清单保留，勿与96车道直接混比。
 - [结果与图表索引](experiments/tianhao/rerun_20261101/README.md)；[proposal核查与修复](docs/tianhao_proposal_review.md)。
 
 **EXPLORATORY — NOT APPROVED AS FINAL RESULTS**：基于7597个暂定车道事件、6799个已知30分钟标签，14个比较臂。目标是恢复确认，与proposal恢复开始仍有差异；空间实验未完成。不包含大型原始数据、模型文件或缓存。
@@ -260,7 +259,7 @@ Optional context features still require separate source verification.
 
 ## Tianhao / Fairy-6b exploratory long-window experiment
 
-The [executed results notebook](notebooks/02_Tianhao_真实模型与外部特征实验.ipynb)
+The [canonical executed 96-lane results notebook](notebooks/Tianhao_新版96车道_完整重跑_20261104.ipynb)
 and [reproduction guide](experiments/tianhao/README.md) add real 30-minute
 logistic/tree experiments, official calendar/weather integration and small,
 checksummed prediction/metric artifacts. These are exploratory results with

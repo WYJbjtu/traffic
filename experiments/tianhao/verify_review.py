@@ -50,10 +50,11 @@ def verify(*, strict_snapshot=False):
     for keys, part in pred.groupby(['model', 'feature_set', 'split']):
         check(np.isclose(table.loc[keys, 'macro_f1'], f1_score(part.y_true, part.y_pred, average='macro', labels=[0, 1], zero_division=0)), 'Macro-F1')
         check(np.array_equal(cm.loc[keys, ['tn', 'fp', 'fn', 'tp']].to_numpy(), confusion_matrix(part.y_true, part.y_pred, labels=[0, 1]).ravel()), 'Confusion matrix')
-    notebook = ROOT / 'notebooks/02_Tianhao_真实模型与外部特征实验.ipynb'
-    if notebook.exists():
-        cells = json.loads(notebook.read_text(encoding='utf-8'))['cells']
-        check(not any(o.get('output_type') == 'error' for c in cells for o in c.get('outputs', [])), 'Notebook contains no error output')
+    # Historical Notebook hashes remain in the frozen manifest; the removed file
+    # cannot be silently treated as a verified current artifact.
+    notebook = ROOT / 'notebooks/Tianhao_新版96车道_完整重跑_20261104.ipynb'
+    cells = json.loads(notebook.read_text(encoding='utf-8'))['cells']
+    check(not any(o.get('output_type') == 'error' for c in cells for o in c.get('outputs', [])), 'Canonical Notebook contains no error output')
     package_manifest = RESULTS / 'package_manifest.json'
     integrity = None
     if package_manifest.exists():
