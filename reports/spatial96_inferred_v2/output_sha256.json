@@ -1,0 +1,22 @@
+{
+  "data/local/spatial96/inferred-v2/inferred_directed_graph.parquet": "c7340f943b31b96f580788b52e203878d7b3f6e9bc8ebc2e42a9a39b65ad4c5c",
+  "data/local/spatial96/inferred-v2/geographic_control_lineage.parquet": "61b91e4cf066a9a290b51ca03b78fe69b801bf87af53ca292745cc4bf9b5fbb7",
+  "data/local/spatial96/inferred-v2/paths_INFERRED_EXPLORATORY.parquet": "73e4582fe8c902880d57298625cc76e4f9628e26a6520cbec02525766f1073e3",
+  "data/local/spatial96/inferred-v2/paths_HIGH_CONFIDENCE_INFERRED.parquet": "22cf9f6c95fb1549b18399d9306f5903be7480c2e2bfa1465cb7d237e04460dc",
+  "data/local/spatial96/inferred-v2/event_neighbor_lineage.parquet": "a30b4b3a31922953415b3b0c9629e2802b191a141efef7b8d387aff8da4ea59f",
+  "data/local/spatial96/inferred-v2/inferred_detector_neighbors.parquet": "69042952bb36444e326806266c010d4145f770072c36a29976ff26dcf4ceb19c",
+  "data/local/spatial96/inferred-v2/event_spatial_features.parquet": "c85552d73b1e512e2d696aafc147c7bae9933717a53f3d2ec762725e0d3d1764",
+  "data/local/spatial96/inferred-v2/mapping_scores.parquet": "82fe2f296eadfdafd73a75cdca0951accfc9b50530384385ed213a2e9b331324",
+  "data/local/spatial96/inferred-v2/geographic_control_features.parquet": "c24b7e15b30e194c3e5c734da751d06ea1b5b1a202ff9dca54634cb22686fe33",
+  "reports/spatial96_inferred_v2/network_methodology.md": "67e8519c787737029fc2ae85b4af4d74d981546579f4d771aede6111d0c15de2",
+  "reports/spatial96_inferred_v2/review-short-path-large-offset.png": "76e37396a65310580094d068e770e88bfe517680eb380516ba387b1cbff53c07",
+  "reports/spatial96_inferred_v2/network_coverage_by_split.csv": "7867a5e4b46005eb975c3c7eb5b36b19029d035c2bc086d89792cd2a74a5b165",
+  "reports/spatial96_inferred_v2/experiment_matrix.csv": "a7b4e4090b4cd125abdce73b07fba96a9e21c31469837f7391c6df7ae2b71260",
+  "reports/spatial96_inferred_v2/network_sensitivity.csv": "4a35d6eb4c9ab324501aa07640ac3c27c48148f54d44489983f9ed815fe82deb",
+  "reports/spatial96_inferred_v2/paired_spatial_metrics.csv": "d527b47a0dcef587b84d75078ad37d1e384f751e3b32ea680b237acdef126b5b",
+  "reports/spatial96_inferred_v2/spatial_negative_controls.csv": "243b9f749bd25e3cbf79d8638ba37cacd96efe9035bffac297319f988b8eeddb",
+  "reports/spatial96_inferred_v2/map_matching_quality.csv": "c787ed3a4e32a67bdc3165a4a080ed77f151b96ac1db440dae84162cfbfdf39f",
+  "reports/spatial96_inferred_v2/review-official-intersection.png": "a8072e67416cee58c219e5223d8b664631cfeb5d17fb7af0af459b584cae19d9",
+  "reports/spatial96_inferred_v2/research_summary_zh.md": "2aaf229f14a195f6539f82d17aa0d4c89ddb65f1861e8aca1da285b367f8a6c2",
+  "reports/spatial96_inferred_v2/source_sha256.json": "8758f900c254e0112aeb7a7e59605a6921f738f0a4568b82cf023846342b5137"
+}
