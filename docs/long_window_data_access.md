@@ -8,7 +8,7 @@ Use `configs/long_window.json` and the long-window scripts exclusively for this 
 
 ## Obtaining the prepared data
 
-The prepared dataset is published as a [GitHub Release](https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/tag/data-long-window-2023-2026-v1). Download the [prepared-data ZIP](https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/download/data-long-window-2023-2026-v1/HK_Traffic_Long_Window_Prepared_Data.zip) (1,669,288,966 bytes, approximately 1.67 GB) and the adjacent `.sha256` asset. Collaborators can download it directly; access to the owner's D: drive is unnecessary.
+The prepared dataset is published as a [GitHub Release](https://github.com/WYJbjtu/traffic/releases/tag/data-long-window-2023-2026-v1). Download the [prepared-data ZIP](https://github.com/WYJbjtu/traffic/releases/download/data-long-window-2023-2026-v1/HK_Traffic_Long_Window_Prepared_Data.zip) (1,669,288,966 bytes, approximately 1.67 GB) and the adjacent `.sha256` asset. Collaborators can download it directly; access to the owner's D: drive is unnecessary.
 
 Whole-ZIP SHA-256: `53688e6e095798f50c124376da1f0f354ca4b2aedf9e83e960fef04fc7298bc9`.
 

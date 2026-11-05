@@ -7,7 +7,7 @@
 - 426候选质量：583,194个车道日（426×1369），45个月；原24车道一月参考逐项一致。
 - 178项测试通过，1个警告，退出码0。最终独立核验见[final_verification.json](../reports/lane_expansion_execution_20261102/final96/final_verification.json)。
 
-下载[96车道Release](https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/tag/data-expanded-96-2023-2026-v1)中的`HK_Traffic_Expanded_96_Prepared_Data_v1.zip`（870,121,429字节）和相邻SHA文件。组员无需访问数据持有人的D盘。
+下载[96车道Release](https://github.com/WYJbjtu/traffic/releases/tag/data-expanded-96-2023-2026-v1)中的`HK_Traffic_Expanded_96_Prepared_Data_v1.zip`（870,121,429字节）和相邻SHA文件。组员无需访问数据持有人的D盘。
 
 整包SHA-256：`f5be559a6ad8df69e68fbc382fb609d13fdae40aa044c9d1fe4d7e3b2253b6b8`。已核对GitHub附件大小及服务器digest与本地一致。解压到独立数据目录，读取`processed/cohort_bins.parquet`和`processed/events.parquet`，按`SHARED_DATA_MANIFEST.json`校验包内文件。自动生成的Source code ZIP不含数据。47GB原始档案、426巨大中间表及机器环境不包含在发布包中。
 
@@ -15,7 +15,7 @@
 
 426候选有效30秒覆盖：2023年79.37%、2024年61.88%、2025年58.82%、2026年1–9月49.05%；五分钟可用箱比例为90.48%、88.64%、90.93%、86.26%。这是不同采样粒度的指标，不能混用。设备身份变化、缺口及参考漂移仍需小组复核，质量诊断不能用于看过验证/测试期后重选队列。
 
-旧[24车道Release](https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/tag/data-long-window-2023-2026-v1)（7,597事件）和73事件短窗保持独立，不能与96数据混算。此次仍沿用冻结阈值、参考和分组，标签表示观测到的持续恢复确认；未知不是负例。
+旧[24车道Release](https://github.com/WYJbjtu/traffic/releases/tag/data-long-window-2023-2026-v1)（7,597事件）和73事件短窗保持独立，不能与96数据混算。此次仍沿用冻结阈值、参考和分组，标签表示观测到的持续恢复确认；未知不是负例。
 
 ## 四人接手
 
