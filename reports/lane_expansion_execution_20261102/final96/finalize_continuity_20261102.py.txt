@@ -1,0 +1,56 @@
+from pathlib import Path
+import json,time,hashlib
+import pandas as pd
+import pyarrow.parquet as pq
+ROOT=Path(__file__).parent
+while True:
+    state=json.loads((ROOT/'run_status.json').read_text(encoding='utf-8'))
+    if any(s['status']=='failed' for s in state['stages']):
+        raise RuntimeError('Pipeline failed; inspect '+str(ROOT/(state['current_stage']+'.log')))
+    if state.get('status')=='all_stages_completed':break
+    time.sleep(30)
+quality=ROOT/'continuity426-v1';dataset=ROOT/'pilot96-id-order-v1'
+manifest=json.loads((dataset/'pilot_manifest.json').read_text(encoding='utf-8'))
+assert manifest['units']==96
+output=ROOT/'reports-full96-v1';output.mkdir(exist_ok=True)
+for name in ['monthly_continuity','yearly_continuity','monthly_speed_drift','fold_continuity','gap_continuity','detector_identity_inventory']:
+    pd.read_parquet(quality/(name+'.parquet')).to_csv(output/(name+'.csv'),index=False)
+counts={}
+for kind in ['bins','events']:
+    destination=dataset/('cohort_'+kind+'.parquet');temporary=destination.with_suffix('.partial');writer=None;rows=0
+    try:
+        for source in sorted((dataset/'units').glob('*/'+kind+'.parquet')):
+            checkpoint=json.loads((source.parent/'checkpoint.json').read_text(encoding='utf-8'))
+            with source.open('rb') as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
+            assert digest==checkpoint['outputs_sha256'][source.name]
+            table=pq.read_table(source)
+            if writer is None:writer=pq.ParquetWriter(temporary,table.schema,compression='zstd')
+            writer.write_table(table.cast(writer.schema));rows+=table.num_rows
+    finally:
+        if writer:writer.close()
+    if writer is None:raise RuntimeError('No actual '+kind+' rows')
+    temporary.replace(destination);counts[kind]=rows
+assert counts['events']==manifest['events']
+if 'events' in counts:
+    events=pd.read_parquet(dataset/'cohort_events.parquet',columns=['event_id','detector_id','direction','lane_id','prediction_time'])
+    assert not events.event_id.duplicated().any()
+    assert not events.duplicated(['detector_id','direction','lane_id','prediction_time']).any()
+years=pd.read_parquet(quality/'yearly_continuity.parquet')
+lines=['# 426候选车道长期连续性与96车道真实数据结果','',
+'来源：已核验的45个月官方ZIP及2026年10月1日边界档案。使用main提交 '+state['main_commit']+' 的已合并审计程序，沿用冻结队列及既有标签规则，没有根据后期覆盖换站，没有训练模型。','',
+'96车道五分钟数据行数：'+str(counts['bins'])+'；恢复事件数：'+str(counts['events'])+'。',
+'统一数据文件：../pilot96-id-order-v1/cohort_bins.parquet 和 cohort_events.parquet；原始逐车道文件及校验值保持不变。','',
+'## 426个冻结候选的逐年质量','',
+'| 年份 | 有效30秒观测覆盖 | 可用5分钟箱比例 | 全缺车道日 |','|---|---:|---:|---:|']
+for year,g in years.groupby('year'):
+    lines.append(f"| {year} | {g.valid_slots.sum()/g.expected_slots.sum():.2%} | {g.usable_5m_bins.sum()/(g.days.sum()*288):.2%} | {int(g.missing_days.sum())} |")
+lines+=['','2026年仅统计1至9月；30秒覆盖与至少两个有效正流量时段形成的五分钟可用箱不是同一指标。身份变化和速度漂移是回顾质量诊断，不用于重选队列或重新拟合验证/测试参考。','',
+'## 96车道标签分布','','| 范围 | 已恢复 | 未恢复 | 未知 |','|---|---:|---:|---:|']
+for h,c in manifest['horizons'].items():lines.append(f"| {h}分钟 | {c['positive']} | {c['negative']} | {c['unknown']} |")
+lines+=['','时间分组事件数：'+json.dumps(manifest['by_split'],ensure_ascii=False),'',
+'未知不是负例，恢复指持续恢复确认而非精确物理恢复时刻；设备/车道身份跨年稳定性、稀疏采样及长期参考漂移仍须团队复核。原24车道、7597事件结果未覆盖或混入。','',
+'426候选的逐月、逐年、训练/验证/测试质量、长期缺口、身份清单和速度漂移见同目录CSV；原始Parquet和校验清单见 ../continuity426-v1/。']
+(output/'report_zh.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+summary={'status':'verified_completed','main_commit':state['main_commit'],'repairs':state.get('repairs',[]),'units':96,'candidate_units':426,'dataset_rows':counts,'horizons':manifest['horizons'],'by_split':manifest['by_split']}
+(output/'summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
+print(json.dumps(summary),flush=True)

@@ -1,0 +1,57 @@
+{
+  "manifest_version": "model-dataset-manifest-v1",
+  "created_at": "2026-11-01T10:46:42.312184+00:00",
+  "validation": {
+    "rows": 7597,
+    "events": 7597,
+    "purged": 0,
+    "known_label_15m": 6954,
+    "known_label_30m": 6799,
+    "known_label_60m": 6611,
+    "dataset_version": "member4-long-window-history-flow-v1",
+    "scientific_approval": "pending_team_review",
+    "feature_groups": {
+      "local": [
+        "speed_kmh",
+        "speed_ratio",
+        "baseline_kmh",
+        "valid_slots",
+        "onset_observed_minutes"
+      ],
+      "history": [
+        "speed_change_15m_ratio",
+        "speed_mean_15m_ratio",
+        "speed_slope_15m_ratio_per_min",
+        "speed_trend_observed_bins"
+      ],
+      "flow": [
+        "volume_median_per_observed_30s",
+        "occupancy_median_pct",
+        "flow_observed_slots",
+        "occupancy_observed_slots"
+      ]
+    }
+  },
+  "inputs": {
+    "events": {
+      "path": "D:/HK_Traffic_Recovery_Long_Window/processed/derived/events.parquet",
+      "sha256": "0a9d362179329978954175507a7dd2eb60f6c9eb90180169a508cecad74eac12"
+    },
+    "speed_history_features": {
+      "path": "experiments/member4/prepared/speed_history_features.parquet",
+      "sha256": "a595b6dda0469df254b51055a3d879394292ef88564d8facbd901eba55012a85"
+    },
+    "flow_occupancy_features": {
+      "path": "experiments/member4/prepared/flow_occupancy_features.parquet",
+      "sha256": "d40ccdebfa00e13c4f5f931e4e517590757afb05e16da7cc1a447e781f436798"
+    }
+  },
+  "contract": {
+    "path": "experiments/member4/experiment_contract_hf.json",
+    "sha256": "958143929dee92ef26471f42476fb1b1592dc75d89a85eeedbd4cd9d41bf2903"
+  },
+  "output": {
+    "path": "experiments/member4/event_features_hf.parquet",
+    "sha256": "8202a4b7afed01770dc362d9f71b2867d4f1db5d0f5d1e649a861c9517173c67"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "status": "EXPLORATORY — NOT APPROVED AS FINAL RESULTS",
+  "created_at_utc": "2026-11-01T01:04:13.997849+00:00",
+  "source_release": "https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/tag/data-long-window-2023-2026-v1",
+  "traffic_zip_sha256": "53688e6e095798f50c124376da1f0f354ca4b2aedf9e83e960fef04fc7298bc9",
+  "repository_head": "bb4170a55a4da7cb0298b0ffaa06afa6281d4abe",
+  "repository_dirty": true,
+  "uv_lock_sha256": "2df0603b254f74846af88b66ae258816f71e3e88a0e8b42e05d03abc48c1680a",
+  "plan_sha256": "45f93603e7eed7bd4164404c8336e6f6fe3271d3b2f88b4eb63b657e9b25b52f",
+  "source_checks_sha256": "48f28d743a350d6293d0cd358f26289f6674ac6aef2d0799870a051a25d9bc03",
+  "software": {
+    "python": "3.12.14",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "sklearn": "1.9.1"
+  },
+  "dataset": {
+    "inputs": {
+      "events": {
+        "path": "release_subset/processed/derived/events.parquet",
+        "sha256": "0a9d362179329978954175507a7dd2eb60f6c9eb90180169a508cecad74eac12"
+      },
+      "speed_history_features": {
+        "path": "external-input/speed_history_features.parquet",
+        "sha256": "9c9511fb9072246632441398b1452644bc568badf75da917471f5980f0cf769c"
+      },
+      "flow_occupancy_features": {
+        "path": "external-input/flow_occupancy_features.parquet",
+        "sha256": "fbdbbe3b882cda209cd8b32d29f4cf583cbcf7da3b681a5403236758ab40c957"
+      },
+      "calendar_event_features": {
+        "path": "external-input/calendar_event_features.parquet",
+        "sha256": "447c32b26b2365e58f2c741ecacf83f9c7e247fda16850f9b0354d66379ba63a"
+      },
+      "weather_event_features": {
+        "path": "external-input/weather_event_features.parquet",
+        "sha256": "6eb3ca6fb18d34a74d381daca79a9a951aa684fa1420fc6f641fbf10dc8293d2"
+      }
+    },
+    "contract_validation": {
+      "rows": 7597,
+      "events": 7597,
+      "purged": 0,
+      "known_label_30m": 6799
+    },
+    "dataset_report": {
+      "rows": 7597,
+      "events": 7597,
+      "purged": 0,
+      "known_label_30m": 6799,
+      "dataset_version": "tianhao-long-window-30m-exploratory-v1",
+      "scientific_approval": "pending_team_review_user_authorized_exploration",
+      "feature_groups": {
+        "local": [
+          "speed_kmh",
+          "speed_ratio",
+          "baseline_kmh",
+          "valid_slots",
+          "onset_observed_minutes"
+        ],
+        "history": [
+          "speed_change_15m_ratio",
+          "speed_mean_15m_ratio",
+          "speed_slope_15m_ratio_per_min",
+          "speed_trend_observed_bins"
+        ],
+        "flow": [
+          "volume_median_per_observed_30s",
+          "occupancy_median_pct",
+          "flow_observed_slots",
+          "occupancy_observed_slots"
+        ],
+        "calendar": [
+          "hour_sin",
+          "hour_cos",
+          "dow_sin",
+          "dow_cos",
+          "is_weekend",
+          "is_public_holiday",
+          "is_day_before_holiday",
+          "is_day_after_holiday"
+        ],
+        "weather": [
+          "temperature_c",
+          "wind_speed_kmh",
+          "temperature_age_minutes",
+          "wind_age_minutes",
+          "temperature_missing",
+          "wind_missing"
+        ]
+      }
+    }
+  },
+  "events": 7597,
+  "known_30m": 6799,
+  "prediction_rows": 95186,
+  "arms": 14,
+  "checks_passed": 151,
+  "runtime_seconds": 81.58090016699998,
+  "code_sha256": {
+    "experiments/tianhao/acquire_sources.py": "cc04439199e04d7a3edc50adbf3f00262667a73b6cdf3f3efba8d0548d4d125e",
+    "experiments/tianhao/paths.py": "706cda29474a0f688587068dcca0a13c4f43166ac97165d29cdc886bf4f84bb5",
+    "experiments/tianhao/prepare_external.py": "2d63f7848f8723b47f11ce5d180ef07e77cf736f8ebf4c01f91bada52e3a3e87",
+    "experiments/tianhao/prepare_local.py": "ca3ca76687ac9023e191d0b8aa97040e398d8e4dd76622c55b35d10b5d32e127",
+    "experiments/tianhao/review_existing_run.py": "f4f525d2a3de99f326a8be572048fc73cd995fbfce71831690491421322b06aa",
+    "experiments/tianhao/run_experiment.py": "8ee7973d11cb11c8f31ae7a4516a48a9c3de4c8b57cb21d7c578c878867c065f",
+    "experiments/tianhao/stage_release.py": "5597fad1c180fd81dd803bf00feee25e50530bc5a0875bd2e2464873b6135489",
+    "experiments/tianhao/verify_real_run.py": "1b653543f095c570c33b2f0d4e70ce4747e1a13a01ec31306a328c5134353644",
+    "experiments/tianhao/verify_review.py": "7866b8b454af3c995292c8edd1849b05da9dab6f47f120b27b907a63e89a8667",
+    "src/traffic_recovery/models/__init__.py": "a1fe1979eba03357f36ed1657603112b384f76f770f734c5a4de14c2ae564ca4",
+    "src/traffic_recovery/models/benchmarks.py": "df8e7fc5c1bccd38d83272b840ad64b45bf5bf845ba5ba56dfc11c3e1dc3887a",
+    "src/traffic_recovery/models/comparison.py": "3ad7bb03d36ab70ec971c0f2425c890bbd8815959c480cf267fd49344696d62d",
+    "src/traffic_recovery/models/contract.py": "7f24e5f73bdb8ebe96d706b675b6858c4cc55c9d0c0dfae50f153091e9df5993",
+    "src/traffic_recovery/models/dataset.py": "54d8d0ac8350197995e3da23ea5d853585e9d3044dcc9e1345f11d3c9ee03fd9",
+    "src/traffic_recovery/models/decision_tree.py": "9839e9885c5f1d851c52cf675bfccef935535ee42b230360ac7107c892d443bd",
+    "src/traffic_recovery/models/evaluation.py": "2e06bf721b2a099d451c0c75bdc61c6af7997f0d6aa574ba4b27c6b2d125271c",
+    "src/traffic_recovery/models/logistic.py": "dd3dab50edbe00d6a06e41d9312471b173405dcd0e651d5276d2156c5c1a1b37",
+    "src/traffic_recovery/models/provenance.py": "6dc5bf314d6243b821f1b7d1c7913fe4448494fb9099fef3b9f7363aef535cc9",
+    "src/traffic_recovery/models/supervised.py": "de98538dd135a0a1c3494cd2d07dc6411ef377a97f5e3314c87a1ff7dc30b5cf",
+    "src/traffic_recovery/external/__init__.py": "7a61e45f7c72c005349cea9bf85f93a212fc5b5cf76a6b9d26012ba6beeb84a3",
+    "src/traffic_recovery/external/_validation.py": "0302b54e919710c59430a9a942adc00821c93c0be86c522b81af2d953a3fef74",
+    "src/traffic_recovery/external/build.py": "62ae00e758a7de88f1b77ea1c53ab7883a2659f6cefbe474ddd1b1f963520ca6",
+    "src/traffic_recovery/external/calendar.py": "8e3bd4c66935610416ea417cca9cf54b650903b84112733973e83ff50bd016f9",
+    "src/traffic_recovery/external/incidents.py": "59a5d9164700fe2403082cca015e49255887fcd9c21874876f5d45adbe45571f",
+    "src/traffic_recovery/external/major_events.py": "82279c8d40edff1559f628a2491e1a3ce8a911b1ee52236909dcafec0ed5826e",
+    "src/traffic_recovery/external/pipeline.py": "750a75c2b699b354c436154dffb327de2ab712498ddec6b55ae5a60a86b5a992",
+    "src/traffic_recovery/external/weather.py": "37d3df84ca2bcbd3b0584c5bcf0d49109d42d23a46e876898f37cb23bb800ead"
+  },
+  "outputs_sha256": {
+    "source_checks.json": "48f28d743a350d6293d0cd358f26289f6674ac6aef2d0799870a051a25d9bc03",
+    "release_metadata.json": "56c6b66e9818d30f23b9bf22cd71ec5310754bece21bdc3e35ed74a6f2a04ba0",
+    "calendar_adapter_30_real_events.csv": "faa0ea7ec5e79e5bf646bf88a706cd3233a1b6d26d88edb14920848fe93fa1e1",
+    "review_contract.json": "52a504d48dc5320eb7f7f98da67e4aa4334ea3d79802575ebe4b8f97549f8e59",
+    "label_counts.csv": "1ebe5d9bc7715bcb345cb852f02816a0918aaf4c89b596cea6576d8ab63a3e6f",
+    "local_event_features_REVIEW_ONLY.parquet": "a070347a34935c6b64cd74d529daffc91126b1743a797c54123ed126b3b86a1e",
+    "models/benchmarks.json": "2ef4478f172dba93ca6371c5f993c16f90a07a9a5841241e1d90dc55f469c96e",
+    "models/supervised_models.json": "ef760d850b4012ac1cd1dac9ef45e4da2a142f0964044bd21b07aa9e444f21e0",
+    "models/feature_group_comparisons.csv": "c10ed591237b7133a70e501e8aaf931377b3d3c653c32f320a0eb4b70eee7561",
+    "models/metrics_summary.csv": "1d0fdc8c48de31c643a8b4c5db977e1b7a608ed144f21f8303ace9ef5eb640fd",
+    "models/interpretation.csv": "f01619cd95e65dfe2cbfeb0ed3f3adbc788bac741afddb660698d57c6ab4de93",
+    "models/predeclared_plan.json": "45f93603e7eed7bd4164404c8336e6f6fe3271d3b2f88b4eb63b657e9b25b52f",
+    "models/report.md": "12805a31993ef725f2ac2e1162850fa1e1a9f173b21f3f547f4b135041b9a91c",
+    "models/confusion_matrices.csv": "237018916d15a6289ab912e3de703c7d57993226a3f74b9bec28d0f3a7ff747b",
+    "models/tuning.csv": "da55422a4e34f5dcbe004c9e2f5eb67a366c086e22de89a3b0ef69e44f091d2f",
+    "models/metrics.csv": "3ceb9f40de51c4039e0191be59f24a3c3b8f7896181b1e6af473ab1cc5c4e5e0",
+    "models/model_summaries.json": "bf2a89cc6b70c2407b9b43456c7379bebbbed9523267b723d32f122dd307b964",
+    "models/trend_rule_tuning.csv": "192431473a2da00005923908eb0641a4383e694f5396b1bea0b7103c5f22fa0c",
+    "models/experiment_contract.json": "eab166bffa4da9217769726181372dc2d9487191c1d615e78fd4d3632874ddb7",
+    "models/fitted_pipelines.joblib": "c0233ba43ea35cf0fb53636a87c7b946ef03c91896f60df909934cc444d58a04",
+    "models/cohort_summary.csv": "9f57a7ca9e01b66f78d413a1616ada20c570ea2faf49fac478531ea94a306eac",
+    "models/event_feature_audit.parquet": "fe00cb25ee7048011956f9dd47a3c73241b35a854fd993941809f8d30996a49d",
+    "models/predictions.parquet": "452da27baaa2ca43834c1192be9c7e17633febc313fed7d1713a441b3ae50eb4",
+    "models/test_error_audit.parquet": "cfde98a016a3861b73e661febba97a41134a24f82a743294ae57caa1d38db38d",
+    "models/event_features.parquet": "6f14973f42a998a457dd3ca09ee3dd7db38dabfbdbd3d785c78d7aced503e4a4",
+    "models/error_groups.csv": "94d7a07fe0cdb562654144dbb157cf932981a7d4b37345b8dc313387cab80d9c",
+    "models/feature_missingness.csv": "0d567dbdc723d031176330c0c5b9fe16e6a4e225fecc9cfec1c5f093ac4a9890",
+    "figures/09_feature_group_gain.png": "9f937fbb9e0571969f8e1810c13a285329b8dc5fb8945e4a39680276e3a1ab99",
+    "figures/01_labels_and_unknowns.png": "712e430c78428e1856fd8c2b3eb4ad8d38695e504d4f90ef76a9f29963c5d1bd",
+    "figures/07_test_roc_pr.png": "bf5f14c7c188e7f2e322294a6c1fbf4ab1513d04a3dcfada6a27c013015a2124",
+    "figures/06_spatial_readiness.png": "46824ac91f3a4a783f36d9a319262dad0a8d78d662ca249122a4b29e30118647",
+    "figures/08_test_confusion_matrices.png": "c0ed05ec5a60055a37f2864b2413d4c5f05ae4daf492dba5124c65955d64a5d1",
+    "figures/10_coefficients_and_tree_importance.png": "c23376c2c56718c2e7f7592c596aa981122f63e2d9272bb20607a883787ecc26",
+    "figures/02_monthly_events.png": "e09817ed77549f2ef939dc74bc8e6863f84e7fcced6512a9efae832be0a0b42c",
+    "figures/04_train_feature_distributions.png": "9f31f268744608c918d7df061f9a8e75d3be74f07b4cd4188aad124d77b6aaec",
+    "figures/05_hourly_event_counts.png": "a7e4abeb1eedf5509ad7b03792d952a070f91a3671890cd735d04cd9e130d995",
+    "figures/03_real_event_curve.png": "f838f5ff189a3a437c14db990f48147a7f0840bbd9d9c6e7b27bd84631718b96",
+    "model_work/prepared/weather_event_features.parquet": "6eb3ca6fb18d34a74d381daca79a9a951aa684fa1420fc6f641fbf10dc8293d2",
+    "model_work/prepared/cleaned_daily_schema.json": "400929e24415ab44883d7df3661f1baf890c60060f724846de7fdcd93ca49370",
+    "model_work/prepared/weather_parser_exclusions.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "model_work/prepared/weather_station_snapshots.parquet": "d21f4895d0e136fe9d6ec83fdebbd438a989c7b1ba1a91d505eaf3861e1daec8",
+    "model_work/prepared/flow_occupancy_features.parquet": "fbdbbe3b882cda209cd8b32d29f4cf583cbcf7da3b681a5403236758ab40c957",
+    "model_work/prepared/weather_archive_inventory.csv": "2a29dd72ef062db680776418cf4b64cea2de579ff2df6f2a7fa72f5e8a3b7051",
+    "model_work/prepared/calendar_event_features.parquet": "447c32b26b2365e58f2c741ecacf83f9c7e247fda16850f9b0354d66379ba63a",
+    "model_work/prepared/holiday_source_manifest.json": "29f047bff6f140663065c1d4cad1f6f7a769362117433fc504d67b8ea67f8804",
+    "model_work/prepared/official_holiday_editions.parquet": "9b390a6a1181ea5e8dcdb362093fed0f71b5fc0666071e08e199179699c8e929",
+    "model_work/prepared/speed_history_features.parquet": "9c9511fb9072246632441398b1452644bc568badf75da917471f5980f0cf769c",
+    "models/inputs/weather_event_features.parquet": "6eb3ca6fb18d34a74d381daca79a9a951aa684fa1420fc6f641fbf10dc8293d2",
+    "models/inputs/flow_occupancy_features.parquet": "fbdbbe3b882cda209cd8b32d29f4cf583cbcf7da3b681a5403236758ab40c957",
+    "models/inputs/calendar_event_features.parquet": "447c32b26b2365e58f2c741ecacf83f9c7e247fda16850f9b0354d66379ba63a",
+    "models/inputs/speed_history_features.parquet": "9c9511fb9072246632441398b1452644bc568badf75da917471f5980f0cf769c"
+  },
+  "scientific_limits": [
+    "recovery confirmation vs proposal start",
+    "selected 24 lanes",
+    "regional weather proxy",
+    "no verified spatial experiment",
+    "no significance/causal claim",
+    "previously exposed test set"
+  ]
+}

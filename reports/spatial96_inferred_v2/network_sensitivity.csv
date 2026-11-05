@@ -1,0 +1,7 @@
+population,max_network_distance_m,pairs,meaning
+INFERRED_EXPLORATORY,250,3,coverage-only; no test-score-based selection
+INFERRED_EXPLORATORY,500,22,coverage-only; no test-score-based selection
+INFERRED_EXPLORATORY,1000,42,coverage-only; no test-score-based selection
+HIGH_CONFIDENCE_INFERRED,250,0,coverage-only; no test-score-based selection
+HIGH_CONFIDENCE_INFERRED,500,5,coverage-only; no test-score-based selection
+HIGH_CONFIDENCE_INFERRED,1000,6,coverage-only; no test-score-based selection

@@ -1,0 +1,162 @@
+[
+  {
+    "model": "logistic",
+    "feature_set": "local",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.6859667610174129,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false
+  },
+  {
+    "model": "tree",
+    "feature_set": "local",
+    "horizon_min": 30,
+    "parameters": {
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.6671429028698426,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false,
+    "tree_depth": 4,
+    "tree_leaves": 15,
+    "tree_text": "|--- numeric__baseline_kmh <= 73.50\n|   |--- numeric__baseline_kmh <= 60.00\n|   |   |--- numeric__speed_ratio <= 0.13\n|   |   |   |--- class: 1\n|   |   |--- numeric__speed_ratio >  0.13\n|   |   |   |--- numeric__speed_ratio <= 0.25\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.25\n|   |   |   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  60.00\n|   |   |--- numeric__baseline_kmh <= 72.00\n|   |   |   |--- numeric__speed_ratio <= 0.11\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.11\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__baseline_kmh >  72.00\n|   |   |   |--- numeric__speed_kmh <= 16.25\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_kmh >  16.25\n|   |   |   |   |--- class: 1\n|--- numeric__baseline_kmh >  73.50\n|   |--- numeric__baseline_kmh <= 76.00\n|   |   |--- numeric__valid_slots <= 9.00\n|   |   |   |--- numeric__speed_kmh <= 23.75\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_kmh >  23.75\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__valid_slots >  9.00\n|   |   |   |--- numeric__speed_ratio <= 0.43\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.43\n|   |   |   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  76.00\n|   |   |--- numeric__baseline_kmh <= 87.75\n|   |   |   |--- numeric__speed_kmh <= 29.75\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_kmh >  29.75\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__baseline_kmh >  87.75\n|   |   |   |--- numeric__speed_ratio <= 0.26\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.26\n|   |   |   |   |--- class: 0\n"
+  },
+  {
+    "model": "logistic",
+    "feature_set": "local+history",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.6700505688793029,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false
+  },
+  {
+    "model": "tree",
+    "feature_set": "local+history",
+    "horizon_min": 30,
+    "parameters": {
+      "max_depth": 2,
+      "min_samples_leaf": 1,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.6638282425434316,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false,
+    "tree_depth": 2,
+    "tree_leaves": 4,
+    "tree_text": "|--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |--- numeric__baseline_kmh <= 73.50\n|   |   |--- class: 1\n|   |--- numeric__baseline_kmh >  73.50\n|   |   |--- class: 0\n|--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |--- numeric__baseline_kmh <= 60.00\n|   |   |--- class: 0\n|   |--- numeric__baseline_kmh >  60.00\n|   |   |--- class: 0\n"
+  },
+  {
+    "model": "logistic",
+    "feature_set": "local+history+flow",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.6688823963719147,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false
+  },
+  {
+    "model": "tree",
+    "feature_set": "local+history+flow",
+    "horizon_min": 30,
+    "parameters": {
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "class_weight": "balanced"
+    },
+    "validation_log_loss": 0.6701896084622235,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false,
+    "tree_depth": 4,
+    "tree_leaves": 16,
+    "tree_text": "|--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |--- numeric__baseline_kmh <= 73.50\n|   |   |--- numeric__speed_mean_15m_ratio <= 0.46\n|   |   |   |--- numeric__occupancy_median_pct <= 33.75\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__occupancy_median_pct >  33.75\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__speed_mean_15m_ratio >  0.46\n|   |   |   |--- numeric__speed_ratio <= 0.19\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_ratio >  0.19\n|   |   |   |   |--- class: 1\n|   |--- numeric__baseline_kmh >  73.50\n|   |   |--- numeric__occupancy_median_pct <= 34.75\n|   |   |   |--- numeric__speed_ratio <= 0.27\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_ratio >  0.27\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__occupancy_median_pct >  34.75\n|   |   |   |--- numeric__baseline_kmh <= 76.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  76.00\n|   |   |   |   |--- class: 1\n|--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |--- numeric__occupancy_median_pct <= 20.75\n|   |   |--- numeric__baseline_kmh <= 87.75\n|   |   |   |--- numeric__speed_change_15m_ratio <= -0.05\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_change_15m_ratio >  -0.05\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__baseline_kmh >  87.75\n|   |   |   |--- numeric__speed_change_15m_ratio <= -0.40\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_change_15m_ratio >  -0.40\n|   |   |   |   |--- class: 0\n|   |--- numeric__occupancy_median_pct >  20.75\n|   |   |--- numeric__baseline_kmh <= 60.00\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |   |   |   |--- class: 0\n|   |   |--- numeric__baseline_kmh >  60.00\n|   |   |   |--- numeric__baseline_kmh <= 73.50\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  73.50\n|   |   |   |   |--- class: 0\n"
+  },
+  {
+    "model": "logistic",
+    "feature_set": "local+history+flow+calendar",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.6652678816781472,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false
+  },
+  {
+    "model": "tree",
+    "feature_set": "local+history+flow+calendar",
+    "horizon_min": 30,
+    "parameters": {
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.6510141818634149,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false,
+    "tree_depth": 4,
+    "tree_leaves": 15,
+    "tree_text": "|--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |--- numeric__hour_sin <= 0.39\n|   |   |--- numeric__baseline_kmh <= 73.50\n|   |   |   |--- numeric__speed_mean_15m_ratio <= 0.46\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_mean_15m_ratio >  0.46\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__baseline_kmh >  73.50\n|   |   |   |--- numeric__baseline_kmh <= 76.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  76.00\n|   |   |   |   |--- class: 0\n|   |--- numeric__hour_sin >  0.39\n|   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |   |   |--- numeric__speed_ratio <= 0.22\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_ratio >  0.22\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |   |   |--- numeric__occupancy_median_pct <= 45.00\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__occupancy_median_pct >  45.00\n|   |   |   |   |--- class: 0\n|--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |--- numeric__hour_sin <= 0.80\n|   |   |--- numeric__occupancy_median_pct <= 31.75\n|   |   |   |--- numeric__hour_sin <= -0.99\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__hour_sin >  -0.99\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__occupancy_median_pct >  31.75\n|   |   |   |--- numeric__volume_median_per_observed_30s <= 4.75\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__volume_median_per_observed_30s >  4.75\n|   |   |   |   |--- class: 0\n|   |--- numeric__hour_sin >  0.80\n|   |   |--- numeric__occupancy_median_pct <= 10.25\n|   |   |   |--- class: 0\n|   |   |--- numeric__occupancy_median_pct >  10.25\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |   |   |   |--- class: 0\n"
+  },
+  {
+    "model": "logistic",
+    "feature_set": "local+history+flow+calendar+weather",
+    "horizon_min": 30,
+    "parameters": {
+      "C": 10.0,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.6653538765273559,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false
+  },
+  {
+    "model": "tree",
+    "feature_set": "local+history+flow+calendar+weather",
+    "horizon_min": 30,
+    "parameters": {
+      "max_depth": 4,
+      "min_samples_leaf": 10,
+      "class_weight": null
+    },
+    "validation_log_loss": 0.6510141818634149,
+    "train_rows": 3428,
+    "validation_rows": 2008,
+    "test_rows": 1363,
+    "refit_after_selection": false,
+    "tree_depth": 4,
+    "tree_leaves": 15,
+    "tree_text": "|--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |--- numeric__hour_sin <= 0.39\n|   |   |--- numeric__baseline_kmh <= 73.50\n|   |   |   |--- numeric__speed_mean_15m_ratio <= 0.46\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_mean_15m_ratio >  0.46\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__baseline_kmh >  73.50\n|   |   |   |--- numeric__baseline_kmh <= 76.00\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__baseline_kmh >  76.00\n|   |   |   |   |--- class: 0\n|   |--- numeric__hour_sin >  0.39\n|   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |   |   |--- numeric__speed_ratio <= 0.22\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__speed_ratio >  0.22\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |   |   |--- numeric__occupancy_median_pct <= 45.00\n|   |   |   |   |--- class: 1\n|   |   |   |--- numeric__occupancy_median_pct >  45.00\n|   |   |   |   |--- class: 0\n|--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |--- numeric__hour_sin <= 0.80\n|   |   |--- numeric__occupancy_median_pct <= 31.75\n|   |   |   |--- numeric__hour_sin <= -0.99\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__hour_sin >  -0.99\n|   |   |   |   |--- class: 1\n|   |   |--- numeric__occupancy_median_pct >  31.75\n|   |   |   |--- numeric__volume_median_per_observed_30s <= 4.75\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__volume_median_per_observed_30s >  4.75\n|   |   |   |   |--- class: 0\n|   |--- numeric__hour_sin >  0.80\n|   |   |--- numeric__occupancy_median_pct <= 10.25\n|   |   |   |--- class: 0\n|   |   |--- numeric__occupancy_median_pct >  10.25\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min <= -0.04\n|   |   |   |   |--- class: 0\n|   |   |   |--- numeric__speed_slope_15m_ratio_per_min >  -0.04\n|   |   |   |   |--- class: 0\n"
+  }
+]

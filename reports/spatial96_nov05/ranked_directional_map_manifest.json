@@ -1,0 +1,13 @@
+{
+  "status": "candidate_only",
+  "road_source_sha256": "4fad0303e65c759ac7abe8eea3920b3ffcfcd5149c978fa9540bf032933a32c2",
+  "intersection_source_sha256": "79119240315ea989b18e715d54f7146ff8bcbc9c51aeb91ed46857c0bf72fa5f",
+  "sha256": {
+    "ranked-directed-pair-1.png": "a8072e67416cee58c219e5223d8b664631cfeb5d17fb7af0af459b584cae19d9",
+    "ranked-directed-pair-2.png": "7b71095456935b41c39d9ec96c341decd7e7c3770007d7359ea252fa82430e3b",
+    "ranked-directed-pair-3.png": "5bbeccd3d6f5d4c02d1e0a89609cb238f546dfe37cb67dd0b4689837d6af8595",
+    "ranked-directed-pair-4.png": "f4eee9df72262696087a335375bee1cec6f379d2063ea7e9e4107879d07c2ee1",
+    "ranked-directed-pair-5.png": "7c21b7247b0cee58a27914e6ee4d0712e25114a0eb736450e8ef2a7faff4b235",
+    "ranked-directed-pair-6.png": "d98a10cae4897393b957545db3f11c186a42c3e37e45cd30bab22a66e7229fb1"
+  }
+}

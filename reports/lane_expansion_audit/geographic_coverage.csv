@@ -1,0 +1,44 @@
+scenario,district_current_metadata,detectors,lane_units,coordinate_status
+Original 24,Kowloon City,6,6,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Original 24,Sha Tin,9,9,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Original 24,Southern,6,6,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Original 24,Wan Chai,1,1,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Original 24,Wong Tai Sin,1,1,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Original 24,Yau Tsim Mong,1,1,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 48,Kowloon City,14,14,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 48,Kwun Tong,8,8,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 48,Sha Tin,9,9,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 48,Southern,11,11,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 48,Wan Chai,4,4,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 48,Wong Tai Sin,1,1,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 48,Yau Tsim Mong,1,1,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Central & Western,3,3,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Kowloon City,14,14,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Kwai Tsing,1,1,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Kwun Tong,20,20,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Sha Tin,17,17,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Sham Shui Po,8,8,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Southern,11,11,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Tsuen Wan,3,3,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Wan Chai,4,4,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Wong Tai Sin,2,2,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Yau Tsim Mong,4,4,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+Expanded 96,Yuen Long,9,9,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Central & Western,10,10,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Eastern,23,23,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Islands,23,23,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Kowloon City,18,18,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Kwai Tsing,12,12,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Kwun Tong,38,38,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,North,15,15,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Sai Kung,8,8,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Sha Tin,56,56,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Sham Shui Po,38,38,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Southern,11,11,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Tai Po,20,20,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Tsuen Wan,59,59,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Tuen Mun,26,26,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Wan Chai,4,4,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Wong Tai Sin,5,5,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Yau Tsim Mong,20,20,HK1980 Grid from CURRENT TD metadata; historical validity unverified
+All eligible,Yuen Long,40,40,HK1980 Grid from CURRENT TD metadata; historical validity unverified

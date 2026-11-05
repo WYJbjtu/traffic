@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "candidate_lane_days": 583194,
+  "candidate_units": 426,
+  "days": 1369,
+  "months": 45,
+  "units": 96,
+  "events": 30452,
+  "bins": 35782769,
+  "per_unit_hashes": "passed",
+  "event_uniqueness": "passed",
+  "label_counts_unknowns": "passed",
+  "feature_availability": "passed",
+  "split_and_maturity_recomputed": "passed",
+  "original_24_reference_exact_match": true,
+  "pytest": "178 passed, 1 warning; exit 0",
+  "release_sha256": "f5be559a6ad8df69e68fbc382fb609d13fdae40aa044c9d1fe4d7e3b2253b6b8"
+}

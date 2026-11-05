@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-11-05T10:08:12.024650+00:00",
+  "url": "http://localhost:8501",
+  "browser": "Playwright Chromium, 1365x850",
+  "checks": {
+    "overview_counts": true,
+    "official_geometry": true,
+    "detector_selection": true,
+    "inferred_path": true,
+    "real_event": true,
+    "detector_persists_to_event": true,
+    "neighbor_curve": true,
+    "future_separated": true,
+    "saved_spatial_features": true,
+    "frozen_model_metrics": true,
+    "controls": true,
+    "scientific_limits": true,
+    "no_page_errors": true,
+    "no_horizontal_overflow": true
+  },
+  "page_errors": [],
+  "screenshots": [
+    "overview-browser.png",
+    "network-browser.png",
+    "network-selected-browser.png",
+    "event-browser.png",
+    "features-browser.png",
+    "models-browser.png",
+    "methods-browser.png"
+  ]
+}

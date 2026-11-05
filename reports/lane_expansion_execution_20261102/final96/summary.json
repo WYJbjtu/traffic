@@ -1,0 +1,43 @@
+{
+  "status": "verified_completed",
+  "main_commit": "4309351ea6c365918adbb5fc6b12c7f37c9dea63",
+  "repairs": [
+    {
+      "at_utc": "2026-11-02T11:52:37.016479+00:00",
+      "problem": "January report assumed a repo-relative first-week location absent on the archive owner machine",
+      "fix": "Resolve from original reference manifest or explicit --selection-directory; require frozen profile SHA-256 match",
+      "scientific_rules_changed": false,
+      "completed_reference_sha256": "f34b16ce590e3a6ae3c35477b2aa7d74c5ae3337315d78900285d32aeb0f88f4",
+      "regression_tests": "4 passed"
+    }
+  ],
+  "units": 96,
+  "candidate_units": 426,
+  "dataset_rows": {
+    "bins": 35782769,
+    "events": 30452
+  },
+  "horizons": {
+    "15": {
+      "positive": 3406,
+      "negative": 25060,
+      "unknown": 1986
+    },
+    "30": {
+      "positive": 7226,
+      "negative": 20632,
+      "unknown": 2594
+    },
+    "60": {
+      "positive": 12845,
+      "negative": 14212,
+      "unknown": 3395
+    }
+  },
+  "by_split": {
+    "train": 14290,
+    "validation": 8557,
+    "test": 7605,
+    "purged": 0
+  }
+}

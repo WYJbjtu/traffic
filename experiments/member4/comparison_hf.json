@@ -1,0 +1,20 @@
+{
+  "version": "member4-history-flow-v1",
+  "scientific_approval": "pending_team_review",
+  "models": ["logistic", "tree", "rf", "hgb"],
+  "feature_sets": [
+    {"name": "local", "groups": ["local"]},
+    {"name": "local+history", "groups": ["local", "history"]},
+    {"name": "local+history+flow", "groups": ["local", "history", "flow"]}
+  ],
+  "reference_feature_set": "local",
+  "comparison_split": "test",
+  "metrics": {
+    "balanced_accuracy": "higher",
+    "f1": "higher",
+    "roc_auc": "higher",
+    "pr_auc": "higher",
+    "brier_score": "lower",
+    "log_loss": "lower"
+  }
+}

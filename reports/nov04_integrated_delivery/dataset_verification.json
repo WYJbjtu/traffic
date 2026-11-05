@@ -1,0 +1,26 @@
+{
+  "release_zip_sha256": "f5be559a6ad8df69e68fbc382fb609d13fdae40aa044c9d1fe4d7e3b2253b6b8",
+  "release_files_verified": 23,
+  "frozen_lane_units": 96,
+  "event_lane_units": 94,
+  "events": 30452,
+  "bins": 35782769,
+  "split_counts": {
+    "train": 14290,
+    "validation": 8557,
+    "test": 7605
+  },
+  "known_label_counts": {
+    "15m": 28466,
+    "30m": 27858,
+    "60m": 27057
+  },
+  "unknown_label_counts": {
+    "15m": 1986,
+    "30m": 2594,
+    "60m": 3395
+  },
+  "events_with_current_metadata_coordinates": 30452,
+  "event_units_with_current_metadata_coordinates": 94,
+  "model_manifest_sha256": "64cb6894f3a0a7c6b80164dad1f9477872d56ad2388becb7ed74e9ffcc610a4d"
+}

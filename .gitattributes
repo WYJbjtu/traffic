@@ -1,0 +1,36 @@
+# Preserve verified government sample files byte-for-byte.
+# Git must not convert LF/CRLF during checkout.
+data/sample/verified/** -text
+
+# SHA-256 publication inputs and evidence must retain their exact Git bytes.
+experiments/tianhao/expanded96_20261104/** -text
+.gitattributes -text
+configs/benchmarks.json -text
+configs/supervised_models.json -text
+configs/tianhao_expanded96_30m_contract.json -text
+configs/tianhao_extended_models.json -text
+experiments/tianhao/acquire_sources.py -text
+experiments/tianhao/build_release96_notebook.py -text
+experiments/tianhao/paths.py -text
+experiments/tianhao/prepare_external.py -text
+experiments/tianhao/prepare_local.py -text
+experiments/tianhao/run_experiment.py -text
+experiments/tianhao/run_extended_models.py -text
+experiments/tianhao/run_release96.py -text
+experiments/tianhao/verify_release96.py -text
+experiments/tianhao/verify_workflow.py -text
+notebooks/Tianhao_新版96车道_完整重跑_20261104.ipynb -text
+src/traffic_recovery/external/_validation.py -text
+src/traffic_recovery/external/calendar.py -text
+src/traffic_recovery/models/benchmarks.py -text
+src/traffic_recovery/models/contract.py -text
+src/traffic_recovery/models/dataset.py -text
+src/traffic_recovery/models/evaluation.py -text
+src/traffic_recovery/models/experiment_diagnostics.py -text
+src/traffic_recovery/models/extended_classifiers.py -text
+src/traffic_recovery/models/provenance.py -text
+src/traffic_recovery/models/supervised.py -text
+tests/test_extended_classifiers.py -text
+tests/test_release96_publication.py -text
+tests/test_tianhao_workflow.py -text
+uv.lock -text

@@ -1,0 +1,3 @@
+# Streamlit verification: NOT RUN for the 96-lane delivery
+
+`apps/research_explorer.py` remains the historical 24-lane research interface; it explicitly labels 7,597 historical events. The application was not adapted to the 96-lane release in this partial delivery. Streamlit/Plotly/pydeck are optional and not present in the locked core environment. No browser was launched; no map, interaction or chart check is claimed. **Acceptance criterion for 96-lane Explorer and tiled full network is unmet.** Do not select the 96-lane events path in the historical 24-lane model panel and interpret its outputs as 96-lane predictions. The verified new run artifacts are available separately at `data/local/expanded96-release/model-a0-a2-v2/` for a future explicit 96-lane selector.

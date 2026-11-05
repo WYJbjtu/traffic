@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "notebook": "notebooks/01_Tianhao_\u6d41\u7a0b\u4e0e\u6570\u636e\u7ed3\u679c_\u526f\u672c.ipynb",
+  "notebook_sha256": "108329b679e208f9a232e94c8fbfbacfcdf080ae5b1a0fecac35ee7d6c1791c3",
+  "html_sha256": "f558fa510fd8c0ad5eecf10016b8b835f311a142f0e9a0745ec0c49dfd6ce39d",
+  "executed_code_sha256": "c7492ac74688ef639c22d6898ccddd809f16bc4e76c2f8c80bb25eee8b4151a6",
+  "executed_code_cells": 22,
+  "error_outputs": 0,
+  "embedded_png_outputs": 10,
+  "all_run_artifact_checksums_verified": true,
+  "metrics_match_prior_exploratory_run": true,
+  "visual_review": "Inspected all four model figures: ROC/PR, six confusion matrices, feature-group gain, coefficients/tree importance; labels legible, no clipping.",
+  "note": "All 22 code cells actually executed; markdown wording normalized after execution. No model retraining during export. Repository sharing paths are adapted; this JSON records the original local notebook, not the shared notebook hash."
+}

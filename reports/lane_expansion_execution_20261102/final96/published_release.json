@@ -1,0 +1,19 @@
+{
+  "url": "https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/tag/data-expanded-96-2023-2026-v1",
+  "tag": "data-expanded-96-2023-2026-v1",
+  "sha256": "f5be559a6ad8df69e68fbc382fb609d13fdae40aa044c9d1fe4d7e3b2253b6b8",
+  "assets": [
+    {
+      "name": "HK_Traffic_Expanded_96_Prepared_Data_v1.zip",
+      "bytes": 870121429,
+      "url": "https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/download/data-expanded-96-2023-2026-v1/HK_Traffic_Expanded_96_Prepared_Data_v1.zip",
+      "digest": "sha256:f5be559a6ad8df69e68fbc382fb609d13fdae40aa044c9d1fe4d7e3b2253b6b8"
+    },
+    {
+      "name": "HK_Traffic_Expanded_96_Prepared_Data_v1.zip.sha256",
+      "bytes": 111,
+      "url": "https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/download/data-expanded-96-2023-2026-v1/HK_Traffic_Expanded_96_Prepared_Data_v1.zip.sha256",
+      "digest": "sha256:339177c1b13de0bd41cc4689f1428619b2b91c5cb27b7fc924b31721cd205ad7"
+    }
+  ]
+}

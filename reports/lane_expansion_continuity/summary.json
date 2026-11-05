@@ -1,0 +1,27 @@
+{
+  "january_only": true,
+  "full_january_reference_count": 426,
+  "original_24_reference_exact_match": true,
+  "january_reference_bin_min": 2929,
+  "january_baseline_kmh_median": 81.0,
+  "january_missing_candidate_unit_days": 1330,
+  "source_gap_days_at_least_317_of_426": [
+    "2023-01-16 00:00:00+08:00",
+    "2023-01-17 00:00:00+08:00",
+    "2023-01-18 00:00:00+08:00",
+    "2023-01-24 00:00:00+08:00"
+  ],
+  "within_january_baseline_change_median_kmh": 0.0,
+  "within_january_baseline_change_abs_90pct_kmh": 1.0,
+  "district_round_robin_metadata_history_verified": false,
+  "proximity_candidate_pairs_250m_all_426": 196,
+  "proximity_candidate_pairs_250m_id_order_96": 29,
+  "verified_neighbor_pairs": 0,
+  "continuity_months_for_expanded_units": 1,
+  "remaining_months_missing_raw_archive": 44,
+  "new_96_event_count": null,
+  "source_january_reference_sha256": "1c448733b109b3ff01aec272ced58ff2186d972cd437e282095480a31194ba21",
+  "candidate_config_sha256": "b561185a2599a86018d14ca9e60a4a8ba9e14bd81ee2c098814dfa77c6c2c468",
+  "current_metadata_sha256": "f30818ec94984c024f0188e2e45139ac684c4636aae7906561e227f01407423d",
+  "source_notes": "Jan reference is January 1\u201331; district metadata is current and not proven effective in Jan 2023; 250m pairs are distance-only review leads"
+}

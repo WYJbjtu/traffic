@@ -1,0 +1,25 @@
+{
+  "version": "member4-long-window-history-flow-v1",
+  "scientific_approval": "pending_team_review",
+  "horizons_minutes": [15, 30, 60],
+  "split_boundaries": {
+    "validation_start": "2025-01-01T00:00:00+08:00",
+    "test_start": "2026-01-01T00:00:00+08:00",
+    "test_end": "2026-10-01T00:00:00+08:00"
+  },
+  "feature_groups": {
+    "local": ["speed_kmh", "speed_ratio", "baseline_kmh", "valid_slots", "onset_observed_minutes"],
+    "history": ["speed_change_15m_ratio", "speed_mean_15m_ratio", "speed_slope_15m_ratio_per_min", "speed_trend_observed_bins"],
+    "flow": ["volume_median_per_observed_30s", "occupancy_median_pct", "flow_observed_slots", "occupancy_observed_slots"]
+  },
+  "availability_columns": [
+    "feature_max_available_at",
+    "speed_trend_max_available_at",
+    "flow_max_available_at"
+  ],
+  "availability_requirements": {
+    "feature_max_available_at": ["speed_kmh", "speed_ratio", "baseline_kmh", "valid_slots", "onset_observed_minutes"],
+    "speed_trend_max_available_at": ["speed_change_15m_ratio", "speed_mean_15m_ratio", "speed_slope_15m_ratio_per_min", "speed_trend_observed_bins"],
+    "flow_max_available_at": ["volume_median_per_observed_30s", "occupancy_median_pct", "flow_observed_slots", "occupancy_observed_slots"]
+  }
+}

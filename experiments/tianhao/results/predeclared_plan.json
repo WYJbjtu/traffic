@@ -1,0 +1,95 @@
+{
+  "status": "EXPLORATORY — NOT APPROVED AS FINAL RESULTS",
+  "target": "30-minute observed recovery confirmation from handed-off labels",
+  "data_preparation_version": "v2_cross_midnight_flow_window_reads_previous_day",
+  "feature_groups": {
+    "local": [
+      "speed_kmh",
+      "speed_ratio",
+      "baseline_kmh",
+      "valid_slots",
+      "onset_observed_minutes"
+    ],
+    "history": [
+      "speed_change_15m_ratio",
+      "speed_mean_15m_ratio",
+      "speed_slope_15m_ratio_per_min",
+      "speed_trend_observed_bins"
+    ],
+    "flow": [
+      "volume_median_per_observed_30s",
+      "occupancy_median_pct",
+      "flow_observed_slots",
+      "occupancy_observed_slots"
+    ],
+    "calendar": [
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "is_weekend",
+      "is_public_holiday",
+      "is_day_before_holiday",
+      "is_day_after_holiday"
+    ],
+    "weather": [
+      "temperature_c",
+      "wind_speed_kmh",
+      "temperature_age_minutes",
+      "wind_age_minutes",
+      "temperature_missing",
+      "wind_missing"
+    ]
+  },
+  "feature_sets": [
+    [
+      "local"
+    ],
+    [
+      "local",
+      "history"
+    ],
+    [
+      "local",
+      "history",
+      "flow"
+    ],
+    [
+      "local",
+      "history",
+      "flow",
+      "calendar"
+    ],
+    [
+      "local",
+      "history",
+      "flow",
+      "calendar",
+      "weather"
+    ]
+  ],
+  "selection": "existing engine: validation log loss; trend rule: validation macro-F1",
+  "classification_threshold": 0.5,
+  "seed": 42,
+  "refit_train_plus_validation": false,
+  "trend_threshold_candidates": [
+    -0.8,
+    -0.6,
+    -0.4,
+    -0.2,
+    -0.1,
+    0,
+    0.1,
+    0.2
+  ],
+  "peak_definition": "HKT hours [07:00,10:00) or [17:00,20:00)",
+  "weather": "King's Park temperature and wind regional proxy; archived availability; <=60-minute observation age",
+  "excluded_families": [
+    "unverified neighboring-road features",
+    "rainfall",
+    "humidity",
+    "incidents",
+    "major events"
+  ],
+  "test_policy": "fixed plan; no test-driven retuning or feature changes"
+}

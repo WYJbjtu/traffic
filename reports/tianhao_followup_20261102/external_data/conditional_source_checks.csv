@@ -1,0 +1,14 @@
+file,url,status,error,bytes,version_count,returned_timestamps,preview
+rainfall_inventory_20230201.json,https://app.data.gov.hk/v1/historical-archive/list-file-versions?url=https%3A%2F%2Fdata.weather.gov.hk%2FweatherAPI%2Fopendata%2FhourlyRainfall.php%3Flang%3Den&start=20230201&end=20230201,failed,Request failed: https://app.data.gov.hk/v1/historical-archive/list-file-versions?url=https%3A%2F%2Fdata.weather.gov.hk%2FweatherAPI%2Fopendata%2FhourlyRainfall.php%3Flang%3Den&start=20230201&end=20230201: HTTP Error 404: Not Found,,,,
+rainfall_inventory_20260930.json,https://app.data.gov.hk/v1/historical-archive/list-file-versions?url=https%3A%2F%2Fdata.weather.gov.hk%2FweatherAPI%2Fopendata%2FhourlyRainfall.php%3Flang%3Den&start=20260930&end=20260930,failed,Request failed: https://app.data.gov.hk/v1/historical-archive/list-file-versions?url=https%3A%2F%2Fdata.weather.gov.hk%2FweatherAPI%2Fopendata%2FhourlyRainfall.php%3Flang%3Den&start=20260930&end=20260930: HTTP Error 404: Not Found,,,,
+incidents_inventory_20230201.json,https://app.data.gov.hk/v1/historical-archive/list-file-versions?url=https%3A%2F%2Fwww.td.gov.hk%2Fen%2Fspecial_news%2Ftrafficnews.xml&start=20230201&end=20230201,retrieved,,4973.0,152.0,152.0,
+major_events_inventory_20230201.json,https://app.data.gov.hk/v1/historical-archive/list-file-versions?url=https%3A%2F%2Fwww.tourism.gov.hk%2Fdatagovhk%2Fhktb_events%2Fhktb_events_en.csv&start=20230201&end=20230201,retrieved,,843.0,0.0,0.0,
+incidents_inventory_20260930.json,https://app.data.gov.hk/v1/historical-archive/list-file-versions?url=https%3A%2F%2Fwww.td.gov.hk%2Fen%2Fspecial_news%2Ftrafficnews.xml&start=20260930&end=20260930,retrieved,,2947.0,71.0,71.0,
+major_events_inventory_20260930.json,https://app.data.gov.hk/v1/historical-archive/list-file-versions?url=https%3A%2F%2Fwww.tourism.gov.hk%2Fdatagovhk%2Fhktb_events%2Fhktb_events_en.csv&start=20260930&end=20260930,retrieved,,843.0,0.0,0.0,
+hktb_events_current.csv,https://www.tourism.gov.hk/datagovhk/hktb_events/hktb_events_en.csv,retrieved,,597.0,,,"Date,Event_Name,Venue
+29 January 2025,2025 International Chinese New Year Night Parade,""Hong Kong Cultural Centre Piazza, Tsim Sha Tsui""
+7 to 8 June 2025,2025 Hong Kong International Dragon Boat Races,Tsim Sha Tsui East Waterfront
+23 to 26 October 2025,2025 Hong Kong Wine & Dine Festival,Central Harbourfront Event Space
+14 November 2025 to 4 January 2026 (Temporarily closed from 29 November to 9 December 2025),2025 Hong Kong WinterFest,""Statue Square Gardens, Central""
+31 December 2025 to 1 January 2026,2025-26 Hong Kong New Year Countdown,""Chater Road Pedestrian Precinct, Central""
+"

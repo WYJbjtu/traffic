@@ -1,0 +1,809 @@
+detector_id,District,Road_EN,Easting,Northing,observed_lane_units,eligible_lane_units,one_lane_groups,historical_inventory_status
+AID01101,Southern,Aberdeen Praya Road near Abba House - Eastbound ,833758,812147,3,3,1,observed_and_in_current_metadata
+AID01102,Southern,Aberdeen Praya Road near Hoi Fai Mansion - Eastbound ,834293,812041,3,0,0,observed_and_in_current_metadata
+AID01103,Southern,Wong Chuk Hang Road near Aberdeen Technical School - Eastbound ,834750,812208,3,3,1,observed_and_in_current_metadata
+AID01104,Southern,Wong Chuk Hang Road Flyover near AXA Southside - Eastbound ,835128,812179,2,2,1,observed_and_in_current_metadata
+AID01105,Southern,Wong Chuk Hang Road Flyover near Benefit Industrial Factory Building - Eastbound ,835419,812324,2,2,1,observed_and_in_current_metadata
+AID01106,Southern,Wong Chuk Hang Road near Hong Kong Academy of Medicine - Eastbound ,835753,812408,2,2,1,observed_and_in_current_metadata
+AID01107,Southern,Aberdeen Tunnel near Wong Chuk Hang Hospital - Eastbound ,836208,812358,2,2,1,observed_and_in_current_metadata
+AID01108,Wan Chai,Wong Nai Chung Gap Flyover near Racecourse - Northbound ,836603,814780,2,2,1,observed_and_in_current_metadata
+AID01109,Wan Chai,Canal Road Flyover near Cricket Club - Northbound ,836701,815304,3,0,0,observed_and_in_current_metadata
+AID01110,Wan Chai,Canal Road Flyover near Wan Chai Fire Station - Northbound ,836715,815609,3,0,0,observed_and_in_current_metadata
+AID01111,Kowloon City,Hong Chong Road near The Hong Kong Polytechnic University - Northbound (1) ,836693,818352,4,4,1,observed_and_in_current_metadata
+AID01112,Kowloon City,Hong Chong Road near The Hong Kong Polytechnic University - Northbound (2) ,836728,818441,4,4,1,observed_and_in_current_metadata
+AID01113,Yau Tsim Mong,Princess Margaret Road near Parc Palais- Northbound  ,836401,819035,3,3,1,observed_and_in_current_metadata
+AID01114,Kowloon City,Princess Margaret Road near Oi Man Estate - Northbound ,836275,819369,3,3,1,observed_and_in_current_metadata
+AID01115,Kowloon City,Princess Margaret Road near Yu Chun Keung Memorial College - Northbound ,836485,819945,3,0,0,observed_and_in_current_metadata
+AID01116,Kowloon City,Princess Margaret Road near St. John Ambulance Brigade Kowloon Depot - Northbound ,836454,820193,2,0,0,observed_and_in_current_metadata
+AID01117,Kowloon City,Waterloo Road near St. George Apartments - Northbound ,836416,820593,4,4,1,observed_and_in_current_metadata
+AID01118,Kowloon City,Waterloo Road near Kowloon Tong Club - Northbound ,836433,821044,3,0,0,observed_and_in_current_metadata
+AID01119,Kowloon City,Waterloo Road near Durham Road - Northbound ,836463,821497,0,0,0,metadata_only
+AID01120,Kowloon City,Waterloo Road near Kowloon East Barracks(1) - Northbound ,836475,821768,3,3,1,observed_and_in_current_metadata
+AID01121,Kowloon City,Waterloo Road near Kowloon East Barracks(2) - Northbound ,836502,822157,2,0,0,observed_and_in_current_metadata
+AID01122,Kowloon City,Waterloo Road near Warwick Road - Northbound ,836480,822536,2,0,0,observed_and_in_current_metadata
+AID01123,Kowloon City,Lion Rock Tunnel Road near Entrance from Kowloon - Northbound ,836727,822903,2,0,0,observed_and_in_current_metadata
+AID01124,Sha Tin,Lion Rock Tunnel Road near Toll Plaza - Northbound ,836094,824460,2,2,1,observed_and_in_current_metadata
+AID01125,Sha Tin,Lion Rock Tunnel Road near Worldwide Gardens - Northbound ,836574,824919,2,0,0,observed_and_in_current_metadata
+AID01126,Sha Tin,Lion Rock Tunnel Road near Kak Tin Village - Northbound (1) ,836964,825143,2,2,1,observed_and_in_current_metadata
+AID01127,Sha Tin,Lion Rock Tunnel Road near Kak Tin Village - Northbound (2) ,837206,825316,2,2,1,observed_and_in_current_metadata
+AID01128,Sha Tin,Lion Rock Tunnel Road near Fung Shing Court - Northbound ,837539,825774,2,0,0,observed_and_in_current_metadata
+AID01129,Sha Tin,Sha Tin Road near Pok Hong Estate - Northbound ,837926,826070,2,2,1,observed_and_in_current_metadata
+AID01130,Sha Tin,Sha Tin Road near Christ College - Northbound ,838207,826144,0,0,0,metadata_only
+AID01131,Sha Tin,Sha Tin Road near Sha Tin Wai New Village - Northbound ,838512,826339,2,2,1,observed_and_in_current_metadata
+AID01132,Sha Tin,Sha Tin Road near Prince of Wales Hospital - Northbound ,838711,826855,3,0,0,observed_and_in_current_metadata
+AID01133,Sha Tin,Sha Tin Road near Shing Mun River - Northbound(1) ,838796,827166,2,2,1,observed_and_in_current_metadata
+AID01134,Sha Tin,Sha Tin Road near Shing Mun River - Northbound ,838719,827588,2,2,1,observed_and_in_current_metadata
+AID01135,Sha Tin,Sha Tin Road near Hong Kong Institute of Vocational Education (Sha Tin) - Northbound ,838547,827880,2,2,1,observed_and_in_current_metadata
+AID01136,Sha Tin,Sha Tin Road near Fo Tan Railway House - Northbound ,838555,828307,2,2,1,observed_and_in_current_metadata
+AID01201,Wong Tai Sin,Lion Rock Tunnel Road near Exit to Kowloon - Southbound ,836751,822953,2,2,1,observed_and_in_current_metadata
+AID01202,Kowloon City,Waterloo Road near Warwick Road - Southbound ,836461,822591,2,2,1,observed_and_in_current_metadata
+AID01203,Kowloon City,Waterloo Road near Junction Road - Southbound ,836504,822205,2,2,1,observed_and_in_current_metadata
+AID01204,Kowloon City,Waterloo Road near Kowloon East Barracks - Southbound ,836478,821768,3,3,1,observed_and_in_current_metadata
+AID01205,Kowloon City,Waterloo Road near American Internationnal School - Southbound ,836474,821497,0,0,0,metadata_only
+AID01206,Kowloon City,Waterloo Road near Kowloon Tong Club - Southbound ,836446,821043,2,2,1,observed_and_in_current_metadata
+AID01207,Kowloon City,Waterloo Road near St. George Apartments - Southbound ,836413,820552,4,0,0,observed_and_in_current_metadata
+AID01208,Kowloon City,Princess Margaret Road near St. John Ambulance Brigade Kowloon Depot - Southbound ,836411,820255,2,0,0,observed_and_in_current_metadata
+AID01209,Kowloon City,Princess Margaret Road near Yu Chun Keung Memorial College - Southbound ,836487,819944,3,3,1,observed_and_in_current_metadata
+AID01210,Kowloon City,Princess Margaret Road near Oi Man Estate - Southbound ,836277,819369,3,3,1,observed_and_in_current_metadata
+AID01211,Kowloon City,Princess Margaret Road near Oi Man Estate - Southbound(2) ,836402,819036,3,3,1,observed_and_in_current_metadata
+AID01212,Kowloon City,Princess Margaret Road near King's Park -Southbound ,836469,818943,3,3,1,observed_and_in_current_metadata
+AID01213,Kowloon City,Hong Chong Road near The Hong Kong Polytechnic University - Southbound ,836747,818515,4,4,1,observed_and_in_current_metadata
+AID01214,Wan Chai,Canal Road Flyover near Elizabeth House - Southbound ,836662,815761,3,3,1,observed_and_in_current_metadata
+AID01215,Wan Chai,Canal Road Flyover near Wing Tak Building - Southbound ,836715,815483,2,2,1,observed_and_in_current_metadata
+AID01216,Wan Chai,Wong Nai Chung Gap Flyover near Racecourse - Southbound ,836549,814941,2,2,1,observed_and_in_current_metadata
+AID01217,Southern,Aberdeen Tunnel near Toll Plaza - Westbound ,836339,812425,4,0,0,observed_and_in_current_metadata
+AID01218,Southern,Wong Chuk Hang Road near Wong Chuk Hang Sports Centre - Westbound ,835942,812365,2,0,0,observed_and_in_current_metadata
+AID01219,Southern,Wong Chuk Hang Road near Wong Chuk Hang Recreation Ground - Westbound ,835501,812367,2,2,1,observed_and_in_current_metadata
+AID01220,Southern,Wong Chuk Hang Road Flyover near Cheung Tak Industrial Building - Westbound ,835049,812168,2,2,1,observed_and_in_current_metadata
+AID01221,Southern,Wong Chuk Hang Road near Aberdeen Police Station - Westbound ,834711,812207,3,3,1,observed_and_in_current_metadata
+AID01222,Southern,Aberdeen Praya Road near Ocean Court - Westbound ,834430,812095,3,3,1,observed_and_in_current_metadata
+AID01223,Southern,Aberdeen Praya Road near Aberdeen Bus Terminus - Westbound ,833976,812080,3,3,1,observed_and_in_current_metadata
+AID02104,Kwun Tong,Kwun Tong Bypass near Sceneway Garden - Westbound ,842062,818666,2,2,1,observed_and_in_current_metadata
+AID02105,Kwun Tong,Kwun Tong Bypass near Magistrates Courts - Westbound ,841702,818880,2,2,1,observed_and_in_current_metadata
+AID02106,Kwun Tong,Kwun Tong Bypass near Laguna City - Westbound ,841412,818796,3,0,0,observed_and_in_current_metadata
+AID02107,Kwun Tong,Kwun Tong Bypass near Manulife Financial Centre - Westbound ,841181,818618,3,0,0,observed_and_in_current_metadata
+AID02108,Kwun Tong,Kwun Tong Bypass near Kwun Tong Ferry - Westbound ,840801,818770,3,3,1,observed_and_in_current_metadata
+AID02109,Kwun Tong,Kwun Tong Bypass near Kowloon Flour Mills - Northbound ,840500,819171,3,3,1,observed_and_in_current_metadata
+AID02110,Kwun Tong,Kwun Tong Bypass near NEO - Northbound ,840333,819356,3,3,1,observed_and_in_current_metadata
+AID02111,Kwun Tong,Kwun Tong Bypass near Kowloon Godown - Northbound ,840097,819614,3,3,1,observed_and_in_current_metadata
+AID02112,Kwun Tong,Kwun Tong Bypass near Kai Tak Fire Station - Northbound ,839824,819769,2,2,1,observed_and_in_current_metadata
+AID02113,Kwun Tong,Kwun Tong Bypass near MegaBox - Northbound ,839429,819986,2,0,0,observed_and_in_current_metadata
+AID02114,Kwun Tong,Kwun Tong Bypass near Trade & Exhibition Centre - Northbound ,839111,820425,2,2,1,observed_and_in_current_metadata
+AID02115,Kwun Tong,Kwun Tong Bypass near Kowloon Bay Park - Northbound ,839178,820953,2,2,1,observed_and_in_current_metadata
+AID02116,Kwun Tong,Kwun Tong Bypass near Choi Hung Estate - Northbound ,839182,821576,2,2,1,observed_and_in_current_metadata
+AID02117,Wong Tai Sin,Tate's Cairn Highway near Chi Lin Nunnery - Northbound ,839004,822151,2,0,0,observed_and_in_current_metadata
+AID02118,Sha Tin,Tate's Cairn Tunnel near Toll Plaza - Northbound ,839760,826563,5,5,1,observed_and_in_current_metadata
+AID02119,Sha Tin,Tate's Cairn Highway near HK School of Motoring - Northbound ,839715,827017,2,2,1,observed_and_in_current_metadata
+AID02120,Sha Tin,Tate's Cairn Highway near HKBU (Shek Mun) - Northbound ,839799,827615,4,4,1,observed_and_in_current_metadata
+AID02121,Sha Tin,Tate's Cairn Highway near On Sum Street - Northbound ,839605,828117,3,3,1,observed_and_in_current_metadata
+AID02122,Sha Tin,Tate's Cairn Highway near Rowing Centre - Northbound ,839703,828592,3,0,0,observed_and_in_current_metadata
+AID02123,Sha Tin,Tate's Cairn Highway near Shatin Hospital - Northbound ,839934,828967,3,3,1,observed_and_in_current_metadata
+AID02124,Sha Tin,Tate's Cairn Highway near A Kung Kok Sports Grounds - Northbound ,840259,829280,2,2,1,observed_and_in_current_metadata
+AID02125,Sha Tin,Tate's Cairn Highway near Tai Shui Hang Bicycle Park - Northbound ,840477,829635,2,2,1,observed_and_in_current_metadata
+AID02126,Sha Tin,Tate's Cairn Highway near Marine Police Station - Northbound ,840060,830007,2,0,0,observed_and_in_current_metadata
+AID02127,Sha Tin,Tate's Cairn Highway near Hyatt Regency ShaTin - Northbound ,839899,830281,2,2,1,observed_and_in_current_metadata
+AID02201,Wong Tai Sin,Tate's Cairn Highway near Chi Lin Nunnery - Southbound ,839044,822352,0,0,0,metadata_only
+AID02202,Wong Tai Sin,Tate's Cairn Highway near Choi Hung Estate - Southbound ,839128,821806,2,2,1,observed_and_in_current_metadata
+AID02203,Kwun Tong,Kwun Tong Bypass near Kai Ching Estate - Southbound ,839177,821481,2,2,1,observed_and_in_current_metadata
+AID02204,Kwun Tong,Kwun Tong Bypass near Skyline Tower Car Park - Southbound ,839156,820907,2,0,0,observed_and_in_current_metadata
+AID02205,Kwun Tong,Kwun Tong Bypass near Trade & Exhibition Centre - Southbound ,839098,820528,2,2,1,observed_and_in_current_metadata
+AID02206,Kwun Tong,Kwun Tong Bypass near MegaBox - Southbound ,839395,820028,2,0,0,observed_and_in_current_metadata
+AID02207,Kwun Tong,Kwun Tong Bypass near Vehicle Examination Centre - Southbound ,839730,819786,3,3,1,observed_and_in_current_metadata
+AID02208,Kwun Tong,Kwun Tong Bypass near Kowloon Godown - Southbound ,840030,819687,3,3,1,observed_and_in_current_metadata
+AID02209,Kwun Tong,Kwun Tong Bypass near MG Tower - Southbound ,840366,819319,3,3,1,observed_and_in_current_metadata
+AID02210,Kwun Tong,Kwun Tong Bypass near Kowloon Flour Mills - Southbound ,840534,819132,3,3,1,observed_and_in_current_metadata
+AID02211,Kwun Tong,Kwun Tong Bypass near Kwun Tong Ferry - Eastbound ,840742,818852,0,0,0,metadata_only
+AID02212,Kwun Tong,Kwun Tong Bypass near Kwun Tong Sewage Treatment Works - Eastbound ,840947,818594,3,3,1,observed_and_in_current_metadata
+AID02213,Kwun Tong,Kwun Tong Bypass near Manulife Financial Centre - Eastbound ,841144,818603,3,3,1,observed_and_in_current_metadata
+AID02214,Kwun Tong,Kwun Tong Bypass near Sunbeam Centre - Eastbound ,841515,818840,4,4,1,observed_and_in_current_metadata
+AID02215,Kwun Tong,Kwun Tong Bypass near Sceneway Garden - Eastbound ,841960,818814,2,2,1,observed_and_in_current_metadata
+AID03101,Central & Western,Connaught Road West Flyover near Tram Depot - Eastbound ,832254,816567,3,2,1,observed_and_in_current_metadata
+AID03102,Central & Western,Connaught Road West near Western Wholesale Food Market - Northbound ,832348,816645,2,0,0,observed_and_in_current_metadata
+AID03103,Central & Western,Connaught Road West near Sun Yat Sen Memorial Park - Northbound (1) ,833123,816624,2,2,1,observed_and_in_current_metadata
+AID03104,Central & Western,Connaught Road West near Sun Yat Sen Memorial Park - Northbound (2) ,832804,816644,1,1,1,observed_and_in_current_metadata
+AID03106,Yau Tsim Mong,West Kowloon Highway near Centenary Substation - Northbound ,834605,818760,3,3,1,observed_and_in_current_metadata
+AID03107,Yau Tsim Mong,West Kowloon Highway near Olympic Plaza - Northbound ,834652,819473,3,2,1,observed_and_in_current_metadata
+AID03108,Yau Tsim Mong,West Kowloon Highway near Olympic MTR Station - Northbound (1) ,834512,819856,3,3,1,observed_and_in_current_metadata
+AID03109,Yau Tsim Mong,West Kowloon Highway near Olympic MTR Station - Northbound (2) ,834436,820040,3,0,0,observed_and_in_current_metadata
+AID03110,Sham Shui Po,West Kowloon Highway near Tai Kok Tsui Substation - Northbound ,834086,820588,3,3,1,observed_and_in_current_metadata
+AID03111,Sham Shui Po,West Kowloon Highway near Nam Cheong MTR Station - Northbound ,833758,820901,3,0,0,observed_and_in_current_metadata
+AID03112,Sham Shui Po,West Kowloon Highway near Hing Wah Street West - Northbound ,833449,821105,3,3,1,observed_and_in_current_metadata
+AID03113,Sham Shui Po,West Kowloon Highway near SKH St. Andrew's Primary School - Northbound ,833124,821242,3,2,1,observed_and_in_current_metadata
+AID03114,Sham Shui Po,West Kln Hwy near Tsing Sha Hwy - Northbound ,832755,821402,3,2,1,observed_and_in_current_metadata
+AID03115,Tsuen Wan,Tsing Long Highway near Royal View Hotel - Northbound ,825965,825563,3,3,1,observed_and_in_current_metadata
+AID03116,Tsuen Wan,Tsing Long Highway near Tai Lam Tunnel Entrance from Kowloon - Northbound ,825634,825811,3,3,1,observed_and_in_current_metadata
+AID03117,Yuen Long,Tsing Long Highway near MTR Pat Heung Maintenance Centre - Northbound (1) ,824668,831570,3,3,1,observed_and_in_current_metadata
+AID03118,Yuen Long,Tsing Long Highway near MTR Pat Heung Maintenance Centre - Northbound (2) ,824640,832089,3,2,1,observed_and_in_current_metadata
+AID03119,Yuen Long,Tsing Long Highway near MTR Kam Sheung Road Station - Northbound (1) ,824521,832512,3,2,1,observed_and_in_current_metadata
+AID03120,Yuen Long,Tsing Long Highway near MTR Kam Sheung Road Station - Northbound (2) ,824312,832852,3,2,1,observed_and_in_current_metadata
+AID03121,Yuen Long,Tsing Long Highway near Kam Tin Road - Northbound (1) ,824037,833122,3,2,1,observed_and_in_current_metadata
+AID03122,Yuen Long,Tsing Long Highway near Kam Tin Road - Northbound (2) ,823667,833410,3,2,1,observed_and_in_current_metadata
+AID03123,Yuen Long,Tsing Long Highway near Kam Tin Road - Northbound (3) ,823311,833750,3,2,1,observed_and_in_current_metadata
+AID03124,Yuen Long,Tsing Long Highway near Castle Peak Road (Yuen Long) - Northbound (1) ,823098,834200,2,1,1,observed_and_in_current_metadata
+AID03125,Yuen Long,Tsing Long Highway near Castle Peak Road (Yuen Long) - Northbound (2) ,823028,834472,2,1,1,observed_and_in_current_metadata
+AID03201,Tsuen Wan,Tsing Long Highway near Tai Lam Tunnel exit to Kowloon - Southbound ,825229,826083,3,3,1,observed_and_in_current_metadata
+AID03202,Kwai Tsing,Tsing Kwai Highway near China Resources Int'l Logistics Centre - Southbound ,832016,821730,4,4,1,observed_and_in_current_metadata
+AID03203,Sham Shui Po,West Kln Hwy near Hoi Lai Estate - Southbound ,832477,821531,3,3,1,observed_and_in_current_metadata
+AID03204,Sham Shui Po,West Kowloon Highway near Hing Wah Street West - Southbound ,833364,821148,3,3,1,observed_and_in_current_metadata
+AID03205,Sham Shui Po,West Kowloon Highway near Nam Cheong MTR Statoin - Southbound ,833799,820868,3,3,1,observed_and_in_current_metadata
+AID03206,Sham Shui Po,West Kowloon Highway near Tai Kok Tsui Substation - Southbound ,834115,820554,3,3,1,observed_and_in_current_metadata
+AID03207,Yau Tsim Mong,West Kowloon Highway near Olympian City Promenade Park - Southbound ,834324,820256,3,3,1,observed_and_in_current_metadata
+AID03208,Yau Tsim Mong,West Kowloon Highway near Olympic MTR Station - Southbound ,834456,819995,3,3,1,observed_and_in_current_metadata
+AID03209,Yau Tsim Mong,West Kowloon Highway near Hoi Fai Road Promenade - Southbound ,834547,819765,3,0,0,observed_and_in_current_metadata
+AID03210,Yau Tsim Mong,West Kowloon Highway near Olympic Plaza - Southbound ,834638,819522,3,3,1,observed_and_in_current_metadata
+AID03211,Yau Tsim Mong,West Kowloon Highway near Centenary Substation - Southbound ,834624,818672,4,4,1,observed_and_in_current_metadata
+AID04101,Central & Western,Shing Sai Road near Kennedy Town Swimming Pool - Eastbound ,831588,816412,3,2,1,observed_and_in_current_metadata
+AID04102,Central & Western,Connaught Road West Flyover near Western Harbour Centre - Eastbound ,832070,816512,2,1,1,observed_and_in_current_metadata
+AID04103,Central & Western,Connaught Road West Flyover near The Westpoint - Eastbound ,832464,816678,2,2,1,observed_and_in_current_metadata
+AID04104,Central & Western,Connaught Road West Flyover near Sun Yat Sen Memorial Park - Eastbound ,832770,816687,4,4,1,observed_and_in_current_metadata
+AID04105,Central & Western,Connaught Road West Flyover near Central Police Station - Eastbound ,833404,816592,3,0,0,observed_and_in_current_metadata
+AID04106,Eastern,Island Eastern Corridor near Provident Centre - Eastbound ,838359,817150,3,0,0,observed_and_in_current_metadata
+AID04107,Eastern,Island Eastern Corridor near North Point Ferry Pier Eastbound ,838798,817217,3,3,1,observed_and_in_current_metadata
+AID04108,Eastern,Island Eastern Corridor near ICAC Headquarters - Eastbound ,839208,817245,2,2,1,observed_and_in_current_metadata
+AID04109,Eastern,Island Eastern Corridor near North Point Government Offices - Eastbound ,839536,817141,2,2,1,observed_and_in_current_metadata
+AID04110,Eastern,Island Eastern Corridor near Quarry Bay Park Phase 2 - Eastbound ,839866,816918,5,0,0,observed_and_in_current_metadata
+AID04111,Eastern,Island Eastern Corridor near Quarry Bay Park Phase 1 - Eastbound ,840296,816739,2,2,1,observed_and_in_current_metadata
+AID04112,Eastern,Island Eastern Corridor near Taikoo Shing - Eastbound ,840887,816515,3,3,1,observed_and_in_current_metadata
+AID04113,Eastern,Island Eastern Corridor near Tai On Building - Eastbound ,840914,816144,3,3,1,observed_and_in_current_metadata
+AID04114,Eastern,Island Eastern Corridor near St. Mark's School - Eastbound ,841190,815826,3,3,1,observed_and_in_current_metadata
+AID04115,Eastern,Island Eastern Corridor near Aldrich Garden - Eastbound ,841721,815679,2,2,1,observed_and_in_current_metadata
+AID04116,Eastern,Island Eastern Corridor near Heng Fa Chuen - Eastbound (1) ,842163,815931,2,2,1,observed_and_in_current_metadata
+AID04117,Eastern,Island Eastern Corridor near Heng Fa Chuen - Eastbound (2) ,842429,815545,2,2,1,observed_and_in_current_metadata
+AID04118,Eastern,Island Eastern Corridor near Heng Fa Chuen - Eastbound (3) ,842628,815161,2,2,1,observed_and_in_current_metadata
+AID04119,Eastern,Island Eastern Corridor near HKIVE (Chai Wan) - Southbound ,842679,814704,2,0,0,observed_and_in_current_metadata
+AID04120,Eastern,Island Eastern Corridor near Chai Wan Park - Southbound ,842530,814296,2,0,0,observed_and_in_current_metadata
+AID04121,Eastern,Island Eastern Corridor near ICAC Headquarters - Eastbound ,839230,817216,2,2,1,observed_and_in_current_metadata
+AID04122,Eastern,Island Eastern Corridor near North Point Government Offices - Eastbound ,839444,817143,3,3,1,observed_and_in_current_metadata
+AID04201,Eastern,Island Eastern Corridor near Chai Wan MTR Station - Northbound ,842509,813977,2,0,0,observed_and_in_current_metadata
+AID04202,Eastern,Island Eastern Corridor near Eastern Hospital - Northbound ,842568,814461,2,1,1,observed_and_in_current_metadata
+AID04203,Eastern,Island Eastern Corridor near HKIVE (Chai Wan) - Northbound ,842658,814760,3,0,0,observed_and_in_current_metadata
+AID04204,Eastern,Island Eastern Corridor near Heng Fa Chuen - Northbound (1) ,842527,815284,2,2,1,observed_and_in_current_metadata
+AID04205,Eastern,Island Eastern Corridor near Heng Fa Chuen - Northbound (2) ,842417,815570,3,3,1,observed_and_in_current_metadata
+AID04206,Eastern,Island Eastern Corridor near Museum of Coastal Defence - Northbound ,842241,815833,2,2,1,observed_and_in_current_metadata
+AID04207,Eastern,Island Eastern Corridor near Aldrich Garden - Westbound ,841762,815822,2,2,1,observed_and_in_current_metadata
+AID04208,Eastern,Island Eastern Corridor near Oi Tung Estate - Westbound ,841312,815750,3,3,1,observed_and_in_current_metadata
+AID04209,Eastern,Island Eastern Corridor near Tai On Building - Westbound ,841170,815822,3,0,0,observed_and_in_current_metadata
+AID04210,Eastern,Island Eastern Corridor near Taikoo Shing - Westbound (1) ,840860,816347,4,0,0,observed_and_in_current_metadata
+AID04211,Eastern,Island Eastern Corridor near Taikoo Shing - Westbound (2) ,840613,816615,2,0,0,observed_and_in_current_metadata
+AID04212,Eastern,Island Eastern Corridor near Quarry Bay Park Phase 1 - Westbound (1) ,840723,816617,6,0,0,observed_and_in_current_metadata
+AID04213,Eastern,Island Eastern Corridor near Quarry Bay Park Phase 1 - Westbound (2) ,840276,816690,3,3,1,observed_and_in_current_metadata
+AID04214,Eastern,Island Eastern Corridor near Quarry Bay Park Phase 2 - Westbound ,839880,816886,5,5,1,observed_and_in_current_metadata
+AID04215,Eastern,Island Eastern Corridor near North Point Government Offices - Westbound ,839556,817108,4,0,0,observed_and_in_current_metadata
+AID04216,Eastern,Island Eastern Corridor near Vehicle Ferry Pier - Westbound ,839188,817220,3,3,1,observed_and_in_current_metadata
+AID04217,Eastern,Island Eastern Corridor near Hyatt Centric - Westbound ,838560,817177,3,0,0,observed_and_in_current_metadata
+AID04218,Central & Western,Connaught Road West Flyover near Shun Tak Centre - Westbound ,833656,816515,3,3,1,observed_and_in_current_metadata
+AID04219,Central & Western,Connaught Road West Flyover near Sheung Wan Fire Station - Westbound ,833289,816614,3,3,1,observed_and_in_current_metadata
+AID04220,Central & Western,Connaught Road West Flyover near Sun Yat Sen Memorial Park - Westbound ,832876,816666,2,0,0,observed_and_in_current_metadata
+AID04221,Central & Western,Connaught Road West Flyover near Courtyard - Westbound ,832308,816587,2,2,1,observed_and_in_current_metadata
+AID04222,Eastern,Island Eastern Corridor near EHC - Westbound ,840095,816735,1,1,1,observed_and_in_current_metadata
+AID05101,Kwun Tong,Kai Fuk Road near Kwun Tong Government Primary School - Northbound ,840532,819604,2,2,1,observed_and_in_current_metadata
+AID05102,Kwun Tong,Kai Fuk Road near Ngau Tau Kok Jockey Club Clinic - Northbound ,840260,819749,1,1,1,observed_and_in_current_metadata
+AID05103,Kwun Tong,Kai Fuk Road near Kowloon Bay Vehicle Examination Centre - Westbound ,839860,819909,3,3,1,observed_and_in_current_metadata
+AID05104,Kwun Tong,Kai Fuk Road near Kowloon Bay Vehicle Detention and Examination Centre - Westbound ,839454,819987,3,3,1,observed_and_in_current_metadata
+AID05109,Kowloon City,Chatham Road North near MTR Ho Man Tin Station - Westbound ,836891,818841,4,0,0,observed_and_in_current_metadata
+AID05110,Yau Tsim Mong,Gascoigne Road near Gun Club Hill Barracks - Westbound ,836408,818547,2,2,1,observed_and_in_current_metadata
+AID05111,Yau Tsim Mong,Gascoigne Road near Diocesan Girls' School - Westbound ,835963,818689,1,1,1,observed_and_in_current_metadata
+AID05112,,,,,1,0,0,observed_missing_current_metadata
+AID05113,Yau Tsim Mong,Gascoigne Road Flyover near Prosperous Garden - Northbound ,835288,819052,2,1,1,observed_and_in_current_metadata
+AID05114,Yau Tsim Mong,Ferry Street near Cherry Street Park - Northbound ,835233,819365,4,0,0,observed_and_in_current_metadata
+AID05115,Yau Tsim Mong,West Kowloon Corridor West near Cherry Street Park - Northbound (1) ,835176,819761,2,2,1,observed_and_in_current_metadata
+AID05116,Yau Tsim Mong,West Kowloon Corridor West near Cherry Street Park - Northbound (2) ,834960,819942,2,2,1,observed_and_in_current_metadata
+AID05117,Yau Tsim Mong,West Kowloon Corridor West near Fuk Tsun Street - Northbound ,834734,820418,2,2,1,observed_and_in_current_metadata
+AID05118,Sham Shui Po,West Kowloon Corridor near Tung Chau Street Park - Northbound ,834478,820858,2,2,1,observed_and_in_current_metadata
+AID05119,Sham Shui Po,West Kowloon Corridor near Yen Chow Street West - Northbound ,834225,821058,2,2,1,observed_and_in_current_metadata
+AID05120,Sham Shui Po,West Kowloon Corridor near West Kowloon Law Courts Building - Northbound ,833845,821382,2,2,1,observed_and_in_current_metadata
+AID05121,Sham Shui Po,West Kowloon Corridor near Lai Chi Kok MTR Station - Northbound ,833349,821835,2,2,1,observed_and_in_current_metadata
+AID05122,Sham Shui Po,Kwai Chung Road near Lai Chi Kok Fire Station- Northbound ,832892,821921,2,2,1,observed_and_in_current_metadata
+AID05123,Sham Shui Po,Kwai Chung Road near Delia Memorial School (Glee Path) - Northbound ,832471,822002,3,3,1,observed_and_in_current_metadata
+AID05124,Sham Shui Po,Kwai Chung Road near Kwai Chung Interchange - Northbound ,831931,822103,3,3,1,observed_and_in_current_metadata
+AID05125,Kwai Tsing,Kwai Chung Road near Hong Chi Winifred Mary Cheung Morninghope School - Northbound ,831319,822703,5,0,0,observed_and_in_current_metadata
+AID05126,Kwai Tsing,Kwai Chung Road near Lai King MTR Station - Nouthbound ,830914,823231,3,3,1,observed_and_in_current_metadata
+AID05127,Kwai Tsing,Kwai Chung Road near Lai King Estate - Northbound ,830996,823571,2,2,1,observed_and_in_current_metadata
+AID05128,Kwai Tsing,Tsuen Wan Road near Kwai Chung Park - Northbound ,830699,824106,3,3,1,observed_and_in_current_metadata
+AID05129,Tsuen Wan,Tsuen Wan Road near Wing Kin Industrial Building - Nouthbound ,830428,824376,3,3,1,observed_and_in_current_metadata
+AID05130,Kwai Tsing,Tsuen Wan Road near Wing Kei Road 5-A-Side Soccer Pitch - Northbound ,830262,824766,2,2,1,observed_and_in_current_metadata
+AID05131,Tsuen Wan,Tsuen Wan Road near Tsuen Wan Driving Test Centre - Northbound ,829978,825000,2,2,1,observed_and_in_current_metadata
+AID05132,Tsuen Wan,Tsuen Wan Road near Tsuen Wan Sports Centre - Northbound ,829675,825244,3,3,1,observed_and_in_current_metadata
+AID05133,Tsuen Wan,Tsuen Wan Road near Tsuen Wan West MTR Station - Northbound ,829349,825594,2,2,1,observed_and_in_current_metadata
+AID05134,Tsuen Wan,Tsuen Wan Road near Hoi Shing Garden - Northbound ,829040,825911,2,0,0,observed_and_in_current_metadata
+AID05135,Tsuen Wan,Tsuen Wan Road near Kong Nam industrial building - Westbound ,828673,826115,2,2,1,observed_and_in_current_metadata
+AID05201,Tsuen Wan,Tuen Mun Road near Belvedere Garden Phase 1 Car Park -Eastbound ,828480,826069,3,3,1,observed_and_in_current_metadata
+AID05202,Tsuen Wan,Tsuen Wan Road near Hoi Shing Garden - Southbound ,829078,825872,2,2,1,observed_and_in_current_metadata
+AID05203,Tsuen Wan,Tsuen Wan Road near Tsuen Wan West MTR Station - Southbound ,829381,825562,2,0,0,observed_and_in_current_metadata
+AID05204,Tsuen Wan,Tsuen Wan Road near Tsuen Wan Sports Centre - Sorthbound ,829690,825262,3,3,1,observed_and_in_current_metadata
+AID05205,Kwai Tsing,Tsuen Wan Road near Wing Kei Road 5-A-Side Soccer Pitch - Southbound (1) ,830213,824830,2,2,1,observed_and_in_current_metadata
+AID05206,Kwai Tsing,Tsuen Wan Road near Wing Kei Road 5-A-Side Soccer Pitch - Southbound (2) ,830380,824493,3,3,1,observed_and_in_current_metadata
+AID05207,Kwai Tsing,Tsuen Wan Road near Kwai Chung Park - Southbound ,830645,824159,3,3,1,observed_and_in_current_metadata
+AID05208,Kwai Tsing,Tsuen Wan Road near Kwai Shun Street Playground - Southbound ,830899,823901,4,4,1,observed_and_in_current_metadata
+AID05209,Kwai Tsing,Kwai Chung Road near Lai King MTR Station - Southbound (1) ,830983,823404,4,4,1,observed_and_in_current_metadata
+AID05210,Kwai Tsing,Kwai Chung Road near Lai King MTR Station - Southbound (2) ,830920,823051,5,5,1,observed_and_in_current_metadata
+AID05211,Kwai Tsing,Kwai Chung Road near Hong Chi Winifred Mary Cheung Morninghope School - Southbound ,831174,822771,5,5,1,observed_and_in_current_metadata
+AID05212,Sham Shui Po,Kwai Chung Road near Mei Foo MTR Station - Southbound ,831978,822095,3,3,1,observed_and_in_current_metadata
+AID05213,Sham Shui Po,Kwai Chung Road near Delia Memorial School (Glee Path) - Southbound ,832414,822013,3,3,1,observed_and_in_current_metadata
+AID05214,Sham Shui Po,Kwai Chung Road near Lai Chi Kok Fire Station - Southbound ,832799,821939,2,0,0,observed_and_in_current_metadata
+AID05215,Sham Shui Po,Lai Chi Kok Road near Novel Industrial Building - Southbound ,833232,821797,2,2,1,observed_and_in_current_metadata
+AID05216,Sham Shui Po,West Kowloon Corridor near The Pacifica -Southbound ,833513,821819,2,0,0,observed_and_in_current_metadata
+AID05217,Sham Shui Po,West Kowloon Corridor near West Kowloon Law Courts Building - Southbound ,833857,821397,2,2,1,observed_and_in_current_metadata
+AID05218,Sham Shui Po,West Kowloon Corridor near Tung Chau Street Park - Southbound ,834412,820920,3,3,1,observed_and_in_current_metadata
+AID05219,Yau Tsim Mong,West Kowloon Corridor near Sycamore Playground -Southbound ,834813,820608,2,2,1,observed_and_in_current_metadata
+AID05220,Yau Tsim Mong,West Kowloon Corridor near Fuk Keung Indistrial Building - Southbound ,835092,820342,2,2,1,observed_and_in_current_metadata
+AID05221,Yau Tsim Mong,West Kowloon Corridor near Cherry Street Park - Southbound (1) ,835168,819951,2,2,1,observed_and_in_current_metadata
+AID05222,Yau Tsim Mong,West Kowloon Corridor near Cherry Street Park - Southbound (2) ,835224,819543,3,3,1,observed_and_in_current_metadata
+AID05223,Yau Tsim Mong,West Kowloon Corridor near Prosperous Garden - Southbound ,835302,819006,2,0,0,observed_and_in_current_metadata
+AID05224,Yau Tsim Mong,Gascoigne Road near Methodist College - Eastbound ,835729,818891,0,0,0,metadata_only
+AID05225,Yau Tsim Mong,Gascoigne Road near Diocesan Girls' School - Eastbound  ,836014,818683,1,1,1,observed_and_in_current_metadata
+AID05226,Yau Tsim Mong,Gascoigne Road near Gun Club Hill Barracks - Eastbound ,836367,818560,4,4,1,observed_and_in_current_metadata
+AID05227,Kowloon City,Chatham Road North near MTR Ho Man Tin Station - Eastbound ,836860,818824,4,0,0,observed_and_in_current_metadata
+AID05232,Kwun Tong,Kai Fuk Road near Billion Centre - Eastbound ,839261,820201,0,0,0,metadata_only
+AID05233,Kwun Tong,Kai Fuk Road near Kowloon Bay Vehicle Detention and Examination Centre - Eastbound ,839488,819970,3,0,0,observed_and_in_current_metadata
+AID05234,Kwun Tong,Kai Fuk Road near Kowloon Bay Vehicle Examination Centre - Eastbound ,839828,819905,3,2,1,observed_and_in_current_metadata
+AID05235,Kwun Tong,Kai Fuk Road near Kwun Tong Road Sitting-out Area - Eastbound ,840357,819677,1,1,1,observed_and_in_current_metadata
+AID07101,Sai Kung,Wan Po Road near Pung Loi Road - Westbound ,845496,819021,3,3,1,observed_and_in_current_metadata
+AID07102,Sai Kung,Wan Po Road near Hong Kong Velodrome - Westbound ,845207,819382,2,2,1,observed_and_in_current_metadata
+AID07103,Sai Kung,Tseung Kwan O Tunnel Road near Telephone Exchange - Westbound ,844773,819713,2,2,1,observed_and_in_current_metadata
+AID07104,Sai Kung,Tseung Kwan O Tunnel Road near Tseung Kwan O Tunnel Portal - Westbound ,844424,820029,3,3,1,observed_and_in_current_metadata
+AID07105,Kwun Tong,Tseung Kwan O Road near Lin Tak Road - Westbound ,842757,819540,0,0,0,metadata_only
+AID07106,Kwun Tong,Tseung Kwan O Road near Junk Bay Road Substation - Westbound ,842474,819342,3,3,1,observed_and_in_current_metadata
+AID07107,Kwun Tong,Tseung Kwan O Road near Yau Tong Telephone Exchange - Westbound ,841850,819040,3,3,1,observed_and_in_current_metadata
+AID07108,Kwun Tong,Kwun Tong Road near Tsui Ping Road - Westbound ,841579,819103,4,0,0,observed_and_in_current_metadata
+AID07109,Kwun Tong,Kwun Tong Road near The Grande Building - Westbound ,841031,819400,4,0,0,observed_and_in_current_metadata
+AID07110,Kwun Tong,Kwun Tong Road near Lai Yip Street - Westbound ,840516,819609,2,2,1,observed_and_in_current_metadata
+AID07111,Kwun Tong,Kwun Tong Road near Yan Wing Mansion - Westbound ,840171,819998,0,0,0,metadata_only
+AID07112,Kwun Tong,Kwun Tong Road near Fuk To Street - Westbound ,840126,820471,3,0,0,observed_and_in_current_metadata
+AID07113,Kwun Tong,Kwun Tong Road near Kowloon Bay St. John the Baptist Catholic Primary School - Westbound ,839929,821058,4,4,1,observed_and_in_current_metadata
+AID07114,Kwun Tong,Kwun Tong Road near Choi Shek Lane - Westbound ,839683,821289,6,6,1,observed_and_in_current_metadata
+AID07115,Kwun Tong,Lung Cheung Road near Ping Shek Estate - Westbound ,839500,821434,2,2,1,observed_and_in_current_metadata
+AID07116,Wong Tai Sin,Lung Cheung Road near Kam Hon House Choi Hung Estate Substation - Westbound ,839374,821940,4,0,0,observed_and_in_current_metadata
+AID07117,Wong Tai Sin,Lung Cheung Road near Diamond Hill MTR Station ,838972,822207,3,0,0,observed_and_in_current_metadata
+AID07118,Wong Tai Sin,Lung Cheung Road near Po Kong Village Road - Westbound ,838421,822514,3,3,1,observed_and_in_current_metadata
+AID07119,Wong Tai Sin,Lung Cheung Road near Lung On House Lower Wong Tai Sin (II) Estate - Westbound ,837923,822511,3,3,1,observed_and_in_current_metadata
+AID07120,Wong Tai Sin,Lung Cheung Road near Tin Ma Court - Westbound ,837240,822607,3,0,0,observed_and_in_current_metadata
+AID07121,Kowloon City,Lung Cheung Road near RTHK - Westbound ,837025,822677,3,3,1,observed_and_in_current_metadata
+AID07122,Kowloon City,Lung Cheung Road near Lung Cheung Road Park - Westbound ,836687,822779,3,3,1,observed_and_in_current_metadata
+AID07123,Kowloon City,Lung Cheung Road near Elizabethan Court - Westbound ,836292,822848,3,3,1,observed_and_in_current_metadata
+AID07124,Sham Shui Po,Lung Cheung Road Lookout - Westbound ,835734,822685,3,3,1,observed_and_in_current_metadata
+AID07125,Sham Shui Po,Lung Cheung Road Beacon Heights - Westbound (1) ,835514,822509,2,0,0,observed_and_in_current_metadata
+AID07126,Sham Shui Po,Lung Cheung Road Beacon Heights - Westbound (2) ,835016,822538,2,2,1,observed_and_in_current_metadata
+AID07127,Sham Shui Po,Lung Cheung Road Tai Woh Ping - Westbound ,834792,822460,2,2,1,observed_and_in_current_metadata
+AID07128,Sham Shui Po,Lung Cheung Road near Ching Cheung Road - Westbound ,834455,822602,2,2,1,observed_and_in_current_metadata
+AID07129,Sham Shui Po,Lung Cheung Road near Monte Carlton - Westbound ,833961,822632,3,3,1,observed_and_in_current_metadata
+AID07130,Sham Shui Po,Ching Cheung Road near Caritas Medical Centre - Westbound ,833683,822508,3,3,1,observed_and_in_current_metadata
+AID07131,Sham Shui Po,Ching Cheung Road near Dragon lndustrial Building - Westbound ,833376,822389,3,3,1,observed_and_in_current_metadata
+AID07132,Sham Shui Po,Ching Cheung Road near CLP Substation - Westbound ,832772,822442,3,3,1,observed_and_in_current_metadata
+AID07133,Sham Shui Po,Ching Cheung Road near Lai Chi Kok Park Sports Centre - Westbound ,832324,822443,3,0,0,observed_and_in_current_metadata
+AID07134,Sham Shui Po,Ching Cheung Road near Ching Lai Court - Westbound ,832068,822256,2,2,1,observed_and_in_current_metadata
+AID07201,Sham Shui Po,Ching Cheung Road near Ching Lai Court - Eastbound ,832073,822322,4,4,1,observed_and_in_current_metadata
+AID07202,Sham Shui Po,Ching Cheung Road near CLP Substation - Eastbound ,832625,822321,3,3,1,observed_and_in_current_metadata
+AID07203,Sham Shui Po,Ching Cheung Road near International School - Eastbound ,833060,822313,3,3,1,observed_and_in_current_metadata
+AID07204,Sham Shui Po,Ching Cheung Road near Dragon lndustrial Building - Eastbound ,833273,822356,3,3,1,observed_and_in_current_metadata
+AID07205,Sham Shui Po,Ching Cheung Road near Caritas Medical Centre - Eastbound ,833731,822530,4,4,1,observed_and_in_current_metadata
+AID07206,Sham Shui Po,Lung Cheung Road near Monte Carlton - Eastbound ,834043,822636,3,3,1,observed_and_in_current_metadata
+AID07207,Sham Shui Po,Lung Cheung Road near Tai Woh Ping - Eastbound ,834715,822445,3,3,1,observed_and_in_current_metadata
+AID07208,Sham Shui Po,Lung Cheung Road near Block 15 Beacon Heights Phase 2 - Eastbound ,835104,822542,3,3,1,observed_and_in_current_metadata
+AID07209,Sham Shui Po,Lung Cheung Road Beacon Heights - Eastbound (2) ,835556,822574,4,4,1,observed_and_in_current_metadata
+AID07210,Kowloon City,Lung Cheung Road Lookout - Eastbound ,836011,822648,3,3,1,observed_and_in_current_metadata
+AID07211,Kowloon City,Lung Cheung Road near Elizabethan Court - Eastbound ,836220,822838,3,0,0,observed_and_in_current_metadata
+AID07212,Wong Tai Sin,Lung Cheung Road near Lung Cheung Road Park - Eastbound ,836876,822771,0,0,0,metadata_only
+AID07213,Wong Tai Sin,Lung Cheung Road near Meridain Hill - Eastbound ,837195,822616,3,3,1,observed_and_in_current_metadata
+AID07214,Wong Tai Sin,Lung Cheung Road near Temple Mall North - Eastbound ,837717,822516,0,0,0,metadata_only
+AID07215,Wong Tai Sin,Lung Cheung Road near Tropicana Gardens - Eastbound ,838336,822516,0,0,0,metadata_only
+AID07216,Wong Tai Sin,Lung Cheung Road near Lung Poon Court Commercial Centre - Eastbound ,838636,822419,3,0,0,observed_and_in_current_metadata
+AID07217,Wong Tai Sin,Lung Cheung Road near Nan Lian Garden - Eastbound ,839068,822147,3,0,0,observed_and_in_current_metadata
+AID07218,Wong Tai Sin,Lung Cheung Road near Ngau Chi Wan Village Playground - Eastbound ,839411,821904,4,0,0,observed_and_in_current_metadata
+AID07219,Kwun Tong,Kwun Tong Road near Choi Shek Lane - Eastbound ,839767,821226,3,0,0,observed_and_in_current_metadata
+AID07220,Kwun Tong,Kwun Tong Road near Kai Tai Court - Eastbound ,839986,821004,4,4,1,observed_and_in_current_metadata
+AID07221,Kwun Tong,Kwun Tong Road near Lower Ngau Tau Kok Estate - Eastbound ,840137,820348,3,0,0,observed_and_in_current_metadata
+AID07222,Kwun Tong,Kwun Tong Road near Sheung Yee Road - Eastbound ,840175,819998,3,0,0,observed_and_in_current_metadata
+AID07223,Kwun Tong,Kwun Tong Road near Foo Yue Building - Eastbound ,840344,819701,3,3,1,observed_and_in_current_metadata
+AID07224,Kwun Tong,Kwun Tong Road near Kwun Tong Road Rest Garden - Eastbound ,840759,819516,4,0,0,observed_and_in_current_metadata
+AID07225,Kwun Tong,Kwun Tong Road near Hong Ning Road - Eastbound ,841114,819366,3,3,1,observed_and_in_current_metadata
+AID07226,Kwun Tong,Kwun Tong Road near Hong Kong Student Aid Society - Eastbound ,841525,819141,4,4,1,observed_and_in_current_metadata
+AID07227,Kwun Tong,Tseung Kwan O Road near Kwun Tong Swimming Pool - Eastbound ,841906,819117,2,2,1,observed_and_in_current_metadata
+AID07228,Kwun Tong,Tseung Kwan O Road near Tsui Ping (South) Estate - Eastbound ,842261,819250,3,3,1,observed_and_in_current_metadata
+AID07229,Sai Kung,Tseung Kwan O Tunnel Road near Tseung Kwan O Tunnel Portal - Eastbound ,843951,820249,2,2,1,observed_and_in_current_metadata
+AID07230,Sai Kung,Tseung Kwan O Tunnel Road near Po Hong Park - Eastbound ,844451,819997,2,2,1,observed_and_in_current_metadata
+AID07231,Sai Kung,Wan Po Road near Tseung Kwan O Tunnel Road - Eastbound ,844890,819629,2,2,1,observed_and_in_current_metadata
+AID07232,Sai Kung,Wan Po Road near Chiu Shun Road - Eastbound ,845299,819310,2,2,1,observed_and_in_current_metadata
+AID08101,Tsuen Wan,North Lantau Highway near Yan O Wan - Westbound (1) ,820655,820959,3,3,1,observed_and_in_current_metadata
+AID08102,Tsuen Wan,North Lantau Highway near Yan O Wan - Westbound (2) ,820200,820699,3,3,1,observed_and_in_current_metadata
+AID08103,Tsuen Wan,North Lantau Highway near Sunny Bay Beach - Westbound ,819734,820674,3,3,1,observed_and_in_current_metadata
+AID08104,Tsuen Wan,North Lantau Highway near Sham Shui Kok Substation - Westbound (1) ,819249,820648,3,3,1,observed_and_in_current_metadata
+AID08105,Tsuen Wan,North Lantau Highway near Sham Shui Kok Substation - Westbound (2) ,818793,820460,3,3,1,observed_and_in_current_metadata
+AID08106,Tsuen Wan,North Lantau Highway near Sham Shui Kok Substation - Westbound (3) ,818348,820243,3,3,1,observed_and_in_current_metadata
+AID08107,Tsuen Wan,North Lantau Highway near Tung Yip Hang - Westbound ,817944,819966,3,3,1,observed_and_in_current_metadata
+AID08108,Tsuen Wan,North Lantau Highway near HK Police Vehicle Pound - Westbound ,817703,819601,3,3,1,observed_and_in_current_metadata
+AID08109,Islands,North Lantau Highway near Siu Ho Wan Sewage Treatment Works - Westbound ,817363,819246,3,3,1,observed_and_in_current_metadata
+AID08110,Islands,North Lantau Highway near Siu Ho Wan Gov. Vehicle Centre - Westbound ,816899,818953,3,0,0,observed_and_in_current_metadata
+AID08111,Islands,North Lantau Highway near MTR Siu Ho Wan Depot - Westbound (2) ,816481,818687,3,3,1,observed_and_in_current_metadata
+AID08112,Islands,North Lantau Highway near Tai Ho Wan - Westbound (1) ,816072,818411,3,3,1,observed_and_in_current_metadata
+AID08113,Islands,North Lantau Highway near Tai Ho Wan - Westbound (2) ,815654,818149,3,3,1,observed_and_in_current_metadata
+AID08114,Islands,North Lantau Highway near Tai Ho Wan - Westbound (3) ,815216,817920,3,3,1,observed_and_in_current_metadata
+AID08115,Islands,North Lantau Highway near Tai Ho Wan - Westbound (4) ,814747,817774,3,3,1,observed_and_in_current_metadata
+AID08116,Islands,North Lantau Highway near Tai Ho Wan - Westbound (5) ,814373,817685,3,3,1,observed_and_in_current_metadata
+AID08117,Islands,North Lantau Highway near Ying Tung Estate - Westbound (1) ,813748,817511,3,3,1,observed_and_in_current_metadata
+AID08118,Islands,North Lantau Highway near Ying Tung Estate - Westbound (2) ,813435,817318,3,3,1,observed_and_in_current_metadata
+AID08119,Islands,North Lantau Highway near Caribbean Coast Phase 1 - Westbound ,813185,817080,3,3,1,observed_and_in_current_metadata
+AID08120,Islands,North Lantau Highway near Caribbean Coast Phase 3 - Westbound ,812874,816833,3,3,1,observed_and_in_current_metadata
+AID08121,Islands,North Lantau Highway near Tung Chung (N) - Westbound (1) ,812342,816752,3,2,1,observed_and_in_current_metadata
+AID08122,Islands,North Lantau Highway near Tung Chung (N) - Westbound (2) ,811926,816918,3,2,1,observed_and_in_current_metadata
+AID08201,Islands,North Lantau Highway near Tung Chung (N) - Eastbound (1) ,811644,817229,3,2,1,observed_and_in_current_metadata
+AID08202,Islands,North Lantau Highway near Tung Chung (N) - Eastbound (2) ,811818,817019,0,0,0,metadata_only
+AID08203,Islands,North Lantau Highway near Tung Chung (N) - Eastbound (3) ,812289,816763,3,0,0,observed_and_in_current_metadata
+AID08204,Islands,North Lantau Highway near Caribbean Coast Phase 3 - Eastbound ,812754,816777,3,2,1,observed_and_in_current_metadata
+AID08205,Islands,North Lantau Highway near Caribbean Coast Phase 1 - Eastbound ,813149,817039,3,3,1,observed_and_in_current_metadata
+AID08206,Islands,North Lantau Highway near Ying Tung Estate - Eastbound (1) ,813463,817346,3,3,1,observed_and_in_current_metadata
+AID08207,Islands,North Lantau Highway near Ying Tung Estate - Eastbound (2) ,813790,817529,3,0,0,observed_and_in_current_metadata
+AID08208,Islands,North Lantau Highway near Tai Ho Wan - Eastbound (1) ,814106,817621,3,3,1,observed_and_in_current_metadata
+AID08209,Islands,North Lantau Highway near Tai Ho Wan - Eastbound (2) ,814536,817723,3,3,1,observed_and_in_current_metadata
+AID08210,Islands,North Lantau Highway near Tai Ho Wan - Eastbound (3) ,815064,817860,3,3,1,observed_and_in_current_metadata
+AID08211,Islands,North Lantau Highway near Tai Ho Wan - Eastbound (4) ,815460,818044,3,3,1,observed_and_in_current_metadata
+AID08212,Islands,North Lantau Highway near Tai Ho Wan - Eastbound (5) ,815890,818289,3,3,1,observed_and_in_current_metadata
+AID08213,Islands,North Lantau Highway near MTR Siu Ho Wan Depot - Eastbound (1) ,816299,818564,3,3,1,observed_and_in_current_metadata
+AID08214,Islands,North Lantau Highway near MTR Siu Ho Wan Depot - Eastbound (2) ,816666,818808,3,0,0,observed_and_in_current_metadata
+AID08215,Islands,North Lantau Highway near MTR Siu Ho Wan Depot - Eastbound (3) ,817086,819068,3,0,0,observed_and_in_current_metadata
+AID08216,Islands,North Lantau Highway near Siu Ho Wan Sewage Treatment Works - Eastbound ,817532,819394,3,0,0,observed_and_in_current_metadata
+AID08217,Tsuen Wan,North Lantau Highway near Refuse Transfer Station - Eastbound ,817816,819787,3,0,0,observed_and_in_current_metadata
+AID08218,Tsuen Wan,North Lantau Highway near Tung Yip Hang - Eastbound (1) ,818154,820142,3,0,0,observed_and_in_current_metadata
+AID08219,Tsuen Wan,North Lantau Highway near Tung Yip Hang - Eastbound (2) ,818596,820365,3,0,0,observed_and_in_current_metadata
+AID08220,Tsuen Wan,North Lantau Highway near Tung Yip Hang - Eastbound (3) ,819043,820575,3,3,1,observed_and_in_current_metadata
+AID08221,Tsuen Wan,North Lantau Highway near Ta Pang Po - Eastbound ,819500,820684,3,3,1,observed_and_in_current_metadata
+AID08222,Tsuen Wan,North Lantau Highway near Yan O Wan - Eastbound (1) ,820015,820666,3,0,0,observed_and_in_current_metadata
+AID08223,Tsuen Wan,North Lantau Highway near Yan O Wan - Eastbound (2) ,820376,820764,3,3,1,observed_and_in_current_metadata
+AID09101,Tsuen Wan,Tuen Mun Road near Tsuen Wan Road - Eastbound ,828662,826129,2,2,1,observed_and_in_current_metadata
+AID09102,Tsuen Wan,Tuen Mun Road near Chai Wan Kok Cooked Food Market - Eastbound ,828871,826168,3,2,1,observed_and_in_current_metadata
+AID09103,Tsuen Wan,Cheung Pei Shan Road near The Mills - Eastbound ,829265,826270,3,2,1,observed_and_in_current_metadata
+AID09104,Tsuen Wan,Cheung Pei Shan Road near Discovery Park - Eastbound ,829775,826377,2,2,1,observed_and_in_current_metadata
+AID09105,Tsuen Wan,Cheung Pei Shan Road near Tsuen Kam Interchange - Eastbound ,830443,826252,2,1,1,observed_and_in_current_metadata
+AID09106,Tsuen Wan,Cheung Pei Shan Road near Shek Wai Kok Estate - Eastbound ,830726,826359,3,2,1,observed_and_in_current_metadata
+AID09107,Tsuen Wan,Cheung Pei Shan Road near Lui Ming Choi Lutheran College - Eastbound ,831202,826550,3,3,1,observed_and_in_current_metadata
+AID09108,Tsuen Wan,Cheung Pei Shan Road near Wo Yi Hop Road Interchange - Eastbound ,831657,826753,3,3,1,observed_and_in_current_metadata
+AID09109,Tsuen Wan,Cheung Pei Shan Road near Ho Fung College - Eastbound ,832043,826938,4,4,1,observed_and_in_current_metadata
+AID09110,Tsuen Wan,Shing Mun Tunnel Road near Entrance from Shatin - Eastbound ,835257,826851,2,2,1,observed_and_in_current_metadata
+AID09111,Sha Tin,Shing Mun Tunnel Road near Puguangming Temple - Eastbound ,835966,827028,2,2,1,observed_and_in_current_metadata
+AID09112,Sha Tin,Shing Mun Tunnel Road near Mei Tin Road - Eastbound ,836308,826755,2,2,1,observed_and_in_current_metadata
+AID09113,Sha Tin,Shing Mun Tunnel Road near Chung Ling Road - Eastbound ,836523,826543,1,1,1,observed_and_in_current_metadata
+AID09114,Sha Tin,Shing Mun Tunnel Road near Hong Kong Heritage Museum - Eastbound ,837086,826605,3,3,1,observed_and_in_current_metadata
+AID09115,Sha Tin,Tai Po Road - Sha Tin near Sha Tin MTR Station - Eastbound,837482,827163,0,0,0,metadata_only
+AID09116,Sha Tin,Tai Po Road - Sha Tin near Wo Che Estate - Eastbound,838143,827908,0,0,0,metadata_only
+AID09118,Sha Tin,Tai Po Road near Fo Tan Railway House - Northbound ,838549,828275,2,2,1,observed_and_in_current_metadata
+AID09119,Sha Tin,Tai Po Road near Sha Tin Racecourse - Northbound (1) ,838799,828713,3,3,1,observed_and_in_current_metadata
+AID09120,Sha Tin,Tai Po Road near Sha Tin Racecourse - Northbound (2) ,838919,828917,3,3,1,observed_and_in_current_metadata
+AID09121,Sha Tin,Tai Po Road near Sha Tin Racecourse - Northbound (3) ,839197,829335,3,3,1,observed_and_in_current_metadata
+AID09122,Sha Tin,Tolo Highway near Sha Tin Sewage Treatment Works - Northbound ,839655,829668,3,3,1,observed_and_in_current_metadata
+AID09123,Sha Tin,Tolo Highway near Ma Liu Shui Weigh Station - Northbound ,839869,829975,3,3,1,observed_and_in_current_metadata
+AID09151,North,Fanling Highway near Golf Parkview - Eastbound ,830044,840286,3,0,0,observed_and_in_current_metadata
+AID09152,North,Fanling Highway near Eden Manor - Eastbound ,830591,840158,0,0,0,metadata_only
+AID09153,North,Fanling Highway near Choi Yuen Estate Choi Lai House - Eastbound ,830874,840026,3,3,1,observed_and_in_current_metadata
+AID09154,North,Fanling Highway near So Kwun Po Road - Eastbound ,831416,839865,0,0,0,metadata_only
+AID09155,North,Fanling Highway near Fanling Recreation Ground - Eastbound ,832098,839360,3,3,1,observed_and_in_current_metadata
+AID09156,North,Fanling Highway near Fanling Station - Eastbound ,832347,839104,3,3,1,observed_and_in_current_metadata
+AID09157,North,Fanling Highway near Avon Park - Eastbound ,832885,838760,0,0,0,metadata_only
+AID09201,Tsuen Wan,Cheung Pei Shan Road near Ho Fung College - Westbound ,832093,826941,3,0,0,observed_and_in_current_metadata
+AID09202,Tsuen Wan,Cheung Pei Shan Road near Wo Yi Hop Road Interchange - Westbound ,831780,826836,2,2,1,observed_and_in_current_metadata
+AID09203,Tsuen Wan,Cheung Pei Shan Road near Lui Ming Choi Lutheran College - Westbound ,831283,826583,0,0,0,metadata_only
+AID09204,Tsuen Wan,Cheung Pei Shan Road near Shek Wai Kok Estate - Westbound ,830676,826334,2,2,1,observed_and_in_current_metadata
+AID09205,Tsuen Wan,Cheung Pei Shan Road near Tsuen Kam Interchange - Westbound ,830366,826230,2,0,0,observed_and_in_current_metadata
+AID09206,Tsuen Wan,Cheung Pei Shan Road near Discovery Park - Westbound ,829735,826372,3,2,1,observed_and_in_current_metadata
+AID09207,Tsuen Wan,Cheung Pei Shan Road near The Mills - Westbound ,829345,826266,2,2,1,observed_and_in_current_metadata
+AID09208,Tsuen Wan,Tuen Mun Road near Chai Wan Kok Cooked Food Market - Westbound ,828963,826206,2,2,1,observed_and_in_current_metadata
+AID09251,North,Fanling Highway near Dawning Views - Westbound ,833087,838686,3,3,1,observed_and_in_current_metadata
+AID09252,North,Fanling Highway near Fanling Centre - Westbound ,832836,838768,3,3,1,observed_and_in_current_metadata
+AID09253,North,Fanling Highway near Fanling Station - Westbound ,832256,839175,3,0,0,observed_and_in_current_metadata
+AID09254,North,Fanling Highway near Exit to So Kwun Po Road - Westbound ,831828,839589,3,3,1,observed_and_in_current_metadata
+AID09255,North,Fanling Highway near Entrance from So Kwun Po Road - Westbound ,831399,839846,0,0,0,metadata_only
+AID09256,North,Fanling Highway near Choi Yuen Estate Choi Lai House - Westbound ,830905,840014,3,0,0,observed_and_in_current_metadata
+AID09257,North,Fanling Highway near Eden Manor - Westbound ,830556,840177,3,3,1,observed_and_in_current_metadata
+AID09258,North,Fanling Highway near Golf Parkview - Westbound ,830085,840291,3,3,1,observed_and_in_current_metadata
+AID09301,North,Fanling Bypass - Westbound (1),832548,840860,0,0,0,metadata_only
+AID09302,North,Fanling Bypass - Westbound (2),832976,840858,0,0,0,metadata_only
+AID09303,North,Fanling Bypass - Westbound (3),833112,840580,0,0,0,metadata_only
+AID09304,North,Fanling Bypass - Westbound (4),833281,840053,0,0,0,metadata_only
+AID09305,North,Fanling Bypass - Westbound (5),833254,839845,0,0,0,metadata_only
+AID09306,North,Fanling Bypass - Westbound (6),833127,839539,0,0,0,metadata_only
+AID09307,North,Fanling Bypass - Westbound (7),833250,839160,0,0,0,metadata_only
+AID09308,North,Fanling Bypass - Westbound (8),833305,838640,0,0,0,metadata_only
+AID09401,North,Fanling Bypass - Eastbound (1),833707,838402,0,0,0,metadata_only
+AID09402,North,Fanling Bypass - Eastbound (2),833364,838698,0,0,0,metadata_only
+AID09403,North,Fanling Bypass - Eastbound (3),833259,839124,0,0,0,metadata_only
+AID09404,North,Fanling Bypass - Eastbound (4),833132,839524,0,0,0,metadata_only
+AID09405,North,Fanling Bypass - Eastbound (5),833284,840032,0,0,0,metadata_only
+AID09406,North,Fanling Bypass - Eastbound (6),833146,840409,0,0,0,metadata_only
+AID09407,North,Fanling Bypass - Eastbound (7),832952,840875,0,0,0,metadata_only
+AID09408,North,Fanling Bypass - Eastbound (8),832547,840863,0,0,0,metadata_only
+AID09409,North,Fanling Bypass - Eastbound (9),832318,840774,0,0,0,metadata_only
+AID10101,Tuen Mun,Kong Sham Western Highway near Fuk Hang Tsuen - Northbound (1) ,817072,830833,1,1,1,observed_and_in_current_metadata
+AID10102,Tuen Mun,Kong Sham Western Highway near Fuk Hang Tsuen - Northbound (2) ,817022,831096,3,1,1,observed_and_in_current_metadata
+AID10103,Tuen Mun,Kong Sham Western Highway near Fuk Hang Tsuen - Northbound (3) ,817276,831179,2,0,0,observed_and_in_current_metadata
+AID10104,Tuen Mun,Kong Sham Western Highway near The Sherwood - Northbound ,816826,831076,2,1,1,observed_and_in_current_metadata
+AID10105,Tuen Mun,Kong Sham Western Highway Tsing Yick Road - Northbound ,816496,831511,3,1,1,observed_and_in_current_metadata
+AID10106,Tuen Mun,Kong Sham Western Highway near Mai Yuan Wei Lu - Northbound ,816320,831850,3,1,1,observed_and_in_current_metadata
+AID10107,Tuen Mun,Kong Sham Western Highway near Yick Yuen Road - Northbound (1) ,816260,832321,3,1,1,observed_and_in_current_metadata
+AID10108,Yuen Long,Kong Sham Western Highway near Yick Yuen Road - Northbound (2) ,816440,832782,3,1,1,observed_and_in_current_metadata
+AID10109,Yuen Long,Kong Sham Western Highway near San Sang San Tsuen - Northbound ,816552,833225,3,1,1,observed_and_in_current_metadata
+AID10110,Yuen Long,Kong Sham Western Highway near Ha Tsuen Road - Northbound ,816502,833781,3,1,1,observed_and_in_current_metadata
+AID10111,Yuen Long,Kong Sham Western Highway near San Wai Sewage Treatment Plant - Northbound ,816170,834164,3,0,0,observed_and_in_current_metadata
+AID10112,Yuen Long,Kong Sham Western Highway near Helipad - Northbound ,815754,834378,3,1,1,observed_and_in_current_metadata
+AID10113,Yuen Long,Kong Sham Western Highway near Ngau Hom Shek E&M Plant Room - Northbound ,815374,834803,3,0,0,observed_and_in_current_metadata
+AID10114,Yuen Long,Shenzhen Bay Bridge - Northbound (1) ,815166,835098,3,1,1,observed_and_in_current_metadata
+AID10115,Yuen Long,Shenzhen Bay Bridge - Northbound (2) ,814927,835483,3,1,1,observed_and_in_current_metadata
+AID10116,Yuen Long,Shenzhen Bay Bridge - Northbound (3) ,814709,835914,3,1,1,observed_and_in_current_metadata
+AID10117,Yuen Long,Shenzhen Bay Bridge - Northbound (4) ,814403,836417,3,1,1,observed_and_in_current_metadata
+AID10118,Yuen Long,Shenzhen Bay Bridge - Northbound (5) ,814120,836769,3,1,1,observed_and_in_current_metadata
+AID10119,Yuen Long,Shenzhen Bay Bridge - Northbound (6) ,813761,837144,3,1,1,observed_and_in_current_metadata
+AID10120,Yuen Long,Shenzhen Bay Bridge - Northbound (7) ,817447,831377,3,2,1,observed_and_in_current_metadata
+AID10201,Yuen Long,Shenzhen Bay Bridge - Southbound (1) ,813450,837479,3,0,0,observed_and_in_current_metadata
+AID10202,Yuen Long,Shenzhen Bay Bridge - Southbound (2) ,813789,837126,3,0,0,observed_and_in_current_metadata
+AID10203,Yuen Long,Shenzhen Bay Bridge - Southbound (3) ,814125,836774,3,0,0,observed_and_in_current_metadata
+AID10204,Yuen Long,Shenzhen Bay Bridge - Southbound (4) ,814450,836363,3,0,0,observed_and_in_current_metadata
+AID10205,Yuen Long,Shenzhen Bay Bridge - Southbound (5) ,814716,835917,3,0,0,observed_and_in_current_metadata
+AID10206,Yuen Long,Shenzhen Bay Bridge - Southbound (6) ,814969,835423,3,0,0,observed_and_in_current_metadata
+AID10207,Yuen Long,Shenzhen Bay Bridge - Southbound (7) ,815210,835047,3,0,0,observed_and_in_current_metadata
+AID10208,Yuen Long,Kong Sham Western Highway near Ngau Hom Shek E&M Plant Room - Southbound ,815387,834815,3,0,0,observed_and_in_current_metadata
+AID10209,Yuen Long,Kong Sham Western Highway near Helipad - Southbound ,815659,834517,3,0,0,observed_and_in_current_metadata
+AID10210,Yuen Long,Kong Sham Western Highway near Ha Tsuen Weigh Station - Southbound ,815982,834271,3,0,0,observed_and_in_current_metadata
+AID10211,Yuen Long,Kong Sham Western Highway near San Wai Sewage Treatment Plant - Southbound ,816261,834085,3,1,1,observed_and_in_current_metadata
+AID10212,Yuen Long,Kong Sham Western Highway near Ha Tsuen Road - Southbound ,816477,833820,3,0,0,observed_and_in_current_metadata
+AID10213,Yuen Long,Kong Sham Western Highway near San Sang San Tsuen - Southbound ,816575,833357,3,0,0,observed_and_in_current_metadata
+AID10214,Yuen Long,Kong Sham Western Highway near Yick Yuen Road - Southbound (1) ,816472,832868,3,1,1,observed_and_in_current_metadata
+AID10215,Yuen Long,Kong Sham Western Highway near Yick Yuen Road - Southbound (2) ,816292,832458,3,1,1,observed_and_in_current_metadata
+AID10216,Tuen Mun,Kong Sham Western Highway near Mai Yuan Wei Road - Southbound ,816337,831812,3,1,1,observed_and_in_current_metadata
+AID10217,Tuen Mun,Kong Sham Western Highway near Tsing Yick Road - Southbound ,816475,831549,3,1,1,observed_and_in_current_metadata
+AID10218,Tuen Mun,Kong Sham Western Highway near Fuk Hang Tsuen - Southbound ,816978,831113,2,0,0,observed_and_in_current_metadata
+AID90008,Sha Tin,Tai Po Road - Sha Tin near Wo Che Estate - Westbound,838065,827836,0,0,0,metadata_only
+AID90009,Sha Tin,Tai Po Road - Sha Tin near Lek Yuen Estate - Westbound,837652,827393,0,0,0,metadata_only
+TDS10001,Sha Tin,Sha Tin Road near Hong Kong Jockey Club Shatin Staff Quarters - Southbound ,838589,828351,3,3,1,observed_and_in_current_metadata
+TDS10002,Sha Tin,Sha Tin Road near New Territories Fire Command Headquarters - Southbound ,838519,827957,2,2,1,observed_and_in_current_metadata
+TDS10003,Sha Tin,Sha Tin Road near Prince of Wales Hospital - Southbound ,838680,826759,0,0,0,metadata_only
+TDS10004,Sha Tin,Sha Tin Road near Yuen Chau Kok Park - Southbound ,838791,827137,0,0,0,metadata_only
+TDS10005,Sha Tin,Sha Tin Road near Tai Chung Kiu Road - Southbound ,838704,827611,2,2,1,observed_and_in_current_metadata
+TDS10006,Sha Tin,Sha Tin Road near Sha Tin Wai Road - Southbound ,838544,826431,2,2,1,observed_and_in_current_metadata
+TDS10007,Sha Tin,Sha Tin Road near Sha Tin Tau - Southbound ,837612,825884,2,0,0,observed_and_in_current_metadata
+TDS10008,Sha Tin,Sha Tin Road near Pok Hong Estate - Southbound ,838001,826075,0,0,0,metadata_only
+TDS10009,Sha Tin,Sha Tin Road near Shui Chuen O Estate - Southbound ,838256,826157,0,0,0,metadata_only
+TDS10010,Sha Tin,Lion Rock Tunnel Road near Sha Tin Government Primary School - Southbound ,837331,825410,2,2,1,observed_and_in_current_metadata
+TDS10011,Sha Tin,Lion Rock Tunnel Road near Hung Mui Kuk Road - Southbound ,836800,825055,3,0,0,observed_and_in_current_metadata
+TDS10012,Sha Tin,Lion Rock Tunnel Road near World-wide Gardens - Southbound ,836552,824858,3,3,1,observed_and_in_current_metadata
+TDS10013,Sha Tin,Lion Rock Tunnel Road near Union Hospital - Southbound ,836219,824568,3,3,1,observed_and_in_current_metadata
+TDS20001,Sha Tin,Tate's Cairn Highway near Hong Kong School of Motoring - Sha Tin - Southbound ,839701,826864,2,2,1,observed_and_in_current_metadata
+TDS20002,Sha Tin,Tate's Cairn Highway near Shek Mun Riverside Garden - Southbound ,839745,827204,2,2,1,observed_and_in_current_metadata
+TDS20003,Sha Tin,Tate's Cairn Highway near Sha Tin Transfer Station - Southbound ,839819,827616,4,4,1,observed_and_in_current_metadata
+TDS20004,Sha Tin,Tate's Cairn Highway near Shek Mun Interchange - Southbound ,839656,828083,3,3,1,observed_and_in_current_metadata
+TDS20005,Sha Tin,Tate's Cairn Highway near Sha Tin Hospital - Southbound (2) ,839802,828693,3,3,1,observed_and_in_current_metadata
+TDS20006,Sha Tin,Tate's Cairn Highway near Sha Tin Hospital - Southbound (1) ,840080,829063,0,0,0,metadata_only
+TDS20007,Sha Tin,Tate's Cairn Highway near Ah Kung Kok Fishermen Village - Southbound ,840497,829387,2,2,1,observed_and_in_current_metadata
+TDS20008,Sha Tin,Tate's Cairn Highway near Sha Tin Sewage Treatment Works - Southbound ,840350,829765,2,0,0,observed_and_in_current_metadata
+TDS20009,Sha Tin,"Tate's Cairn Highway near Hyatt Regency Hong Kong, Sha Tin - Southbound ",839969,830219,2,0,0,observed_and_in_current_metadata
+TDS30001,Yuen Long,Tsing Long Highway near Ho Pui - Southbound ,824365,830217,3,0,0,observed_and_in_current_metadata
+TDS30002,Yuen Long,Tsing Long Highway near Pat Heung Depot - Southbound ,824679,831546,3,0,0,observed_and_in_current_metadata
+TDS30003,Yuen Long,Tsing Long Highway near Kam Sheung Road MTR Station - Southbound (1) ,824648,832092,3,0,0,observed_and_in_current_metadata
+TDS30004,Yuen Long,Tsing Long Highway near Kam Sheung Road MTR Station - Southbound (2) ,824488,832606,3,0,0,observed_and_in_current_metadata
+TDS30005,Yuen Long,Tsing Long Highway near Kam Sheung Road MTR Station - Southbound (3) ,824108,833078,4,0,0,observed_and_in_current_metadata
+TDS30006,Yuen Long,Tsing Long Highway near Au Tau Treatment Works - Southbound ,823748,833357,3,0,0,observed_and_in_current_metadata
+TDS30007,Yuen Long,Tsing Long Highway near Yuen Long Highway - Southbound (1) ,823314,833779,2,0,0,observed_and_in_current_metadata
+TDS30008,Yuen Long,Tsing Long Highway near Yuen Long Highway - Southbound (2) ,823077,834282,2,0,0,observed_and_in_current_metadata
+TDS30009,Yuen Long,Tsing Long Highway near Yuen Long Highway - Southbound (3) ,823175,834931,0,0,0,metadata_only
+TDS90001,Sha Tin,"Tolo Highway near Hyatt Regency Hong Kong, Sha Tin - Southbound ",839877,830017,3,3,1,observed_and_in_current_metadata
+TDS90002,Sha Tin,Tolo Highway near The Hong Kong Jockey Club Stables - Southbound ,839599,829633,4,4,1,observed_and_in_current_metadata
+TDS90003,Sha Tin,Tai Po Road - Sha Tin near Racecourse MTR Station - Southbound ,839048,829136,3,3,1,observed_and_in_current_metadata
+TDS90004,Sha Tin,Tai Po Road Sha Tin near Plaza Ascot - Southbound ,838864,828823,0,0,0,metadata_only
+TDS90005,Sha Tin,Tai Po Road - Sha Tin near Hong Kong Jockey Club Shatin Staff Quarters - Southbound ,838645,828457,3,3,1,observed_and_in_current_metadata
+TDS90010,Sha Tin,Tai Po Road - Sha Tin near Sha Tin MTR Station - Westbound ,837219,826760,2,0,0,observed_and_in_current_metadata
+TDS90011,Sha Tin,Shing Mun Tunnel Road near Hong Kong Heritage Museum - Westbound ,836920,826532,2,0,0,observed_and_in_current_metadata
+TDS90012,Sha Tin,Shing Mun Tunnel Road near Mei Lam Estate - Westbound ,836491,826573,2,0,0,observed_and_in_current_metadata
+TDS90013,Sha Tin,Shing Mun Tunnel Road near May Shing Court - Westbound ,836273,826791,3,0,0,observed_and_in_current_metadata
+TDS90014,Sha Tin,Shing Mun Tunnel Road near Puguangming Temple - Westbound ,835846,827041,3,0,0,observed_and_in_current_metadata
+TDS90015,Sha Tin,Shing Mun Tunnel Road near Shun Shin Chee Kit Yin Koon - Westbound ,835485,826910,3,0,0,observed_and_in_current_metadata
+TDS90016,Tsuen Wan,Tuen Mun Road near Tsuen Wan Road - Westbound ,828518,826065,4,4,1,observed_and_in_current_metadata
+TDS90017,Tsuen Wan,Tuen Mun Road near Yau Kom Tau Village - Westbound ,828148,825890,3,3,1,observed_and_in_current_metadata
+TDS90018,Tsuen Wan,Tuen Mun Road near Yau Kom Tau Water Treatment Works - Westbound ,827809,825590,3,3,1,observed_and_in_current_metadata
+TDS90019,Tsuen Wan,Tuen Mun Road near Hanley Villa - Westbound ,827353,825680,3,3,1,observed_and_in_current_metadata
+TDS90020,Tsuen Wan,Tuen Mun Road near Ting Kau - Westbound (1) ,826798,825588,3,3,1,observed_and_in_current_metadata
+TDS90021,Tsuen Wan,Tuen Mun Road near Ting Kau - Westbound (2) ,826214,825843,4,4,1,observed_and_in_current_metadata
+TDS90022,Tsuen Wan,Tuen Mun Road near Ting Kau - Westbound (3) ,825659,825767,3,3,1,observed_and_in_current_metadata
+TDS90023,Tsuen Wan,Tuen Mun Road near Ting Kau - Westbound (4) ,825456,825418,0,0,0,metadata_only
+TDS90024,Tsuen Wan,Tuen Mun Road near Ting Kau - Westbound (5) ,825054,825190,0,0,0,metadata_only
+TDS90025,Tsuen Wan,Tuen Mun Road near Sham Tseng - Westbound (1) ,824808,825284,3,3,1,observed_and_in_current_metadata
+TDS90026,Tsuen Wan,Tuen Mun Road near Sham Tseng - Westbound (2) ,824404,825568,3,0,0,observed_and_in_current_metadata
+TDS90027,Tsuen Wan,Tuen Mun Road near Sham Tseng - Westbound (3) ,824120,825437,0,0,0,metadata_only
+TDS90028,Tsuen Wan,Tuen Mun Road near Sham Tseng - Westbound (4) ,823619,825297,3,3,1,observed_and_in_current_metadata
+TDS90029,Tsuen Wan,Tuen Mun Road near Sham Tseng - Westbound (5) ,823121,825157,0,0,0,metadata_only
+TDS90030,Tsuen Wan,Tuen Mun Road near Sham Tseng - Westbound (6) ,822765,825156,3,3,1,observed_and_in_current_metadata
+TDS90031,Tsuen Wan,Tuen Mun Road near Hong Kong Garden - Westbound (1) ,822304,825012,3,3,1,observed_and_in_current_metadata
+TDS90032,Tsuen Wan,Tuen Mun Road near Hong Kong Garden - Westbound (2) ,821902,824679,3,0,0,observed_and_in_current_metadata
+TDS90033,Tsuen Wan,Tuen Mun Road near Ka Loon Tsuen - Westbound (1) ,821495,824374,3,3,1,observed_and_in_current_metadata
+TDS90034,Tuen Mun,Tuen Mun Road near Ka Loon Tsuen - Westbound (2) ,820981,824092,3,3,1,observed_and_in_current_metadata
+TDS90035,Tuen Mun,Tuen Mun Road near Tai Lam - Westbound ,820438,824121,3,3,1,observed_and_in_current_metadata
+TDS90036,Tuen Mun,Tuen Mun Road near Tuen Mun Road Bus-Bus Interchange - Westbound (1) ,819998,824391,0,0,0,metadata_only
+TDS90037,Tuen Mun,Tuen Mun Road near Tuen Mun Road Bus-Bus Interchange - Westbound (2) ,819673,824797,3,3,1,observed_and_in_current_metadata
+TDS90038,Tuen Mun,Tuen Mun Road near Correctional Services Department Married Staff Quarters - Westbound ,819472,825088,0,0,0,metadata_only
+TDS90039,Tuen Mun,Tuen Mun Road near Tsing Lam Road - Westbound ,819145,825284,3,3,1,observed_and_in_current_metadata
+TDS90040,Tuen Mun,Tuen Mun Road near Kwun Fat Street - Westbound ,818558,825352,0,0,0,metadata_only
+TDS90041,Tuen Mun,Tuen Mun Road near Siu Sau Tsuen - Westbound ,818179,825469,3,3,1,observed_and_in_current_metadata
+TDS90042,Tuen Mun,Tuen Mun Road near So Kwun Wat Road - Westbound ,817879,825932,3,3,1,observed_and_in_current_metadata
+TDS90043,Tuen Mun,Tuen Mun Road near Harrow International School Hong Kong - Westbound (1) ,817378,826310,3,3,1,observed_and_in_current_metadata
+TDS90044,Tuen Mun,Tuen Mun Road near Harrow International School Hong Kong- Westbound (2) ,817151,826240,0,0,0,metadata_only
+TDS90045,Tuen Mun,Tuen Mun Road near Castle Peak Bay Immigration Centre - Westbound ,816715,826430,0,0,0,metadata_only
+TDS90046,Tuen Mun,Tuen Mun Road near Castle Peak Beach - Westbound ,816176,826970,0,0,0,metadata_only
+TDS90048,Tuen Mun,Tuen Mun Road near San Hui Market - Northbound ,815608,828659,0,0,0,metadata_only
+TDS90049,Tuen Mun,Tuen Mun Road near San Hui Playground - Northbound ,815664,828977,4,0,0,observed_and_in_current_metadata
+TDS90051,Tuen Mun,Tuen Mun Road near Fung Tei Light Rail Stop - Northbound ,815797,829710,4,0,0,observed_and_in_current_metadata
+TDS90052,Tuen Mun,Tuen Mun Road near Siu Hong MTR Station - Northbound (1) ,815882,830113,3,0,0,observed_and_in_current_metadata
+TDS90053,Tuen Mun,Tuen Mun Road near Siu Hong MTR Station - Northbound (2) ,815961,830356,3,0,0,observed_and_in_current_metadata
+TDS90055,Tuen Mun,Yuen Long Highway near Kong Sham Western Highway - Eastbound (1) ,816879,830745,3,3,1,observed_and_in_current_metadata
+TDS90056,Tuen Mun,Yuen Long Highway near Kong Sham Western Highway - Eastbound (2) ,817281,831019,3,3,1,observed_and_in_current_metadata
+TDS90057,Tuen Mun,Yuen Long Highway near Kong Sham Western Highway - Eastbound (3) ,817613,831584,3,0,0,observed_and_in_current_metadata
+TDS90058,Yuen Long,Yuen Long Highway near Tan Kwai Tsuen - Eastbound ,817879,831759,3,0,0,observed_and_in_current_metadata
+TDS90059,Yuen Long,Yuen Long Highway near Shui Fu Road - Eastbound ,818132,832060,3,0,0,observed_and_in_current_metadata
+TDS90060,Yuen Long,Yuen Long Highway near Hung Tin Road - Eastbound (1) ,818321,832517,0,0,0,metadata_only
+TDS90061,Yuen Long,Yuen Long Highway near Hung Tin Road - Eastbound (2) ,818698,832986,0,0,0,metadata_only
+TDS90062,Yuen Long,Yuen Long Highway near Tong Yan San Tsuen Road - Eastbound ,819125,833130,3,0,0,observed_and_in_current_metadata
+TDS90063,Yuen Long,Yuen Long Highway near Tong Yan San Tsuen Interchange - Eastbound ,819481,833179,4,0,0,observed_and_in_current_metadata
+TDS90064,Yuen Long,Yuen Long Highway near Lam Hau Tsuen - Eastbound ,819940,833007,0,0,0,metadata_only
+TDS90065,Yuen Long,Yuen Long Highway near Kung Um Road - Eastbound ,820418,832876,3,0,0,observed_and_in_current_metadata
+TDS90066,Yuen Long,Yuen Long Highway near Sham Chung Tsuen - Eastbound ,820943,832777,3,0,0,observed_and_in_current_metadata
+TDS90067,Yuen Long,Yuen Long Highway near Shap Pat Heung Interchange - Eastbound (1) ,821524,832822,3,0,0,observed_and_in_current_metadata
+TDS90068,Yuen Long,Yuen Long Highway near Shap Pat Heung Interchange - Eastbound (2) ,821908,833148,2,0,0,observed_and_in_current_metadata
+TDS90069,Yuen Long,Yuen Long Highway near Pok Oi Interchange - Eastbound (1) ,822117,833570,0,0,0,metadata_only
+TDS90070,Yuen Long,Yuen Long Highway near Pok Oi Interchange - Eastbound (2) ,822179,834127,4,0,0,observed_and_in_current_metadata
+TDS90071,Yuen Long,Yuen Long Highway near Long Fai Road - Eastbound ,822622,834406,2,2,1,observed_and_in_current_metadata
+TDS90072,Yuen Long,Yuen Long Highway near Tsing Long Highway - Eastbound ,823033,834773,2,2,1,observed_and_in_current_metadata
+TDS90073,Yuen Long,San Tin Highway near Sha Po Tsuen - Northbound ,823349,835175,0,0,0,metadata_only
+TDS90074,Yuen Long,San Tin Highway near Mo Fan Heung - Northbound ,823486,835637,3,3,1,observed_and_in_current_metadata
+TDS90075,Yuen Long,San Tin Highway near Pok Wai - Northbound ,823588,836090,3,0,0,observed_and_in_current_metadata
+TDS90076,Yuen Long,San Tin Highway near Kam Pok Road East - Northbound ,823693,836551,3,3,1,observed_and_in_current_metadata
+TDS90077,Yuen Long,San Tin Highway near Fairview Park Boulevard - Northbound ,823809,837034,3,2,1,observed_and_in_current_metadata
+TDS90078,Yuen Long,San Tin Highway near Chun Shin Road - Northbound ,824014,837591,3,3,1,observed_and_in_current_metadata
+TDS90079,Yuen Long,San Tin Highway near Geranium Path - Northbound ,824069,838025,3,3,1,observed_and_in_current_metadata
+TDS90080,Yuen Long,San Tin Highway near Palm Springs Boulevard - Northbound ,824089,838380,3,0,0,observed_and_in_current_metadata
+TDS90081,Yuen Long,San Tin Highway near Mai Po San Tsuen - Northbound ,824304,838957,0,0,0,metadata_only
+TDS90082,Yuen Long,San Tin Highway near San Tin Soccer Pitch - Northbound ,824726,839219,3,0,0,observed_and_in_current_metadata
+TDS90083,Yuen Long,San Tin Highway near Mai Po Lung - Northbound ,825110,839331,0,0,0,metadata_only
+TDS90084,Yuen Long,San Tin Highway near Tsing Lung Tsuen - Northbound ,825708,839506,3,2,1,observed_and_in_current_metadata
+TDS90085,Yuen Long,San Tin Highway near Man Tin Cheung Park - Northbound ,826149,839779,0,0,0,metadata_only
+TDS90086,Yuen Long,Fanling Highway near San Tin Interchange - Eastbound ,826544,840260,3,3,1,observed_and_in_current_metadata
+TDS90087,Yuen Long,Fanling Highway near Chau Tau Tsuen - Eastbound (1) ,826894,840450,0,0,0,metadata_only
+TDS90088,Yuen Long,Fanling Highway near Chau Tau Tsuen - Eastbound (2) ,827288,840514,0,0,0,metadata_only
+TDS90089,North,Fanling Highway near Kwu Tung - Eastbound (1) ,827860,840471,4,4,1,observed_and_in_current_metadata
+TDS90090,North,Fanling Highway near Kwu Tung - Eastbound (2) ,828326,840433,3,3,1,observed_and_in_current_metadata
+TDS90091,North,Fanling Highway near Kwu Tung - Eastbound (3) ,828732,840400,3,3,1,observed_and_in_current_metadata
+TDS90092,North,Fanling Highway near Kwu Tung - Eastbound (4) ,829194,840362,0,0,0,metadata_only
+TDS91001,Tsuen Wan,Tuen Mun Road near Yau Kom Tau Village - Eastbound ,828267,825982,3,3,1,observed_and_in_current_metadata
+TDS91002,Tsuen Wan,Tuen Mun Road near Yau Kom Tau No. 2 Fresh Water Service Reservoir - Eastbound ,827630,825751,2,2,1,observed_and_in_current_metadata
+TDS91003,Tsuen Wan,Tuen Mun Road near Hanley Villa - Eastbound ,827276,825621,3,3,1,observed_and_in_current_metadata
+TDS91004,Tsuen Wan,Tuen Mun Road near Ting Kau - Eastbound (1) ,826928,825594,3,3,1,observed_and_in_current_metadata
+TDS91005,Tsuen Wan,Tuen Mun Road near Ting Kau - Eastbound (2) ,826518,825753,3,3,1,observed_and_in_current_metadata
+TDS91006,Tsuen Wan,Tuen Mun Road near Ting Kau - Eastbound (3) ,826005,825808,4,4,1,observed_and_in_current_metadata
+TDS91007,Tsuen Wan,Tuen Mun Road near Ting Kau - Eastbound (4) ,825598,825673,3,3,1,observed_and_in_current_metadata
+TDS91008,Tsuen Wan,Tuen Mun Road near Ting Kau - Eastbound (5) ,825370,825284,3,3,1,observed_and_in_current_metadata
+TDS91009,Tsuen Wan,Tuen Mun Road near Sham Tseng - Eastbound (1) ,824837,825267,4,0,0,observed_and_in_current_metadata
+TDS91010,Tsuen Wan,Tuen Mun Road near Sham Tseng - Eastbound (2) ,824571,825491,0,0,0,metadata_only
+TDS91011,Tsuen Wan,Tuen Mun Road near Sham Tseng - Eastbound (3) ,824170,825470,3,0,0,observed_and_in_current_metadata
+TDS91012,Tsuen Wan,Tuen Mun Road near Sham Tseng - Eastbound (4) ,823677,825310,0,0,0,metadata_only
+TDS91013,Tsuen Wan,Tuen Mun Road near Sham Tseng - Eastbound (5) ,823355,825174,0,0,0,metadata_only
+TDS91014,Tsuen Wan,Tuen Mun Road near Sham Tseng - Eastbound (6) ,822879,825179,0,0,0,metadata_only
+TDS91015,Tsuen Wan,Tuen Mun Road near Hong Kong Garden - Eastbound (1) ,822473,825081,3,3,1,observed_and_in_current_metadata
+TDS91016,Tsuen Wan,Tuen Mun Road near Hong Kong Garden - Eastbound (2) ,821862,824642,0,0,0,metadata_only
+TDS91017,Tsuen Wan,Tuen Mun Road near Ka Loon Tsuen - Eastbound (1) ,821394,824292,3,3,1,observed_and_in_current_metadata
+TDS91018,Tuen Mun,Tuen Mun Road near Ka Loon Tsuen - Eastbound (2) ,820917,824127,4,4,1,observed_and_in_current_metadata
+TDS91019,Tuen Mun,Tuen Mun Road near Tai Lam - Eastbound ,820302,824220,4,4,1,observed_and_in_current_metadata
+TDS91020,Tuen Mun,Tuen Mun Road near Tuen Mun Road Bus-Bus Interchange - Eastbound (1) ,819925,824482,0,0,0,metadata_only
+TDS91021,Tuen Mun,Tuen Mun Road near Tuen Mun Road Bus-Bus Interchange - Eastbound (2) ,819600,824892,3,3,1,observed_and_in_current_metadata
+TDS91022,Tuen Mun,Tuen Mun Road near Correctional Services Department Married Staff Quarters - Eastbound ,819435,825135,0,0,0,metadata_only
+TDS91023,Tuen Mun,Tuen Mun Road near Kwun Fat Street - Eastbound ,818906,825312,0,0,0,metadata_only
+TDS91024,Tuen Mun,Tuen Mun Road near The Aegean - Eastbound ,818417,825347,4,3,1,observed_and_in_current_metadata
+TDS91025,Tuen Mun,Tuen Mun Road near Siu Sau Tsuen - Eastbound ,818045,825649,4,3,1,observed_and_in_current_metadata
+TDS91026,Tuen Mun,Tuen Mun Road near So Kwun Wat Road - Eastbound ,817786,826089,3,3,1,observed_and_in_current_metadata
+TDS91027,Tuen Mun,Tuen Mun Road near Harrow International School Hong Kong - Eastbound (1) ,817322,826294,3,3,1,observed_and_in_current_metadata
+TDS91028,Tuen Mun,Tuen Mun Road near Harrow International School Hong Kong - Eastbound (2) ,817053,826218,3,3,1,observed_and_in_current_metadata
+TDS91029,Tuen Mun,Tuen Mun Road near Castle Peak Bay Immigration Centre - Eastbound ,816679,826476,0,0,0,metadata_only
+TDS91030,Tuen Mun,Tuen Mun Road near Castle Peak Beach - Eastbound ,816200,826948,0,0,0,metadata_only
+TDS91031,Tuen Mun,Tuen Mun Road near Tuen Mun Siu Lun Government Complex - Southbound ,816001,827192,4,4,1,observed_and_in_current_metadata
+TDS91032,Tuen Mun,Tuen Mun Road near Chi Lok Fa Yuen - Southbound ,815867,827610,0,0,0,metadata_only
+TDS91035,Tuen Mun,Tuen Mun Road near San Hui Playground - Southbound ,815703,829032,0,0,0,metadata_only
+TDS91037,Tuen Mun,Tuen Mun Road near Fung Tei Light Rail Stop - Southbound ,815826,829756,0,0,0,metadata_only
+TDS91038,Tuen Mun,Tuen Mun Road near Siu Hong MTR Station - Souththbound ,815985,830363,0,0,0,metadata_only
+TDS91040,Tuen Mun,Yuen Long Highway near Kong Sham Western Highway - Westbound (1) ,817045,830799,0,0,0,metadata_only
+TDS91041,Tuen Mun,Yuen Long Highway near Kong Sham Western Highway - Westbound (2) ,817322,831142,3,0,0,observed_and_in_current_metadata
+TDS91042,Tuen Mun,Yuen Long Highway near Kong Sham Western Highway - Westbound (3) ,817512,831499,3,0,0,observed_and_in_current_metadata
+TDS91043,Yuen Long,Yuen Long Highway near Shui Fu Road - Westbound ,818065,831944,0,0,0,metadata_only
+TDS91044,Yuen Long,Yuen Long Highway near Hung Tin Road - Westbound (1) ,818291,832432,3,0,0,observed_and_in_current_metadata
+TDS91045,Yuen Long,Yuen Long Highway near Hung Tin Road - Westbound (2) ,818513,832869,0,0,0,metadata_only
+TDS91046,Yuen Long,Yuen Long Highway near Tong Yan San Tsuen Road - Westbound ,818951,833083,3,0,0,observed_and_in_current_metadata
+TDS91047,Yuen Long,Yuen Long Highway near Tong Yan San Tsuen Interchange - Westbound ,819436,833180,0,0,0,metadata_only
+TDS91048,Yuen Long,Yuen Long Highway near Lam Hau Tsuen - Westbound ,819901,833028,3,0,0,observed_and_in_current_metadata
+TDS91049,Yuen Long,Yuen Long Highway near Kung Um Road - Westbound ,820373,832884,3,0,0,observed_and_in_current_metadata
+TDS91050,Yuen Long,Yuen Long Highway near Sham Chung Village - Westbound ,820900,832785,0,0,0,metadata_only
+TDS91051,Yuen Long,Yuen Long Highway near Shap Pat Heung Interchange - Westbound (1) ,821372,832761,4,0,0,observed_and_in_current_metadata
+TDS91052,Yuen Long,Yuen Long Highway near Shap Pat Heung Interchange - Westbound (2) ,821938,833176,2,0,0,observed_and_in_current_metadata
+TDS91053,Yuen Long,Yuen Long Highway near Pok Oi Interchange - Westbound (1) ,822117,833611,3,0,0,observed_and_in_current_metadata
+TDS91054,Yuen Long,Yuen Long Highway near Pok Oi Interchange - Westbound (2) ,822152,834068,2,0,0,observed_and_in_current_metadata
+TDS91055,Yuen Long,Yuen Long Highway near Long Fai Road - Westbound ,822467,834377,3,0,0,observed_and_in_current_metadata
+TDS91056,Yuen Long,Yuen Long Highway near Tsing Long Highway - Westbound (1) ,822855,834370,2,0,0,observed_and_in_current_metadata
+TDS91057,Yuen Long,Yuen Long Highway near Tsing Long Highway - Westbound (2) ,823126,834746,2,0,0,observed_and_in_current_metadata
+TDS91058,Yuen Long,San Tin Highway near Sha Po Tsuen - Southbound ,823304,835109,0,0,0,metadata_only
+TDS91059,Yuen Long,San Tin Highway near Mo Fan Heung - Southbound ,823475,835588,3,0,0,observed_and_in_current_metadata
+TDS91060,Yuen Long,San Tin Highway near Pok Wai - Southbound ,823578,836047,3,0,0,observed_and_in_current_metadata
+TDS91061,Yuen Long,San Tin Highway near Kam Pok Road East - Southbound ,823682,836504,4,0,0,observed_and_in_current_metadata
+TDS91062,Yuen Long,San Tin Highway near Fairview Park Boulevard - Southbound ,823820,837083,3,3,1,observed_and_in_current_metadata
+TDS91063,Yuen Long,San Tin Highway near Chun Shin Road - Southbound ,823998,837544,3,0,0,observed_and_in_current_metadata
+TDS91064,Yuen Long,San Tin Highway near Geranium Path - Southbound ,824066,837976,3,3,1,observed_and_in_current_metadata
+TDS91065,Yuen Long,San Tin Highway near Palm Springs Boulevard - Southbound ,824092,838428,0,0,0,metadata_only
+TDS91066,Yuen Long,San Tin Highway near Mai Po Shan Tsuen - Southbound ,824272,838919,3,3,1,observed_and_in_current_metadata
+TDS91067,Yuen Long,San Tin Highway near San Tin Soccer Pitch - Southbound ,824678,839204,3,3,1,observed_and_in_current_metadata
+TDS91068,Yuen Long,San Tin Highway near Mai Po Lung - Southbound ,825261,839375,3,3,1,observed_and_in_current_metadata
+TDS91069,Yuen Long,San Tin Highway near Tsing Lung Tsuen - Southbound ,825804,839534,3,0,0,observed_and_in_current_metadata
+TDS91070,Yuen Long,San Tin Highway near Man Tin Cheung Park - Southbound ,826120,839736,3,3,1,observed_and_in_current_metadata
+TDS91071,Yuen Long,San Tin Highway near San Tin Interchange - Southbound ,826379,840105,3,3,1,observed_and_in_current_metadata
+TDS91072,Yuen Long,Fanling Highway near Chau Tau Tsuen - Westbound (1) ,826711,840370,0,0,0,metadata_only
+TDS91073,Yuen Long,Fanling Highway near Chau Tau Tsuen - Westbound (2) ,827190,840511,3,2,1,observed_and_in_current_metadata
+TDS91074,North,Fanling Highway near Kwu Tung - Westbound (1) ,827805,840476,0,0,0,metadata_only
+TDS91075,North,Fanling Highway near Kwu Tung - Westbound (2) ,828274,840437,3,3,1,observed_and_in_current_metadata
+TDS91076,North,Fanling Highway near Kwu Tung - Westbound (3) ,828891,840387,0,0,0,metadata_only
+TDS91077,North,Fanling Highway near Kwu Tung - Westbound (4) ,829447,840336,3,3,1,observed_and_in_current_metadata
+TDSAPR10001,Southern,Aberdeen Praya Road near Aberdeen Wholesale Fish Market - Eastbound ,833468,812208,3,0,0,observed_and_in_current_metadata
+TDSAPR20001,Southern,Aberdeen Praya Road near Aberdeen Wholesale Fish Market - Westbound ,833435,812183,3,0,0,observed_and_in_current_metadata
+TDSCPRHSK10001,Tuen Mun,Castle Peak Rd-Lam Tei near Lam Tei Pet Garden - Northbound ,816566,831465,0,0,0,metadata_only
+TDSCPRHSK10002,Tuen Mun,Castle Peak Rd-Hung Shui Kui near Shun Tat Street - Northbound ,817018,831982,3,0,0,observed_and_in_current_metadata
+TDSCPRHSK10003,Tuen Mun,Castle Peak Rd-Hung Shui Kui near Tin Ha Road - Northbound ,817413,832378,3,0,0,observed_and_in_current_metadata
+TDSCPRHSK10004,Yuen Long,Castle Peak Rd-Hung Shui Kiu near Hung Shui Kiu Light Rail Stop - Northbound ,817952,832802,2,0,0,observed_and_in_current_metadata
+TDSCPRHSK20001,Tuen Mun,Castle Peak Rd-Hung Shui Kui near Shun Tat Street - Southbound ,816889,831835,2,0,0,observed_and_in_current_metadata
+TDSCPRHSK20002,Tuen Mun,Castle Peak Rd-Hung Shui Kui near Tin Ha Road - Southbound ,817277,832259,3,0,0,observed_and_in_current_metadata
+TDSCPRHSK20003,Tuen Mun,Castle Peak Rd-Hung Shui Kui near Hung Shui Kiu Main Street - Southbound ,817640,832562,2,0,0,observed_and_in_current_metadata
+TDSCPRKC10001,Tsuen Wan,Castle Peak Rd-Kwai Chung near Shing Mun Road - Eastbound ,830635,825680,3,0,0,observed_and_in_current_metadata
+TDSCPRKC10002,Tsuen Wan,Castle Peak Rd-Kwai Chung near Kwok Shui Road Park - Eastbound ,831283,825743,4,0,0,observed_and_in_current_metadata
+TDSCPRKC10003,Kwai Tsing,Castle Peak Rd-Kwai Chung near Yip Shing Street Playground - Southbound ,831993,824554,2,0,0,observed_and_in_current_metadata
+TDSCPRKC10004,Kwai Tsing,Castle Peak Rd-Kwai Chung near Tai Wo Interchange - Southbound ,831748,823763,0,0,0,metadata_only
+TDSCPRKC20001,Tsuen Wan,Castle Peak Rd-Tseun Wan near Texaco Road Flyover - Westbound ,830684,825684,4,0,0,observed_and_in_current_metadata
+TDSCPRKC20002,Tsuen Wan,Castle Peak Rd-Kwai Chung near Kwok Shui Road Park - Westbound (1) ,831324,825748,3,0,0,observed_and_in_current_metadata
+TDSCPRKC20003,Tsuen Wan,Castle Peak Rd-Kwai Chung near Kwok Shui Road Park - Westbound (2) ,831498,825737,3,0,0,observed_and_in_current_metadata
+TDSCPRKC20004,Kwai Tsing,Castle Peak Rd-Kwai Chung near Central Kwai Chung Park - Northbound (1) ,831907,824457,2,0,0,observed_and_in_current_metadata
+TDSCPRKC20005,Kwai Tsing,Castle Peak Rd-Kwai Chung near Central Kwai Chung Park - Northbound (2) ,831778,823993,2,0,0,observed_and_in_current_metadata
+TDSCPRLT10001,Tuen Mun,Castle Peak Rd-Lam Tei near Lam Tei Interchange - Northbound ,816163,830882,2,0,0,observed_and_in_current_metadata
+TDSCPRLT10002,Tuen Mun,Castle Peak Rd-Lam Tei near Miu Fat Buddhist Monastery - Northbound ,816346,831214,3,0,0,observed_and_in_current_metadata
+TDSCPRLT20001,Tuen Mun,Castle Peak Rd-Lam Tei near Lam Tei Main Street - Southbound ,816271,831092,2,0,0,observed_and_in_current_metadata
+TDSCPRLT20002,Tuen Mun,Castle Peak Rd-Lam Tei near Fuk Hang Playground - Southbound ,816376,831248,2,0,0,observed_and_in_current_metadata
+TDSCPRPS10001,Yuen Long,Castle Peak Rd-Ping Shan near Hung Tin Road - Eastbound ,818144,832950,0,0,0,metadata_only
+TDSCPRPS10002,Yuen Long,Castle Peak Rd-Ping Shan near Fui Sha Wai - Eastbound ,818616,833276,2,0,0,observed_and_in_current_metadata
+TDSCPRPS10003,Yuen Long,Castle Peak Rd-Ping Shan near Tong Yan San Tsuen Playground - Eastbound ,818979,833520,3,0,0,observed_and_in_current_metadata
+TDSCPRPS10004,Yuen Long,Castle Peak Rd-Ping Shan near Ping Shan Light Rail Stop - Eastbound ,819332,833721,3,0,0,observed_and_in_current_metadata
+TDSCPRPS20001,Yuen Long,Castle Peak Rd-Ping Shan near Hung Tin Road - Westbound ,818279,833048,2,0,0,observed_and_in_current_metadata
+TDSCPRPS20002,Yuen Long,Castle Peak Rd-Ping Shan near Fui Sha Wai - Westbound ,818657,833303,2,0,0,observed_and_in_current_metadata
+TDSCPRPS20003,Yuen Long,Castle Peak Rd-Ping Shan near Tong Yan San Tsuen Playground - Westbound ,819028,833551,0,0,0,metadata_only
+TDSCPRPS20004,Yuen Long,Castle Peak Rd-Ping Shan near Long Tin Road - Westbound ,819724,833829,3,0,0,observed_and_in_current_metadata
+TDSIEC10001,Central and Western,Harcourt Road near Tim Mei Avenue - Eastbound ,834973,815726,4,0,0,observed_and_in_current_metadata
+TDSIEC10002,Wan Chai,Harcourt Road near The Hong Kong Academy for Performing Arts - Eastbound ,835451,815638,0,0,0,metadata_only
+TDSIEC10003,Wan Chai,Gloucestor Road near Gloucester Road Garden - Eastbound ,835819,815599,0,0,0,metadata_only
+TDSIEC10004,Wan Chai,Gloucestor Road near Stewart Road - Eastbound ,836252,815650,0,0,0,metadata_only
+TDSIEC20001,Wan Chai,Gloucestor Road near Fleming Road - Westbound ,836003,815618,4,0,0,observed_and_in_current_metadata
+TDSIEC20002,Wan Chai,Gloucestor Road near Wan Chai Sport Ground - Westbound ,836411,815698,4,0,0,observed_and_in_current_metadata
+TDSJCR10001,North,Jockey Club Road near Fanling Government Primary School - Southbound ,832780,839350,2,2,1,observed_and_in_current_metadata
+TDSJCR10002,North,Jockey Club Road near Fanling Highway - Southbound ,833111,838901,2,0,0,observed_and_in_current_metadata
+TDSJCR20001,North,Jockey Club Road near Fanling Government Primary School - Northbound ,832818,839325,2,2,1,observed_and_in_current_metadata
+TDSJCR20002,North,Jockey Club Road near Fanling Highway - Northbound ,833124,838784,2,0,0,observed_and_in_current_metadata
+TDSLFR10001,Tuen Mun,Lung Fu Road near Wong Chu Road - Eastbound ,814863,827541,3,0,0,observed_and_in_current_metadata
+TDSLFR10002,Tuen Mun,Wong Chu Road near Hoi Wong Road - Eastbound ,815089,827436,0,0,0,metadata_only
+TDSLFR10003,Tuen Mun,Wong Chu Road near Tuen Mun Heung Sze Wui Road - Eastbound ,815497,827390,0,0,0,metadata_only
+TDSLFR20001,Tuen Mun,Wong Chu Road near Hoi Wong Road - Westbound ,815005,827469,3,0,0,observed_and_in_current_metadata
+TDSLFR20002,Tuen Mun,Wong Chu Road near Tuen Mun Heung Sze Wui Road - Westbound ,815533,827393,2,0,0,observed_and_in_current_metadata
+TDSLTR10001,Yuen Long,Long Tin Road near Tin Fuk Road - Southbound ,819006,834629,0,0,0,metadata_only
+TDSLTR10002,Yuen Long,Long Tin Road near Yung Yuen Road - Southbound ,819371,834215,3,0,0,observed_and_in_current_metadata
+TDSLTR10003,Yuen Long,Long Tin Road near Shui Pin Wai Interchange - Southbound ,819776,833915,3,0,0,observed_and_in_current_metadata
+TDSLTR10004,Yuen Long,Long Tin Road near Tong Yan San Tsuen Interchange - Southbound ,819747,833578,3,0,0,observed_and_in_current_metadata
+TDSLTR20001,Yuen Long,Long Tin Road near Tin Fuk Road - Northbound ,819035,834545,2,0,0,observed_and_in_current_metadata
+TDSLTR20002,Yuen Long,Long Tin Road near Yung Yuen Road - Northbound ,819257,834283,3,0,0,observed_and_in_current_metadata
+TDSLTR20003,Yuen Long,Long Tin Road near Shui Pin Wai Interchange - Northbound ,819771,833967,2,0,0,observed_and_in_current_metadata
+TDSLTR20004,Yuen Long,Long Tin Road near Tong Yan San Tsuen Interchange - Northbound ,819735,833529,3,0,0,observed_and_in_current_metadata
+TDSMOSB10001,Sha Tin,Ma On Shan Bypass near Hang Fai Street Park - Eastbound ,841649,830601,0,0,0,metadata_only
+TDSMOSB10002,Sha Tin,Ma On Shan Bypass near Ma On Shan Fire Station - Eastbound ,842172,831036,3,2,1,observed_and_in_current_metadata
+TDSMOSB10003,Sha Tin,Ma On Shan Bypass near Ma On Shan Service Reservoir - Eastbound ,842636,831482,2,1,1,observed_and_in_current_metadata
+TDSMOSB10004,Sha Tin,Ma On Shan Bypass near Lee On Estate - Eastbound ,843052,831751,2,1,1,observed_and_in_current_metadata
+TDSMOSB10005,Sha Tin,Ma On Shan Bypass near Cheung Muk Tau - Eastbound ,843472,832155,2,1,1,observed_and_in_current_metadata
+TDSMOSB20001,Sha Tin,Ma On Shan Bypass near Hang Fai Street Park - Westbound ,841670,830587,2,2,1,observed_and_in_current_metadata
+TDSMOSB20002,Sha Tin,Ma On Shan Bypass near Ma On Shan Fire Station - Westbound ,842032,830898,2,2,1,observed_and_in_current_metadata
+TDSMOSB20003,Sha Tin,Ma On Shan Bypass near Ma On Shan Service Reservoir - Westbound ,842405,831272,2,2,1,observed_and_in_current_metadata
+TDSMOSB20004,Sha Tin,Ma On Shan Bypass near Lee On Estate - Westbound ,842963,831640,3,2,1,observed_and_in_current_metadata
+TDSMOSB20005,Sha Tin,Ma On Shan Bypass near Wu Kai Sha MTR Station - Westbound ,843343,832055,0,0,0,metadata_only
+TDSMOSB20006,Sha Tin,Ma On Shan Bypass near Cheung Muk Tau - Westbound ,843652,832210,3,2,1,observed_and_in_current_metadata
+TDSMOSR10001,Sha Tin,Ma On Shan Road near Ah Kung Kok Fishermen Village - Northbound ,840548,829443,2,2,1,observed_and_in_current_metadata
+TDSMOSR10002,Sha Tin,Ma On Shan Road near Tai Shui Hang MTR Station - Northbound ,840947,829877,3,3,1,observed_and_in_current_metadata
+TDSMOSR10003,Sha Tin,Ma On Shan Road near Hang Tai Road - Northbound ,841294,830389,3,0,0,observed_and_in_current_metadata
+TDSMOSR20001,Sha Tin,Ma On Shan Road near Tai Shui Hang MTR Station - Southbound ,841036,829929,4,4,1,observed_and_in_current_metadata
+TDSMOSR20002,Sha Tin,Ma On Shan Road near Hang Tai Road - Southbound ,841338,830421,3,0,0,observed_and_in_current_metadata
+TDSNCWBR10001,Kwun Tong,New Clear Water Bay Road near St. Joseph's Anglo-Chinese School - Eastbound ,840563,821560,3,0,0,observed_and_in_current_metadata
+TDSNCWBR10002,Kwun Tong,New Clear Water Bay Road near Shun Lee Disciplined Services Quarters - Eastbound (1) ,840788,821435,2,0,0,observed_and_in_current_metadata
+TDSNCWBR10003,Kwun Tong,New Clear Water Bay Road near Shun Lee Disciplined Services Quarters - Eastbound (2) ,840927,821548,3,0,0,observed_and_in_current_metadata
+TDSNCWBR10004,Kwun Tong,New Clear Water Bay Road near New Clear Water Bay Road Sitting-out Area - Eastbound ,841074,821677,2,0,0,observed_and_in_current_metadata
+TDSNCWBR20001,Kwun Tong,New Clear Water Bay Road near Shun Lee Disciplined Services Quarters - Westbound (1) ,840790,821409,0,0,0,metadata_only
+TDSNCWBR20002,Kwun Tong,New Clear Water Bay Road near Shun Lee Disciplined Services Quarters - Westbound (2) ,840896,821555,2,0,0,observed_and_in_current_metadata
+TDSNCWBR20003,Kwun Tong,New Clear Water Bay Road near New Clear Water Bay Road Sitting-out Area - Westbound ,841141,821673,0,0,0,metadata_only
+TDSNCWBR20004,Sai Kung,New Clear Water Bay Road near On Sau Road - Westbound ,841796,821723,2,0,0,observed_and_in_current_metadata
+TDSPBH10001,Tsuen Wan,Penny's Bay Highway near North Lantau Highway - Southbound ,821397,821219,0,0,0,metadata_only
+TDSPBH10002,Tsuen Wan,Penny's Bay Highway near Inspiration Lake Recreation Centre - Southbound ,821728,820726,0,0,0,metadata_only
+TDSPBH20001,Tsuen Wan,Penny's Bay Highway near North Lantau Highway - Northbound ,821472,821029,4,0,0,observed_and_in_current_metadata
+TDSPBH20002,Tsuen Wan,Penny's Bay Highway near Inspiration Lake Recreation Centre - Northbound ,821824,820649,2,0,0,observed_and_in_current_metadata
+TDSPERE10001,Kowloon City,Prince Edward Road East near Tak Ku Ling Road - Northbound ,837770,820991,2,0,0,observed_and_in_current_metadata
+TDSPERE10002,Kowloon City,Prince Edward Road East near Lee Kau Yan Memorial School - Northbound ,838161,821380,3,0,0,observed_and_in_current_metadata
+TDSPERE20001,Kowloon City,Prince Edward Road East near Regal Oriental Hotel - Southbound ,837907,821124,2,0,0,observed_and_in_current_metadata
+TDSPERE20002,Kowloon City,Prince Edward Road East near Lee Kau Yan Memorial School - Southbound ,838139,821359,0,0,0,metadata_only
+TDSSPWR10001,Southern,Pok Fu Lam Road near St. Paul's College Primary School - Eastbound ,832294,812890,0,0,0,metadata_only
+TDSSPWR10002,Southern,Shek Pai Wan Road near Wah Kwai Estate - Eastbound ,832595,812412,2,0,0,observed_and_in_current_metadata
+TDSSPWR10003,Southern,Shek Pai Wan Road near Shek Pai Wan Road Playground - Eastbound ,832986,812292,2,0,0,observed_and_in_current_metadata
+TDSSPWR20001,Southern,Shek Pai Wan Road near Wah Fu Road - Westbound ,832514,812621,0,0,0,metadata_only
+TDSSPWR20002,Southern,Shek Pai Wan Road near Wah Kwai Estate - Westbound ,832619,812352,2,0,0,observed_and_in_current_metadata
+TDSSPWR20003,Southern,Shek Pai Wan Road near Shek Pai Wan Road Playground - Westbound ,832988,812275,2,0,0,observed_and_in_current_metadata
+TDSTCKR10001,Sha Tin,Tai Chung Kui Road near Shing Mun River Promenade Garden No. 1 - Northbound ,837670,826418,2,0,0,observed_and_in_current_metadata
+TDSTCKR10002,Sha Tin,Tai Chung Kiu Road near Sha Tin Wai Road - Northbound ,838099,826896,3,0,0,observed_and_in_current_metadata
+TDSTCKR10003,Sha Tin,Tai Chung Kiu Road near Kong Pui Street Rest Garden - Northbound ,838238,827049,4,0,0,observed_and_in_current_metadata
+TDSTCKR10004,Sha Tin,Tai Chung Kiu Road near Sha Tin Road - Northbound ,838741,827632,3,0,0,observed_and_in_current_metadata
+TDSTCKR20001,Sha Tin,Tai Chung Kiu Road near Sha Tin Wai Road - Southbound ,838022,826805,3,0,0,observed_and_in_current_metadata
+TDSTCKR20002,Sha Tin,Tai Chung Kiu Road near Kong Pui Street Rest Garden - Southbound ,838209,827019,3,0,0,observed_and_in_current_metadata
+TDSTCKR20003,Sha Tin,Tai Chung Kiu Road near Sha Tin Road - Southbound ,838647,827485,0,0,0,metadata_only
+TDSTCKR20004,Sha Tin,Tai Chung Kui Road near Shing Mun River Promenade Garden No. 2 - Southbound ,838816,827671,0,0,0,metadata_only
+TDSTKR10001,Tai Po,Ting Kok Road near Fortune Garden - Eastbound ,838519,835560,2,2,1,observed_and_in_current_metadata
+TDSTKR10002,Tai Po,Ting Kok Road near Golf Park Golf Driving Range - Eastbound ,838114,835699,2,2,1,observed_and_in_current_metadata
+TDSTKR10003,Tai Po,Ting Kok Road near Dai Kwai Street - Eastbound ,837550,835859,2,0,0,observed_and_in_current_metadata
+TDSTKR10004,Tai Po,Ting Kok Road near Ting Hing Road - Eastbound ,837223,835859,2,2,1,observed_and_in_current_metadata
+TDSTKR10005,Tai Po,Ting Kok Road near Dai Fu Street Substation - Eastbound ,836928,835593,2,2,1,observed_and_in_current_metadata
+TDSTKR10006,Tai Po,Ting Kok Road near Fung Yuen Road - Eastbound ,836602,835515,2,0,0,observed_and_in_current_metadata
+TDSTKR10007,Tai Po,Ting Kok Road near Yue Kok Village Sitting-out Area - Eastbound ,836337,835310,0,0,0,metadata_only
+TDSTKR10008,Tai Po,Ting Kok Road near Chung Nga Road - Eastbound ,835705,835171,3,0,0,observed_and_in_current_metadata
+TDSTKR20001,Tai Po,Ting Kok Road near Sam Mun Tsai Road - Westbound ,838957,835629,2,2,1,observed_and_in_current_metadata
+TDSTKR20002,Tai Po,Ting Kok Road near Fortune Garden - Westbound ,838351,835580,2,2,1,observed_and_in_current_metadata
+TDSTKR20003,Tai Po,Ting Kok Road near Lo Fai Road - Westbound ,837821,835787,2,2,1,observed_and_in_current_metadata
+TDSTKR20004,Tai Po,Ting Kok Road near Ting Hing Road - Westbound ,837324,835859,2,2,1,observed_and_in_current_metadata
+TDSTKR20005,Tai Po,Ting Kok Road near Dai Fu Street Substation - Westbound ,837007,835701,2,2,1,observed_and_in_current_metadata
+TDSTKR20006,Tai Po,Ting Kok Road near Dai Fat Street - Westbound ,836669,835513,2,0,0,observed_and_in_current_metadata
+TDSTKR20007,Tai Po,Ting Kok Road near Yue Kok - Westbound ,836349,835394,4,0,0,observed_and_in_current_metadata
+TDSTKR20008,Tai Po,Ting Kok Road near Dai Fuk Street - Westbound ,836276,835242,2,2,1,observed_and_in_current_metadata
+TDSTKR20009,Tai Po,Ting Kok Road near On Po Road - Westbound ,836008,835136,2,2,1,observed_and_in_current_metadata
+TDSTPR10001,Tai Po,Tai Po Road - Yuen Chau Tsai near Kwong Wang Street - Souhtbound ,836033,834085,0,0,0,metadata_only
+TDSTPR10002,Tai Po,Tai Po Road - Tai Po Kau near Tai Po Kau Fresh Water Pumping Station - Souhtbound ,836536,833632,2,0,0,observed_and_in_current_metadata
+TDSTPR10003,Tai Po,Tai Po Road - Tai Po Kau near Yat Yiu Avenue - Southbound ,836857,833118,1,0,0,observed_and_in_current_metadata
+TDSTPR10004,Tai Po,Tai Po Road - Tai Po Kau near Lai Chi Hang - Southbound ,837077,832716,1,0,0,observed_and_in_current_metadata
+TDSTPR10005,Tai Po,Tai Po Road - Tai Po Kau near Tai Po Kau Garden - Souhtbound ,837226,832591,0,0,0,metadata_only
+TDSTPR10006,Tai Po,Tai Po Road - Tai Po Kau near Tai Po Kau Park - Southbound ,837661,832592,0,0,0,metadata_only
+TDSTPR10007,Tai Po,Tai Po Road - Tai Po Kau near Japanese International School - Southbound ,838061,832465,1,1,1,observed_and_in_current_metadata
+TDSTPR10008,Tai Po,Tai Po Road - Tai Po Kau near Po Leung Kuk Tin Ka Ping Millennium Primary School - Southbound ,838273,832215,1,0,0,observed_and_in_current_metadata
+TDSTPR10009,Tai Po,Tai Po Road - Tai Po Kau near Cheung Shue Tan Road - Southbound ,838299,831749,1,0,0,observed_and_in_current_metadata
+TDSTPR10010,Tai Po,Tai Po Road - Tai Po Kau near Dragon Fountain - Southbound ,838293,831451,0,0,0,metadata_only
+TDSTPR10011,Sha Tin,Tai Po Road - Ma Liu Shui near Tai Po Mei - Southbound ,838423,831144,2,0,0,observed_and_in_current_metadata
+TDSTPR10012,Sha Tin,Tai Po Road - Ma Liu Shui near Chek Nai Ping - Souhtbound ,838682,831127,1,0,0,observed_and_in_current_metadata
+TDSTPR10013,Sha Tin,Tai Po Road - Ma Liu Shui near University Avenue - Southbound ,839008,830930,1,0,0,observed_and_in_current_metadata
+TDSTPR10014,Sha Tin,Tai Po Road - Ma Liu Shui near De Yucca - Southbound ,839256,830675,1,0,0,observed_and_in_current_metadata
+TDSTPR10015,Sha Tin,"Tai Po Road - Ma Liu Shui near Hyatt Regency Hong Kong, Sha Tin - Southbound ",839762,830035,1,0,0,observed_and_in_current_metadata
+TDSTPR10016,Sha Tin,Tai Po Road - Ma Liu Shui near Kau To Shan Road - Southbound ,839463,829620,1,0,0,observed_and_in_current_metadata
+TDSTPR20001,Tai Po,Tai Po Road - Tai Po Kau near Tai Po Kau Fresh Water Pumping Station - Northbound ,836483,833666,1,1,1,observed_and_in_current_metadata
+TDSTPR20002,Tai Po,Tai Po Road - Tai Po Kau near Yin Tse Lane - Northbound ,836841,833387,1,0,0,observed_and_in_current_metadata
+TDSTPR20003,Tai Po,Tai Po Road - Tai Po Kau near Lai Chi Hang - Northbound ,836957,832947,1,1,1,observed_and_in_current_metadata
+TDSTPR20004,Tai Po,Tai Po Road - Tai Po Kau near Tai Po Kau Park - Northbound ,837636,832580,1,0,0,observed_and_in_current_metadata
+TDSTPR20005,Tai Po,Tai Po Road - Tai Po Kau near Japanese International School - Northbound ,838032,832483,1,1,1,observed_and_in_current_metadata
+TDSTPR20006,Tai Po,Tai Po Road - Tai Po Kau near Po Leung Kuk Tin Ka Ping Millennium Primary School - Northbound ,838260,832255,0,0,0,metadata_only
+TDSTPR20007,Tai Po,Tai Po Road - Tai Po Kau near Cheung Shue Tan Road - Northbound ,838275,831895,1,1,1,observed_and_in_current_metadata
+TDSTPR20008,Tai Po,Tai Po Road - Tai Po Kau near Dragon Fountain - Northbound ,838274,831542,1,0,0,observed_and_in_current_metadata
+TDSTPR20009,Tai Po,Tai Po Road - Tai Po Kau near Tai Po Mei - Northbound ,838247,831192,1,0,0,observed_and_in_current_metadata
+TDSTPR20010,Sha Tin,Tai Po Road - Ma Liu Shui near Chek Nai Ping - Northbound ,838509,831115,1,0,0,observed_and_in_current_metadata
+TDSTPR20011,Sha Tin,Tai Po Road - Ma Liu Shui near University Avenue - Northbound ,838922,830957,0,0,0,metadata_only
+TDSTPR20012,Sha Tin,Tai Po Road - Ma Liu Shui near De Yucca - Northbound ,839225,830706,2,0,0,observed_and_in_current_metadata
+TDSTPR20013,Sha Tin,Tai Po Road - Ma Liu Shui near University MTR Station - Northbound ,839619,830347,2,0,0,observed_and_in_current_metadata
+TDSTPR20014,Sha Tin,Tai Po Road - Ma Liu Shui near Sha Tin Sewage Treatment Works - Northbound ,839661,829722,2,0,0,observed_and_in_current_metadata
+TDSTPTWR10001,Tai Po,Tai Po Tai Wo Road near Tai Po Arts Centre - Eastbound ,835345,834628,0,0,0,metadata_only
+TDSTPTWR10002,Tai Po,Tai Po Tai Wo Road near New Territories North Regional Police Headquarters - Eastbound ,835808,834628,3,0,0,observed_and_in_current_metadata
+TDSTPTWR20001,Tai Po,Tai Po Tai Wo Road near New Territories North Regional Police Headquarters - Westbound ,835722,834625,3,0,0,observed_and_in_current_metadata
+TDSTPTWR20002,Tai Po,Tai Po Tai Wo Road near Yuen Shin Park - Westbound ,836221,834620,0,0,0,metadata_only
+TDSTTR10001,Tuen Mun,Tsing Tin Road near Tsing Tin Playground - Eastbound ,814905,829562,2,0,0,observed_and_in_current_metadata
+TDSTTR10002,Tuen Mun,Tsing Tin Road near Tuen Mun Tang Shiu Kin Sports Ground - Eastbound ,815392,829556,3,0,0,observed_and_in_current_metadata
+TDSTTR10003,Tuen Mun,Tsing Tin Road near Tuen Mun Hospital - Eastbound ,815575,829624,3,0,0,observed_and_in_current_metadata
+TDSTTR20001,Tuen Mun,Tsing Tin Road near Tsing Tin Playground - Westbound ,814954,829573,2,0,0,observed_and_in_current_metadata
+TDSTTR20002,Tuen Mun,Tsing Tin Road near Tuen Mun Hospital - Westbound ,815611,829622,3,0,0,observed_and_in_current_metadata
+TDSTYR10001,Yuen Long,Tin Ying Road near Tin Wah Road - Northbound ,817382,835886,2,0,0,observed_and_in_current_metadata
+TDSTYR10002,Yuen Long,Tin Ying Road near Tin Sau Road - Northbound ,817660,836552,2,0,0,observed_and_in_current_metadata
+TDSTYR10003,Yuen Long,Tin Ying Road near Tin Yuet Road - Northbound ,817769,836799,2,0,0,observed_and_in_current_metadata
+TDSTYR20001,Yuen Long,Tin Ying Road near Tin Sau Road - Southbound ,817575,836355,2,0,0,observed_and_in_current_metadata
+TDSTYR20002,Yuen Long,Tin Ying Road near Tin Yuet Road - Southbound ,817789,836839,2,0,0,observed_and_in_current_metadata
+TDSTYR20003,Yuen Long,Tin Ying Road near Lau Fau Shan Fire Station Cum Ambulance Depot - Westbound ,818246,836908,2,0,0,observed_and_in_current_metadata
+TDSYSR10001,Tai Po,Yuen Shin Road near Yuen Chau Tsai Park - Northbound ,836265,834116,2,2,1,observed_and_in_current_metadata
+TDSYSR10002,Tai Po,Yuen Shin Road near Tai Po Tai Wo Road - Northbound ,836309,834720,2,0,0,observed_and_in_current_metadata
+TDSYSR10003,Tai Po,Yuen Shin Road near Dai Fat Street - Northbound ,836383,834949,2,2,1,observed_and_in_current_metadata
+TDSYSR20001,Tai Po,Yuen Shin Road near Tai Po Tai Wo Road - Southbound ,836288,834549,2,2,1,observed_and_in_current_metadata
+TDSYSR20002,Tai Po,Yuen Shin Road near Dai Fat Street - Southbound ,836355,834833,2,0,0,observed_and_in_current_metadata
+TDSYSR20003,Tai Po,Yuen Shin Road near Dai Fuk Street - Southbound ,836348,835182,2,2,1,observed_and_in_current_metadata

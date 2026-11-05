@@ -1,0 +1,93 @@
+{
+  "status": "EXPLORATORY \u2014 NOT APPROVED AS FINAL RESULTS",
+  "horizon": 30,
+  "seed": 42,
+  "feature_groups": {
+    "local": [
+      "speed_kmh",
+      "speed_ratio",
+      "baseline_kmh",
+      "valid_slots",
+      "onset_observed_minutes"
+    ],
+    "history": [
+      "speed_change_15m_ratio",
+      "speed_mean_15m_ratio",
+      "speed_slope_15m_ratio_per_min",
+      "speed_trend_observed_bins"
+    ],
+    "flow": [
+      "volume_median_per_observed_30s",
+      "occupancy_median_pct",
+      "flow_observed_slots",
+      "occupancy_observed_slots"
+    ],
+    "calendar": [
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "is_weekend",
+      "is_public_holiday",
+      "is_day_before_holiday",
+      "is_day_after_holiday"
+    ],
+    "weather": [
+      "temperature_c",
+      "wind_speed_kmh",
+      "temperature_age_minutes",
+      "wind_age_minutes",
+      "temperature_missing",
+      "wind_missing"
+    ]
+  },
+  "feature_sets": [
+    [
+      "local"
+    ],
+    [
+      "local",
+      "history"
+    ],
+    [
+      "local",
+      "history",
+      "flow"
+    ],
+    [
+      "local",
+      "history",
+      "flow",
+      "calendar"
+    ],
+    [
+      "local",
+      "history",
+      "flow",
+      "calendar",
+      "weather"
+    ]
+  ],
+  "selection": "logistic/tree: validation_log_loss; trend: validation_macro_f1",
+  "refit_train_plus_validation": false,
+  "threshold": 0.5,
+  "trend_candidates": [
+    -0.8,
+    -0.6,
+    -0.4,
+    -0.2,
+    -0.1,
+    0,
+    0.1,
+    0.2
+  ],
+  "target": "observed sustained recovery confirmation, not recovery start",
+  "excluded": [
+    "unverified spatial",
+    "rainfall",
+    "incidents",
+    "major events"
+  ],
+  "test_policy": "existing fixed candidate rules; no test-driven retuning",
+  "prior_exposure": "previous exploratory test results already exist; this is a reproducibility rerun, not an independent new holdout"
+}

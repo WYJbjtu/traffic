@@ -1,0 +1,110 @@
+from pathlib import Path
+import subprocess,json,hashlib,time,os
+ROOT=Path(__file__).parents[1]
+PROJECT=ROOT/'project'
+REPO='CityuHK-wyj/hk-traffic-recovery-prediction'
+BASE='https://api.github.com/repos/'+REPO
+TAG='data-expanded-96-2023-2026-v1'
+SHA='10920bec788e84625be24824e7b85a4ce19dc5a3'
+PACKAGE=ROOT/'HK_Traffic_Expanded_96_Prepared_Data_v1.zip'
+import zipfile,shutil
+EXP=ROOT/'expansion'
+print('WAITING_FOR_VERIFIED_96_RESULTS',flush=True)
+while not (EXP/'reports-full96-v1/summary.json').exists():
+    status=json.loads((EXP/'run_status.json').read_text(encoding='utf-8'))
+    if any(s['status']=='failed' for s in status['stages']):raise RuntimeError('Audit failed; no publication')
+    time.sleep(30)
+stats=json.loads((EXP/'reports-full96-v1/summary.json').read_text(encoding='utf-8'))
+status=json.loads((EXP/'run_status.json').read_text(encoding='utf-8'))
+assert stats['status']=='verified_completed' and stats['units']==96 and stats['candidate_units']==426
+assert status.get('status')=='all_stages_completed'
+assert stats['main_commit']=='4309351ea6c365918adbb5fc6b12c7f37c9dea63'
+files=[(EXP/'pilot96-id-order-v1/cohort_bins.parquet','processed/cohort_bins.parquet'),
+       (EXP/'pilot96-id-order-v1/cohort_events.parquet','processed/events.parquet'),
+       (EXP/'pilot96-id-order-v1/pilot_manifest.json','reports/pilot_manifest.json'),
+       (EXP/'continuity426-v1/continuity_manifest.json','reports/continuity_manifest.json'),
+       (EXP/'january426-v1/reference_manifest.json','reports/reference_manifest.json'),
+       (EXP/'january426-v1/full_january_reference.parquet','reports/full_january_reference.parquet'),
+       (PROJECT/'configs/long_window_96_candidate.json','configs/long_window_96_candidate.json'),
+       (PROJECT/'reports/lane_expansion_execution_20261102/archive_inventory.csv','reports/raw_archive_inventory.csv'),
+       (ROOT/'metadata/detectors.csv','metadata/detectors.csv')]
+files += [(p,'reports/'+p.name) for p in (EXP/'reports-full96-v1').glob('*') if p.is_file()]
+files += [(p,'reports/'+p.name) for p in (EXP/'continuity426-v1').glob('*.parquet') if p.is_file()]
+manifest={}
+with zipfile.ZipFile(PACKAGE,'w',compression=zipfile.ZIP_STORED,allowZip64=True) as z:
+    for source,name in files:
+        with source.open('rb') as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
+        manifest[name]={'bytes':source.stat().st_size,'sha256':digest};z.write(source,name)
+    z.writestr('SHARED_DATA_MANIFEST.json',json.dumps({'dataset':'expanded96-long-window-v1','units':96,'candidate_quality_units':426,'events':stats['dataset_rows']['events'],'files':manifest},indent=2))
+with zipfile.ZipFile(PACKAGE) as z:assert z.testzip() is None
+assert PACKAGE.stat().st_size<2*1024**3,'Bundle exceeds release limit; split and review, do not publish incomplete data'
+print('BUNDLE_VERIFIED',PACKAGE.stat().st_size,flush=True)
+credentials=subprocess.run(['git','credential','fill'],input=b'protocol=https\nhost=github.com\nusername=whiteball-shiro\n\n',capture_output=True,cwd=PROJECT,check=True,env={**os.environ,'GCM_INTERACTIVE':'Never','GCM_GUI_PROMPT':'false'}).stdout.decode('utf-8')
+fields=dict(line.split('=',1) for line in credentials.splitlines() if '=' in line)
+secret_config=('header = "Authorization: Bearer '+fields['password']+'"\nheader = "Accept: application/vnd.github+json"\n').encode()
+
+def api(method,url,payload=None,asset=None,name='api'):
+    output=EXP/('expanded_'+name+'_response.json')
+    cmd=['curl.exe','--silent','--show-error','--connect-timeout','30','--max-time','3600' if asset else '90','--config','-','--request',method,'--output',str(output),'--write-out','%{http_code}']
+    if payload is not None:
+        body=EXP/('expanded_'+name+'_request.json');body.write_text(json.dumps(payload,ensure_ascii=True),encoding='utf-8')
+        cmd+=['--header','Content-Type: application/json','--data-binary','@'+str(body)]
+    if asset:
+        cmd+=['--header','Content-Type: application/octet-stream','--data-binary','@'+str(asset)]
+    cmd.append(url)
+    with (EXP/('expanded_'+name+'_transfer.log')).open('ab') as error:
+        result=subprocess.run(cmd,input=secret_config,stdout=subprocess.PIPE,stderr=error)
+    if result.returncode:raise RuntimeError(f'curl failed ({result.returncode}); see {name}_transfer.log')
+    status=int(result.stdout.decode().strip())
+    data=json.loads(output.read_bytes())
+    if status>=400:raise RuntimeError(f'HTTP {status}: '+str(data.get('message',data)))
+    return data
+
+with PACKAGE.open('rb') as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
+checksum=ROOT/'HK_Traffic_Expanded_96_Prepared_Data_v1.zip.sha256'
+checksum.write_text(digest+'  '+PACKAGE.name+'\n',encoding='utf-8')
+notes=f"""# 扩展96车道真实数据与426候选长期质量 v1
+
+配套代码快照：`{SHA}`；审计算法基于main 4309351，另修正一月报告在数据持有人机器上的源目录定位（校验冻结首周profile哈希，未改研究定义）；观测范围2023-01-01至2026-09-30（香港时间）。45个月原始ZIP和2026-10-01边界已核验。所有计算和测试结束、逐车道校验及统一事件唯一性检查通过后才发布本包。
+
+## 真实结果
+- 冻结ID顺序96个车道；统一五分钟序列 **{stats['dataset_rows']['bins']:,}行**；真实恢复事件 **{stats['dataset_rows']['events']:,}个**。
+- 426候选长期质量、逐月/逐年/时间分组覆盖、长期缺口、身份清单、回顾速度漂移见包内 reports。
+- 时间分组数量：{json.dumps(stats['by_split'],ensure_ascii=False)}。
+- 15/30/60分钟标签：{json.dumps(stats['horizons'],ensure_ascii=False)}。
+
+## 下载与使用
+下载 `HK_Traffic_Expanded_96_Prepared_Data_v1.zip`，大小{PACKAGE.stat().st_size:,}字节。下载同名.sha256校验文件并对照；包内SHARED_DATA_MANIFEST.json含每个文件SHA-256。Windows可使用 `Get-FileHash <ZIP路径> -Algorithm SHA256`。
+
+解压到单独的96车道数据目录。主要文件：processed/events.parquet 为事件与标签；processed/cohort_bins.parquet 为五分钟序列；configs 为配套配置；reports/report_zh.md 为中文质量交接。配套代码使用本Release的Source code或标签；Source code本身不含数据附件。
+
+**不要与73事件的2026年10月短窗口或24车道7,597事件的原长窗口混用。** 本包只包含冻结96车道的处理数据和426候选轻量质量报告，不包含47GB原始ZIP及全部426车道巨型中间观测。它们仍保留在数据持有人本机。如需重建，按repo连续性审计说明从官方原始档案运行。
+
+未知标签不是负例。恢复是持续恢复确认，不是精确物理恢复时刻。未来覆盖与速度漂移仅作诊断，不用于回溯换站；物理车道稳定性、空间上下游连接及最终科学定义仍需复核。没有训练模型或宣称模型精度。
+
+## 交接
+道路负责人据身份/方向清单复核历史几何；外部因素负责人按预测时刻可获得性准备背景；模型负责人按时间与事件边界、未知标签及标签成熟时间继续基准和评估。原数据负责人保留原始档案、运行日志和完整检查点。
+
+## 整包SHA-256
+`{digest}`
+"""
+(EXP/'EXPANDED96_RELEASE_NOTES.md').write_text(notes,encoding='utf-8')
+releases=api('GET',BASE+'/releases?per_page=100',name='list_releases')
+existing=next((r for r in releases if r['tag_name']==TAG),None)
+release=existing or api('POST',BASE+'/releases',{'tag_name':TAG,'target_commitish':SHA,'name':'Expanded 96-lane data and 426-lane continuity v1 (2023-2026)','body':notes,'draft':True,'prerelease':False},name='create_release')
+print('RELEASE_DRAFT',release['id'],flush=True)
+for asset in [PACKAGE,checksum]:
+    present=next((a for a in release.get('assets',[]) if a['name']==asset.name and a['state']=='uploaded' and a['size']==asset.stat().st_size),None)
+    if present:
+        print('ASSET_ALREADY_PRESENT',asset.name,flush=True);continue
+    print('UPLOADING',asset.name,asset.stat().st_size,flush=True)
+    uploaded=api('POST',release['upload_url'].split('{')[0]+'?name='+asset.name,asset=asset,name='upload_'+('data' if asset==PACKAGE else 'checksum'))
+    if uploaded['state']!='uploaded' or uploaded['size']!=asset.stat().st_size:raise RuntimeError('Upload size/state mismatch')
+    if asset==PACKAGE and uploaded.get('digest') and uploaded['digest']!='sha256:'+digest:raise RuntimeError('Remote asset digest mismatch')
+    print('UPLOADED',asset.name,uploaded['size'],flush=True)
+final=api('PATCH',BASE+'/releases/'+str(release['id']),{'draft':False,'body':notes},name='publish_release')
+verified=api('GET',BASE+'/releases/'+str(release['id']),name='verify_release')
+if verified['draft']:raise RuntimeError('Release still draft')
+result={'url':verified['html_url'],'tag':TAG,'sha256':digest,'assets':[{'name':a['name'],'bytes':a['size'],'url':a['browser_download_url'],'digest':a.get('digest')} for a in verified['assets']]}
+(EXP/'published_expanded96_release.json').write_text(json.dumps(result,indent=2),encoding='utf-8')
+print('PUBLISHED',json.dumps(result),flush=True)

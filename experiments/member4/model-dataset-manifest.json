@@ -1,0 +1,37 @@
+{
+  "manifest_version": "model-dataset-manifest-v1",
+  "created_at": "2026-11-01T08:44:15.475651+00:00",
+  "validation": {
+    "rows": 7597,
+    "events": 7597,
+    "purged": 0,
+    "known_label_15m": 6954,
+    "known_label_30m": 6799,
+    "known_label_60m": 6611,
+    "dataset_version": "member4-long-window-local-v1",
+    "scientific_approval": "pending_team_review",
+    "feature_groups": {
+      "local": [
+        "speed_kmh",
+        "speed_ratio",
+        "baseline_kmh",
+        "valid_slots",
+        "onset_observed_minutes"
+      ]
+    }
+  },
+  "inputs": {
+    "events": {
+      "path": "D:/HK_Traffic_Recovery_Long_Window/processed/derived/events.parquet",
+      "sha256": "0a9d362179329978954175507a7dd2eb60f6c9eb90180169a508cecad74eac12"
+    }
+  },
+  "contract": {
+    "path": "experiments/member4/experiment_contract_local.json",
+    "sha256": "5e4adbd8ffedf796318ec843d98334f85f31b2fb1faacb281a57cf67202261ca"
+  },
+  "output": {
+    "path": "experiments/member4/event_features.parquet",
+    "sha256": "f163c732ba05e00e23802cb3cc390f8c5a8c034975a0ef3524674a3278c346b8"
+  }
+}

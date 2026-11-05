@@ -1,0 +1,25 @@
+{
+  "version": "external-coverage-v1",
+  "scope": "original_24_lane_events",
+  "event_audit_sha256": "fe00cb25ee7048011956f9dd47a3c73241b35a854fd993941809f8d30996a49d",
+  "event_audit_committed": false,
+  "input_sha256": {
+    "experiments/tianhao/rerun_20261101/original_rerun_manifest.json": "fad3f7b1da869903d666ca9f9df7d5d9a200396ec5e22bfbe0abb11cc5168953",
+    "experiments/tianhao/rerun_20261101/feature_missingness.csv": "0d567dbdc723d031176330c0c5b9fe16e6a4e225fecc9cfec1c5f093ac4a9890",
+    "experiments/tianhao/rerun_20261101/cohort_summary.csv": "9f57a7ca9e01b66f78d413a1616ada20c570ea2faf49fac478531ea94a306eac",
+    "experiments/tianhao/rerun_20261101/predictions.parquet": "452da27baaa2ca43834c1192be9c7e17633febc313fed7d1713a441b3ae50eb4",
+    "experiments/tianhao/results/holiday_source_manifest.json": "29f047bff6f140663065c1d4cad1f6f7a769362117433fc504d67b8ea67f8804",
+    "experiments/tianhao/results/conditional_source_audit.json": "9b046f29ee42d6323f5032bad77e1c3d89003e2dce983b25585d49316b8f1663"
+  },
+  "code_sha256": "7c4b776f64b148847ba79e5dc1a9873597d1bdc73b4d3d8efdf913d9af109be7",
+  "output_sha256": {
+    "coverage.csv": "b9ffed4bf49f200d22509ae5ec957b32723ecd09174d462c36fb08ccdc1d8eca",
+    "holiday_sources.csv": "c03081f7380edb85dbd920a8fc1e2c4f3918f5af1cddfb78036ea0cd8650b3ae",
+    "README.md": "55c1b075c3f7e2b99d0c7f0f09f79e4b73a06e03c8ccf8d556b2e8742a0d25ed",
+    "conditional_source_checks.csv": "18d64136b545452d1c0a787d4c60712dd747042e33c2353c854a7f2b2eb5c99c"
+  },
+  "all_events": 7597,
+  "known_label_30m_events": 6799,
+  "source_time_and_saved_missingness_checks": "passed",
+  "scientific_approval": "pending_team_review"
+}

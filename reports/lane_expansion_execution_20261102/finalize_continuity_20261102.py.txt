@@ -1,0 +1,56 @@
+from pathlib import Path
+import json,time,hashlib
+import pandas as pd
+import pyarrow.parquet as pq
+ROOT=Path(__file__).parent
+while True:
+    state=json.loads((ROOT/'run_status.json').read_text(encoding='utf-8'))
+    if any(s['status']=='failed' for s in state['stages']):
+        raise RuntimeError('Pipeline failed; inspect '+str(ROOT/(state['current_stage']+'.log')))
+    if state.get('status')=='all_stages_completed':break
+    time.sleep(30)
+quality=ROOT/'continuity426-v1';dataset=ROOT/'pilot96-id-order-v1'
+manifest=json.loads((dataset/'pilot_manifest.json').read_text(encoding='utf-8'))
+assert manifest['units']==96
+output=ROOT/'reports-full96-v1';output.mkdir(exist_ok=True)
+for name in ['monthly_continuity','yearly_continuity','monthly_speed_drift','fold_continuity','gap_continuity','detector_identity_inventory']:
+    pd.read_parquet(quality/(name+'.parquet')).to_csv(output/(name+'.csv'),index=False)
+counts={}
+for kind in ['bins','events']:
+    destination=dataset/('cohort_'+kind+'.parquet');temporary=destination.with_suffix('.partial');writer=None;rows=0
+    try:
+        for source in sorted((dataset/'units').glob('*/'+kind+'.parquet')):
+            checkpoint=json.loads((source.parent/'checkpoint.json').read_text(encoding='utf-8'))
+            with source.open('rb') as stream:digest=hashlib.file_digest(stream,'sha256').hexdigest()
+            assert digest==checkpoint['outputs_sha256'][source.name]
+            table=pq.read_table(source)
+            if writer is None:writer=pq.ParquetWriter(temporary,table.schema,compression='zstd')
+            writer.write_table(table.cast(writer.schema));rows+=table.num_rows
+    finally:
+        if writer:writer.close()
+    if writer is None:raise RuntimeError('No actual '+kind+' rows')
+    temporary.replace(destination);counts[kind]=rows
+assert counts['events']==manifest['events']
+if 'events' in counts:
+    events=pd.read_parquet(dataset/'cohort_events.parquet',columns=['event_id','detector_id','direction','lane_id','prediction_time'])
+    assert not events.event_id.duplicated().any()
+    assert not events.duplicated(['detector_id','direction','lane_id','prediction_time']).any()
+years=pd.read_parquet(quality/'yearly_continuity.parquet')
+lines=['# 426��ѡ����������������96������ʵ���ݽ��','',
+'��Դ���Ѻ����45���¹ٷ�ZIP��2026��10��1�ձ߽絵����ʹ��main�ύ '+state['main_commit']+' ���Ѻϲ���Ƴ������ö�����м����б�ǩ����û�и��ݺ��ڸ��ǻ�վ��û��ѵ��ģ�͡�','',
+'96�������������������'+str(counts['bins'])+'���ָ��¼�����'+str(counts['events'])+'��',
+'ͳһ�����ļ���../pilot96-id-order-v1/cohort_bins.parquet �� cohort_events.parquet��ԭʼ�𳵵��ļ���У��ֵ���ֲ��䡣','',
+'## 426�������ѡ����������','',
+'| ��� | ��Ч30��۲⸲�� | ����5��������� | ȫȱ������ |','|---|---:|---:|---:|']
+for year,g in years.groupby('year'):
+    lines.append(f"| {year} | {g.valid_slots.sum()/g.expected_slots.sum():.2%} | {g.usable_5m_bins.sum()/(g.days.sum()*288):.2%} | {int(g.missing_days.sum())} |")
+lines+=['','2026���ͳ��1��9�£�30�븲��������������Ч������ʱ���γɵ�����ӿ����䲻��ͬһָ�ꡣ���ݱ仯���ٶ�Ư���ǻع�������ϣ���������ѡ���л����������֤/���Բο���','',
+'## 96������ǩ�ֲ�','','| ��Χ | �ѻָ� | δ�ָ� | δ֪ |','|---|---:|---:|---:|']
+for h,c in manifest['horizons'].items():lines.append(f"| {h}���� | {c['positive']} | {c['negative']} | {c['unknown']} |")
+lines+=['','ʱ������¼�����'+json.dumps(manifest['by_split'],ensure_ascii=False),'',
+'δ֪���Ǹ������ָ�ָ�����ָ�ȷ�϶��Ǿ�ȷ�����ָ�ʱ�̣��豸/�������ݿ����ȶ��ԡ�ϡ����������ڲο�Ư�������ŶӸ��ˡ�ԭ24������7597�¼����δ���ǻ���롣','',
+'426��ѡ�����¡����ꡢѵ��/��֤/��������������ȱ�ڡ������嵥���ٶ�Ư�Ƽ�ͬĿ¼CSV��ԭʼParquet��У���嵥�� ../continuity426-v1/��']
+(output/'report_zh.md').write_text('\n'.join(lines)+'\n',encoding='utf-8')
+summary={'status':'verified_completed','main_commit':state['main_commit'],'repairs':state.get('repairs',[]),'units':96,'candidate_units':426,'dataset_rows':counts,'horizons':manifest['horizons'],'by_split':manifest['by_split']}
+(output/'summary.json').write_text(json.dumps(summary,indent=2),encoding='utf-8')
+print(json.dumps(summary),flush=True)
