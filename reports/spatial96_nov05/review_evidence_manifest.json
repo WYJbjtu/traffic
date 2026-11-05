@@ -1,0 +1,11 @@
+{
+  "status": "candidate_review_no_human_approval",
+  "sha256": {
+    "selected_pair_intersections.csv": "3e5be19107bdccc798d2da0aad12ae09d7dc56bfa23b17fe04875e67f436e808",
+    "selected_pair_turns.csv": "be9856d4fda946561cce69588a3ce9bc1c17043a47aea8c45c038c88658f26ad",
+    "historical_processed_speed_audit.csv": "98c8a65ca1a860bdf464efe8cfd27bc9d08e3f91893b857b81c3c092002a557a",
+    "previous_pair_overlap96.csv": "b6cebae74d9095aa329801e53e7d8228dca761ca998efd784efd299144d49acf",
+    "geographic_review_leads_250m.csv": "2bd7b439bb65a1b85e559ee3acd23b113b9d7b2ef5cc978375c2ac6b4dad6fdd",
+    "selected_pair_review_details.md": "6b8637c4b286bbc9cf72c5ca5e35106312ed8610529ac71eb7b867cdcdbe8d83"
+  }
+}
