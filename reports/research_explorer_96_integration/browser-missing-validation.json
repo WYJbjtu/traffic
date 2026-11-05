@@ -1,0 +1,11 @@
+{
+  "checked_at_utc": "2026-11-05T10:05:04.483995+00:00",
+  "url": "http://localhost:8502",
+  "browser": "Playwright Chromium, 1365x850; empty artifact root",
+  "checks": {
+    "missing_event_status": true,
+    "missing_network_status": true,
+    "no_page_errors": true
+  },
+  "page_errors": []
+}
