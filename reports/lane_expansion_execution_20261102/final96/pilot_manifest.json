@@ -1,0 +1,4717 @@
+{
+  "status": "authentic_expanded_96_data_only_pilot",
+  "units": 96,
+  "config_version": "long-window-2023-202609-96-id-order-v1",
+  "inputs": {
+    "continuity_manifest_sha256": "9ac294c36b88d28f298bfccf10dce3ee03d4e694d7decf1caf2d999e2b883626",
+    "january_reference_sha256": "f34b16ce590e3a6ae3c35477b2aa7d74c5ae3337315d78900285d32aeb0f88f4",
+    "config_sha256": "993782da843fcfc42d0a10e43dfc71bc63f89a30587b0ca5e0be399d4c15766c",
+    "label_code_sha256": "574c0bd03181287eb54dfac9155d366da7b9528230c0a8fc7a885fbaa214ef64",
+    "split_code_sha256": "733390cfd558b8aac6e09beeab2829f4ccc2083642b3ce841a06ba2585d17f74"
+  },
+  "events": 30452,
+  "per_unit": [
+    {
+      "unit": {
+        "detector_id": "AID01101",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 1,
+      "labels": {
+        "events": 1,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 1
+      },
+      "source_reference_bins": 6752,
+      "source_baseline_kmh": 64.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01103",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 39,
+      "labels": {
+        "events": 39,
+        "horizons": {
+          "15": {
+            "positive": 16,
+            "negative": 13,
+            "unknown": 10,
+            "reasons": {
+              "confirmed_recovery": 16,
+              "observed_without_recovery": 13,
+              "missing_or_invalid_bin": 10
+            }
+          },
+          "30": {
+            "positive": 19,
+            "negative": 9,
+            "unknown": 11,
+            "reasons": {
+              "confirmed_recovery": 19,
+              "missing_or_invalid_bin": 11,
+              "observed_without_recovery": 9
+            }
+          },
+          "60": {
+            "positive": 26,
+            "negative": 2,
+            "unknown": 11,
+            "reasons": {
+              "confirmed_recovery": 26,
+              "missing_or_invalid_bin": 11,
+              "observed_without_recovery": 2
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 20,
+        "validation": 12,
+        "test": 7
+      },
+      "source_reference_bins": 6747,
+      "source_baseline_kmh": 68.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01104",
+        "direction": "North East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 58,
+      "labels": {
+        "events": 58,
+        "horizons": {
+          "15": {
+            "positive": 25,
+            "negative": 25,
+            "unknown": 8,
+            "reasons": {
+              "confirmed_recovery": 25,
+              "observed_without_recovery": 25,
+              "missing_or_invalid_bin": 8
+            }
+          },
+          "30": {
+            "positive": 35,
+            "negative": 14,
+            "unknown": 9,
+            "reasons": {
+              "confirmed_recovery": 35,
+              "observed_without_recovery": 14,
+              "missing_or_invalid_bin": 9
+            }
+          },
+          "60": {
+            "positive": 43,
+            "negative": 5,
+            "unknown": 10,
+            "reasons": {
+              "confirmed_recovery": 43,
+              "missing_or_invalid_bin": 10,
+              "observed_without_recovery": 5
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "validation": 24,
+        "train": 19,
+        "test": 15
+      },
+      "source_reference_bins": 6613,
+      "source_baseline_kmh": 71.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01105",
+        "direction": "North East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 158,
+      "labels": {
+        "events": 158,
+        "horizons": {
+          "15": {
+            "positive": 64,
+            "negative": 83,
+            "unknown": 11,
+            "reasons": {
+              "observed_without_recovery": 83,
+              "confirmed_recovery": 64,
+              "missing_or_invalid_bin": 11
+            }
+          },
+          "30": {
+            "positive": 113,
+            "negative": 32,
+            "unknown": 13,
+            "reasons": {
+              "confirmed_recovery": 113,
+              "observed_without_recovery": 32,
+              "missing_or_invalid_bin": 13
+            }
+          },
+          "60": {
+            "positive": 142,
+            "negative": 3,
+            "unknown": 13,
+            "reasons": {
+              "confirmed_recovery": 142,
+              "missing_or_invalid_bin": 13,
+              "observed_without_recovery": 3
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 90,
+        "validation": 50,
+        "test": 18
+      },
+      "source_reference_bins": 6762,
+      "source_baseline_kmh": 73.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01106",
+        "direction": "South East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 725,
+      "labels": {
+        "events": 725,
+        "horizons": {
+          "15": {
+            "positive": 71,
+            "negative": 598,
+            "unknown": 56,
+            "reasons": {
+              "observed_without_recovery": 598,
+              "confirmed_recovery": 71,
+              "missing_or_invalid_bin": 56
+            }
+          },
+          "30": {
+            "positive": 122,
+            "negative": 530,
+            "unknown": 73,
+            "reasons": {
+              "observed_without_recovery": 530,
+              "confirmed_recovery": 122,
+              "missing_or_invalid_bin": 73
+            }
+          },
+          "60": {
+            "positive": 335,
+            "negative": 300,
+            "unknown": 90,
+            "reasons": {
+              "confirmed_recovery": 335,
+              "observed_without_recovery": 300,
+              "missing_or_invalid_bin": 90
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 342,
+        "validation": 217,
+        "test": 166
+      },
+      "source_reference_bins": 6707,
+      "source_baseline_kmh": 58.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01107",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 900,
+      "labels": {
+        "events": 900,
+        "horizons": {
+          "15": {
+            "positive": 229,
+            "negative": 601,
+            "unknown": 70,
+            "reasons": {
+              "observed_without_recovery": 601,
+              "confirmed_recovery": 229,
+              "missing_or_invalid_bin": 70
+            }
+          },
+          "30": {
+            "positive": 433,
+            "negative": 380,
+            "unknown": 87,
+            "reasons": {
+              "confirmed_recovery": 433,
+              "observed_without_recovery": 380,
+              "missing_or_invalid_bin": 87
+            }
+          },
+          "60": {
+            "positive": 645,
+            "negative": 157,
+            "unknown": 98,
+            "reasons": {
+              "confirmed_recovery": 645,
+              "observed_without_recovery": 157,
+              "missing_or_invalid_bin": 98
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 333,
+        "validation": 326,
+        "test": 241
+      },
+      "source_reference_bins": 6764,
+      "source_baseline_kmh": 71.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01108",
+        "direction": "North West",
+        "lane_id": "Fast Lane"
+      },
+      "events": 1923,
+      "labels": {
+        "events": 1923,
+        "horizons": {
+          "15": {
+            "positive": 258,
+            "negative": 1488,
+            "unknown": 177,
+            "reasons": {
+              "observed_without_recovery": 1488,
+              "confirmed_recovery": 258,
+              "missing_or_invalid_bin": 177
+            }
+          },
+          "30": {
+            "positive": 595,
+            "negative": 1087,
+            "unknown": 241,
+            "reasons": {
+              "observed_without_recovery": 1087,
+              "confirmed_recovery": 595,
+              "missing_or_invalid_bin": 241
+            }
+          },
+          "60": {
+            "positive": 936,
+            "negative": 634,
+            "unknown": 353,
+            "reasons": {
+              "confirmed_recovery": 936,
+              "observed_without_recovery": 634,
+              "missing_or_invalid_bin": 353
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 1102,
+        "validation": 421,
+        "test": 400
+      },
+      "source_reference_bins": 6617,
+      "source_baseline_kmh": 74.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01111",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 187,
+      "labels": {
+        "events": 187,
+        "horizons": {
+          "15": {
+            "positive": 31,
+            "negative": 138,
+            "unknown": 18,
+            "reasons": {
+              "observed_without_recovery": 138,
+              "confirmed_recovery": 31,
+              "missing_or_invalid_bin": 18
+            }
+          },
+          "30": {
+            "positive": 63,
+            "negative": 104,
+            "unknown": 20,
+            "reasons": {
+              "observed_without_recovery": 104,
+              "confirmed_recovery": 63,
+              "missing_or_invalid_bin": 20
+            }
+          },
+          "60": {
+            "positive": 107,
+            "negative": 56,
+            "unknown": 24,
+            "reasons": {
+              "confirmed_recovery": 107,
+              "observed_without_recovery": 56,
+              "missing_or_invalid_bin": 24
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 88,
+        "validation": 76,
+        "test": 23
+      },
+      "source_reference_bins": 6743,
+      "source_baseline_kmh": 69.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01112",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 87,
+      "labels": {
+        "events": 87,
+        "horizons": {
+          "15": {
+            "positive": 19,
+            "negative": 61,
+            "unknown": 7,
+            "reasons": {
+              "observed_without_recovery": 61,
+              "confirmed_recovery": 19,
+              "missing_or_invalid_bin": 7
+            }
+          },
+          "30": {
+            "positive": 41,
+            "negative": 37,
+            "unknown": 9,
+            "reasons": {
+              "confirmed_recovery": 41,
+              "observed_without_recovery": 37,
+              "missing_or_invalid_bin": 9
+            }
+          },
+          "60": {
+            "positive": 65,
+            "negative": 13,
+            "unknown": 9,
+            "reasons": {
+              "confirmed_recovery": 65,
+              "observed_without_recovery": 13,
+              "missing_or_invalid_bin": 9
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 47,
+        "validation": 36,
+        "test": 4
+      },
+      "source_reference_bins": 6685,
+      "source_baseline_kmh": 64.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01113",
+        "direction": "North West",
+        "lane_id": "Fast Lane"
+      },
+      "events": 25,
+      "labels": {
+        "events": 25,
+        "horizons": {
+          "15": {
+            "positive": 5,
+            "negative": 17,
+            "unknown": 3,
+            "reasons": {
+              "observed_without_recovery": 17,
+              "confirmed_recovery": 5,
+              "missing_or_invalid_bin": 3
+            }
+          },
+          "30": {
+            "positive": 10,
+            "negative": 11,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 11,
+              "confirmed_recovery": 10,
+              "missing_or_invalid_bin": 4
+            }
+          },
+          "60": {
+            "positive": 13,
+            "negative": 8,
+            "unknown": 4,
+            "reasons": {
+              "confirmed_recovery": 13,
+              "observed_without_recovery": 8,
+              "missing_or_invalid_bin": 4
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 14,
+        "validation": 8,
+        "test": 3
+      },
+      "source_reference_bins": 5267,
+      "source_baseline_kmh": 78.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01114",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 48,
+      "labels": {
+        "events": 48,
+        "horizons": {
+          "15": {
+            "positive": 14,
+            "negative": 30,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 30,
+              "confirmed_recovery": 14,
+              "missing_or_invalid_bin": 4
+            }
+          },
+          "30": {
+            "positive": 27,
+            "negative": 16,
+            "unknown": 5,
+            "reasons": {
+              "confirmed_recovery": 27,
+              "observed_without_recovery": 16,
+              "missing_or_invalid_bin": 5
+            }
+          },
+          "60": {
+            "positive": 34,
+            "negative": 7,
+            "unknown": 7,
+            "reasons": {
+              "confirmed_recovery": 34,
+              "missing_or_invalid_bin": 7,
+              "observed_without_recovery": 7
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 26,
+        "validation": 11,
+        "test": 11
+      },
+      "source_reference_bins": 6763,
+      "source_baseline_kmh": 70.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01117",
+        "direction": "North",
+        "lane_id": "Fast Lane"
+      },
+      "events": 1879,
+      "labels": {
+        "events": 1879,
+        "horizons": {
+          "15": {
+            "positive": 417,
+            "negative": 1297,
+            "unknown": 165,
+            "reasons": {
+              "observed_without_recovery": 1297,
+              "confirmed_recovery": 417,
+              "missing_or_invalid_bin": 165
+            }
+          },
+          "30": {
+            "positive": 925,
+            "negative": 774,
+            "unknown": 180,
+            "reasons": {
+              "confirmed_recovery": 925,
+              "observed_without_recovery": 774,
+              "missing_or_invalid_bin": 180
+            }
+          },
+          "60": {
+            "positive": 1408,
+            "negative": 280,
+            "unknown": 191,
+            "reasons": {
+              "confirmed_recovery": 1408,
+              "observed_without_recovery": 280,
+              "missing_or_invalid_bin": 191
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 1025,
+        "validation": 507,
+        "test": 347
+      },
+      "source_reference_bins": 6759,
+      "source_baseline_kmh": 71.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01120",
+        "direction": "North",
+        "lane_id": "Middle Lane"
+      },
+      "events": 116,
+      "labels": {
+        "events": 116,
+        "horizons": {
+          "15": {
+            "positive": 20,
+            "negative": 83,
+            "unknown": 13,
+            "reasons": {
+              "observed_without_recovery": 83,
+              "confirmed_recovery": 20,
+              "missing_or_invalid_bin": 13
+            }
+          },
+          "30": {
+            "positive": 40,
+            "negative": 61,
+            "unknown": 15,
+            "reasons": {
+              "observed_without_recovery": 61,
+              "confirmed_recovery": 40,
+              "missing_or_invalid_bin": 15
+            }
+          },
+          "60": {
+            "positive": 71,
+            "negative": 26,
+            "unknown": 19,
+            "reasons": {
+              "confirmed_recovery": 71,
+              "observed_without_recovery": 26,
+              "missing_or_invalid_bin": 19
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 76,
+        "test": 21,
+        "validation": 19
+      },
+      "source_reference_bins": 6624,
+      "source_baseline_kmh": 62.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01124",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 123,
+      "labels": {
+        "events": 123,
+        "horizons": {
+          "15": {
+            "positive": 35,
+            "negative": 81,
+            "unknown": 7,
+            "reasons": {
+              "observed_without_recovery": 81,
+              "confirmed_recovery": 35,
+              "missing_or_invalid_bin": 7
+            }
+          },
+          "30": {
+            "positive": 70,
+            "negative": 44,
+            "unknown": 9,
+            "reasons": {
+              "confirmed_recovery": 70,
+              "observed_without_recovery": 44,
+              "missing_or_invalid_bin": 9
+            }
+          },
+          "60": {
+            "positive": 99,
+            "negative": 11,
+            "unknown": 13,
+            "reasons": {
+              "confirmed_recovery": 99,
+              "missing_or_invalid_bin": 13,
+              "observed_without_recovery": 11
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 71,
+        "validation": 32,
+        "test": 20
+      },
+      "source_reference_bins": 6729,
+      "source_baseline_kmh": 66.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01126",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 481,
+      "labels": {
+        "events": 481,
+        "horizons": {
+          "15": {
+            "positive": 91,
+            "negative": 374,
+            "unknown": 16,
+            "reasons": {
+              "observed_without_recovery": 374,
+              "confirmed_recovery": 91,
+              "missing_or_invalid_bin": 16
+            }
+          },
+          "30": {
+            "positive": 181,
+            "negative": 274,
+            "unknown": 26,
+            "reasons": {
+              "observed_without_recovery": 274,
+              "confirmed_recovery": 181,
+              "missing_or_invalid_bin": 26
+            }
+          },
+          "60": {
+            "positive": 335,
+            "negative": 115,
+            "unknown": 31,
+            "reasons": {
+              "confirmed_recovery": 335,
+              "observed_without_recovery": 115,
+              "missing_or_invalid_bin": 31
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 209,
+        "validation": 195,
+        "test": 77
+      },
+      "source_reference_bins": 6648,
+      "source_baseline_kmh": 87.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01127",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 250,
+      "labels": {
+        "events": 250,
+        "horizons": {
+          "15": {
+            "positive": 34,
+            "negative": 208,
+            "unknown": 8,
+            "reasons": {
+              "observed_without_recovery": 208,
+              "confirmed_recovery": 34,
+              "missing_or_invalid_bin": 8
+            }
+          },
+          "30": {
+            "positive": 70,
+            "negative": 168,
+            "unknown": 12,
+            "reasons": {
+              "observed_without_recovery": 168,
+              "confirmed_recovery": 70,
+              "missing_or_invalid_bin": 12
+            }
+          },
+          "60": {
+            "positive": 143,
+            "negative": 93,
+            "unknown": 14,
+            "reasons": {
+              "confirmed_recovery": 143,
+              "observed_without_recovery": 93,
+              "missing_or_invalid_bin": 14
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "validation": 135,
+        "test": 66,
+        "train": 49
+      },
+      "source_reference_bins": 6733,
+      "source_baseline_kmh": 90.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01129",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 59,
+      "labels": {
+        "events": 59,
+        "horizons": {
+          "15": {
+            "positive": 8,
+            "negative": 45,
+            "unknown": 6,
+            "reasons": {
+              "observed_without_recovery": 45,
+              "confirmed_recovery": 8,
+              "missing_or_invalid_bin": 6
+            }
+          },
+          "30": {
+            "positive": 18,
+            "negative": 32,
+            "unknown": 9,
+            "reasons": {
+              "observed_without_recovery": 32,
+              "confirmed_recovery": 18,
+              "missing_or_invalid_bin": 9
+            }
+          },
+          "60": {
+            "positive": 23,
+            "negative": 25,
+            "unknown": 11,
+            "reasons": {
+              "observed_without_recovery": 25,
+              "confirmed_recovery": 23,
+              "missing_or_invalid_bin": 11
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 35,
+        "test": 14,
+        "validation": 10
+      },
+      "source_reference_bins": 6737,
+      "source_baseline_kmh": 80.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01131",
+        "direction": "North East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 2,
+      "labels": {
+        "events": 2,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 1,
+            "unknown": 1,
+            "reasons": {
+              "missing_or_invalid_bin": 1,
+              "observed_without_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "missing_or_invalid_bin": 1,
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "missing_or_invalid_bin": 1,
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 1,
+        "test": 1
+      },
+      "source_reference_bins": 6771,
+      "source_baseline_kmh": 87.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01133",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 19,
+      "labels": {
+        "events": 19,
+        "horizons": {
+          "15": {
+            "positive": 4,
+            "negative": 12,
+            "unknown": 3,
+            "reasons": {
+              "observed_without_recovery": 12,
+              "confirmed_recovery": 4,
+              "missing_or_invalid_bin": 3
+            }
+          },
+          "30": {
+            "positive": 4,
+            "negative": 12,
+            "unknown": 3,
+            "reasons": {
+              "observed_without_recovery": 12,
+              "confirmed_recovery": 4,
+              "missing_or_invalid_bin": 3
+            }
+          },
+          "60": {
+            "positive": 7,
+            "negative": 6,
+            "unknown": 6,
+            "reasons": {
+              "confirmed_recovery": 7,
+              "missing_or_invalid_bin": 6,
+              "observed_without_recovery": 6
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 12,
+        "test": 4,
+        "validation": 3
+      },
+      "source_reference_bins": 6536,
+      "source_baseline_kmh": 88.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01134",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 51,
+      "labels": {
+        "events": 51,
+        "horizons": {
+          "15": {
+            "positive": 14,
+            "negative": 27,
+            "unknown": 10,
+            "reasons": {
+              "observed_without_recovery": 27,
+              "confirmed_recovery": 14,
+              "missing_or_invalid_bin": 10
+            }
+          },
+          "30": {
+            "positive": 24,
+            "negative": 17,
+            "unknown": 10,
+            "reasons": {
+              "confirmed_recovery": 24,
+              "observed_without_recovery": 17,
+              "missing_or_invalid_bin": 10
+            }
+          },
+          "60": {
+            "positive": 36,
+            "negative": 5,
+            "unknown": 10,
+            "reasons": {
+              "confirmed_recovery": 36,
+              "missing_or_invalid_bin": 10,
+              "observed_without_recovery": 5
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 27,
+        "validation": 15,
+        "test": 9
+      },
+      "source_reference_bins": 6778,
+      "source_baseline_kmh": 82.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01135",
+        "direction": "North West",
+        "lane_id": "Fast Lane"
+      },
+      "events": 86,
+      "labels": {
+        "events": 86,
+        "horizons": {
+          "15": {
+            "positive": 23,
+            "negative": 49,
+            "unknown": 14,
+            "reasons": {
+              "observed_without_recovery": 49,
+              "confirmed_recovery": 23,
+              "missing_or_invalid_bin": 14
+            }
+          },
+          "30": {
+            "positive": 37,
+            "negative": 34,
+            "unknown": 15,
+            "reasons": {
+              "confirmed_recovery": 37,
+              "observed_without_recovery": 34,
+              "missing_or_invalid_bin": 15
+            }
+          },
+          "60": {
+            "positive": 54,
+            "negative": 14,
+            "unknown": 18,
+            "reasons": {
+              "confirmed_recovery": 54,
+              "missing_or_invalid_bin": 18,
+              "observed_without_recovery": 14
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 40,
+        "validation": 30,
+        "test": 16
+      },
+      "source_reference_bins": 6770,
+      "source_baseline_kmh": 86.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01136",
+        "direction": "North East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 212,
+      "labels": {
+        "events": 212,
+        "horizons": {
+          "15": {
+            "positive": 15,
+            "negative": 182,
+            "unknown": 15,
+            "reasons": {
+              "observed_without_recovery": 182,
+              "missing_or_invalid_bin": 15,
+              "confirmed_recovery": 15
+            }
+          },
+          "30": {
+            "positive": 41,
+            "negative": 151,
+            "unknown": 20,
+            "reasons": {
+              "observed_without_recovery": 151,
+              "confirmed_recovery": 41,
+              "missing_or_invalid_bin": 20
+            }
+          },
+          "60": {
+            "positive": 79,
+            "negative": 108,
+            "unknown": 25,
+            "reasons": {
+              "observed_without_recovery": 108,
+              "confirmed_recovery": 79,
+              "missing_or_invalid_bin": 25
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 114,
+        "validation": 60,
+        "test": 38
+      },
+      "source_reference_bins": 6619,
+      "source_baseline_kmh": 88.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01201",
+        "direction": "South",
+        "lane_id": "Fast Lane"
+      },
+      "events": 16,
+      "labels": {
+        "events": 16,
+        "horizons": {
+          "15": {
+            "positive": 8,
+            "negative": 3,
+            "unknown": 5,
+            "reasons": {
+              "confirmed_recovery": 8,
+              "missing_or_invalid_bin": 5,
+              "observed_without_recovery": 3
+            }
+          },
+          "30": {
+            "positive": 8,
+            "negative": 2,
+            "unknown": 6,
+            "reasons": {
+              "confirmed_recovery": 8,
+              "missing_or_invalid_bin": 6,
+              "observed_without_recovery": 2
+            }
+          },
+          "60": {
+            "positive": 8,
+            "negative": 2,
+            "unknown": 6,
+            "reasons": {
+              "confirmed_recovery": 8,
+              "missing_or_invalid_bin": 6,
+              "observed_without_recovery": 2
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 11,
+        "validation": 3,
+        "test": 2
+      },
+      "source_reference_bins": 6634,
+      "source_baseline_kmh": 66.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01202",
+        "direction": "South East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 152,
+      "labels": {
+        "events": 152,
+        "horizons": {
+          "15": {
+            "positive": 49,
+            "negative": 87,
+            "unknown": 16,
+            "reasons": {
+              "observed_without_recovery": 87,
+              "confirmed_recovery": 49,
+              "missing_or_invalid_bin": 16
+            }
+          },
+          "30": {
+            "positive": 90,
+            "negative": 42,
+            "unknown": 20,
+            "reasons": {
+              "confirmed_recovery": 90,
+              "observed_without_recovery": 42,
+              "missing_or_invalid_bin": 20
+            }
+          },
+          "60": {
+            "positive": 116,
+            "negative": 14,
+            "unknown": 22,
+            "reasons": {
+              "confirmed_recovery": 116,
+              "missing_or_invalid_bin": 22,
+              "observed_without_recovery": 14
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 82,
+        "validation": 45,
+        "test": 25
+      },
+      "source_reference_bins": 6778,
+      "source_baseline_kmh": 64.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01203",
+        "direction": "South",
+        "lane_id": "Fast Lane"
+      },
+      "events": 284,
+      "labels": {
+        "events": 284,
+        "horizons": {
+          "15": {
+            "positive": 45,
+            "negative": 181,
+            "unknown": 58,
+            "reasons": {
+              "observed_without_recovery": 181,
+              "missing_or_invalid_bin": 58,
+              "confirmed_recovery": 45
+            }
+          },
+          "30": {
+            "positive": 109,
+            "negative": 109,
+            "unknown": 66,
+            "reasons": {
+              "confirmed_recovery": 109,
+              "observed_without_recovery": 109,
+              "missing_or_invalid_bin": 66
+            }
+          },
+          "60": {
+            "positive": 167,
+            "negative": 42,
+            "unknown": 75,
+            "reasons": {
+              "confirmed_recovery": 167,
+              "missing_or_invalid_bin": 75,
+              "observed_without_recovery": 42
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 148,
+        "validation": 93,
+        "test": 43
+      },
+      "source_reference_bins": 6738,
+      "source_baseline_kmh": 75.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01204",
+        "direction": "South",
+        "lane_id": "Slow Lane"
+      },
+      "events": 1163,
+      "labels": {
+        "events": 1163,
+        "horizons": {
+          "15": {
+            "positive": 24,
+            "negative": 1043,
+            "unknown": 96,
+            "reasons": {
+              "observed_without_recovery": 1043,
+              "missing_or_invalid_bin": 96,
+              "confirmed_recovery": 24
+            }
+          },
+          "30": {
+            "positive": 67,
+            "negative": 968,
+            "unknown": 128,
+            "reasons": {
+              "observed_without_recovery": 968,
+              "missing_or_invalid_bin": 128,
+              "confirmed_recovery": 67
+            }
+          },
+          "60": {
+            "positive": 154,
+            "negative": 839,
+            "unknown": 170,
+            "reasons": {
+              "observed_without_recovery": 839,
+              "missing_or_invalid_bin": 170,
+              "confirmed_recovery": 154
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 614,
+        "validation": 314,
+        "test": 235
+      },
+      "source_reference_bins": 6704,
+      "source_baseline_kmh": 46.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01206",
+        "direction": "South",
+        "lane_id": "Slow Lane"
+      },
+      "events": 454,
+      "labels": {
+        "events": 454,
+        "horizons": {
+          "15": {
+            "positive": 45,
+            "negative": 381,
+            "unknown": 28,
+            "reasons": {
+              "observed_without_recovery": 381,
+              "confirmed_recovery": 45,
+              "missing_or_invalid_bin": 28
+            }
+          },
+          "30": {
+            "positive": 103,
+            "negative": 312,
+            "unknown": 39,
+            "reasons": {
+              "observed_without_recovery": 312,
+              "confirmed_recovery": 103,
+              "missing_or_invalid_bin": 39
+            }
+          },
+          "60": {
+            "positive": 206,
+            "negative": 201,
+            "unknown": 47,
+            "reasons": {
+              "confirmed_recovery": 206,
+              "observed_without_recovery": 201,
+              "missing_or_invalid_bin": 47
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 234,
+        "validation": 144,
+        "test": 76
+      },
+      "source_reference_bins": 6660,
+      "source_baseline_kmh": 54.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01209",
+        "direction": "South West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 89,
+      "labels": {
+        "events": 89,
+        "horizons": {
+          "15": {
+            "positive": 11,
+            "negative": 67,
+            "unknown": 11,
+            "reasons": {
+              "observed_without_recovery": 67,
+              "confirmed_recovery": 11,
+              "missing_or_invalid_bin": 11
+            }
+          },
+          "30": {
+            "positive": 25,
+            "negative": 51,
+            "unknown": 13,
+            "reasons": {
+              "observed_without_recovery": 51,
+              "confirmed_recovery": 25,
+              "missing_or_invalid_bin": 13
+            }
+          },
+          "60": {
+            "positive": 50,
+            "negative": 24,
+            "unknown": 15,
+            "reasons": {
+              "confirmed_recovery": 50,
+              "observed_without_recovery": 24,
+              "missing_or_invalid_bin": 15
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 47,
+        "validation": 28,
+        "test": 14
+      },
+      "source_reference_bins": 6763,
+      "source_baseline_kmh": 74.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01210",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 731,
+      "labels": {
+        "events": 731,
+        "horizons": {
+          "15": {
+            "positive": 78,
+            "negative": 598,
+            "unknown": 55,
+            "reasons": {
+              "observed_without_recovery": 598,
+              "confirmed_recovery": 78,
+              "missing_or_invalid_bin": 55
+            }
+          },
+          "30": {
+            "positive": 159,
+            "negative": 483,
+            "unknown": 89,
+            "reasons": {
+              "observed_without_recovery": 483,
+              "confirmed_recovery": 159,
+              "missing_or_invalid_bin": 89
+            }
+          },
+          "60": {
+            "positive": 265,
+            "negative": 333,
+            "unknown": 133,
+            "reasons": {
+              "observed_without_recovery": 333,
+              "confirmed_recovery": 265,
+              "missing_or_invalid_bin": 133
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 335,
+        "validation": 234,
+        "test": 162
+      },
+      "source_reference_bins": 6596,
+      "source_baseline_kmh": 66.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01211",
+        "direction": "South East",
+        "lane_id": "Fast Lane"
+      },
+      "events": 1036,
+      "labels": {
+        "events": 1036,
+        "horizons": {
+          "15": {
+            "positive": 67,
+            "negative": 890,
+            "unknown": 79,
+            "reasons": {
+              "observed_without_recovery": 890,
+              "missing_or_invalid_bin": 79,
+              "confirmed_recovery": 67
+            }
+          },
+          "30": {
+            "positive": 176,
+            "negative": 756,
+            "unknown": 104,
+            "reasons": {
+              "observed_without_recovery": 756,
+              "confirmed_recovery": 176,
+              "missing_or_invalid_bin": 104
+            }
+          },
+          "60": {
+            "positive": 286,
+            "negative": 603,
+            "unknown": 147,
+            "reasons": {
+              "observed_without_recovery": 603,
+              "confirmed_recovery": 286,
+              "missing_or_invalid_bin": 147
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 518,
+        "validation": 310,
+        "test": 208
+      },
+      "source_reference_bins": 6542,
+      "source_baseline_kmh": 74.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01212",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 946,
+      "labels": {
+        "events": 946,
+        "horizons": {
+          "15": {
+            "positive": 7,
+            "negative": 825,
+            "unknown": 114,
+            "reasons": {
+              "observed_without_recovery": 825,
+              "missing_or_invalid_bin": 114,
+              "confirmed_recovery": 7
+            }
+          },
+          "30": {
+            "positive": 22,
+            "negative": 766,
+            "unknown": 158,
+            "reasons": {
+              "observed_without_recovery": 766,
+              "missing_or_invalid_bin": 158,
+              "confirmed_recovery": 22
+            }
+          },
+          "60": {
+            "positive": 53,
+            "negative": 664,
+            "unknown": 229,
+            "reasons": {
+              "observed_without_recovery": 664,
+              "missing_or_invalid_bin": 229,
+              "confirmed_recovery": 53
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 479,
+        "validation": 257,
+        "test": 210
+      },
+      "source_reference_bins": 6024,
+      "source_baseline_kmh": 87.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01213",
+        "direction": "South West",
+        "lane_id": "Fast Lane"
+      },
+      "events": 2803,
+      "labels": {
+        "events": 2803,
+        "horizons": {
+          "15": {
+            "positive": 186,
+            "negative": 2525,
+            "unknown": 92,
+            "reasons": {
+              "observed_without_recovery": 2525,
+              "confirmed_recovery": 186,
+              "missing_or_invalid_bin": 92
+            }
+          },
+          "30": {
+            "positive": 378,
+            "negative": 2298,
+            "unknown": 127,
+            "reasons": {
+              "observed_without_recovery": 2298,
+              "confirmed_recovery": 378,
+              "missing_or_invalid_bin": 127
+            }
+          },
+          "60": {
+            "positive": 717,
+            "negative": 1880,
+            "unknown": 206,
+            "reasons": {
+              "observed_without_recovery": 1880,
+              "confirmed_recovery": 717,
+              "missing_or_invalid_bin": 206
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 1561,
+        "validation": 899,
+        "test": 343
+      },
+      "source_reference_bins": 6718,
+      "source_baseline_kmh": 57.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01214",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 1393,
+      "labels": {
+        "events": 1393,
+        "horizons": {
+          "15": {
+            "positive": 43,
+            "negative": 1298,
+            "unknown": 52,
+            "reasons": {
+              "observed_without_recovery": 1298,
+              "missing_or_invalid_bin": 52,
+              "confirmed_recovery": 43
+            }
+          },
+          "30": {
+            "positive": 72,
+            "negative": 1254,
+            "unknown": 67,
+            "reasons": {
+              "observed_without_recovery": 1254,
+              "confirmed_recovery": 72,
+              "missing_or_invalid_bin": 67
+            }
+          },
+          "60": {
+            "positive": 150,
+            "negative": 1142,
+            "unknown": 101,
+            "reasons": {
+              "observed_without_recovery": 1142,
+              "confirmed_recovery": 150,
+              "missing_or_invalid_bin": 101
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 676,
+        "validation": 396,
+        "test": 321
+      },
+      "source_reference_bins": 6463,
+      "source_baseline_kmh": 48.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01215",
+        "direction": "South West",
+        "lane_id": "Fast Lane"
+      },
+      "events": 228,
+      "labels": {
+        "events": 228,
+        "horizons": {
+          "15": {
+            "positive": 56,
+            "negative": 147,
+            "unknown": 25,
+            "reasons": {
+              "observed_without_recovery": 147,
+              "confirmed_recovery": 56,
+              "missing_or_invalid_bin": 25
+            }
+          },
+          "30": {
+            "positive": 126,
+            "negative": 73,
+            "unknown": 29,
+            "reasons": {
+              "confirmed_recovery": 126,
+              "observed_without_recovery": 73,
+              "missing_or_invalid_bin": 29
+            }
+          },
+          "60": {
+            "positive": 169,
+            "negative": 26,
+            "unknown": 33,
+            "reasons": {
+              "confirmed_recovery": 169,
+              "missing_or_invalid_bin": 33,
+              "observed_without_recovery": 26
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 86,
+        "validation": 86,
+        "test": 56
+      },
+      "source_reference_bins": 6527,
+      "source_baseline_kmh": 71.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01216",
+        "direction": "South East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 567,
+      "labels": {
+        "events": 567,
+        "horizons": {
+          "15": {
+            "positive": 141,
+            "negative": 398,
+            "unknown": 28,
+            "reasons": {
+              "observed_without_recovery": 398,
+              "confirmed_recovery": 141,
+              "missing_or_invalid_bin": 28
+            }
+          },
+          "30": {
+            "positive": 276,
+            "negative": 257,
+            "unknown": 34,
+            "reasons": {
+              "confirmed_recovery": 276,
+              "observed_without_recovery": 257,
+              "missing_or_invalid_bin": 34
+            }
+          },
+          "60": {
+            "positive": 481,
+            "negative": 45,
+            "unknown": 41,
+            "reasons": {
+              "confirmed_recovery": 481,
+              "observed_without_recovery": 45,
+              "missing_or_invalid_bin": 41
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 256,
+        "validation": 174,
+        "test": 137
+      },
+      "source_reference_bins": 6544,
+      "source_baseline_kmh": 73.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01219",
+        "direction": "South West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 17,
+      "labels": {
+        "events": 17,
+        "horizons": {
+          "15": {
+            "positive": 3,
+            "negative": 12,
+            "unknown": 2,
+            "reasons": {
+              "observed_without_recovery": 12,
+              "confirmed_recovery": 3,
+              "missing_or_invalid_bin": 2
+            }
+          },
+          "30": {
+            "positive": 5,
+            "negative": 10,
+            "unknown": 2,
+            "reasons": {
+              "observed_without_recovery": 10,
+              "confirmed_recovery": 5,
+              "missing_or_invalid_bin": 2
+            }
+          },
+          "60": {
+            "positive": 8,
+            "negative": 6,
+            "unknown": 3,
+            "reasons": {
+              "confirmed_recovery": 8,
+              "observed_without_recovery": 6,
+              "missing_or_invalid_bin": 3
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 8,
+        "test": 6,
+        "validation": 3
+      },
+      "source_reference_bins": 6777,
+      "source_baseline_kmh": 72.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01220",
+        "direction": "North West",
+        "lane_id": "Fast Lane"
+      },
+      "events": 29,
+      "labels": {
+        "events": 29,
+        "horizons": {
+          "15": {
+            "positive": 2,
+            "negative": 25,
+            "unknown": 2,
+            "reasons": {
+              "observed_without_recovery": 25,
+              "missing_or_invalid_bin": 2,
+              "confirmed_recovery": 2
+            }
+          },
+          "30": {
+            "positive": 4,
+            "negative": 23,
+            "unknown": 2,
+            "reasons": {
+              "observed_without_recovery": 23,
+              "confirmed_recovery": 4,
+              "missing_or_invalid_bin": 2
+            }
+          },
+          "60": {
+            "positive": 22,
+            "negative": 4,
+            "unknown": 3,
+            "reasons": {
+              "confirmed_recovery": 22,
+              "observed_without_recovery": 4,
+              "missing_or_invalid_bin": 3
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 16,
+        "validation": 10,
+        "test": 3
+      },
+      "source_reference_bins": 6771,
+      "source_baseline_kmh": 80.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID01221",
+        "direction": "South West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 12,
+      "labels": {
+        "events": 12,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 11,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 11,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "30": {
+            "positive": 2,
+            "negative": 9,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 9,
+              "confirmed_recovery": 2,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "60": {
+            "positive": 4,
+            "negative": 7,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 7,
+              "confirmed_recovery": 4,
+              "missing_or_invalid_bin": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 9,
+        "validation": 2,
+        "test": 1
+      },
+      "source_reference_bins": 6754,
+      "source_baseline_kmh": 56.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01222",
+        "direction": "South West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 85,
+      "labels": {
+        "events": 85,
+        "horizons": {
+          "15": {
+            "positive": 3,
+            "negative": 69,
+            "unknown": 13,
+            "reasons": {
+              "observed_without_recovery": 69,
+              "missing_or_invalid_bin": 13,
+              "confirmed_recovery": 3
+            }
+          },
+          "30": {
+            "positive": 4,
+            "negative": 66,
+            "unknown": 15,
+            "reasons": {
+              "observed_without_recovery": 66,
+              "missing_or_invalid_bin": 15,
+              "confirmed_recovery": 4
+            }
+          },
+          "60": {
+            "positive": 9,
+            "negative": 58,
+            "unknown": 18,
+            "reasons": {
+              "observed_without_recovery": 58,
+              "missing_or_invalid_bin": 18,
+              "confirmed_recovery": 9
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 39,
+        "validation": 27,
+        "test": 19
+      },
+      "source_reference_bins": 5901,
+      "source_baseline_kmh": 74.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID01223",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 8,
+      "labels": {
+        "events": 8,
+        "horizons": {
+          "15": {
+            "positive": 2,
+            "negative": 3,
+            "unknown": 3,
+            "reasons": {
+              "missing_or_invalid_bin": 3,
+              "observed_without_recovery": 3,
+              "confirmed_recovery": 2
+            }
+          },
+          "30": {
+            "positive": 2,
+            "negative": 2,
+            "unknown": 4,
+            "reasons": {
+              "missing_or_invalid_bin": 4,
+              "observed_without_recovery": 2,
+              "confirmed_recovery": 2
+            }
+          },
+          "60": {
+            "positive": 2,
+            "negative": 2,
+            "unknown": 4,
+            "reasons": {
+              "missing_or_invalid_bin": 4,
+              "observed_without_recovery": 2,
+              "confirmed_recovery": 2
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 8
+      },
+      "source_reference_bins": 6767,
+      "source_baseline_kmh": 72.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02104",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 2,
+      "labels": {
+        "events": 2,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 2,
+            "reasons": {
+              "missing_or_invalid_bin": 2
+            }
+          },
+          "30": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 2,
+            "reasons": {
+              "missing_or_invalid_bin": 2
+            }
+          },
+          "60": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 2,
+            "reasons": {
+              "missing_or_invalid_bin": 2
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 1,
+        "test": 1
+      },
+      "source_reference_bins": 6249,
+      "source_baseline_kmh": 79.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID02105",
+        "direction": "South West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 1,
+      "labels": {
+        "events": 1,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 1
+      },
+      "source_reference_bins": 6282,
+      "source_baseline_kmh": 72.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID02108",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 886,
+      "labels": {
+        "events": 886,
+        "horizons": {
+          "15": {
+            "positive": 93,
+            "negative": 758,
+            "unknown": 35,
+            "reasons": {
+              "observed_without_recovery": 758,
+              "confirmed_recovery": 93,
+              "missing_or_invalid_bin": 35
+            }
+          },
+          "30": {
+            "positive": 219,
+            "negative": 616,
+            "unknown": 51,
+            "reasons": {
+              "observed_without_recovery": 616,
+              "confirmed_recovery": 219,
+              "missing_or_invalid_bin": 51
+            }
+          },
+          "60": {
+            "positive": 393,
+            "negative": 428,
+            "unknown": 65,
+            "reasons": {
+              "observed_without_recovery": 428,
+              "confirmed_recovery": 393,
+              "missing_or_invalid_bin": 65
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 414,
+        "train": 292,
+        "validation": 180
+      },
+      "source_reference_bins": 6770,
+      "source_baseline_kmh": 92.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02109",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 1119,
+      "labels": {
+        "events": 1119,
+        "horizons": {
+          "15": {
+            "positive": 69,
+            "negative": 1024,
+            "unknown": 26,
+            "reasons": {
+              "observed_without_recovery": 1024,
+              "confirmed_recovery": 69,
+              "missing_or_invalid_bin": 26
+            }
+          },
+          "30": {
+            "positive": 173,
+            "negative": 910,
+            "unknown": 36,
+            "reasons": {
+              "observed_without_recovery": 910,
+              "confirmed_recovery": 173,
+              "missing_or_invalid_bin": 36
+            }
+          },
+          "60": {
+            "positive": 398,
+            "negative": 670,
+            "unknown": 51,
+            "reasons": {
+              "observed_without_recovery": 670,
+              "confirmed_recovery": 398,
+              "missing_or_invalid_bin": 51
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 442,
+        "train": 428,
+        "validation": 249
+      },
+      "source_reference_bins": 6729,
+      "source_baseline_kmh": 99.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02110",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 1129,
+      "labels": {
+        "events": 1129,
+        "horizons": {
+          "15": {
+            "positive": 41,
+            "negative": 1064,
+            "unknown": 24,
+            "reasons": {
+              "observed_without_recovery": 1064,
+              "confirmed_recovery": 41,
+              "missing_or_invalid_bin": 24
+            }
+          },
+          "30": {
+            "positive": 123,
+            "negative": 967,
+            "unknown": 39,
+            "reasons": {
+              "observed_without_recovery": 967,
+              "confirmed_recovery": 123,
+              "missing_or_invalid_bin": 39
+            }
+          },
+          "60": {
+            "positive": 339,
+            "negative": 740,
+            "unknown": 50,
+            "reasons": {
+              "observed_without_recovery": 740,
+              "confirmed_recovery": 339,
+              "missing_or_invalid_bin": 50
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 448,
+        "train": 439,
+        "validation": 242
+      },
+      "source_reference_bins": 6751,
+      "source_baseline_kmh": 97.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02111",
+        "direction": "North East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 1260,
+      "labels": {
+        "events": 1260,
+        "horizons": {
+          "15": {
+            "positive": 69,
+            "negative": 1159,
+            "unknown": 32,
+            "reasons": {
+              "observed_without_recovery": 1159,
+              "confirmed_recovery": 69,
+              "missing_or_invalid_bin": 32
+            }
+          },
+          "30": {
+            "positive": 160,
+            "negative": 1052,
+            "unknown": 48,
+            "reasons": {
+              "observed_without_recovery": 1052,
+              "confirmed_recovery": 160,
+              "missing_or_invalid_bin": 48
+            }
+          },
+          "60": {
+            "positive": 339,
+            "negative": 862,
+            "unknown": 59,
+            "reasons": {
+              "observed_without_recovery": 862,
+              "confirmed_recovery": 339,
+              "missing_or_invalid_bin": 59
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 505,
+        "test": 468,
+        "validation": 287
+      },
+      "source_reference_bins": 6765,
+      "source_baseline_kmh": 89.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID02112",
+        "direction": "West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 91,
+      "labels": {
+        "events": 91,
+        "horizons": {
+          "15": {
+            "positive": 20,
+            "negative": 67,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 67,
+              "confirmed_recovery": 20,
+              "missing_or_invalid_bin": 4
+            }
+          },
+          "30": {
+            "positive": 37,
+            "negative": 48,
+            "unknown": 6,
+            "reasons": {
+              "observed_without_recovery": 48,
+              "confirmed_recovery": 37,
+              "missing_or_invalid_bin": 6
+            }
+          },
+          "60": {
+            "positive": 66,
+            "negative": 17,
+            "unknown": 8,
+            "reasons": {
+              "confirmed_recovery": 66,
+              "observed_without_recovery": 17,
+              "missing_or_invalid_bin": 8
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 55,
+        "validation": 32,
+        "test": 4
+      },
+      "source_reference_bins": 6594,
+      "source_baseline_kmh": 89.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02114",
+        "direction": "North",
+        "lane_id": "Slow Lane"
+      },
+      "events": 154,
+      "labels": {
+        "events": 154,
+        "horizons": {
+          "15": {
+            "positive": 29,
+            "negative": 116,
+            "unknown": 9,
+            "reasons": {
+              "observed_without_recovery": 116,
+              "confirmed_recovery": 29,
+              "missing_or_invalid_bin": 9
+            }
+          },
+          "30": {
+            "positive": 61,
+            "negative": 79,
+            "unknown": 14,
+            "reasons": {
+              "observed_without_recovery": 79,
+              "confirmed_recovery": 61,
+              "missing_or_invalid_bin": 14
+            }
+          },
+          "60": {
+            "positive": 108,
+            "negative": 30,
+            "unknown": 16,
+            "reasons": {
+              "confirmed_recovery": 108,
+              "observed_without_recovery": 30,
+              "missing_or_invalid_bin": 16
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 79,
+        "validation": 66,
+        "test": 9
+      },
+      "source_reference_bins": 6766,
+      "source_baseline_kmh": 80.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02115",
+        "direction": "North East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 237,
+      "labels": {
+        "events": 237,
+        "horizons": {
+          "15": {
+            "positive": 37,
+            "negative": 189,
+            "unknown": 11,
+            "reasons": {
+              "observed_without_recovery": 189,
+              "confirmed_recovery": 37,
+              "missing_or_invalid_bin": 11
+            }
+          },
+          "30": {
+            "positive": 88,
+            "negative": 135,
+            "unknown": 14,
+            "reasons": {
+              "observed_without_recovery": 135,
+              "confirmed_recovery": 88,
+              "missing_or_invalid_bin": 14
+            }
+          },
+          "60": {
+            "positive": 159,
+            "negative": 60,
+            "unknown": 18,
+            "reasons": {
+              "confirmed_recovery": 159,
+              "observed_without_recovery": 60,
+              "missing_or_invalid_bin": 18
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 129,
+        "validation": 102,
+        "test": 6
+      },
+      "source_reference_bins": 6778,
+      "source_baseline_kmh": 71.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02116",
+        "direction": "North",
+        "lane_id": "Middle Lane"
+      },
+      "events": 207,
+      "labels": {
+        "events": 207,
+        "horizons": {
+          "15": {
+            "positive": 13,
+            "negative": 153,
+            "unknown": 41,
+            "reasons": {
+              "observed_without_recovery": 153,
+              "missing_or_invalid_bin": 41,
+              "confirmed_recovery": 13
+            }
+          },
+          "30": {
+            "positive": 47,
+            "negative": 97,
+            "unknown": 63,
+            "reasons": {
+              "observed_without_recovery": 97,
+              "missing_or_invalid_bin": 63,
+              "confirmed_recovery": 47
+            }
+          },
+          "60": {
+            "positive": 93,
+            "negative": 35,
+            "unknown": 79,
+            "reasons": {
+              "confirmed_recovery": 93,
+              "missing_or_invalid_bin": 79,
+              "observed_without_recovery": 35
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 165,
+        "validation": 42
+      },
+      "source_reference_bins": 6614,
+      "source_baseline_kmh": 70.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02118",
+        "direction": "North West",
+        "lane_id": "Middle Lane 3"
+      },
+      "events": 2,
+      "labels": {
+        "events": 2,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 1,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 1,
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 1,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 1,
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 1,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 1,
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 2
+      },
+      "source_reference_bins": 6731,
+      "source_baseline_kmh": 68.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02119",
+        "direction": "North East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 12,
+      "labels": {
+        "events": 12,
+        "horizons": {
+          "15": {
+            "positive": 4,
+            "negative": 6,
+            "unknown": 2,
+            "reasons": {
+              "observed_without_recovery": 6,
+              "confirmed_recovery": 4,
+              "missing_or_invalid_bin": 2
+            }
+          },
+          "30": {
+            "positive": 7,
+            "negative": 3,
+            "unknown": 2,
+            "reasons": {
+              "confirmed_recovery": 7,
+              "observed_without_recovery": 3,
+              "missing_or_invalid_bin": 2
+            }
+          },
+          "60": {
+            "positive": 8,
+            "negative": 2,
+            "unknown": 2,
+            "reasons": {
+              "confirmed_recovery": 8,
+              "observed_without_recovery": 2,
+              "missing_or_invalid_bin": 2
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 6,
+        "test": 4,
+        "validation": 2
+      },
+      "source_reference_bins": 6760,
+      "source_baseline_kmh": 85.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02120",
+        "direction": "North",
+        "lane_id": "Middle Lane 1"
+      },
+      "events": 12,
+      "labels": {
+        "events": 12,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 7,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 7,
+              "missing_or_invalid_bin": 4,
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 4,
+            "negative": 3,
+            "unknown": 5,
+            "reasons": {
+              "missing_or_invalid_bin": 5,
+              "confirmed_recovery": 4,
+              "observed_without_recovery": 3
+            }
+          },
+          "60": {
+            "positive": 5,
+            "negative": 2,
+            "unknown": 5,
+            "reasons": {
+              "confirmed_recovery": 5,
+              "missing_or_invalid_bin": 5,
+              "observed_without_recovery": 2
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "validation": 5,
+        "train": 4,
+        "test": 3
+      },
+      "source_reference_bins": 6746,
+      "source_baseline_kmh": 90.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID02121",
+        "direction": "North",
+        "lane_id": "Middle Lane"
+      },
+      "events": 42,
+      "labels": {
+        "events": 42,
+        "horizons": {
+          "15": {
+            "positive": 12,
+            "negative": 22,
+            "unknown": 8,
+            "reasons": {
+              "observed_without_recovery": 22,
+              "confirmed_recovery": 12,
+              "missing_or_invalid_bin": 8
+            }
+          },
+          "30": {
+            "positive": 20,
+            "negative": 14,
+            "unknown": 8,
+            "reasons": {
+              "confirmed_recovery": 20,
+              "observed_without_recovery": 14,
+              "missing_or_invalid_bin": 8
+            }
+          },
+          "60": {
+            "positive": 28,
+            "negative": 5,
+            "unknown": 9,
+            "reasons": {
+              "confirmed_recovery": 28,
+              "missing_or_invalid_bin": 9,
+              "observed_without_recovery": 5
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 17,
+        "validation": 17,
+        "test": 8
+      },
+      "source_reference_bins": 6691,
+      "source_baseline_kmh": 91.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02123",
+        "direction": "North East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 62,
+      "labels": {
+        "events": 62,
+        "horizons": {
+          "15": {
+            "positive": 10,
+            "negative": 44,
+            "unknown": 8,
+            "reasons": {
+              "observed_without_recovery": 44,
+              "confirmed_recovery": 10,
+              "missing_or_invalid_bin": 8
+            }
+          },
+          "30": {
+            "positive": 17,
+            "negative": 36,
+            "unknown": 9,
+            "reasons": {
+              "observed_without_recovery": 36,
+              "confirmed_recovery": 17,
+              "missing_or_invalid_bin": 9
+            }
+          },
+          "60": {
+            "positive": 36,
+            "negative": 15,
+            "unknown": 11,
+            "reasons": {
+              "confirmed_recovery": 36,
+              "observed_without_recovery": 15,
+              "missing_or_invalid_bin": 11
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "validation": 28,
+        "train": 22,
+        "test": 12
+      },
+      "source_reference_bins": 6773,
+      "source_baseline_kmh": 92.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02124",
+        "direction": "North East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 102,
+      "labels": {
+        "events": 102,
+        "horizons": {
+          "15": {
+            "positive": 24,
+            "negative": 73,
+            "unknown": 5,
+            "reasons": {
+              "observed_without_recovery": 73,
+              "confirmed_recovery": 24,
+              "missing_or_invalid_bin": 5
+            }
+          },
+          "30": {
+            "positive": 40,
+            "negative": 54,
+            "unknown": 8,
+            "reasons": {
+              "observed_without_recovery": 54,
+              "confirmed_recovery": 40,
+              "missing_or_invalid_bin": 8
+            }
+          },
+          "60": {
+            "positive": 69,
+            "negative": 24,
+            "unknown": 9,
+            "reasons": {
+              "confirmed_recovery": 69,
+              "observed_without_recovery": 24,
+              "missing_or_invalid_bin": 9
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 46,
+        "validation": 39,
+        "test": 17
+      },
+      "source_reference_bins": 6753,
+      "source_baseline_kmh": 79.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02125",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 199,
+      "labels": {
+        "events": 199,
+        "horizons": {
+          "15": {
+            "positive": 59,
+            "negative": 118,
+            "unknown": 22,
+            "reasons": {
+              "observed_without_recovery": 118,
+              "confirmed_recovery": 59,
+              "missing_or_invalid_bin": 22
+            }
+          },
+          "30": {
+            "positive": 97,
+            "negative": 76,
+            "unknown": 26,
+            "reasons": {
+              "confirmed_recovery": 97,
+              "observed_without_recovery": 76,
+              "missing_or_invalid_bin": 26
+            }
+          },
+          "60": {
+            "positive": 139,
+            "negative": 31,
+            "unknown": 29,
+            "reasons": {
+              "confirmed_recovery": 139,
+              "observed_without_recovery": 31,
+              "missing_or_invalid_bin": 29
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 81,
+        "validation": 75,
+        "test": 43
+      },
+      "source_reference_bins": 6744,
+      "source_baseline_kmh": 68.77500000000009
+    },
+    {
+      "unit": {
+        "detector_id": "AID02127",
+        "direction": "North East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 48,
+      "labels": {
+        "events": 48,
+        "horizons": {
+          "15": {
+            "positive": 8,
+            "negative": 26,
+            "unknown": 14,
+            "reasons": {
+              "observed_without_recovery": 26,
+              "missing_or_invalid_bin": 14,
+              "confirmed_recovery": 8
+            }
+          },
+          "30": {
+            "positive": 15,
+            "negative": 15,
+            "unknown": 18,
+            "reasons": {
+              "missing_or_invalid_bin": 18,
+              "confirmed_recovery": 15,
+              "observed_without_recovery": 15
+            }
+          },
+          "60": {
+            "positive": 24,
+            "negative": 5,
+            "unknown": 19,
+            "reasons": {
+              "confirmed_recovery": 24,
+              "missing_or_invalid_bin": 19,
+              "observed_without_recovery": 5
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "validation": 20,
+        "train": 19,
+        "test": 9
+      },
+      "source_reference_bins": 6763,
+      "source_baseline_kmh": 72.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID02202",
+        "direction": "South East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 3,
+      "labels": {
+        "events": 3,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 3,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 3
+            }
+          },
+          "30": {
+            "positive": 0,
+            "negative": 2,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 2,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 2,
+            "reasons": {
+              "missing_or_invalid_bin": 2,
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 2,
+        "validation": 1
+      },
+      "source_reference_bins": 6655,
+      "source_baseline_kmh": 80.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02203",
+        "direction": "South",
+        "lane_id": "Slow Lane"
+      },
+      "events": 13,
+      "labels": {
+        "events": 13,
+        "horizons": {
+          "15": {
+            "positive": 2,
+            "negative": 9,
+            "unknown": 2,
+            "reasons": {
+              "observed_without_recovery": 9,
+              "confirmed_recovery": 2,
+              "missing_or_invalid_bin": 2
+            }
+          },
+          "30": {
+            "positive": 4,
+            "negative": 6,
+            "unknown": 3,
+            "reasons": {
+              "observed_without_recovery": 6,
+              "confirmed_recovery": 4,
+              "missing_or_invalid_bin": 3
+            }
+          },
+          "60": {
+            "positive": 8,
+            "negative": 2,
+            "unknown": 3,
+            "reasons": {
+              "confirmed_recovery": 8,
+              "missing_or_invalid_bin": 3,
+              "observed_without_recovery": 2
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 8,
+        "test": 3,
+        "validation": 2
+      },
+      "source_reference_bins": 6497,
+      "source_baseline_kmh": 73.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02205",
+        "direction": "South",
+        "lane_id": "Slow Lane"
+      },
+      "events": 155,
+      "labels": {
+        "events": 155,
+        "horizons": {
+          "15": {
+            "positive": 50,
+            "negative": 89,
+            "unknown": 16,
+            "reasons": {
+              "observed_without_recovery": 89,
+              "confirmed_recovery": 50,
+              "missing_or_invalid_bin": 16
+            }
+          },
+          "30": {
+            "positive": 78,
+            "negative": 58,
+            "unknown": 19,
+            "reasons": {
+              "confirmed_recovery": 78,
+              "observed_without_recovery": 58,
+              "missing_or_invalid_bin": 19
+            }
+          },
+          "60": {
+            "positive": 116,
+            "negative": 16,
+            "unknown": 23,
+            "reasons": {
+              "confirmed_recovery": 116,
+              "missing_or_invalid_bin": 23,
+              "observed_without_recovery": 16
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 85,
+        "validation": 43,
+        "test": 27
+      },
+      "source_reference_bins": 6778,
+      "source_baseline_kmh": 90.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID02207",
+        "direction": "East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 435,
+      "labels": {
+        "events": 435,
+        "horizons": {
+          "15": {
+            "positive": 63,
+            "negative": 353,
+            "unknown": 19,
+            "reasons": {
+              "observed_without_recovery": 353,
+              "confirmed_recovery": 63,
+              "missing_or_invalid_bin": 19
+            }
+          },
+          "30": {
+            "positive": 147,
+            "negative": 263,
+            "unknown": 25,
+            "reasons": {
+              "observed_without_recovery": 263,
+              "confirmed_recovery": 147,
+              "missing_or_invalid_bin": 25
+            }
+          },
+          "60": {
+            "positive": 305,
+            "negative": 100,
+            "unknown": 30,
+            "reasons": {
+              "confirmed_recovery": 305,
+              "observed_without_recovery": 100,
+              "missing_or_invalid_bin": 30
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 212,
+        "test": 137,
+        "validation": 86
+      },
+      "source_reference_bins": 6777,
+      "source_baseline_kmh": 82.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID02208",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 574,
+      "labels": {
+        "events": 574,
+        "horizons": {
+          "15": {
+            "positive": 94,
+            "negative": 458,
+            "unknown": 22,
+            "reasons": {
+              "observed_without_recovery": 458,
+              "confirmed_recovery": 94,
+              "missing_or_invalid_bin": 22
+            }
+          },
+          "30": {
+            "positive": 227,
+            "negative": 318,
+            "unknown": 29,
+            "reasons": {
+              "observed_without_recovery": 318,
+              "confirmed_recovery": 227,
+              "missing_or_invalid_bin": 29
+            }
+          },
+          "60": {
+            "positive": 398,
+            "negative": 141,
+            "unknown": 35,
+            "reasons": {
+              "confirmed_recovery": 398,
+              "observed_without_recovery": 141,
+              "missing_or_invalid_bin": 35
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 283,
+        "test": 160,
+        "validation": 131
+      },
+      "source_reference_bins": 6776,
+      "source_baseline_kmh": 83.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02209",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 705,
+      "labels": {
+        "events": 705,
+        "horizons": {
+          "15": {
+            "positive": 36,
+            "negative": 646,
+            "unknown": 23,
+            "reasons": {
+              "observed_without_recovery": 646,
+              "confirmed_recovery": 36,
+              "missing_or_invalid_bin": 23
+            }
+          },
+          "30": {
+            "positive": 114,
+            "negative": 564,
+            "unknown": 27,
+            "reasons": {
+              "observed_without_recovery": 564,
+              "confirmed_recovery": 114,
+              "missing_or_invalid_bin": 27
+            }
+          },
+          "60": {
+            "positive": 335,
+            "negative": 338,
+            "unknown": 32,
+            "reasons": {
+              "observed_without_recovery": 338,
+              "confirmed_recovery": 335,
+              "missing_or_invalid_bin": 32
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 359,
+        "test": 186,
+        "validation": 160
+      },
+      "source_reference_bins": 6766,
+      "source_baseline_kmh": 99.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02210",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 756,
+      "labels": {
+        "events": 756,
+        "horizons": {
+          "15": {
+            "positive": 8,
+            "negative": 703,
+            "unknown": 45,
+            "reasons": {
+              "observed_without_recovery": 703,
+              "missing_or_invalid_bin": 45,
+              "confirmed_recovery": 8
+            }
+          },
+          "30": {
+            "positive": 47,
+            "negative": 655,
+            "unknown": 54,
+            "reasons": {
+              "observed_without_recovery": 655,
+              "missing_or_invalid_bin": 54,
+              "confirmed_recovery": 47
+            }
+          },
+          "60": {
+            "positive": 157,
+            "negative": 532,
+            "unknown": 67,
+            "reasons": {
+              "observed_without_recovery": 532,
+              "confirmed_recovery": 157,
+              "missing_or_invalid_bin": 67
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 365,
+        "validation": 222,
+        "test": 169
+      },
+      "source_reference_bins": 6726,
+      "source_baseline_kmh": 97.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID02212",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 136,
+      "labels": {
+        "events": 136,
+        "horizons": {
+          "15": {
+            "positive": 44,
+            "negative": 84,
+            "unknown": 8,
+            "reasons": {
+              "observed_without_recovery": 84,
+              "confirmed_recovery": 44,
+              "missing_or_invalid_bin": 8
+            }
+          },
+          "30": {
+            "positive": 68,
+            "negative": 57,
+            "unknown": 11,
+            "reasons": {
+              "confirmed_recovery": 68,
+              "observed_without_recovery": 57,
+              "missing_or_invalid_bin": 11
+            }
+          },
+          "60": {
+            "positive": 99,
+            "negative": 21,
+            "unknown": 16,
+            "reasons": {
+              "confirmed_recovery": 99,
+              "observed_without_recovery": 21,
+              "missing_or_invalid_bin": 16
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 63,
+        "validation": 37,
+        "test": 36
+      },
+      "source_reference_bins": 6772,
+      "source_baseline_kmh": 76.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02213",
+        "direction": "North East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 226,
+      "labels": {
+        "events": 226,
+        "horizons": {
+          "15": {
+            "positive": 69,
+            "negative": 151,
+            "unknown": 6,
+            "reasons": {
+              "observed_without_recovery": 151,
+              "confirmed_recovery": 69,
+              "missing_or_invalid_bin": 6
+            }
+          },
+          "30": {
+            "positive": 121,
+            "negative": 91,
+            "unknown": 14,
+            "reasons": {
+              "confirmed_recovery": 121,
+              "observed_without_recovery": 91,
+              "missing_or_invalid_bin": 14
+            }
+          },
+          "60": {
+            "positive": 175,
+            "negative": 34,
+            "unknown": 17,
+            "reasons": {
+              "confirmed_recovery": 175,
+              "observed_without_recovery": 34,
+              "missing_or_invalid_bin": 17
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 105,
+        "validation": 72,
+        "test": 49
+      },
+      "source_reference_bins": 6779,
+      "source_baseline_kmh": 80.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02214",
+        "direction": "North East",
+        "lane_id": "Middle Lane 1"
+      },
+      "events": 464,
+      "labels": {
+        "events": 464,
+        "horizons": {
+          "15": {
+            "positive": 56,
+            "negative": 379,
+            "unknown": 29,
+            "reasons": {
+              "observed_without_recovery": 379,
+              "confirmed_recovery": 56,
+              "missing_or_invalid_bin": 29
+            }
+          },
+          "30": {
+            "positive": 155,
+            "negative": 272,
+            "unknown": 37,
+            "reasons": {
+              "observed_without_recovery": 272,
+              "confirmed_recovery": 155,
+              "missing_or_invalid_bin": 37
+            }
+          },
+          "60": {
+            "positive": 287,
+            "negative": 135,
+            "unknown": 42,
+            "reasons": {
+              "confirmed_recovery": 287,
+              "observed_without_recovery": 135,
+              "missing_or_invalid_bin": 42
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 231,
+        "test": 121,
+        "validation": 112
+      },
+      "source_reference_bins": 6773,
+      "source_baseline_kmh": 79.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID02215",
+        "direction": "South East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 339,
+      "labels": {
+        "events": 339,
+        "horizons": {
+          "15": {
+            "positive": 75,
+            "negative": 229,
+            "unknown": 35,
+            "reasons": {
+              "observed_without_recovery": 229,
+              "confirmed_recovery": 75,
+              "missing_or_invalid_bin": 35
+            }
+          },
+          "30": {
+            "positive": 113,
+            "negative": 183,
+            "unknown": 43,
+            "reasons": {
+              "observed_without_recovery": 183,
+              "confirmed_recovery": 113,
+              "missing_or_invalid_bin": 43
+            }
+          },
+          "60": {
+            "positive": 167,
+            "negative": 116,
+            "unknown": 56,
+            "reasons": {
+              "confirmed_recovery": 167,
+              "observed_without_recovery": 116,
+              "missing_or_invalid_bin": 56
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 150,
+        "test": 95,
+        "validation": 94
+      },
+      "source_reference_bins": 6746,
+      "source_baseline_kmh": 79.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03101",
+        "direction": "North East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 14,
+      "labels": {
+        "events": 14,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 9,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 9,
+              "missing_or_invalid_bin": 4,
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 6,
+            "negative": 3,
+            "unknown": 5,
+            "reasons": {
+              "confirmed_recovery": 6,
+              "missing_or_invalid_bin": 5,
+              "observed_without_recovery": 3
+            }
+          },
+          "60": {
+            "positive": 9,
+            "negative": 0,
+            "unknown": 5,
+            "reasons": {
+              "confirmed_recovery": 9,
+              "missing_or_invalid_bin": 5
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 9,
+        "test": 3,
+        "validation": 2
+      },
+      "source_reference_bins": 6618,
+      "source_baseline_kmh": 67.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03103",
+        "direction": "West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 778,
+      "labels": {
+        "events": 778,
+        "horizons": {
+          "15": {
+            "positive": 26,
+            "negative": 738,
+            "unknown": 14,
+            "reasons": {
+              "observed_without_recovery": 738,
+              "confirmed_recovery": 26,
+              "missing_or_invalid_bin": 14
+            }
+          },
+          "30": {
+            "positive": 75,
+            "negative": 683,
+            "unknown": 20,
+            "reasons": {
+              "observed_without_recovery": 683,
+              "confirmed_recovery": 75,
+              "missing_or_invalid_bin": 20
+            }
+          },
+          "60": {
+            "positive": 202,
+            "negative": 550,
+            "unknown": 26,
+            "reasons": {
+              "observed_without_recovery": 550,
+              "confirmed_recovery": 202,
+              "missing_or_invalid_bin": 26
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 306,
+        "validation": 271,
+        "test": 201
+      },
+      "source_reference_bins": 6616,
+      "source_baseline_kmh": 82.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03104",
+        "direction": "West",
+        "lane_id": "Fast Lane"
+      },
+      "events": 53,
+      "labels": {
+        "events": 53,
+        "horizons": {
+          "15": {
+            "positive": 10,
+            "negative": 27,
+            "unknown": 16,
+            "reasons": {
+              "observed_without_recovery": 27,
+              "missing_or_invalid_bin": 16,
+              "confirmed_recovery": 10
+            }
+          },
+          "30": {
+            "positive": 20,
+            "negative": 12,
+            "unknown": 21,
+            "reasons": {
+              "missing_or_invalid_bin": 21,
+              "confirmed_recovery": 20,
+              "observed_without_recovery": 12
+            }
+          },
+          "60": {
+            "positive": 25,
+            "negative": 4,
+            "unknown": 24,
+            "reasons": {
+              "confirmed_recovery": 25,
+              "missing_or_invalid_bin": 24,
+              "observed_without_recovery": 4
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 24,
+        "validation": 17,
+        "train": 12
+      },
+      "source_reference_bins": 6373,
+      "source_baseline_kmh": 51.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03106",
+        "direction": "North East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 4,
+      "labels": {
+        "events": 4,
+        "horizons": {
+          "15": {
+            "positive": 2,
+            "negative": 2,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 2,
+              "confirmed_recovery": 2
+            }
+          },
+          "30": {
+            "positive": 3,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "confirmed_recovery": 3,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "60": {
+            "positive": 3,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "confirmed_recovery": 3,
+              "missing_or_invalid_bin": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "validation": 2,
+        "train": 1,
+        "test": 1
+      },
+      "source_reference_bins": 6640,
+      "source_baseline_kmh": 94.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03107",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 100,
+      "labels": {
+        "events": 100,
+        "horizons": {
+          "15": {
+            "positive": 17,
+            "negative": 65,
+            "unknown": 18,
+            "reasons": {
+              "observed_without_recovery": 65,
+              "missing_or_invalid_bin": 18,
+              "confirmed_recovery": 17
+            }
+          },
+          "30": {
+            "positive": 30,
+            "negative": 50,
+            "unknown": 20,
+            "reasons": {
+              "observed_without_recovery": 50,
+              "confirmed_recovery": 30,
+              "missing_or_invalid_bin": 20
+            }
+          },
+          "60": {
+            "positive": 47,
+            "negative": 32,
+            "unknown": 21,
+            "reasons": {
+              "confirmed_recovery": 47,
+              "observed_without_recovery": 32,
+              "missing_or_invalid_bin": 21
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 72,
+        "validation": 16,
+        "train": 12
+      },
+      "source_reference_bins": 6703,
+      "source_baseline_kmh": 94.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03108",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 161,
+      "labels": {
+        "events": 161,
+        "horizons": {
+          "15": {
+            "positive": 14,
+            "negative": 134,
+            "unknown": 13,
+            "reasons": {
+              "observed_without_recovery": 134,
+              "confirmed_recovery": 14,
+              "missing_or_invalid_bin": 13
+            }
+          },
+          "30": {
+            "positive": 29,
+            "negative": 118,
+            "unknown": 14,
+            "reasons": {
+              "observed_without_recovery": 118,
+              "confirmed_recovery": 29,
+              "missing_or_invalid_bin": 14
+            }
+          },
+          "60": {
+            "positive": 68,
+            "negative": 76,
+            "unknown": 17,
+            "reasons": {
+              "observed_without_recovery": 76,
+              "confirmed_recovery": 68,
+              "missing_or_invalid_bin": 17
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 130,
+        "train": 17,
+        "validation": 14
+      },
+      "source_reference_bins": 6777,
+      "source_baseline_kmh": 103.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03110",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 153,
+      "labels": {
+        "events": 153,
+        "horizons": {
+          "15": {
+            "positive": 8,
+            "negative": 141,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 141,
+              "confirmed_recovery": 8,
+              "missing_or_invalid_bin": 4
+            }
+          },
+          "30": {
+            "positive": 17,
+            "negative": 132,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 132,
+              "confirmed_recovery": 17,
+              "missing_or_invalid_bin": 4
+            }
+          },
+          "60": {
+            "positive": 31,
+            "negative": 115,
+            "unknown": 7,
+            "reasons": {
+              "observed_without_recovery": 115,
+              "confirmed_recovery": 31,
+              "missing_or_invalid_bin": 7
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 117,
+        "train": 21,
+        "validation": 15
+      },
+      "source_reference_bins": 6778,
+      "source_baseline_kmh": 111.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03112",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 153,
+      "labels": {
+        "events": 153,
+        "horizons": {
+          "15": {
+            "positive": 31,
+            "negative": 118,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 118,
+              "confirmed_recovery": 31,
+              "missing_or_invalid_bin": 4
+            }
+          },
+          "30": {
+            "positive": 37,
+            "negative": 112,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 112,
+              "confirmed_recovery": 37,
+              "missing_or_invalid_bin": 4
+            }
+          },
+          "60": {
+            "positive": 64,
+            "negative": 82,
+            "unknown": 7,
+            "reasons": {
+              "observed_without_recovery": 82,
+              "confirmed_recovery": 64,
+              "missing_or_invalid_bin": 7
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 119,
+        "train": 25,
+        "validation": 9
+      },
+      "source_reference_bins": 6766,
+      "source_baseline_kmh": 92.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03113",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 6,
+      "labels": {
+        "events": 6,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 5,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 5,
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 5,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 5,
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 3,
+            "negative": 3,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 3,
+              "confirmed_recovery": 3
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 5,
+        "train": 1
+      },
+      "source_reference_bins": 6753,
+      "source_baseline_kmh": 100.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03114",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 2,
+      "labels": {
+        "events": 2,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 2,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 2
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 1,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 1,
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 1,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 1,
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 2
+      },
+      "source_reference_bins": 6773,
+      "source_baseline_kmh": 112.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03115",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 2,
+      "labels": {
+        "events": 2,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "missing_or_invalid_bin": 1,
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "missing_or_invalid_bin": 1,
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "missing_or_invalid_bin": 1,
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 2
+      },
+      "source_reference_bins": 6761,
+      "source_baseline_kmh": 92.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03116",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 2,
+      "labels": {
+        "events": 2,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "missing_or_invalid_bin": 1,
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "missing_or_invalid_bin": 1,
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 1,
+            "reasons": {
+              "missing_or_invalid_bin": 1,
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 1,
+        "test": 1
+      },
+      "source_reference_bins": 6748,
+      "source_baseline_kmh": 91.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03117",
+        "direction": "North",
+        "lane_id": "Middle Lane"
+      },
+      "events": 1,
+      "labels": {
+        "events": 1,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 1
+      },
+      "source_reference_bins": 6750,
+      "source_baseline_kmh": 94.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03118",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 1,
+      "labels": {
+        "events": 1,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 1,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {
+              "confirmed_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 1
+      },
+      "source_reference_bins": 6743,
+      "source_baseline_kmh": 90.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03119",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 8,
+      "labels": {
+        "events": 8,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 7,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 7,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "30": {
+            "positive": 2,
+            "negative": 5,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 5,
+              "confirmed_recovery": 2,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "60": {
+            "positive": 2,
+            "negative": 5,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 5,
+              "confirmed_recovery": 2,
+              "missing_or_invalid_bin": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 5,
+        "validation": 2,
+        "test": 1
+      },
+      "source_reference_bins": 6738,
+      "source_baseline_kmh": 108.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03120",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 6,
+      "labels": {
+        "events": 6,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 5,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 5,
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 3,
+            "negative": 3,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 3,
+              "confirmed_recovery": 3
+            }
+          },
+          "60": {
+            "positive": 3,
+            "negative": 3,
+            "unknown": 0,
+            "reasons": {
+              "observed_without_recovery": 3,
+              "confirmed_recovery": 3
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 2,
+        "validation": 2,
+        "test": 2
+      },
+      "source_reference_bins": 6741,
+      "source_baseline_kmh": 84.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID03121",
+        "direction": "North West",
+        "lane_id": "Middle Lane"
+      },
+      "events": 3,
+      "labels": {
+        "events": 3,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 2,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 2,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "30": {
+            "positive": 0,
+            "negative": 2,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 2,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "60": {
+            "positive": 1,
+            "negative": 1,
+            "unknown": 1,
+            "reasons": {
+              "confirmed_recovery": 1,
+              "observed_without_recovery": 1,
+              "missing_or_invalid_bin": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 2,
+        "test": 1
+      },
+      "source_reference_bins": 6724,
+      "source_baseline_kmh": 104.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03122",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 10,
+      "labels": {
+        "events": 10,
+        "horizons": {
+          "15": {
+            "positive": 5,
+            "negative": 4,
+            "unknown": 1,
+            "reasons": {
+              "confirmed_recovery": 5,
+              "observed_without_recovery": 4,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "30": {
+            "positive": 5,
+            "negative": 4,
+            "unknown": 1,
+            "reasons": {
+              "confirmed_recovery": 5,
+              "observed_without_recovery": 4,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "60": {
+            "positive": 8,
+            "negative": 0,
+            "unknown": 2,
+            "reasons": {
+              "confirmed_recovery": 8,
+              "missing_or_invalid_bin": 2
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 8,
+        "validation": 2
+      },
+      "source_reference_bins": 6743,
+      "source_baseline_kmh": 101.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03123",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 13,
+      "labels": {
+        "events": 13,
+        "horizons": {
+          "15": {
+            "positive": 3,
+            "negative": 9,
+            "unknown": 1,
+            "reasons": {
+              "observed_without_recovery": 9,
+              "confirmed_recovery": 3,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "30": {
+            "positive": 7,
+            "negative": 5,
+            "unknown": 1,
+            "reasons": {
+              "confirmed_recovery": 7,
+              "observed_without_recovery": 5,
+              "missing_or_invalid_bin": 1
+            }
+          },
+          "60": {
+            "positive": 11,
+            "negative": 1,
+            "unknown": 1,
+            "reasons": {
+              "confirmed_recovery": 11,
+              "missing_or_invalid_bin": 1,
+              "observed_without_recovery": 1
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 9,
+        "validation": 3,
+        "train": 1
+      },
+      "source_reference_bins": 6754,
+      "source_baseline_kmh": 96.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03124",
+        "direction": "North West",
+        "lane_id": "Slow Lane"
+      },
+      "events": 0,
+      "labels": {
+        "events": 0,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {}
+          },
+          "30": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {}
+          },
+          "60": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {}
+          }
+        }
+      },
+      "split_counts": {},
+      "source_reference_bins": 6029,
+      "source_baseline_kmh": 94.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03125",
+        "direction": "North",
+        "lane_id": "Slow Lane"
+      },
+      "events": 0,
+      "labels": {
+        "events": 0,
+        "horizons": {
+          "15": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {}
+          },
+          "30": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {}
+          },
+          "60": {
+            "positive": 0,
+            "negative": 0,
+            "unknown": 0,
+            "reasons": {}
+          }
+        }
+      },
+      "split_counts": {},
+      "source_reference_bins": 5931,
+      "source_baseline_kmh": 105.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03201",
+        "direction": "South East",
+        "lane_id": "Slow Lane"
+      },
+      "events": 9,
+      "labels": {
+        "events": 9,
+        "horizons": {
+          "15": {
+            "positive": 1,
+            "negative": 4,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 4,
+              "missing_or_invalid_bin": 4,
+              "confirmed_recovery": 1
+            }
+          },
+          "30": {
+            "positive": 2,
+            "negative": 3,
+            "unknown": 4,
+            "reasons": {
+              "missing_or_invalid_bin": 4,
+              "observed_without_recovery": 3,
+              "confirmed_recovery": 2
+            }
+          },
+          "60": {
+            "positive": 5,
+            "negative": 0,
+            "unknown": 4,
+            "reasons": {
+              "confirmed_recovery": 5,
+              "missing_or_invalid_bin": 4
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 8,
+        "validation": 1
+      },
+      "source_reference_bins": 6582,
+      "source_baseline_kmh": 83.5
+    },
+    {
+      "unit": {
+        "detector_id": "AID03202",
+        "direction": "South East",
+        "lane_id": "Middle Lane 1"
+      },
+      "events": 99,
+      "labels": {
+        "events": 99,
+        "horizons": {
+          "15": {
+            "positive": 14,
+            "negative": 81,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 81,
+              "confirmed_recovery": 14,
+              "missing_or_invalid_bin": 4
+            }
+          },
+          "30": {
+            "positive": 29,
+            "negative": 66,
+            "unknown": 4,
+            "reasons": {
+              "observed_without_recovery": 66,
+              "confirmed_recovery": 29,
+              "missing_or_invalid_bin": 4
+            }
+          },
+          "60": {
+            "positive": 45,
+            "negative": 49,
+            "unknown": 5,
+            "reasons": {
+              "observed_without_recovery": 49,
+              "confirmed_recovery": 45,
+              "missing_or_invalid_bin": 5
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 50,
+        "validation": 25,
+        "train": 24
+      },
+      "source_reference_bins": 6646,
+      "source_baseline_kmh": 97.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03203",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 128,
+      "labels": {
+        "events": 128,
+        "horizons": {
+          "15": {
+            "positive": 18,
+            "negative": 102,
+            "unknown": 8,
+            "reasons": {
+              "observed_without_recovery": 102,
+              "confirmed_recovery": 18,
+              "missing_or_invalid_bin": 8
+            }
+          },
+          "30": {
+            "positive": 38,
+            "negative": 80,
+            "unknown": 10,
+            "reasons": {
+              "observed_without_recovery": 80,
+              "confirmed_recovery": 38,
+              "missing_or_invalid_bin": 10
+            }
+          },
+          "60": {
+            "positive": 70,
+            "negative": 45,
+            "unknown": 13,
+            "reasons": {
+              "confirmed_recovery": 70,
+              "observed_without_recovery": 45,
+              "missing_or_invalid_bin": 13
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "test": 69,
+        "train": 33,
+        "validation": 26
+      },
+      "source_reference_bins": 6585,
+      "source_baseline_kmh": 90.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03204",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 491,
+      "labels": {
+        "events": 491,
+        "horizons": {
+          "15": {
+            "positive": 45,
+            "negative": 394,
+            "unknown": 52,
+            "reasons": {
+              "observed_without_recovery": 394,
+              "missing_or_invalid_bin": 52,
+              "confirmed_recovery": 45
+            }
+          },
+          "30": {
+            "positive": 95,
+            "negative": 321,
+            "unknown": 75,
+            "reasons": {
+              "observed_without_recovery": 321,
+              "confirmed_recovery": 95,
+              "missing_or_invalid_bin": 75
+            }
+          },
+          "60": {
+            "positive": 196,
+            "negative": 174,
+            "unknown": 121,
+            "reasons": {
+              "confirmed_recovery": 196,
+              "observed_without_recovery": 174,
+              "missing_or_invalid_bin": 121
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "validation": 185,
+        "test": 184,
+        "train": 122
+      },
+      "source_reference_bins": 6770,
+      "source_baseline_kmh": 102.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03205",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 740,
+      "labels": {
+        "events": 740,
+        "horizons": {
+          "15": {
+            "positive": 32,
+            "negative": 647,
+            "unknown": 61,
+            "reasons": {
+              "observed_without_recovery": 647,
+              "missing_or_invalid_bin": 61,
+              "confirmed_recovery": 32
+            }
+          },
+          "30": {
+            "positive": 82,
+            "negative": 572,
+            "unknown": 86,
+            "reasons": {
+              "observed_without_recovery": 572,
+              "missing_or_invalid_bin": 86,
+              "confirmed_recovery": 82
+            }
+          },
+          "60": {
+            "positive": 200,
+            "negative": 411,
+            "unknown": 129,
+            "reasons": {
+              "observed_without_recovery": 411,
+              "confirmed_recovery": 200,
+              "missing_or_invalid_bin": 129
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 313,
+        "validation": 227,
+        "test": 200
+      },
+      "source_reference_bins": 6779,
+      "source_baseline_kmh": 109.0
+    },
+    {
+      "unit": {
+        "detector_id": "AID03206",
+        "direction": "South East",
+        "lane_id": "Middle Lane"
+      },
+      "events": 702,
+      "labels": {
+        "events": 702,
+        "horizons": {
+          "15": {
+            "positive": 22,
+            "negative": 656,
+            "unknown": 24,
+            "reasons": {
+              "observed_without_recovery": 656,
+              "missing_or_invalid_bin": 24,
+              "confirmed_recovery": 22
+            }
+          },
+          "30": {
+            "positive": 58,
+            "negative": 612,
+            "unknown": 32,
+            "reasons": {
+              "observed_without_recovery": 612,
+              "confirmed_recovery": 58,
+              "missing_or_invalid_bin": 32
+            }
+          },
+          "60": {
+            "positive": 123,
+            "negative": 538,
+            "unknown": 41,
+            "reasons": {
+              "observed_without_recovery": 538,
+              "confirmed_recovery": 123,
+              "missing_or_invalid_bin": 41
+            }
+          }
+        }
+      },
+      "split_counts": {
+        "train": 353,
+        "validation": 180,
+        "test": 169
+      },
+      "source_reference_bins": 6772,
+      "source_baseline_kmh": 113.5
+    }
+  ],
+  "by_split": {
+    "train": 14290,
+    "validation": 8557,
+    "test": 7605,
+    "purged": 0
+  },
+  "horizons": {
+    "15": {
+      "positive": 3406,
+      "negative": 25060,
+      "unknown": 1986
+    },
+    "30": {
+      "positive": 7226,
+      "negative": 20632,
+      "unknown": 2594
+    },
+    "60": {
+      "positive": 12845,
+      "negative": 14212,
+      "unknown": 3395
+    }
+  },
+  "no_model_training": true,
+  "created_at_utc": "2026-11-04T05:41:30.506298+00:00"
+}

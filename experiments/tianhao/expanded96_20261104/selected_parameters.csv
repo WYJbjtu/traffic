@@ -1,0 +1,17 @@
+model_version,model,feature_set,horizon_min,candidate_id,parameters,validation_log_loss,validation_n,selected,base_fit_n,calibration_n,n_features,nonzero_coefficients
+supervised-models-v1,logistic_regression,local,30,4,"{""C"": 10.0, ""class_weight"": null}",0.5943822764897774,7848,True,,,,
+supervised-models-v1,decision_tree,local,30,16,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 10}",0.5391929628862278,7848,True,,,,
+tianhao-l1-svm-30m-v1,logistic_l1,local,30,0,"{""C"": 0.01, ""class_weight"": null}",0.593401110782213,7848,True,13002.0,0.0,5.0,2.0
+tianhao-l1-svm-30m-v1,svm_rbf,local,30,17,"{""C"": 10.0, ""class_weight"": ""balanced"", ""gamma"": 0.1}",0.5540092381505675,7848,True,8947.0,4055.0,5.0,
+supervised-models-v1,logistic_regression,local+history,30,4,"{""C"": 10.0, ""class_weight"": null}",0.564735175823829,7848,True,,,,
+supervised-models-v1,decision_tree,local+history,30,10,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 10}",0.5436435112298305,7848,True,,,,
+tianhao-l1-svm-30m-v1,logistic_l1,local+history,30,4,"{""C"": 1.0, ""class_weight"": null}",0.5647011701813187,7848,True,13002.0,0.0,9.0,7.0
+tianhao-l1-svm-30m-v1,svm_rbf,local+history,30,17,"{""C"": 10.0, ""class_weight"": ""balanced"", ""gamma"": 0.1}",0.5394584537320929,7848,True,8947.0,4055.0,9.0,
+supervised-models-v1,logistic_regression,local+history+calendar,30,4,"{""C"": 10.0, ""class_weight"": null}",0.5581975908083614,7848,True,,,,
+supervised-models-v1,decision_tree,local+history+calendar,30,10,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 10}",0.5331618822863979,7848,True,,,,
+tianhao-l1-svm-30m-v1,logistic_l1,local+history+calendar,30,4,"{""C"": 1.0, ""class_weight"": null}",0.5581675240058667,7848,True,13002.0,0.0,17.0,14.0
+tianhao-l1-svm-30m-v1,svm_rbf,local+history+calendar,30,13,"{""C"": 10.0, ""class_weight"": ""balanced"", ""gamma"": ""scale""}",0.5229373196140784,7848,True,8947.0,4055.0,17.0,
+supervised-models-v1,logistic_regression,local+history+calendar+weather,30,4,"{""C"": 10.0, ""class_weight"": null}",0.5585417432053134,7848,True,,,,
+supervised-models-v1,decision_tree,local+history+calendar+weather,30,14,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 5}",0.5202895516648697,7848,True,,,,
+tianhao-l1-svm-30m-v1,logistic_l1,local+history+calendar+weather,30,2,"{""C"": 0.1, ""class_weight"": null}",0.558438528158384,7848,True,13002.0,0.0,23.0,18.0
+tianhao-l1-svm-30m-v1,svm_rbf,local+history+calendar+weather,30,15,"{""C"": 10.0, ""class_weight"": ""balanced"", ""gamma"": 0.01}",0.5307254770190492,7848,True,8947.0,4055.0,23.0,

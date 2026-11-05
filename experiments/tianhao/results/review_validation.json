@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks": 603,
+  "prediction_rows": 95186,
+  "arms": 14,
+  "note": "Offline output checks only; source-time checks remain in the historical real-run verification. No scientific approval."
+}

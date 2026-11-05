@@ -1,0 +1,35 @@
+from pathlib import Path
+import json,hashlib
+import pandas as pd
+import pyarrow.parquet as pq
+from scripts.label_long_window import availability_safe_splits
+ROOT=Path('D:/HK_Traffic_Recovery_Long_Window');OUT=ROOT/'expansion';REPO=ROOT/'project'
+def sha(p):
+ with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()
+q=OUT/'continuity426-v1';d=OUT/'pilot96-id-order-v1';unit=['detector_id','direction','lane_id']
+m=json.loads((q/'continuity_manifest.json').read_text());assert m['units']==426 and m['observed_months']==45
+for name,h in m['outputs_sha256'].items():assert sha(q/name)==h
+frozen=pd.read_csv(REPO/'reports/lane_expansion_audit/eligible_lane_units.csv',dtype={c:str for c in unit})
+grid=pd.read_parquet(q/'processed/derived/coverage_lane_day.parquet').merge(frozen[unit],on=unit,how='inner',validate='many_to_one')
+assert len(grid)==426*1369 and grid.day.nunique()==1369 and not grid.duplicated(unit+['day']).any()
+jan=json.loads((OUT/'january426-v1/reference_manifest.json').read_text());assert jan['original_published_24_reference_exact_match'] is True
+manifest=json.loads((d/'pilot_manifest.json').read_text());assert manifest['units']==96 and manifest['events']==30452
+for check in (d/'units').glob('*/checkpoint.json'):
+ rec=json.loads(check.read_text())
+ for name,h in rec['outputs_sha256'].items():assert sha(check.parent/name)==h
+events=pd.read_parquet(d/'cohort_events.parquet');assert len(events)==30452 and not events.event_id.duplicated().any()
+assert not events.duplicated(unit+['prediction_time']).any()
+assert (events.feature_max_available_at<=events.prediction_time).all()
+cfg=json.loads((REPO/'configs/long_window_96_candidate.json').read_text())
+splits,maturity=availability_safe_splits(events,*[pd.Timestamp(cfg[k]) for k in ['validation_start','test_start','observation_end']])
+assert splits.astype(str).equals(events.split_proposal.astype(str))
+assert (maturity==events.outcome_maturity_at).all()
+for h,counts in manifest['horizons'].items():
+ labels=events['label_'+h+'m'];assert labels.dropna().isin([0,1]).all()
+ assert (int(labels.eq(1).sum()),int(labels.eq(0).sum()),int(labels.isna().sum()))==(counts['positive'],counts['negative'],counts['unknown'])
+assert pq.ParquetFile(d/'cohort_bins.parquet').metadata.num_rows==35782769
+status=json.loads((OUT/'run_status.json').read_text());assert all(s['exit_code']==0 for s in status['stages'])
+assert '178 passed' in (OUT/'tests.log').read_text()
+pub=json.loads((OUT/'published_expanded96_release.json').read_text());assert sha(ROOT/'HK_Traffic_Expanded_96_Prepared_Data_v1.zip')==pub['sha256']
+checks={'status':'passed','candidate_lane_days':len(grid),'candidate_units':426,'days':1369,'months':45,'units':96,'events':len(events),'bins':35782769,'per_unit_hashes':'passed','event_uniqueness':'passed','label_counts_unknowns':'passed','feature_availability':'passed','split_and_maturity_recomputed':'passed','original_24_reference_exact_match':True,'pytest':'178 passed, 1 warning; exit 0','release_sha256':pub['sha256']}
+(OUT/'reports-full96-v1/final_verification.json').write_text(json.dumps(checks,indent=2),encoding='utf-8');print(json.dumps(checks))

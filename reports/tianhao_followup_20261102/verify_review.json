@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checks": 632,
+  "prediction_rows": 95186,
+  "arms": 14,
+  "integrity": {
+    "mode": "immutable_results",
+    "verified_artifacts": 22,
+    "workspace_changes": [
+      {
+        "path": "README.md",
+        "status": "changed",
+        "expected_sha256": "b26e2deaeb2fa8fbe627b832cd1f871e3b16f52deb5fa5a458201ed226ff7ffd",
+        "actual_sha256": "3589e126f6c245677d407ca63f4b1679b4768767f84b7131725104680a5db4d8"
+      },
+      {
+        "path": "experiments/tianhao/README.md",
+        "status": "changed",
+        "expected_sha256": "979d1274fa009a8f7adc9af20e7d91bf04a1db7deb0bbf2dfc5dc657146f4554",
+        "actual_sha256": "271226f44259a6dd28c2f48c088fe7204ccb10dcb75d2326c61fc49ca5c9c9bc"
+      },
+      {
+        "path": "experiments/tianhao/verify_review.py",
+        "status": "changed",
+        "expected_sha256": "7866b8b454af3c995292c8edd1849b05da9dab6f47f120b27b907a63e89a8667",
+        "actual_sha256": "6c187ad904c04315cc8c3c478afc17d877a51505390eb11c9e9d812b4cffc9fe"
+      }
+    ],
+    "snapshot_matches_manifest": false,
+    "note": "Result integrity does not certify the scientific validity or identity of current code."
+  },
+  "note": "Offline output checks only; source-time checks remain in the historical real-run verification. No scientific approval."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "candidate_only",
+  "input_coverage_sha256": "d28bce874c88a6244e59bd060a9d1948f708ef1f8706d5ba0e9b66a731fb7708",
+  "outputs_sha256": {
+    "candidate_corridor_coverage_ranking.csv": "fca27f40af3c2c3aa22324cb86a79d89576afb9a855ced5c75e76605d7c56975",
+    "candidate_detector_disconnections.csv": "cebf9cd2de8fb54447e6fbe19c0836590c4eb2e8ad3bf5a5787f60e52be00fde"
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "status": "EXPLORATORY \u2014 NOT APPROVED AS FINAL RESULTS",
+  "version": "tianhao-l1-svm-30m-v1",
+  "prior_test_exposure": true,
+  "target": "30-minute observed recovery confirmation; not recovery start",
+  "seed": 42,
+  "selection": "validation_log_loss; trend rule validation_macro_f1",
+  "threshold": 0.5,
+  "refit_after_selection": false,
+  "feature_sets": [
+    [
+      "local"
+    ],
+    [
+      "local",
+      "history"
+    ],
+    [
+      "local",
+      "history",
+      "calendar"
+    ],
+    [
+      "local",
+      "history",
+      "calendar",
+      "weather"
+    ]
+  ],
+  "model_kinds": [
+    "logistic_regression",
+    "decision_tree",
+    "logistic_l1",
+    "svm_rbf"
+  ],
+  "input_hashes": {
+    "dataset": {
+      "file": "event_features.parquet",
+      "sha256": "eee518377e9574743849c7f65fd54c98b98f7b33594a078039705edb04cf4f7d"
+    },
+    "events": {
+      "file": "events.parquet",
+      "sha256": "d9cd1c0ede22d4f919e3b3a7ece9fab25a8646e3f5ee8b2fb0f4ff900606e570"
+    },
+    "contract": {
+      "file": "contract.json",
+      "sha256": "2c029a8398b322f82b3b9ce05e113020bc67d81d0ab15c7834d5945a18903961"
+    },
+    "extended_rules": {
+      "file": "tianhao_extended_models.json",
+      "sha256": "09e5489680320dfffe49ffaf8ae9da068ba75deca8e292e738658f053186f3d4"
+    },
+    "supervised_rules": {
+      "file": "supervised_models.json",
+      "sha256": "ef760d850b4012ac1cd1dac9ef45e4da2a142f0964044bd21b07aa9e444f21e0"
+    },
+    "benchmark_rules": {
+      "file": "benchmarks.json",
+      "sha256": "2ef4478f172dba93ca6371c5f993c16f90a07a9a5841241e1d90dc55f469c96e"
+    }
+  },
+  "calibration_start": "2024-07-01T00:00:00+08:00",
+  "minimum_purge_minutes": 60,
+  "extended_candidates": {
+    "logistic_l1": [
+      {
+        "C": 0.01,
+        "class_weight": null
+      },
+      {
+        "C": 0.01,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 0.1,
+        "class_weight": null
+      },
+      {
+        "C": 0.1,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 1.0,
+        "class_weight": null
+      },
+      {
+        "C": 1.0,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 10.0,
+        "class_weight": null
+      },
+      {
+        "C": 10.0,
+        "class_weight": "balanced"
+      }
+    ],
+    "svm_rbf": [
+      {
+        "C": 0.1,
+        "gamma": "scale",
+        "class_weight": null
+      },
+      {
+        "C": 0.1,
+        "gamma": "scale",
+        "class_weight": "balanced"
+      },
+      {
+        "C": 0.1,
+        "gamma": 0.01,
+        "class_weight": null
+      },
+      {
+        "C": 0.1,
+        "gamma": 0.01,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 0.1,
+        "gamma": 0.1,
+        "class_weight": null
+      },
+      {
+        "C": 0.1,
+        "gamma": 0.1,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 1.0,
+        "gamma": "scale",
+        "class_weight": null
+      },
+      {
+        "C": 1.0,
+        "gamma": "scale",
+        "class_weight": "balanced"
+      },
+      {
+        "C": 1.0,
+        "gamma": 0.01,
+        "class_weight": null
+      },
+      {
+        "C": 1.0,
+        "gamma": 0.01,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 1.0,
+        "gamma": 0.1,
+        "class_weight": null
+      },
+      {
+        "C": 1.0,
+        "gamma": 0.1,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 10.0,
+        "gamma": "scale",
+        "class_weight": null
+      },
+      {
+        "C": 10.0,
+        "gamma": "scale",
+        "class_weight": "balanced"
+      },
+      {
+        "C": 10.0,
+        "gamma": 0.01,
+        "class_weight": null
+      },
+      {
+        "C": 10.0,
+        "gamma": 0.01,
+        "class_weight": "balanced"
+      },
+      {
+        "C": 10.0,
+        "gamma": 0.1,
+        "class_weight": null
+      },
+      {
+        "C": 10.0,
+        "gamma": 0.1,
+        "class_weight": "balanced"
+      }
+    ]
+  }
+}

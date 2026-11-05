@@ -1,0 +1,30 @@
+detector_a,detector_b,distance_m_hk1980,current_metadata_road_a,current_metadata_road_b,id_order_96_a,id_order_96_b,connection_status
+AID01101,AID01223,228.06358762415363,Aberdeen Praya Road near Abba House - Eastbound ,Aberdeen Praya Road near Aberdeen Bus Terminus - Westbound ,True,True,geographic_proximity_only_unverified
+AID01103,AID01221,39.01281840626232,Wong Chuk Hang Road near Aberdeen Technical School - Eastbound ,Wong Chuk Hang Road near Aberdeen Police Station - Westbound ,True,True,geographic_proximity_only_unverified
+AID01104,AID01220,79.76214641043707,Wong Chuk Hang Road Flyover near AXA Southside - Eastbound ,Wong Chuk Hang Road Flyover near Cheung Tak Industrial Building - Westbound ,True,True,geographic_proximity_only_unverified
+AID01105,AID01219,92.59049627256567,Wong Chuk Hang Road Flyover near Benefit Industrial Factory Building - Eastbound ,Wong Chuk Hang Road near Wong Chuk Hang Recreation Ground - Westbound ,True,True,geographic_proximity_only_unverified
+AID01108,AID01216,169.81460479004744,Wong Nai Chung Gap Flyover near Racecourse - Northbound ,Wong Nai Chung Gap Flyover near Racecourse - Southbound ,True,True,geographic_proximity_only_unverified
+AID01111,AID01112,95.63472172804184,Hong Chong Road near The Hong Kong Polytechnic University - Northbound (1) ,Hong Chong Road near The Hong Kong Polytechnic University - Northbound (2) ,True,True,geographic_proximity_only_unverified
+AID01111,AID01213,171.71196813268432,Hong Chong Road near The Hong Kong Polytechnic University - Northbound (1) ,Hong Chong Road near The Hong Kong Polytechnic University - Southbound ,True,True,geographic_proximity_only_unverified
+AID01112,AID01213,76.40026177965623,Hong Chong Road near The Hong Kong Polytechnic University - Northbound (2) ,Hong Chong Road near The Hong Kong Polytechnic University - Southbound ,True,True,geographic_proximity_only_unverified
+AID01113,AID01212,114.40279716860071,Princess Margaret Road near Parc Palais- Northbound  ,Princess Margaret Road near King's Park -Southbound ,True,True,geographic_proximity_only_unverified
+AID01113,AID01211,1.4142135623730951,Princess Margaret Road near Parc Palais- Northbound  ,Princess Margaret Road near Oi Man Estate - Southbound(2) ,True,True,geographic_proximity_only_unverified
+AID01114,AID01210,2.0,Princess Margaret Road near Oi Man Estate - Northbound ,Princess Margaret Road near Oi Man Estate - Southbound ,True,True,geographic_proximity_only_unverified
+AID01120,AID01204,3.0,Waterloo Road near Kowloon East Barracks(1) - Northbound ,Waterloo Road near Kowloon East Barracks - Southbound ,True,True,geographic_proximity_only_unverified
+AID01211,AID01212,114.62111498323507,Princess Margaret Road near Oi Man Estate - Southbound(2) ,Princess Margaret Road near King's Park -Southbound ,True,True,geographic_proximity_only_unverified
+AID02104,AID02215,179.74426277353055,Kwun Tong Bypass near Sceneway Garden - Westbound ,Kwun Tong Bypass near Sceneway Garden - Eastbound ,True,True,geographic_proximity_only_unverified
+AID02105,AID02214,191.23022773609824,Kwun Tong Bypass near Magistrates Courts - Westbound ,Kwun Tong Bypass near Sunbeam Centre - Eastbound ,True,True,geographic_proximity_only_unverified
+AID02108,AID02212,228.67444107289296,Kwun Tong Bypass near Kwun Tong Ferry - Westbound ,Kwun Tong Bypass near Kwun Tong Sewage Treatment Works - Eastbound ,True,True,geographic_proximity_only_unverified
+AID02109,AID02210,51.73973328110612,Kwun Tong Bypass near Kowloon Flour Mills - Northbound ,Kwun Tong Bypass near Kowloon Flour Mills - Southbound ,True,True,geographic_proximity_only_unverified
+AID02109,AID02209,199.64969321288729,Kwun Tong Bypass near Kowloon Flour Mills - Northbound ,Kwun Tong Bypass near MG Tower - Southbound ,True,True,geographic_proximity_only_unverified
+AID02109,AID02110,249.22680433693324,Kwun Tong Bypass near Kowloon Flour Mills - Northbound ,Kwun Tong Bypass near NEO - Northbound ,True,True,geographic_proximity_only_unverified
+AID02110,AID02209,49.57822102496216,Kwun Tong Bypass near NEO - Northbound ,Kwun Tong Bypass near MG Tower - Southbound ,True,True,geographic_proximity_only_unverified
+AID02111,AID02208,99.0858213873206,Kwun Tong Bypass near Kowloon Godown - Northbound ,Kwun Tong Bypass near Kowloon Godown - Southbound ,True,True,geographic_proximity_only_unverified
+AID02112,AID02208,221.72054483064937,Kwun Tong Bypass near Kai Tak Fire Station - Northbound ,Kwun Tong Bypass near Kowloon Godown - Southbound ,True,True,geographic_proximity_only_unverified
+AID02112,AID02207,95.524865872714,Kwun Tong Bypass near Kai Tak Fire Station - Northbound ,Kwun Tong Bypass near Vehicle Examination Centre - Southbound ,True,True,geographic_proximity_only_unverified
+AID02114,AID02205,103.81714694596457,Kwun Tong Bypass near Trade & Exhibition Centre - Northbound ,Kwun Tong Bypass near Trade & Exhibition Centre - Southbound ,True,True,geographic_proximity_only_unverified
+AID02116,AID02203,95.13148795220224,Kwun Tong Bypass near Choi Hung Estate - Northbound ,Kwun Tong Bypass near Kai Ching Estate - Southbound ,True,True,geographic_proximity_only_unverified
+AID02116,AID02202,236.25410049351524,Kwun Tong Bypass near Choi Hung Estate - Northbound ,Tate's Cairn Highway near Choi Hung Estate - Southbound ,True,True,geographic_proximity_only_unverified
+AID02212,AID02213,197.2054765973805,Kwun Tong Bypass near Kwun Tong Sewage Treatment Works - Eastbound ,Kwun Tong Bypass near Manulife Financial Centre - Eastbound ,True,True,geographic_proximity_only_unverified
+AID03110,AID03206,44.68780594300866,West Kowloon Highway near Tai Kok Tsui Substation - Northbound ,West Kowloon Highway near Tai Kok Tsui Substation - Southbound ,True,True,geographic_proximity_only_unverified
+AID03112,AID03204,95.25754563287887,West Kowloon Highway near Hing Wah Street West - Northbound ,West Kowloon Highway near Hing Wah Street West - Southbound ,True,True,geographic_proximity_only_unverified

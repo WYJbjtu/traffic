@@ -1,0 +1,4 @@
+split,events,lag_5m_nonmissing,lag_30m_nonmissing,mean_observed_history_bins
+test,7605,7605,7586,6.996318211702827
+train,14290,14290,14277,6.9986004198740375
+validation,8557,8557,8538,6.996961551945775

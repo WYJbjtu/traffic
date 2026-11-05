@@ -1,0 +1,44 @@
+[project]
+name = "hk-traffic-recovery-prediction"
+version = "0.1.0"
+description = "Reproducible feasibility audit for Hong Kong traffic recovery research"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "duckdb>=1.2,<2",
+    "fastapi>=0.115,<1",
+    "matplotlib>=3.10,<4",
+    "pandas>=2.2,<3",
+    "pyarrow>=19,<24",
+    "pyproj>=3.7,<4",
+    "scikit-learn>=1.6,<2",
+    "shapely>=2.1,<3",
+    "tzdata>=2025.1",
+    "uvicorn>=0.34,<1",
+    "xgboost>=2,<4",
+]
+
+[build-system]
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/traffic_recovery"]
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28,<1",
+    "pytest>=8,<10",
+]
+
+[project.scripts]
+traffic-audit = "traffic_recovery.data.audit:main"
+
+# pandas 2.3 emits timedelta deprecations with NumPy 2.5 in this audit.
+# Bound the existing transitive dependency until a tested pandas upgrade.
+[tool.uv]
+constraint-dependencies = ["numpy<2.4"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

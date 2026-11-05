@@ -1,0 +1,56 @@
+{
+  "status": "EXPLORATORY — NOT APPROVED AS FINAL RESULTS",
+  "original_run_id": "run-20261030T141916Z-36b86a",
+  "original_engine_commit": "4fd706e7ea5b0df970da9b922704c9068677555d",
+  "packaged_on_base": "bb4170a55a4da7cb0298b0ffaa06afa6281d4abe",
+  "original_software": {
+    "python": "3.12.14",
+    "pandas": "2.3.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.9.1"
+  },
+  "note": "Historical result bytes are preserved. Portable script paths and acquisition diagnostics were adapted for this repository; no model was retrained while packaging. historical_run_manifest includes references to intentionally omitted local files; paths there describe the old workspace layout, not this checkout.",
+  "included_historical_outputs": {
+    "predictions.parquet": "fbafaf7977154f32a1b579463ae75471d99d04b82a0fa764d264156ba70cad88",
+    "metrics_summary.csv": "1d0fdc8c48de31c643a8b4c5db977e1b7a608ed144f21f8303ace9ef5eb640fd",
+    "confusion_matrices.csv": "237018916d15a6289ab912e3de703c7d57993226a3f74b9bec28d0f3a7ff747b",
+    "tuning.csv": "da55422a4e34f5dcbe004c9e2f5eb67a366c086e22de89a3b0ef69e44f091d2f",
+    "trend_rule_tuning.csv": "192431473a2da00005923908eb0641a4383e694f5396b1bea0b7103c5f22fa0c",
+    "interpretation.csv": "f01619cd95e65dfe2cbfeb0ed3f3adbc788bac741afddb660698d57c6ab4de93",
+    "error_groups.csv": "94d7a07fe0cdb562654144dbb157cf932981a7d4b37345b8dc313387cab80d9c",
+    "feature_group_comparisons.csv": "c10ed591237b7133a70e501e8aaf931377b3d3c653c32f320a0eb4b70eee7561",
+    "feature_missingness.csv": "0d567dbdc723d031176330c0c5b9fe16e6a4e225fecc9cfec1c5f093ac4a9890",
+    "experiment_contract.json": "eab166bffa4da9217769726181372dc2d9487191c1d615e78fd4d3632874ddb7",
+    "model_summaries.json": "d3c7a6e3b88b1509f553a8e87470cb03133082b195f3d7f2b596fa8e7085d094",
+    "predeclared_plan.json": "86ea305b56158d225d5369598d817f21d7f8044597370cf23d7199789edac4e8"
+  },
+  "omitted_local_files": [
+    "raw traffic release ZIP",
+    "90 weather ZIP archives",
+    "prepared feature tables and raw source members",
+    "event_feature_audit.parquet",
+    "event_features.parquet",
+    "fitted_pipelines.joblib",
+    "inputs/",
+    "code/ snapshots",
+    "superseded runs",
+    "HTML duplicate and original review notebook"
+  ],
+  "config_reuse": {
+    "supervised_models.json": {
+      "source_commit": "4fd706e7ea5b0df970da9b922704c9068677555d",
+      "sha256": "a7fee9a631712a213a6049e3443a0c753e91d088e844fe43449d86abb2d4e09e"
+    },
+    "benchmarks.json": {
+      "source_commit": "4fd706e7ea5b0df970da9b922704c9068677555d",
+      "sha256": "2ef4478f172dba93ca6371c5f993c16f90a07a9a5841241e1d90dc55f469c96e"
+    }
+  },
+  "historical_experiment_code_hashes": {
+    "prepare_local.py": "d57a6307b97417a95947c8d487aa99d1a64ab1fd7d02ed19f96be75d4dee2182",
+    "verify_real_run.py": "9ab67b3ac418c5dd1d909ff759a55b45aaf6f90c0c05c517db8218a0ea8246d7",
+    "acquire_sources.py": "aa2fc8a228347529e0a422861d1b55f8ba2f3e0276b15e5a080f8d99c4e59018",
+    "prepare_external.py": "6f3e86ff3b9be9faaf47689ade95141974860916db5459e17c95fb7b4b5eaf24",
+    "run_experiment.py": "13801766d219997ce47933dbcbdd8f211a4c7e5f5b2a5616a65b50a35ae7f61f"
+  }
+}

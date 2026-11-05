@@ -1,0 +1,151 @@
+model_version,model,feature_set,horizon_min,candidate_id,parameters,validation_log_loss,validation_n,selected
+supervised-models-v1,logistic_regression,local,30,0,"{""C"": 0.1, ""class_weight"": null}",0.688326148734052,2008,False
+supervised-models-v1,logistic_regression,local,30,1,"{""C"": 0.1, ""class_weight"": ""balanced""}",0.6978805257026699,2008,False
+supervised-models-v1,logistic_regression,local,30,2,"{""C"": 1.0, ""class_weight"": null}",0.6863824949005176,2008,False
+supervised-models-v1,logistic_regression,local,30,3,"{""C"": 1.0, ""class_weight"": ""balanced""}",0.6954813798366993,2008,False
+supervised-models-v1,logistic_regression,local,30,4,"{""C"": 10.0, ""class_weight"": null}",0.6859667610174129,2008,True
+supervised-models-v1,logistic_regression,local,30,5,"{""C"": 10.0, ""class_weight"": ""balanced""}",0.6949283712226516,2008,False
+supervised-models-v1,decision_tree,local,30,0,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 1}",0.6680333977648117,2008,False
+supervised-models-v1,decision_tree,local,30,1,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 1}",0.6762534638768317,2008,False
+supervised-models-v1,decision_tree,local,30,2,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 5}",0.6680333977648117,2008,False
+supervised-models-v1,decision_tree,local,30,3,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 5}",0.6762534638768317,2008,False
+supervised-models-v1,decision_tree,local,30,4,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 10}",0.6680333977648117,2008,False
+supervised-models-v1,decision_tree,local,30,5,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 10}",0.6762534638768317,2008,False
+supervised-models-v1,decision_tree,local,30,6,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 1}",0.6719690176160629,2008,False
+supervised-models-v1,decision_tree,local,30,7,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 1}",0.6814062777938295,2008,False
+supervised-models-v1,decision_tree,local,30,8,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 5}",0.6719690176160629,2008,False
+supervised-models-v1,decision_tree,local,30,9,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 5}",0.6814062777938295,2008,False
+supervised-models-v1,decision_tree,local,30,10,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 10}",0.6671429028698426,2008,True
+supervised-models-v1,decision_tree,local,30,11,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 10}",0.6814062777938295,2008,False
+supervised-models-v1,decision_tree,local,30,12,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 1}",1.1901332391210446,2008,False
+supervised-models-v1,decision_tree,local,30,13,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 1}",1.2489344280026358,2008,False
+supervised-models-v1,decision_tree,local,30,14,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 5}",1.0281151885610158,2008,False
+supervised-models-v1,decision_tree,local,30,15,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 5}",1.0531922912201195,2008,False
+supervised-models-v1,decision_tree,local,30,16,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 10}",0.9089646806781319,2008,False
+supervised-models-v1,decision_tree,local,30,17,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 10}",0.9086585534752908,2008,False
+supervised-models-v1,decision_tree,local,30,18,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 1}",7.746109684881127,2008,False
+supervised-models-v1,decision_tree,local,30,19,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 1}",7.834109892491266,2008,False
+supervised-models-v1,decision_tree,local,30,20,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 5}",2.346648943085666,2008,False
+supervised-models-v1,decision_tree,local,30,21,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 5}",2.3924861216491458,2008,False
+supervised-models-v1,decision_tree,local,30,22,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 10}",1.0543593819882013,2008,False
+supervised-models-v1,decision_tree,local,30,23,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 10}",1.15305953520543,2008,False
+supervised-models-v1,logistic_regression,local+history,30,0,"{""C"": 0.1, ""class_weight"": null}",0.6723085936051744,2008,False
+supervised-models-v1,logistic_regression,local+history,30,1,"{""C"": 0.1, ""class_weight"": ""balanced""}",0.6907421777200117,2008,False
+supervised-models-v1,logistic_regression,local+history,30,2,"{""C"": 1.0, ""class_weight"": null}",0.6703960108366281,2008,False
+supervised-models-v1,logistic_regression,local+history,30,3,"{""C"": 1.0, ""class_weight"": ""balanced""}",0.6890979848572178,2008,False
+supervised-models-v1,logistic_regression,local+history,30,4,"{""C"": 10.0, ""class_weight"": null}",0.6700505688793029,2008,True
+supervised-models-v1,logistic_regression,local+history,30,5,"{""C"": 10.0, ""class_weight"": ""balanced""}",0.688732446619436,2008,False
+supervised-models-v1,decision_tree,local+history,30,0,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 1}",0.6638282425434316,2008,True
+supervised-models-v1,decision_tree,local+history,30,1,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 1}",0.6700794446562387,2008,False
+supervised-models-v1,decision_tree,local+history,30,2,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 5}",0.6638282425434316,2008,False
+supervised-models-v1,decision_tree,local+history,30,3,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 5}",0.6700794446562387,2008,False
+supervised-models-v1,decision_tree,local+history,30,4,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 10}",0.6638282425434316,2008,False
+supervised-models-v1,decision_tree,local+history,30,5,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 10}",0.6700794446562387,2008,False
+supervised-models-v1,decision_tree,local+history,30,6,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 1}",0.6842269737236245,2008,False
+supervised-models-v1,decision_tree,local+history,30,7,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 1}",0.6968129176733827,2008,False
+supervised-models-v1,decision_tree,local+history,30,8,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 5}",0.6671588649257109,2008,False
+supervised-models-v1,decision_tree,local+history,30,9,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 5}",0.6804151903967974,2008,False
+supervised-models-v1,decision_tree,local+history,30,10,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 10}",0.6694130201679088,2008,False
+supervised-models-v1,decision_tree,local+history,30,11,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 10}",0.6845306777745888,2008,False
+supervised-models-v1,decision_tree,local+history,30,12,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 1}",1.2271680663851117,2008,False
+supervised-models-v1,decision_tree,local+history,30,13,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 1}",1.3052697603532204,2008,False
+supervised-models-v1,decision_tree,local+history,30,14,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 5}",0.9390428393672391,2008,False
+supervised-models-v1,decision_tree,local+history,30,15,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 5}",1.0895663699438964,2008,False
+supervised-models-v1,decision_tree,local+history,30,16,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 10}",0.7823137029954741,2008,False
+supervised-models-v1,decision_tree,local+history,30,17,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 10}",0.7894038707127946,2008,False
+supervised-models-v1,decision_tree,local+history,30,18,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 1}",16.38837427503185,2008,False
+supervised-models-v1,decision_tree,local+history,30,19,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 1}",16.496074434561088,2008,False
+supervised-models-v1,decision_tree,local+history,30,20,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 5}",6.141268427612256,2008,False
+supervised-models-v1,decision_tree,local+history,30,21,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 5}",6.188415095936517,2008,False
+supervised-models-v1,decision_tree,local+history,30,22,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 10}",2.287671672222737,2008,False
+supervised-models-v1,decision_tree,local+history,30,23,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 10}",2.4076502793190397,2008,False
+supervised-models-v1,logistic_regression,local+history+flow,30,0,"{""C"": 0.1, ""class_weight"": null}",0.6712024450370775,2008,False
+supervised-models-v1,logistic_regression,local+history+flow,30,1,"{""C"": 0.1, ""class_weight"": ""balanced""}",0.6948096685339173,2008,False
+supervised-models-v1,logistic_regression,local+history+flow,30,2,"{""C"": 1.0, ""class_weight"": null}",0.6692214305209192,2008,False
+supervised-models-v1,logistic_regression,local+history+flow,30,3,"{""C"": 1.0, ""class_weight"": ""balanced""}",0.6931234239416368,2008,False
+supervised-models-v1,logistic_regression,local+history+flow,30,4,"{""C"": 10.0, ""class_weight"": null}",0.6688823963719147,2008,True
+supervised-models-v1,logistic_regression,local+history+flow,30,5,"{""C"": 10.0, ""class_weight"": ""balanced""}",0.6927568633346181,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,0,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 1}",0.674255811232238,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,1,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 1}",0.6872837309770845,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,2,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 5}",0.674255811232238,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,3,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 5}",0.6872837309770845,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,4,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 10}",0.674255811232238,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,5,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 10}",0.6872837309770845,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,6,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 1}",0.7580458662862216,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,7,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 1}",0.7415226009726525,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,8,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 5}",0.7580458662862216,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,9,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 5}",0.7415226009726525,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,10,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 10}",0.685536040423015,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,11,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 10}",0.6701896084622235,2008,True
+supervised-models-v1,decision_tree,local+history+flow,30,12,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 1}",1.3783161649753668,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,13,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 1}",1.3812395447058738,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,14,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 5}",1.0158885708150884,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,15,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 5}",1.161105207053662,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,16,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 10}",1.0118952222794881,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,17,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 10}",0.8787579728458886,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,18,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 1}",15.778073371032855,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,19,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 1}",15.706273264680032,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,20,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 5}",6.863943056694167,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,21,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 5}",7.140885295133631,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,22,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 10}",2.2919160995046464,2008,False
+supervised-models-v1,decision_tree,local+history+flow,30,23,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 10}",2.6990356675298104,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar,30,0,"{""C"": 0.1, ""class_weight"": null}",0.6688280835786817,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar,30,1,"{""C"": 0.1, ""class_weight"": ""balanced""}",0.6939557343790987,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar,30,2,"{""C"": 1.0, ""class_weight"": null}",0.6658355783336932,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar,30,3,"{""C"": 1.0, ""class_weight"": ""balanced""}",0.6912963378903559,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar,30,4,"{""C"": 10.0, ""class_weight"": null}",0.6652678816781472,2008,True
+supervised-models-v1,logistic_regression,local+history+flow+calendar,30,5,"{""C"": 10.0, ""class_weight"": ""balanced""}",0.6906886848299751,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,0,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 1}",0.6592418201812604,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,1,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 1}",0.6607947620773125,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,2,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 5}",0.6592418201812604,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,3,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 5}",0.6607947620773125,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,4,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 10}",0.6592418201812604,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,5,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 10}",0.6607947620773125,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,6,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 1}",0.6851290226997867,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,7,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 1}",0.6984700962538475,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,8,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 5}",0.6519059010013055,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,9,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 5}",0.6656444683360784,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,10,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 10}",0.6510141818634149,2008,True
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,11,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 10}",0.6634474551829364,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,12,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 1}",0.8134850805506556,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,13,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 1}",0.8573882505303774,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,14,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 5}",0.7950012719099674,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,15,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 5}",0.8343813562097867,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,16,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 10}",0.7013154872287624,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,17,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 10}",0.7283948549106564,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,18,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 1}",14.395921323741012,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,19,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 1}",14.431821376917425,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,20,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 5}",6.457337068122663,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,21,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 5}",6.410498786454407,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,22,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 10}",2.7040064157085872,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar,30,23,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 10}",2.921776207759352,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar+weather,30,0,"{""C"": 0.1, ""class_weight"": null}",0.6686898290836731,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar+weather,30,1,"{""C"": 0.1, ""class_weight"": ""balanced""}",0.6936380844608098,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar+weather,30,2,"{""C"": 1.0, ""class_weight"": null}",0.6658844553567808,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar+weather,30,3,"{""C"": 1.0, ""class_weight"": ""balanced""}",0.6912250209205133,2008,False
+supervised-models-v1,logistic_regression,local+history+flow+calendar+weather,30,4,"{""C"": 10.0, ""class_weight"": null}",0.6653538765273559,2008,True
+supervised-models-v1,logistic_regression,local+history+flow+calendar+weather,30,5,"{""C"": 10.0, ""class_weight"": ""balanced""}",0.6906740849676868,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,0,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 1}",0.6592418201812604,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,1,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 1}",0.6607947620773125,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,2,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 5}",0.6592418201812604,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,3,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 5}",0.6607947620773125,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,4,"{""class_weight"": null, ""max_depth"": 2, ""min_samples_leaf"": 10}",0.6592418201812604,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,5,"{""class_weight"": ""balanced"", ""max_depth"": 2, ""min_samples_leaf"": 10}",0.6607947620773125,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,6,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 1}",0.7030790492879925,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,7,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 1}",0.7164201228420533,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,8,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 5}",0.6519059010013055,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,9,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 5}",0.6656444683360784,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,10,"{""class_weight"": null, ""max_depth"": 4, ""min_samples_leaf"": 10}",0.6510141818634149,2008,True
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,11,"{""class_weight"": ""balanced"", ""max_depth"": 4, ""min_samples_leaf"": 10}",0.6634474551829362,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,12,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 1}",0.9069796971499594,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,13,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 1}",0.9501586194653773,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,14,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 5}",0.8926384808386736,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,15,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 5}",0.8050459884677957,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,16,"{""class_weight"": null, ""max_depth"": 6, ""min_samples_leaf"": 10}",0.7068698762862874,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,17,"{""class_weight"": ""balanced"", ""max_depth"": 6, ""min_samples_leaf"": 10}",0.7175839533316253,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,18,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 1}",14.054870818565101,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,19,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 1}",14.3600212705646,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,20,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 5}",7.192187957637775,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,21,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 5}",6.943654572998757,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,22,"{""class_weight"": null, ""max_depth"": null, ""min_samples_leaf"": 10}",3.2550780188991904,2008,False
+supervised-models-v1,decision_tree,local+history+flow+calendar+weather,30,23,"{""class_weight"": ""balanced"", ""max_depth"": null, ""min_samples_leaf"": 10}",3.5828860363027535,2008,False

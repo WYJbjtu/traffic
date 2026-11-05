@@ -1,0 +1,28 @@
+{
+  "selection_frozen_from": "D:\\HK_Traffic_Recovery_Long_Window\\selection\\derived\\coverage_lane_day.parquet",
+  "selection_profile_sha256": "18c15c07ed5fd9b83ce416db031182bd287fcb67556526ff9b8d30f3f6824585",
+  "source_archive_sha256": "e9dede47f76807f674d26ca78a6832361e01073f51a09ddb2e1fd489d1794dc0",
+  "source_archive_bytes": 1136915260,
+  "source_archive_url": "https://app.data.gov.hk/v1/historical-archive/get-file?url=https%3A%2F%2Fresource.data.one.gov.hk%2Ftd%2Ftraffic-detectors%2FrawSpeedVol-all.xml&time=20230101",
+  "selection_end_hkt": "2023-01-08T00:00:00+08:00",
+  "reference_fit_end_hkt": "2023-02-01T00:00:00+08:00",
+  "reference_method": "Existing fit_reference: positive finite usable 5m km/h; timestamp AND available_at < Feb 1; 85th percentile; >=300 bins",
+  "jan31_boundary": "No February 1 capture ingested; any capture after reference-fit end would be excluded. Jan31 23:50/55/Feb1 bin-end closures excluded by fit boundary.",
+  "selected_units": 426,
+  "full_january_reference_eligible": 426,
+  "reference_failed": 0,
+  "original_published_24_reference_exact_match": true,
+  "baseline_kmh_min": 43.0,
+  "baseline_kmh_median": 81.0,
+  "baseline_kmh_max": 116.0,
+  "reference_bins_min": 2929,
+  "reference_bins_median": 6762.0,
+  "january_missing_unit_days": 1330,
+  "full_window_continuity_2023_2026": null,
+  "expanded_recovery_events": null,
+  "created_at_utc": "2026-11-02T11:37:03.024051+00:00",
+  "outputs_sha256": {
+    "full_january_reference.parquet": "f34b16ce590e3a6ae3c35477b2aa7d74c5ae3337315d78900285d32aeb0f88f4",
+    "january_lane_day.parquet": "3632bf8830934f9e680f5953dee656cd77647021895c317320096987178b25f3"
+  }
+}

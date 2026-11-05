@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "standards_findings_remaining": 0,
+  "spec_findings_remaining": 0,
+  "tests_passed": 237,
+  "tests_failed": 0,
+  "notebook_cells": 10,
+  "notebook_sha256": "7e3a7a549d2cd5a31438691e4673f0b36c992b9bade2824c52288481a7b6558f",
+  "notebook_figures": 7,
+  "main": "3a184aa43eccc23c308edf1dd66a164a44556627",
+  "release_truth_and_external_source_bytes": "passed",
+  "portable_rebuild_and_retraining": "passed;224candidates;557160predictions;max_abs_score_difference=0",
+  "all_split_pipeline_replay": "passed;max_abs_score_difference=0",
+  "original_training_identity": {
+    "commit": "36eafdabaafa5df450e1eaf40621392470203a08",
+    "dirty": true
+  },
+  "method_status": "EXPLORATORY; prior test exposure; confirmation target",
+  "omitted_local_artifacts": [
+    "raw Release ZIP",
+    "full prepared feature tables",
+    "weather archives",
+    "fitted_pipelines.joblib",
+    "full calibration/error event tables"
+  ],
+  "pr17_path_overlap": [],
+  "notebook_execution": "fresh independent checkout and caller cwd /private/tmp;default offline without Release/cache/joblib",
+  "initial_tests_passed": 234,
+  "initial_review_main": "c5e0bd1bca85673918a129108c4eb35bbaac36df",
+  "notebook_last_executed_main": "c5e0bd1bca85673918a129108c4eb35bbaac36df",
+  "upstream_sync": "PR17 rebased without text conflicts; all previous locked package versions unchanged",
+  "test_environment": "uv sync --locked; isolated Python -m pytest; macOS uses installed sklearn/.dylibs OpenMP via temporary DYLD_LIBRARY_PATH; no system runtime installation",
+  "windows_checkout_regression": "core.autocrlf=true checkout-index; reproduced feature_group_comparisons.csv LF/CRLF mismatch before fix; passes after scoped -text attributes",
+  "initial_ci": {
+    "head": "57a6501d67f45dd1790b30e09eb420d2caf4c2c9",
+    "linux": "236 passed",
+    "windows": "235 passed;1 byte-hash failure fixed by Git attributes",
+    "url": "https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/pull/18/checks"
+  }
+}

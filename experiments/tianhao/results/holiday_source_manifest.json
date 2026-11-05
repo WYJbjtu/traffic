@@ -1,0 +1,38 @@
+[
+  {
+    "year": 2023,
+    "published_at": "2022-05-13T11:00:00+08:00",
+    "named_holidays": 17,
+    "available_at": "2022-05-13 11:00:00+08:00",
+    "source_url": "https://www.info.gov.hk/gia/general/202205/13/P2022051000340.htm",
+    "source_retrieved_at": "2026-10-30 13:56:34.388464+00:00",
+    "source_sha256": "c2abcd07ff97d806b0bcbcd07bd244693bb6422e5c783286115a018cd7946f0c"
+  },
+  {
+    "year": 2024,
+    "published_at": "2023-05-25T11:00:00+08:00",
+    "named_holidays": 17,
+    "available_at": "2023-05-25 11:00:00+08:00",
+    "source_url": "https://www.info.gov.hk/gia/general/202305/25/P2023052500208p.htm",
+    "source_retrieved_at": "2026-10-30 13:56:34.389147+00:00",
+    "source_sha256": "022ade54774d7e768ce735491af9c2fa3ed855e35db6b054f2b0b886c1d5867a"
+  },
+  {
+    "year": 2025,
+    "published_at": "2024-05-03T11:00:00+08:00",
+    "named_holidays": 17,
+    "available_at": "2024-05-03 11:00:00+08:00",
+    "source_url": "https://www.info.gov.hk/gia/general/202405/03/P2024043000417.htm",
+    "source_retrieved_at": "2026-10-30 13:56:34.389207+00:00",
+    "source_sha256": "7a954f31058623331519fa9c277de073b23b0a69d137da7d5073d95f2e205f5e"
+  },
+  {
+    "year": 2026,
+    "published_at": "2025-05-16T11:00:00+08:00",
+    "named_holidays": 17,
+    "available_at": "2025-05-16 11:00:00+08:00",
+    "source_url": "https://www.info.gov.hk/gia/general/202505/16/P2025051300353.htm",
+    "source_retrieved_at": "2026-10-30 13:56:40.356303+00:00",
+    "source_sha256": "bf30b71021f206a23b949281ee6c5a910cb2443352b11784b30f32f35e5f8319"
+  }
+]

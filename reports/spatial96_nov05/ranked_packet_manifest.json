@@ -1,0 +1,15 @@
+{
+  "status": "review_pending_no_human_approval",
+  "sha256": {
+    "ranked_pair_intersections.csv": "cda59905073ec2962cecc977d58a1fc8adfad5f9f2c459029605c85c4f037f9e",
+    "ranked_pair_turns.csv": "1838f5491ad67d8564e0c1adb7b15cfee94d1dba44671a300a3fda9b57387f15",
+    "ranked-pair-1.md": "3e1f010c5330296805a0f038a6dc7a1e52861602af72393fae4d82d660940361",
+    "ranked-pair-2.md": "233aadf0a3ca2f645cb0672fc90573f752a1e7d14f32e20f90daab6df6730c63",
+    "ranked-pair-3.md": "77b2c04bcb0b449720a39370e6308d3246b6f8cc556906802b7a71e94dada7d9",
+    "ranked-pair-4.md": "873f029b047958948997a7bdaa3cda58fc7af0d1d322d8984c902c7210ef4a16",
+    "ranked-pair-5.md": "c66cc1a1a1c56d05aae80f0b0db35414610b6e8a126bd3ee753e884d05dfd6f4",
+    "ranked-pair-6.md": "ceee604774f51a5e53a45585a45a9d132cb72fb384911db04c997e007d559e74",
+    "ranked_pair_selection.csv": "7dc58de650588af39f2e3bcd3740ec8ecfe9b5780c4334b9c6cdfbab7f6cf1b2",
+    "ranked_directional_map_manifest.json": "eb3cb7eeee5d1f9c399f688390858773b16cc631d94be487766921556ce2e032"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "/root/projects/hk-traffic-recovery-prediction/reports/spatial96_nov05/mapping_candidates96.parquet": "291d147be67e98b5662bad12c9e1c365780fec8d4d88ec7670aadbfa9cbab463",
+  "/root/projects/hk-traffic-recovery-prediction/data/local/spatial96/v1/candidate_path_evidence.parquet": "97b44be8143d653d424b8e2488a0b6aaa013a61e4a49e33517334b0eef99d07b",
+  "data/local/expanded96-release/prepared-v1/processed/cohort_bins.parquet": "2936bb58bac7a87e4d8d986165158a39d148dc62065d2a095713fcf4e7ea7de8",
+  "data/local/expanded96-release/prepared-v1/processed/events.parquet": "d9cd1c0ede22d4f919e3b3a7ece9fab25a8646e3f5ee8b2fb0f4ff900606e570",
+  "/root/projects/hk-traffic-recovery-prediction/data/local/expanded96-release/model-a0-a2-v2/history_features.parquet": "3a936b7e7dcad629184db84823a663d7789a7aaa322dd7ded50142f9ec247ba9",
+  "release_zip": "f5be559a6ad8df69e68fbc382fb609d13fdae40aa044c9d1fe4d7e3b2253b6b8",
+  "CENTERLINE.gml": "4fad0303e65c759ac7abe8eea3920b3ffcfcd5149c978fa9540bf032933a32c2",
+  "INTERSECTION.gml": "79119240315ea989b18e715d54f7146ff8bcbc9c51aeb91ed46857c0bf72fa5f",
+  "TURN.gml": "790ce25722354a796f59becc7c6adf82766ebb4289f96621ef118ed4179a38b0",
+  "data/local/expanded96-release/model-a0-a2-v2/history_features.parquet": "3a936b7e7dcad629184db84823a663d7789a7aaa322dd7ded50142f9ec247ba9",
+  "uv.lock": "ad549874af07eba36cbcd07cbeea50bd200a7424a1a7d53de9b736c753104c62",
+  "src/traffic_recovery/network/inferred_v2.py": "a88d26b968f880f24722d2961ad328e68796ad06508c053be18303abb66eefac",
+  "scripts/spatial96_inferred_v2.py": "ed83471c87ef560435411562182df325f445b851e01880f583e3c0646afb9b03",
+  "scripts/spatial96_inferred_controls.py": "4be3c7b3e0a97e79e658d29ce8feba9f7fe634b0258f2c18d3042abad397e7a6",
+  "scripts/spatial96_inferred_figures.py": "eab4f7456ddab11c4da184561f700789a686c1bab154c4a059e4df290a1fb2a8"
+}

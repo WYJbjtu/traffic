@@ -1,0 +1,31 @@
+{
+  "checked_at_utc": "2026-11-02T12:24:27.869052+00:00",
+  "base_commit": "4309351ea6c365918adbb5fc6b12c7f37c9dea63",
+  "environment": "uv sync --locked; isolated Python 3.12.14 environment",
+  "tests": {
+    "command": "uv run --locked pytest -q",
+    "passed": 194,
+    "warnings": 1,
+    "warning": "existing Starlette/httpx deprecation"
+  },
+  "verification": {
+    "historical_results": "passed",
+    "shared_results": "passed",
+    "changed_workspace_files": "reported separately, not silently ignored"
+  },
+  "derived_manifest_hash_checks": 25,
+  "comparison": {
+    "metric_groups": 177,
+    "paired_common_groups": 27,
+    "existing_metric_values_matched": 1635,
+    "new_macro_f1_values": 135
+  },
+  "external_coverage": {
+    "all_events": 7597,
+    "known_30m_events": 6799,
+    "audit_verified_against_original_hash": true
+  },
+  "no_training_or_retuning": true,
+  "historical_results_and_manifests_modified": false,
+  "original_dirty_checkout_modified": false
+}

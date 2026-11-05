@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "release": "data-expanded-96-2023-2026-v1",
+  "zip_sha256": "f5be559a6ad8df69e68fbc382fb609d13fdae40aa044c9d1fe4d7e3b2253b6b8",
+  "events": 30452,
+  "known": 27858,
+  "feature_groups": {
+    "local": [
+      "speed_kmh",
+      "speed_ratio",
+      "baseline_kmh",
+      "valid_slots",
+      "onset_observed_minutes"
+    ],
+    "history": [
+      "speed_change_15m_ratio",
+      "speed_mean_15m_ratio",
+      "speed_slope_15m_ratio_per_min",
+      "speed_trend_observed_bins"
+    ],
+    "calendar": [
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "is_weekend",
+      "is_public_holiday",
+      "is_day_before_holiday",
+      "is_day_after_holiday"
+    ],
+    "weather": [
+      "temperature_c",
+      "wind_speed_kmh",
+      "temperature_age_minutes",
+      "wind_age_minutes",
+      "temperature_missing",
+      "wind_missing"
+    ]
+  },
+  "excluded": "Flow/occupancy not present in expanded96 package; old24 features not reused. Rain/incidents/events/spatial lack approved replay inputs.",
+  "validation": {
+    "rows": 30452,
+    "events": 30452,
+    "purged": 0,
+    "known_label_30m": 27858,
+    "dataset_version": "tianhao-expanded96-30m-v1",
+    "scientific_approval": "pending_team_review_user_authorized_exploration",
+    "feature_groups": {
+      "local": [
+        "speed_kmh",
+        "speed_ratio",
+        "baseline_kmh",
+        "valid_slots",
+        "onset_observed_minutes"
+      ],
+      "history": [
+        "speed_change_15m_ratio",
+        "speed_mean_15m_ratio",
+        "speed_slope_15m_ratio_per_min",
+        "speed_trend_observed_bins"
+      ],
+      "calendar": [
+        "hour_sin",
+        "hour_cos",
+        "dow_sin",
+        "dow_cos",
+        "is_weekend",
+        "is_public_holiday",
+        "is_day_before_holiday",
+        "is_day_after_holiday"
+      ],
+      "weather": [
+        "temperature_c",
+        "wind_speed_kmh",
+        "temperature_age_minutes",
+        "wind_age_minutes",
+        "temperature_missing",
+        "wind_missing"
+      ]
+    }
+  },
+  "outputs_sha256": {
+    "coverage.csv": "3b75185fb4f8ce6d7b2ddab26ec1e47865b0e0de211bae358db9e95e4b3c4ced",
+    "source_checks.csv": "30b05f361d1b8b4eac29596bfd69c15bb1e6cf03ff963cf88aae99bc7e6b8bf9",
+    "event_feature_audit.parquet": "0e9dbbf2c1c2ad8c6bf3e6c38b34664ce424d07a0946a8fc5f0f5373f0c758a2",
+    "event_features.parquet": "eee518377e9574743849c7f65fd54c98b98f7b33594a078039705edb04cf4f7d",
+    "contract.json": "2c029a8398b322f82b3b9ce05e113020bc67d81d0ab15c7834d5945a18903961",
+    "inputs/weather_event_features.parquet": "96ff3f4e09985e8dc1e5d466918e4978a5946f31c58b4f44c7cbe86ebf332339",
+    "inputs/weather_parser_exclusions.json": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "inputs/weather_station_snapshots.parquet": "63e85f58bbaae2d9dc2b32e591d19d6f5fc3e34b88f0a516ab2a051e906e7d6d",
+    "inputs/weather_archive_inventory.csv": "3221bcfcc561d62f2ab380e83415cc18d76bcc628f478421f8bf962ae571a480",
+    "inputs/calendar_event_features.parquet": "09062b1ab368d13ef842e2d12f30e91b02f5b1d0df13ecc72b8da1606c2259f7",
+    "inputs/holiday_source_manifest.json": "29f047bff6f140663065c1d4cad1f6f7a769362117433fc504d67b8ea67f8804",
+    "inputs/official_holiday_editions.parquet": "9b390a6a1181ea5e8dcdb362093fed0f71b5fc0666071e08e199179699c8e929",
+    "inputs/speed_history_features.parquet": "05c154838cc6b02a97f82465ea186dc306b3006f9b5942897189940c9ebafd28"
+  },
+  "event_units": 94,
+  "cohort_units": 96,
+  "release_metadata_sha256": "c44e9dd76170bc547bdc5d1a70e68a5ae6d0b53a95387728902018cd669bb883",
+  "shared_manifest_sha256": "f2fa360ee5701b48aaf38f7c1ea5d80eb7315e39a607ded8d4a01bb30a145f7c",
+  "preparation_code_sha256": {
+    "notebooks/support/run_release96.py": "bf79517cb9e9450328733d77f949a1b1b453455adf4abb43084bfedc51f6549e",
+    "work/tianhao-l1-svm-integration-20261103/experiments/tianhao/prepare_local.py": "58299d9a3fd5e877eae85829e53732e43de8a538cf7e3fc720474e4dfbe146e8",
+    "work/tianhao-l1-svm-integration-20261103/experiments/tianhao/prepare_external.py": "b80edbad94ea76ca744044df62b3914325a98be812f5c2e366ce6a596e7db613"
+  }
+}

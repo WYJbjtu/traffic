@@ -1,0 +1,62 @@
+scenario,district_current_metadata,detector_ids,lane_units
+Original 24,Kowloon City,6,6
+Original 24,Sha Tin,9,9
+Original 24,Southern,6,6
+Original 24,Wan Chai,1,1
+Original 24,Wong Tai Sin,1,1
+Original 24,Yau Tsim Mong,1,1
+ID-order 48,Kowloon City,14,14
+ID-order 48,Kwun Tong,8,8
+ID-order 48,Sha Tin,9,9
+ID-order 48,Southern,11,11
+ID-order 48,Wan Chai,4,4
+ID-order 48,Wong Tai Sin,1,1
+ID-order 48,Yau Tsim Mong,1,1
+ID-order 96,Central & Western,3,3
+ID-order 96,Kowloon City,14,14
+ID-order 96,Kwai Tsing,1,1
+ID-order 96,Kwun Tong,20,20
+ID-order 96,Sha Tin,17,17
+ID-order 96,Sham Shui Po,8,8
+ID-order 96,Southern,11,11
+ID-order 96,Tsuen Wan,3,3
+ID-order 96,Wan Chai,4,4
+ID-order 96,Wong Tai Sin,2,2
+ID-order 96,Yau Tsim Mong,4,4
+ID-order 96,Yuen Long,9,9
+All January 426,Central & Western,10,10
+All January 426,Eastern,23,23
+All January 426,Islands,23,23
+All January 426,Kowloon City,18,18
+All January 426,Kwai Tsing,12,12
+All January 426,Kwun Tong,38,38
+All January 426,North,15,15
+All January 426,Sai Kung,8,8
+All January 426,Sha Tin,56,56
+All January 426,Sham Shui Po,38,38
+All January 426,Southern,11,11
+All January 426,Tai Po,20,20
+All January 426,Tsuen Wan,59,59
+All January 426,Tuen Mun,26,26
+All January 426,Wan Chai,4,4
+All January 426,Wong Tai Sin,5,5
+All January 426,Yau Tsim Mong,20,20
+All January 426,Yuen Long,40,40
+District-round-robin 96 (current metadata only),Central & Western,6,6
+District-round-robin 96 (current metadata only),Eastern,6,6
+District-round-robin 96 (current metadata only),Islands,6,6
+District-round-robin 96 (current metadata only),Kowloon City,6,6
+District-round-robin 96 (current metadata only),Kwai Tsing,6,6
+District-round-robin 96 (current metadata only),Kwun Tong,6,6
+District-round-robin 96 (current metadata only),North,6,6
+District-round-robin 96 (current metadata only),Sai Kung,5,5
+District-round-robin 96 (current metadata only),Sha Tin,5,5
+District-round-robin 96 (current metadata only),Sham Shui Po,5,5
+District-round-robin 96 (current metadata only),Southern,5,5
+District-round-robin 96 (current metadata only),Tai Po,5,5
+District-round-robin 96 (current metadata only),Tsuen Wan,5,5
+District-round-robin 96 (current metadata only),Tuen Mun,5,5
+District-round-robin 96 (current metadata only),Wan Chai,4,4
+District-round-robin 96 (current metadata only),Wong Tai Sin,5,5
+District-round-robin 96 (current metadata only),Yau Tsim Mong,5,5
+District-round-robin 96 (current metadata only),Yuen Long,5,5

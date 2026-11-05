@@ -1,0 +1,288 @@
+{
+  "main_commit": "4309351ea6c365918adbb5fc6b12c7f37c9dea63",
+  "started_at_utc": "2026-11-02T11:15:35.722238+00:00",
+  "stages": [
+    {
+      "name": "archive_scan",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.scan_expanded_archives",
+        "--source-root",
+        "D:\\HK_Traffic_Recovery_Long_Window",
+        "--inventory",
+        "D:\\HK_Traffic_Recovery_Long_Window\\metadata\\archive_inventory.json",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\archive_inventory-v1.csv"
+      ],
+      "started_at_utc": "2026-11-02T11:15:35.722238+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-02T11:16:09.286026+00:00"
+    },
+    {
+      "name": "january426",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.validate_january_references",
+        "--root",
+        "D:\\HK_Traffic_Recovery_Long_Window",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\january426-v1",
+        "--workers",
+        "2"
+      ],
+      "started_at_utc": "2026-11-02T11:16:09.287798+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-02T11:37:03.405321+00:00"
+    },
+    {
+      "name": "january_report",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.report_expanded_january",
+        "--january",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\january426-v1",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\reports-january426-v1"
+      ],
+      "started_at_utc": "2026-11-02T11:52:37.199120+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-02T11:52:42.402961+00:00"
+    },
+    {
+      "name": "continuity426",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.profile_expanded_archives",
+        "--source-root",
+        "D:\\HK_Traffic_Recovery_Long_Window",
+        "--inventory",
+        "D:\\HK_Traffic_Recovery_Long_Window\\metadata\\archive_inventory.json",
+        "--january-reference",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\january426-v1",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\continuity426-v1",
+        "--workers",
+        "2"
+      ],
+      "started_at_utc": "2026-11-04T03:45:39.226877+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-04T05:15:24.043452+00:00"
+    },
+    {
+      "name": "labels96",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.label_expanded_96",
+        "--profile-root",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\continuity426-v1",
+        "--january-reference",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\january426-v1",
+        "--config",
+        "configs/long_window_96_candidate.json",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\pilot96-id-order-v1"
+      ],
+      "started_at_utc": "2026-11-04T05:15:24.049750+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-04T05:41:30.822092+00:00"
+    },
+    {
+      "name": "tests",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "started_at_utc": "2026-11-04T05:41:30.826604+00:00",
+      "status": "completed",
+      "exit_code": 0,
+      "finished_at_utc": "2026-11-04T05:43:33.433518+00:00"
+    }
+  ],
+  "current_stage": "tests",
+  "previous_attempts": [
+    {
+      "name": "january_report",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.report_expanded_january",
+        "--january",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\january426-v1",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\reports-january426-v1"
+      ],
+      "started_at_utc": "2026-11-02T11:37:03.415852+00:00",
+      "status": "failed",
+      "exit_code": 1,
+      "finished_at_utc": "2026-11-02T11:37:05.666328+00:00"
+    },
+    {
+      "name": "continuity426",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.profile_expanded_archives",
+        "--source-root",
+        "D:\\HK_Traffic_Recovery_Long_Window",
+        "--inventory",
+        "D:\\HK_Traffic_Recovery_Long_Window\\metadata\\archive_inventory.json",
+        "--january-reference",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\january426-v1",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\continuity426-v1",
+        "--workers",
+        "2"
+      ],
+      "started_at_utc": "2026-11-02T11:52:42.403958+00:00",
+      "status": "paused_by_user",
+      "paused_at_utc": "2026-11-02T12:59:17.320120+00:00"
+    },
+    {
+      "name": "continuity426",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.profile_expanded_archives",
+        "--source-root",
+        "D:\\HK_Traffic_Recovery_Long_Window",
+        "--inventory",
+        "D:\\HK_Traffic_Recovery_Long_Window\\metadata\\archive_inventory.json",
+        "--january-reference",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\january426-v1",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\continuity426-v1",
+        "--workers",
+        "2"
+      ],
+      "started_at_utc": "2026-11-03T00:56:38.902260+00:00",
+      "status": "paused_by_user",
+      "paused_at_utc": "2026-11-03T08:50:31.054204+00:00"
+    },
+    {
+      "name": "continuity426",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.profile_expanded_archives",
+        "--source-root",
+        "D:\\HK_Traffic_Recovery_Long_Window",
+        "--inventory",
+        "D:\\HK_Traffic_Recovery_Long_Window\\metadata\\archive_inventory.json",
+        "--january-reference",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\january426-v1",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\continuity426-v1",
+        "--workers",
+        "2"
+      ],
+      "started_at_utc": "2026-11-03T10:32:52.617714+00:00",
+      "status": "paused_by_user",
+      "paused_at_utc": "2026-11-03T14:05:43.566093+00:00"
+    },
+    {
+      "name": "continuity426",
+      "command": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\project\\.venv\\Scripts\\python.exe",
+        "-u",
+        "-m",
+        "scripts.profile_expanded_archives",
+        "--source-root",
+        "D:\\HK_Traffic_Recovery_Long_Window",
+        "--inventory",
+        "D:\\HK_Traffic_Recovery_Long_Window\\metadata\\archive_inventory.json",
+        "--january-reference",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\january426-v1",
+        "--output",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\continuity426-v1",
+        "--workers",
+        "2"
+      ],
+      "started_at_utc": "2026-11-04T00:19:43.501757+00:00",
+      "status": "paused_by_user",
+      "paused_at_utc": "2026-11-04T03:29:19.120499+00:00"
+    }
+  ],
+  "repairs": [
+    {
+      "at_utc": "2026-11-02T11:52:37.016479+00:00",
+      "problem": "January report assumed a repo-relative first-week location absent on the archive owner machine",
+      "fix": "Resolve from original reference manifest or explicit --selection-directory; require frozen profile SHA-256 match",
+      "scientific_rules_changed": false,
+      "completed_reference_sha256": "f34b16ce590e3a6ae3c35477b2aa7d74c5ae3337315d78900285d32aeb0f88f4",
+      "regression_tests": "4 passed"
+    }
+  ],
+  "status": "all_stages_completed",
+  "paused_at_utc": "2026-11-04T03:29:19.120499+00:00",
+  "resume_policy": "Only resume after explicit user instruction; reverify completed checkpoints and redo untrusted partials.",
+  "resumed_at_utc": "2026-11-04T03:44:03.592935+00:00",
+  "resumptions": [
+    {
+      "at_utc": "2026-11-03T00:56:14.917807+00:00",
+      "authorization": "User explicitly requested continuation on 2026-11-03",
+      "verified_partitions": 109,
+      "latest_capture": "20230419",
+      "partial_backups": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261103T005614Z\\20230420.partial",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261103T005614Z\\20230421.partial"
+      ],
+      "scientific_rules_changed": false
+    },
+    {
+      "at_utc": "2026-11-03T10:32:01.758250+00:00",
+      "authorization": "User explicitly requested continuation on 2026-11-03",
+      "verified_partitions": 996,
+      "latest_capture": "20250922",
+      "partial_backups": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261103T103201Z\\20250923.partial",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261103T103201Z\\20250924.partial"
+      ],
+      "scientific_rules_changed": false
+    },
+    {
+      "at_utc": "2026-11-04T00:16:05.386539+00:00",
+      "authorization": "User explicitly requested continuation on 2026-11-04",
+      "verified_partitions": 1371,
+      "latest_capture": "20261001",
+      "partial_backups": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261104T001605Z\\bins-20230531.partial",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261104T001605Z\\bins-20230601.partial",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261104T001605Z\\cleaned-20230531.partial",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261104T001605Z\\cleaned-20230601.partial"
+      ],
+      "scientific_rules_changed": false
+    },
+    {
+      "at_utc": "2026-11-04T03:44:03.592935+00:00",
+      "authorization": "User explicitly requested continuation on 2026-11-04",
+      "verified_partitions": 1371,
+      "latest_capture": "20261001",
+      "partial_backups": [
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261104T034403Z\\bins-20250730.partial",
+        "D:\\HK_Traffic_Recovery_Long_Window\\expansion\\resume_backup_20261104T034403Z\\cleaned-20250730.partial"
+      ],
+      "scientific_rules_changed": false
+    }
+  ]
+}
