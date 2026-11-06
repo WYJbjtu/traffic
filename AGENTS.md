@@ -7,13 +7,19 @@ Authentic, traceable data and valid reproducible experiments outrank complexity.
 Core experiments: **November 4, 2026**. Poster: **November 6–7, 2026**.
 Outputs: audited datasets, justified event/label definitions, temporal evaluation,
 spatial ablation, documented limitations, reproducible reports and poster.
-Current milestone is the coverage-filtered event/label and spatial matching pilot:
-no full ML training, dashboard, deployment, database or Docker requirement.
+Current delivery includes a frozen exploratory 96-lane confirmation-target experiment
+and a separate retrospective inferred-network spatial study. The strict verified
+historical-network/P3 gate is NO-GO; Proposal recovery-start is NOT RUN. Historical
+24-lane results and earlier pilots are separate. No live prediction service is claimed.
 
 ## Engineering
 - Python **3.12**, `uv`, `pyproject.toml` and committed `uv.lock`.
-- Simple modular `src/traffic_recovery` package; pandas first. Add GeoPandas,
-  NetworkX or ML dependencies only when the milestone needs them.
+- `apps/research_explorer.py` is the sole current Explorer entry; implementation
+  is `src/traffic_recovery/research_explorer96.py`, read-only adapters in
+  `research96.py`. `data/`, `network/`, `external/`, `models/` retain research
+  responsibilities. `scripts/` are versioned workflows; `experiments/` and
+  `reports/` are research evidence. Preserve the historical API/frontend prototype.
+- Keep the simple modular Python package. Avoid new dependencies without a need.
 - Type public interfaces; document contracts, units, failure modes and return values.
 - Use `pathlib.Path`, UTF-8 and timezone-aware timestamps; support WSL2 and Windows.
   No machine-specific absolute paths or shell-only assumptions in Python.
@@ -30,8 +36,12 @@ no full ML training, dashboard, deployment, database or Docker requirement.
 - Features must be available at prediction time: no future observations,
   retrospective context or full-dataset fitted transformations.
 - Prevent temporal and event-level leakage; purge overlapping label windows.
-- Do not finalize congestion/recovery thresholds without measured data and rationale.
-  Recovery within a horizon is not recovery at its endpoint.
+- Do not change frozen congestion/recovery thresholds, cohort, labels, hashes,
+  splits or published metrics under a refactor. Version new scientific definitions.
+  Recovery within a horizon is not recovery at its endpoint. Do not equate
+  `recovery_confirmation_v1` with unimplemented `recovery_start_sustained_v1`.
+- Inferred 2026 graph is not a validated historical network: P1/P2 are distinct
+  retrospective subsets; P3 remains unapproved. Never fill missing speed with zero.
 
 ## Collaboration
 See `docs/ownership.md` and follow `docs/data_contract.md`.
@@ -44,7 +54,10 @@ Avoid unnecessary edits to another member's module. Coordinate shared interface
 changes in a PR before adoption; proposals in the contract are not final schemas.
 Use feature branches and reviewed PRs; run tests before requesting merge.
 Never commit credentials, large raw/processed datasets or large model artifacts.
-Do not push or merge without authorization.
+Do not push or merge without authorization. **This repository consolidation task
+prohibits every remote push or other remote write. Future remote operations require
+explicit authorization in that request.** No forced checkout, hard reset or clean.
+Avoid committing large data, credentials and unrelated agent work.
 
 ## Agent workflow
 Inspect git status, code and docs first; preserve pre-existing user changes.

@@ -122,3 +122,26 @@ def test_hk_grid_to_display_coordinates_are_transformed(tmp_path: Path) -> None:
     assert (mapped.iloc[0].longitude, mapped.iloc[0].latitude) == pytest.approx(expected)
     assert 113 < mapped.iloc[0].longitude < 115
     assert 21 < mapped.iloc[0].latitude < 23
+
+
+def test_unified_adapter_checks_hashes_and_paired_ids(tmp_path: Path) -> None:
+    """Synthetic fixture, not empirical model evidence."""
+    folder = tmp_path / "experiments/unified96/runs/p1-f0-f4-v1"
+    folder.mkdir(parents=True)
+    rows = pd.DataFrame([{"event_id": "e1", "split": "test", "model": "random_forest",
+                          "feature_arm": arm, "y_true": 1, "y_score": score}
+                         for arm, score in (("F0", .3), ("F4", .8))])
+    rows.to_parquet(folder / "predictions.parquet", index=False)
+    pd.DataFrame([{"model": "random_forest", "split": "test", "arm": arm, "n_events": 1}
+                  for arm in ("F0", "F4")]).to_csv(folder / "metrics.csv", index=False)
+    (folder / "paired_bootstrap.json").write_text("[]", encoding="utf-8")
+    (folder / "manifest.json").write_text(json.dumps({"target": "recovery_confirmation_v1",
+        "population": "INFERRED_EXPLORATORY", "horizon_min": 30,
+        "outputs_sha256": {name: r.sha256(folder / name) for name in
+            ("predictions.parquet", "metrics.csv", "paired_bootstrap.json")}}), encoding="utf-8")
+    scores, _, _ = r.unified_p1_run(tmp_path)
+    assert scores.event_id.tolist() == ["e1", "e1"]
+    rows.loc[1, "event_id"] = "unpaired"
+    rows.to_parquet(folder / "predictions.parquet", index=False)
+    with pytest.raises(ValueError, match="SHA-256"):
+        r.unified_p1_run(tmp_path)

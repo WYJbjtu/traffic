@@ -1,0 +1,5 @@
+model,population,split,target_version,horizon_min,n_events,both_correct,both_wrong,only_spatial_correct,only_base_correct,mean_delta_probability_y1,mean_delta_probability_y0
+logistic_regression,P1_INFERRED_EXPLORATORY,test,recovery_confirmation_v1,30,3933,3058,542,138,195,0.05497729617643992,-0.004948953902956257
+random_forest,P1_INFERRED_EXPLORATORY,test,recovery_confirmation_v1,30,3933,3149,571,106,107,0.012721991259931151,-0.00652405707669722
+xgboost,P1_INFERRED_EXPLORATORY,test,recovery_confirmation_v1,30,3933,3040,549,175,169,0.02629208866052643,-0.00828218429479128
+hist_gradient_boosting,P1_INFERRED_EXPLORATORY,test,recovery_confirmation_v1,30,3933,3013,526,200,194,0.041605306380543,-0.0071477336042441225

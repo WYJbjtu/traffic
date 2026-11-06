@@ -7,7 +7,7 @@ from __future__ import annotations
 
 import streamlit as st
 
-from research_explorer96 import render
+from traffic_recovery.research_explorer96 import render
 
 st.set_page_config(page_title="香港交通拥堵恢复 | Research Explorer", layout="wide",
                    initial_sidebar_state="collapsed")

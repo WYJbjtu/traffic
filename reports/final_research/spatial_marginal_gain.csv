@@ -1,0 +1,5 @@
+population,target_version,horizon_min,split,n_events,clusters,model,comparison,delta_roc_auc,ci_95_lower,ci_95_upper,valid_resamples,invalid_single_class,delta_pr_auc
+P1_INFERRED_EXPLORATORY,recovery_confirmation_v1,30,test,3933,44,logistic_regression,F4_minus_F0,0.04283893990289567,-0.008084417802122497,0.08435047092496305,1000,0,0.03303971860664395
+P1_INFERRED_EXPLORATORY,recovery_confirmation_v1,30,test,3933,44,random_forest,F4_minus_F0,0.03356559570062567,0.007018674839765185,0.061510968036573035,1000,0,0.03802415961046701
+P1_INFERRED_EXPLORATORY,recovery_confirmation_v1,30,test,3933,44,xgboost,F4_minus_F0,0.03227774307910636,0.009131398148014678,0.053804311732622914,1000,0,0.04146072266064976
+P1_INFERRED_EXPLORATORY,recovery_confirmation_v1,30,test,3933,44,hist_gradient_boosting,F4_minus_F0,0.03065814033813008,0.008446188684418057,0.05355692764029576,1000,0,0.03309649234874734

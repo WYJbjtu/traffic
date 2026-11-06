@@ -1,0 +1,159 @@
+{
+  "status": "RETROSPECTIVE_EXPLORATORY_NOT_BLIND",
+  "experiment_id": "unified96-p1-f0-f4-v1",
+  "target": "recovery_confirmation_v1",
+  "population": "INFERRED_EXPLORATORY",
+  "horizon_min": 30,
+  "inputs_sha256": {
+    "data/local/expanded96-release/prepared-v1/processed/events.parquet": "d9cd1c0ede22d4f919e3b3a7ece9fab25a8646e3f5ee8b2fb0f4ff900606e570",
+    "data/local/expanded96-release/model-a0-a2-v2/history_features.parquet": "3a936b7e7dcad629184db84823a663d7789a7aaa322dd7ded50142f9ec247ba9",
+    "data/local/spatial96/inferred-v2/event_spatial_features.parquet": "c85552d73b1e512e2d696aafc147c7bae9933717a53f3d2ec762725e0d3d1764",
+    "data/local/spatial96/inferred-v2/event_neighbor_lineage.parquet": "a30b4b3a31922953415b3b0c9629e2802b191a141efef7b8d387aff8da4ea59f"
+  },
+  "split_event_ids_sha256": {
+    "train": "be30d4c61e7ada517fe093e740175335aa0dd9a86a138ee221a5d210530551dc",
+    "validation": "66042b07983bef149bc9a67b15f80fcf3ef71eeaea7c5b8e1764116a2d2a8d5f",
+    "test": "c6aaae1e81fd1fe9e1309d1068b5e05431823ddb49d3710f62b4ebddde554ef3"
+  },
+  "split_counts": {
+    "train": 7611,
+    "validation": 4680,
+    "test": 3933
+  },
+  "feature_groups": {
+    "L": [
+      "speed_kmh",
+      "speed_ratio",
+      "baseline_kmh",
+      "onset_observed_minutes"
+    ],
+    "H": [
+      "lag_5m_ratio",
+      "lag_10m_ratio",
+      "lag_15m_ratio",
+      "lag_30m_ratio",
+      "history_mean_ratio",
+      "history_trend_ratio"
+    ],
+    "Q": [
+      "valid_slots",
+      "history_observed_bins"
+    ],
+    "S": [
+      "upstream_mean_speed_kmh",
+      "upstream_mean_ratio",
+      "upstream_observed_count",
+      "upstream_mean_age_minutes",
+      "upstream_coverage",
+      "upstream_missing",
+      "downstream_mean_speed_kmh",
+      "downstream_mean_ratio",
+      "downstream_observed_count",
+      "downstream_mean_age_minutes",
+      "downstream_coverage",
+      "downstream_missing",
+      "upstream_congestion_fraction",
+      "downstream_congestion_fraction",
+      "upstream_downstream_congestion_difference",
+      "local_minus_neighbor_ratio",
+      "neighbor_to_local_speed_gradient",
+      "upstream_mean_network_distance_m",
+      "upstream_distance_weighted_speed",
+      "upstream_confidence_weighted_speed",
+      "upstream_multihop_congestion_fraction",
+      "downstream_mean_network_distance_m",
+      "downstream_distance_weighted_speed",
+      "downstream_confidence_weighted_speed",
+      "downstream_multihop_congestion_fraction",
+      "upstream_change_5m_kmh",
+      "upstream_change_10m_kmh",
+      "upstream_change_15m_kmh",
+      "downstream_change_5m_kmh",
+      "downstream_change_10m_kmh",
+      "downstream_change_15m_kmh",
+      "local_neighbor_trend_difference"
+    ]
+  },
+  "arms": {
+    "F0": [
+      "speed_kmh",
+      "speed_ratio",
+      "baseline_kmh",
+      "onset_observed_minutes",
+      "lag_5m_ratio",
+      "lag_10m_ratio",
+      "lag_15m_ratio",
+      "lag_30m_ratio",
+      "history_mean_ratio",
+      "history_trend_ratio",
+      "valid_slots",
+      "history_observed_bins"
+    ],
+    "F4": [
+      "speed_kmh",
+      "speed_ratio",
+      "baseline_kmh",
+      "onset_observed_minutes",
+      "lag_5m_ratio",
+      "lag_10m_ratio",
+      "lag_15m_ratio",
+      "lag_30m_ratio",
+      "history_mean_ratio",
+      "history_trend_ratio",
+      "valid_slots",
+      "history_observed_bins",
+      "upstream_mean_speed_kmh",
+      "upstream_mean_ratio",
+      "upstream_observed_count",
+      "upstream_mean_age_minutes",
+      "upstream_coverage",
+      "upstream_missing",
+      "downstream_mean_speed_kmh",
+      "downstream_mean_ratio",
+      "downstream_observed_count",
+      "downstream_mean_age_minutes",
+      "downstream_coverage",
+      "downstream_missing",
+      "upstream_congestion_fraction",
+      "downstream_congestion_fraction",
+      "upstream_downstream_congestion_difference",
+      "local_minus_neighbor_ratio",
+      "neighbor_to_local_speed_gradient",
+      "upstream_mean_network_distance_m",
+      "upstream_distance_weighted_speed",
+      "upstream_confidence_weighted_speed",
+      "upstream_multihop_congestion_fraction",
+      "downstream_mean_network_distance_m",
+      "downstream_distance_weighted_speed",
+      "downstream_confidence_weighted_speed",
+      "downstream_multihop_congestion_fraction",
+      "upstream_change_5m_kmh",
+      "upstream_change_10m_kmh",
+      "upstream_change_15m_kmh",
+      "downstream_change_5m_kmh",
+      "downstream_change_10m_kmh",
+      "downstream_change_15m_kmh",
+      "local_neighbor_trend_difference"
+    ]
+  },
+  "excluded_groups": {
+    "C": "verified official holiday event feature input unavailable locally",
+    "W": "authenticated King's Park weather event/station input unavailable locally"
+  },
+  "selection": "two frozen candidates/model, minimum validation log loss, no refit; fixed threshold 0.5",
+  "seed": 42,
+  "git_start_sha": "c3506cf297a65db52a1ff589e78c18f36e4c7d37",
+  "runtime_seconds": 20.96717021700033,
+  "software": {
+    "python": "3.12.16",
+    "pandas": "2.3.3",
+    "sklearn": "1.9.1",
+    "xgboost": "3.4.1"
+  },
+  "outputs_sha256": {
+    "metrics.csv": "a263659e54dedefde9a3ce801dbff09d09c0e181b62ad5546d63b1cfa887dcbf",
+    "predictions.parquet": "3e61154d2395f247e446fd9813d6e8adb3433eb3cfe6e33074bb1a384afc5b1b",
+    "paired_bootstrap.json": "77a6def5ebefeac5749cd5f9b43aafc387ffbac5a7eab2fad53fc62f511cab99",
+    "validation_selection.json": "2e2677f9704009a7dcf0819d87baab54cf1f5d0dfbf0c475e34c9bcd7d135b0f"
+  }
+}

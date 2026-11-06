@@ -2,7 +2,9 @@
 
 > **历史交接记录。** 当前 96 车道空间研究浏览器已升级；运行与科学口径请以 [research_explorer_96.md](research_explorer_96.md) 为准。以下内容仅描述 11 月 2 日旧版，不代表当前应用或空间实验状态。
 
-## 今日交付 / 启动
+## 历史交付 / 旧版启动记录（已被取代）
+
+下方命令现在启动的是 **96 车道新版**，不会恢复本页所述的旧 24 车道界面；请以 [当前运行说明](research_explorer_96.md) 为准。旧实验的只读适配器和原始报告继续保留用于复核。
 
 新增只读 `apps/research_explorer.py`（统一 Plotly 印刷风格）、`src/traffic_recovery/research_viz.py`（严格按实验加载、筛选、事件历史和时间汇总）、`tests/test_research_viz.py`。未改动 React/FastAPI 或训练流程；无自动下载、无模型重训。独立 Streamlit/Plotly 依赖不改项目锁文件；在仓库根目录**一条命令启动**（Python 3.12、`uv`）：
 

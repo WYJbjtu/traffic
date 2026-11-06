@@ -1,0 +1,38 @@
+{
+  "contract_version": "unified96-p1-f0-f4-v1",
+  "status": "executed retrospective subset; C/W missing, eight-arm factorial NOT RUN",
+  "dataset": "expanded96-long-window-v1",
+  "population": "INFERRED_EXPLORATORY",
+  "target_version": "recovery_confirmation_v1",
+  "horizon_min": 30,
+  "identity": ["event_id", "detector_id", "direction", "lane_id", "prediction_time", "split", "target_version", "horizon_min"],
+  "join": "event_id one-to-one; spatial also requires equal prediction_time; lineage many-to-one on event_id with target unit equality",
+  "eligibility": "known label_30m and observed_neighbor_count > 0 in each frozen split",
+  "groups": {
+    "L": ["speed_kmh", "speed_ratio", "baseline_kmh", "onset_observed_minutes"],
+    "H": ["lag_5m_ratio", "lag_10m_ratio", "lag_15m_ratio", "lag_30m_ratio", "history_mean_ratio", "history_trend_ratio"],
+    "Q": ["valid_slots", "history_observed_bins"],
+    "S": "S1 + S2 + S3 + S4 from scripts/spatial96_inferred_v2.py; exact ordered names in runs/p1-f0-f4-v1/manifest.json",
+    "C": "NOT AVAILABLE: verified official holiday event features are absent locally",
+    "W": "NOT AVAILABLE: archived King's Park station event features are absent locally; station is a regional proxy"
+  },
+  "arms_executed": {"F0": "L+H+Q", "F4": "L+H+Q+S"},
+  "arms_blocked": ["F1", "F2", "F3", "F5", "F6", "F7"],
+  "availability": {
+    "L": "event feature_max_available_at <= prediction_time; reference_fit_end < prediction_time",
+    "H": "frozen history extraction used five-minute observations with both bin and source availability <= prediction_time; history_latest_available_at rechecked",
+    "Q": "valid_slots belongs to current usable bin; history_observed_bins to frozen as-of history; neither is vehicle volume",
+    "S": "all authentic source lineage observed_at, available_at and last_source_available_at <= prediction_time; no absent speed zero-filled; static 2026 geometry is retrospective inferred",
+    "C": "requires authenticated holiday editions with publication times; not substituted with guessed indicators",
+    "W": "requires authenticated weather observation and issue/capture times; not substituted with future/current data"
+  },
+  "frozen_input_hashes": {
+    "events": "d9cd1c0ede22d4f919e3b3a7ece9fab25a8646e3f5ee8b2fb0f4ff900606e570",
+    "history": "3a936b7e7dcad629184db84823a663d7789a7aaa322dd7ded50142f9ec247ba9",
+    "spatial_features": "c85552d73b1e512e2d696aafc147c7bae9933717a53f3d2ec762725e0d3d1764",
+    "neighbor_lineage": "a30b4b3a31922953415b3b0c9629e2802b191a141efef7b8d387aff8da4ea59f"
+  },
+  "run_manifest": "runs/p1-f0-f4-v1/manifest.json",
+  "missing_not_zero": true,
+  "preprocessing": "existing two-candidate model-specific sklearn pipelines fit on training only; validation chooses minimum log loss; no test refit; 0.5 threshold predeclared"
+}
