@@ -48,6 +48,11 @@ def get_metrics(controls: bool = False) -> pd.DataFrame:
 
 
 @st.cache_data(show_spinner=False)
+def get_unified_p1() -> tuple[pd.DataFrame, pd.DataFrame, list[dict]]:
+    return data.unified_p1_run(ROOT)
+
+
+@st.cache_data(show_spinner=False)
 def get_tile(tile: str) -> pd.DataFrame:
     return load_tile(NETWORK, tile)
 
@@ -396,6 +401,18 @@ def event_explorer() -> None:
                 st.caption("来自独立 A0–A2 v2 全队列实验；PR #21 的 P1/P2 M0 在各自资格群体重新拟合，不能把此分数当作配对空间模型预测。")
         except (FileNotFoundError, ValueError) as exc:
             st.info(f"全队列本地模型逐事件概率不可用：{exc}")
+    if horizon == 30 and population == "INFERRED_EXPLORATORY":
+        try:
+            scores, _, _ = get_unified_p1()
+            matched_scores = scores.loc[scores.event_id.eq(str(event.event_id))]
+            if not matched_scores.empty:
+                st.markdown("**新实验 P1 · 同事件 F0（本地+历史+质量）/ F4（加推断邻路）概率**")
+                st.dataframe(matched_scores[["model", "feature_arm", "y_true", "y_score", "y_pred",
+                                             "selected_threshold", "target_version", "experiment_id"]],
+                             hide_index=True, width="stretch")
+                st.caption("新实验的 P1 重新训练概率，非已发布 PR #21 概率；2026 测试集先前已被查看。")
+        except (FileNotFoundError, ValueError) as exc:
+            st.info(f"新实验逐事件概率不可用：{exc}")
     st.caption("实线表示预测时可用的观测，虚线和阴影表示事后解释窗口。未来观测从未进入已保存模型的预测特征矩阵。")
     try:
         fig, quality = _event_figure(event, paths, horizon)
@@ -503,7 +520,29 @@ def model_comparison() -> None:
                           index=["Actual 0", "Actual 1"], columns=["Pred 0", "Pred 1"])
     st.markdown("**保存的混淆矩阵计数 · 阈值 0.5**")
     st.dataframe(matrix, width="content")
-    st.info("PR #21 只发布空间模型汇总指标，没有逐事件概率产物；空间 ROC/PR 曲线与逐事件空间分数不可用。不能从 AUC 重建曲线。")
+    st.info("PR #21 只发布空间模型汇总指标，没有逐事件概率产物；不能从 AUC 重建 PR #21 曲线。下方新实验 F0/F4 是独立重新拟合的 P1 配对结果，不替代 PR #21 指标。")
+    with st.expander("新统一契约 P1 · F0/F4 四模型（C/W 来源未在本地提供）"):
+        try:
+            _, unified, intervals = get_unified_p1()
+            current = unified.loc[unified.split.eq(split)].copy()
+            st.caption("recovery_confirmation_v1 · 30 分钟 · 同一 P1 有邻路事件；F0=L+H+Q，F4=F0+S。未运行含完整官方节假日/天气的 F1–F3/F5–F7。非首次盲测。")
+            st.dataframe(current[["model", "arm", "n_events", "roc_auc", "average_precision", "macro_f1", "brier", "log_loss"]], hide_index=True, width="stretch")
+            fig_unified = go.Figure()
+            for name, sub in current.groupby("model"):
+                fig_unified.add_scatter(x=sub.arm, y=sub.roc_auc, name=name, mode="lines+markers")
+            fig_unified.update_layout(template="simple_white", height=290, xaxis_title="Feature arm (F0 vs F4)", yaxis_title="ROC-AUC")
+            st.plotly_chart(fig_unified, width="stretch")
+            if split == "test":
+                st.write("**同一物理探测器聚类的配对 bootstrap（1000 次；95% 百分位区间）**")
+                st.dataframe(pd.DataFrame([{"model": row["model"], "clusters": row["clusters"],
+                    "delta_roc_auc": row["roc_auc"]["observed_delta"],
+                    "ci_low": row["roc_auc"]["ci_95_percentile"][0],
+                    "ci_high": row["roc_auc"]["ci_95_percentile"][1],
+                    "invalid_resamples": row["invalid_single_class"]} for row in intervals]),
+                    hide_index=True, width="stretch")
+            st.caption("该聚类区间未处理跨探测器相邻道路相关性；不证明因果、完整路网历史有效或已控制天气。P3 仍 NO-GO。")
+        except (FileNotFoundError, ValueError) as exc:
+            st.info(f"新统一特征实验不可用：{exc}")
     st.caption("P1 与 P2 的测试事件群不同，不能把两组指标当作配对差异。M0 在各自资格群体重新拟合。")
     with st.expander("已发布 Tianhao 96 车道逐事件预测 · 独立实验"):
         _published_predictions()

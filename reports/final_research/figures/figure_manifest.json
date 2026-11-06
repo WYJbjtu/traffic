@@ -1,0 +1,22 @@
+{
+  "sources": {
+    "run_manifest": "860650e7766ca046e197090f63df2d42e689f5fbeaf16594319bab7cdf439a3a",
+    "spatial_controls": "243b9f749bd25e3cbf79d8638ba37cacd96efe9035bffac297319f988b8eeddb",
+    "source_geometry_figure": "a8072e67416cee58c219e5223d8b664631cfeb5d17fb7af0af459b584cae19d9"
+  },
+  "event_id": "000878e002c526c0bcab",
+  "caveats": "Figure 2 is source review geometry, not legal/historical verified routing. Figure 3 neighbour points are as-of; later local speed is retrospective outcome context. Figure 6 partial shuffle is weak.",
+  "figures_sha256": {
+    "01_workflow.png": "a55619a3c935020a0d3b187ffb3a6c5be2e9b469199b5e87dfb7957f9096562b",
+    "01_workflow.svg": "651369f1a8857d275e4ccc554339b884015042fe3df99da5df0d62c6382f82c9",
+    "02_official_geometry_review.png": "a8072e67416cee58c219e5223d8b664631cfeb5d17fb7af0af459b584cae19d9",
+    "03_real_event.png": "f8455045f5720009345726b88c474a5d24248bec46f2bf6fe7d2153c7a0efe8a",
+    "03_real_event.svg": "2fc4a44f20fbf4ee4bd7397623d842060283bb56b76c811ca0089f1ef09587df",
+    "04_ablation.png": "4b22dfa6c4bb12405002e07827d66bb2c22c57134b5a1c919058d426db1058ca",
+    "04_ablation.svg": "79b595e9fa48daf16aaf299fadd9e3f9f2c45b8d4fe9ba86fb32188598ec18b5",
+    "05_spatial_gain.png": "620443c53cdc4ab2b87c6877896d6a1482875d3e76e80945ac5de5ca9eb75b32",
+    "05_spatial_gain.svg": "92ba2086848bb6ea3656ba6213a084f5a93357145ded345c737a5d6644772ddc",
+    "06_network_controls.png": "0658277888aaa21bbbab56c7d4fe43a286607622159c9cb339085dc9f1d8f1a0",
+    "06_network_controls.svg": "a8bbfa214e50e029ac5989ab7b38b94a41f929cedbdc6f4adf8dfdbe007b30b9"
+  }
+}

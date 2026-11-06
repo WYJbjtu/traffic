@@ -138,6 +138,37 @@ def event_features(root: Path, event: pd.Series, population: str) -> pd.Series:
     return frame.iloc[0]
 
 
+def unified_p1_run(root: Path) -> tuple[pd.DataFrame, pd.DataFrame, list[dict]]:
+    """Read authenticated exploratory P1 F0/F4 scores, metrics and cluster intervals.
+
+    Rejects changed files, duplicate event-arm identity and inconsistent paired IDs.
+    Does not substitute these refitted P1 scores for the frozen PR #21 M0/M1 run.
+    """
+    folder = root / "experiments/unified96/runs/p1-f0-f4-v1"
+    manifest = json.loads((folder / "manifest.json").read_text(encoding="utf-8"))
+    if (manifest["target"] != "recovery_confirmation_v1" or
+        manifest["population"] != "INFERRED_EXPLORATORY" or manifest["horizon_min"] != 30):
+        raise ValueError("Unexpected unified experiment identity")
+    for name, digest in manifest["outputs_sha256"].items():
+        local_path(root, str(folder.relative_to(root) / name), digest)
+    scores = pd.read_parquet(folder / "predictions.parquet")
+    metrics = pd.read_csv(folder / "metrics.csv")
+    bootstrap = json.loads((folder / "paired_bootstrap.json").read_text(encoding="utf-8"))
+    identity = ["event_id", "split", "model", "feature_arm"]
+    if scores.duplicated(identity).any() or not set(scores.feature_arm) == {"F0", "F4"}:
+        raise ValueError("Duplicate or missing unified prediction identity")
+    for (model, split), group in scores.groupby(["model", "split"]):
+        a = group.loc[group.feature_arm.eq("F0")]
+        b = group.loc[group.feature_arm.eq("F4")]
+        if (len(a) != len(b) or not a.event_id.is_unique or not b.event_id.is_unique or
+            set(a.event_id) != set(b.event_id)):
+            raise ValueError(f"Unpaired unified event IDs: {model}/{split}")
+        recorded = metrics.loc[metrics.model.eq(model) & metrics.split.eq(split)]
+        if len(recorded) != 2 or any(int(row.n_events) != len(a) for row in recorded.itertuples()):
+            raise ValueError(f"Unified metric support mismatch: {model}/{split}")
+    return scores, metrics, bootstrap
+
+
 def published_local_scores(root: Path, event: pd.Series, horizon: int) -> pd.DataFrame:
     """Read saved full-cohort local/history scores by exact event identity.
 
