@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "public_range_status": 206,
+  "public_range_bytes": 1024,
+  "public_range_matches_local": true,
+  "public_checksum_matches_local": true,
+  "archive_sha256": "b288ba53398f266ab25e09711712a34ed7b238c035e045e1dcfefdb5b03ec13d",
+  "no_authenticated_download_required": true
+}

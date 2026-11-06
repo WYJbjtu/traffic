@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "profile": "sampled2",
+  "events": 26306,
+  "positive_horizon_checks": 27342,
+  "negative_horizon_checks": 38494,
+  "exact_source_bin_checks": 385469,
+  "event_sha256": "7d720fa8ac2b6dcd202b440f648f71480f10945963b5d1cde48d33cac73fb15d",
+  "reference_sha256": "4eaca14c47d509ff21ff6c746d87e43be8c1c596cdf31d177ff152b413099bf4",
+  "verifier_sha256": "74ce58314618f0ae4b3be77e72b787c7dedd308c3e65bb62f2e8b6dbd7dffae6",
+  "does_not_certify_physical_continuity_or_identity": true
+}

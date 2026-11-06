@@ -1,5 +1,9 @@
 # Member 1 — acquisition, coverage, events and labels
 
+## Current Proposal follow-up
+
+The October assignments below are historical. The expanded96 lane-confirmation data engineering and publication are complete; do not repeat source acquisition or call that target Proposal-equivalent. The original one-page Proposal is now verified. [Member 1 v2](../proposal_member1_v2.md) supplies a separate detector/direction aggregation, source volume/occupancy, training-only weekday/hour reference, recovery-start labels and training threshold sensitivity, with real execution evidence attached to the follow-up PR. Scientific adoption, physical identity/units and independent curve review remain joint gates. No old labels, Release or model scores are overwritten.
+
 ## Mission and scope
 Own `src/traffic_recovery/data/`, `tests/test_{data,coverage,events}*`,
 `configs/pilot.json`, data audit/label documentation. Produce a trustworthy

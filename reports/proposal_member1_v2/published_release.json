@@ -1,0 +1,20 @@
+{
+  "tag": "data-proposal-detector-direction-2023-2026-v2",
+  "url": "https://github.com/WYJbjtu/traffic/releases/tag/data-proposal-detector-direction-2023-2026-v2",
+  "target_commit": "ac0b5ca831f2a038f8f879773254c990deaa8d3c",
+  "prerelease": true,
+  "assets": [
+    {
+      "name": "HK_Traffic_Proposal_Detector_Direction_v2.zip",
+      "size": 286653317,
+      "digest": "sha256:b288ba53398f266ab25e09711712a34ed7b238c035e045e1dcfefdb5b03ec13d",
+      "browser_download_url": "https://github.com/WYJbjtu/traffic/releases/download/data-proposal-detector-direction-2023-2026-v2/HK_Traffic_Proposal_Detector_Direction_v2.zip"
+    },
+    {
+      "name": "HK_Traffic_Proposal_Detector_Direction_v2.zip.sha256",
+      "size": 113,
+      "digest": "sha256:eea1c8dcb721272d22e7a4450eb43d9a17de5344838db856dfee80e5b3397033",
+      "browser_download_url": "https://github.com/WYJbjtu/traffic/releases/download/data-proposal-detector-direction-2023-2026-v2/HK_Traffic_Proposal_Detector_Direction_v2.zip.sha256"
+    }
+  ]
+}
