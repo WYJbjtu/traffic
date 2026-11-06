@@ -15,7 +15,7 @@ import streamlit as st
 from traffic_recovery import research96 as data
 from traffic_recovery.network.map_layers import available_tiles, load_tile
 
-ROOT = Path(os.environ.get("RESEARCH96_DATA_ROOT", str(Path(__file__).resolve().parents[1]))).resolve()
+ROOT = Path(os.environ.get("RESEARCH96_DATA_ROOT", str(Path(__file__).resolve().parents[2]))).resolve()
 NETWORK = ROOT / "data/local/network-full/v1"
 BLUE, TEAL, AMBER, RED = "#344A5E", "#21867A", "#C68B44", "#A65A50"
 MODEL_NAMES = {"random_forest": "Random Forest", "xgboost": "XGBoost"}

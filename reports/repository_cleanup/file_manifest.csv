@@ -1,0 +1,22 @@
+original_path,operation,reason,verification
+apps/research_explorer.py,modify,Keep one official launcher and import packaged view,Streamlit AppTest and six-page browser smoke
+apps/research_explorer96.py,move to src/traffic_recovery/research_explorer96.py,Internal view module not independent CLI; preserve all six pages,AppTest and browser smoke; compare original module body and changed ROOT line
+src/traffic_recovery/research96.py,refactor,Remove duplicate SHA-256 body but preserve public sha256 alias,pytest test_research96 and frozen report hashes
+src/traffic_recovery/data/http.py,retain,Canonical streaming SHA-256 and evidence-preserving HTTP implementation,pytest test_acquisition and test_research96
+src/traffic_recovery/research_viz.py,retain historical,24-lane legacy visualization adapter tested independently,pytest test_research_viz
+src/traffic_recovery/api/app.py,retain historical,Medium-pilot API prototype is test referenced,pytest test_api
+README.md,rewrite,Replace conflicting milestone-era front page with evidenced 96-lane overview,Markdown link check and cross-reference saved reports
+AGENTS.md,update,Current scope and remote safety while preserving ownership rules,Manual review and pytest
+docs/README.md,create,Topical navigation and evidence status boundaries,Markdown link check
+docs/research_explorer.md,clarify historical,November-2 command now starts 96-lane app rather than historical interface,Manual cross-check with apps/research_explorer.py
+docs/research_explorer_96.md,retain,Current detailed Explorer reproduction and missing-data requirements,Browser smoke and AppTest
+reports/repository_cleanup/audit.md,create,Audit classifications risks and baseline,Compare Git baseline and project inventory
+reports/repository_cleanup/file_manifest.csv,create,Machine-readable action list,CSV parser and path review
+reports/repository_cleanup/summary.md,create,Final measured outcomes and unresolved gates,Re-run tests and compare SHA-256
+reports/nov04_integrated_delivery/model_metrics.csv,retain immutable,Published 96-lane local-history evidence,SHA-256 equality
+reports/spatial96_inferred_v2/paired_spatial_metrics.csv,retain immutable,Published inferred-network same-event results,SHA-256 equality
+reports/spatial96_inferred_v2/output_sha256.json,retain immutable,Spatial inferred output integrity list,SHA-256 equality
+experiments/tianhao/expanded96_20261104/metrics.csv,retain immutable,Independent release metrics,SHA-256 equality
+notebooks/Tianhao_新版96车道_完整重跑_20261104.ipynb,retain historical,Canonical executed independent 96-lane notebook,pytest test_canonical_notebooks
+configs/experiment_contract.json,retain,Scientific feature/target contract unchanged,pytest test_model_contract
+uv.lock,retain,Do not change published dependency snapshot,uv sync --locked

@@ -6,7 +6,6 @@ raises FileNotFoundError; mismatched identity or provenance raises ValueError.
 """
 from __future__ import annotations
 
-import hashlib
 import json
 from pathlib import Path
 from functools import lru_cache
@@ -16,18 +15,11 @@ import pyarrow.dataset as ds
 from pyproj import Transformer
 from shapely import wkb
 
+from traffic_recovery.data.http import sha256_file as sha256
+
 HKT = "Asia/Hong_Kong"
 POPULATIONS = ("INFERRED_EXPLORATORY", "HIGH_CONFIDENCE_INFERRED")
 UNIT = ("detector_id", "direction", "lane_id")
-
-
-def sha256(path: Path) -> str:
-    """Return the SHA-256 of file bytes without reading the whole file into RAM."""
-    digest = hashlib.sha256()
-    with path.open("rb") as stream:
-        for block in iter(lambda: stream.read(1024 * 1024), b""):
-            digest.update(block)
-    return digest.hexdigest()
 
 
 def verified_file(root: Path, relative: str) -> Path:
