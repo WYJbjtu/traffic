@@ -39,7 +39,7 @@ uv run --locked python -m pytest
 
 ## 完整重建、调参与训练
 
-从[新Release](https://github.com/CityuHK-wyj/hk-traffic-recovery-prediction/releases/tag/data-expanded-96-2023-2026-v1)下载并解压96车道数据。外部缓存须包含sources.csv中的4份官方年度公告、90个月ZIP及EvidenceClient生成的.meta.json；每份URL及原字节SHA均核对。重新获取的retrieved_at如实记录为新证据，不冒充原运行时间。
+从[新Release](https://github.com/WYJbjtu/traffic/releases/tag/data-expanded-96-2023-2026-v1)下载并解压96车道数据。外部缓存须包含sources.csv中的4份官方年度公告、90个月ZIP及EvidenceClient生成的.meta.json；每份URL及原字节SHA均核对。重新获取的retrieved_at如实记录为新证据，不冒充原运行时间。
 
 ```text
 uv run --locked python experiments/tianhao/acquire_sources.py probe

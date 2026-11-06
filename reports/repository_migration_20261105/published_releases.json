@@ -1,0 +1,45 @@
+{
+  "releases": [
+    {
+      "tag": "data-expanded-96-2023-2026-v1",
+      "url": "https://github.com/WYJbjtu/traffic/releases/tag/data-expanded-96-2023-2026-v1",
+      "assets": [
+        {
+          "name": "HK_Traffic_Expanded_96_Prepared_Data_v1.zip",
+          "size": 870121429,
+          "digest": "sha256:f5be559a6ad8df69e68fbc382fb609d13fdae40aa044c9d1fe4d7e3b2253b6b8",
+          "browser_download_url": "https://github.com/WYJbjtu/traffic/releases/download/data-expanded-96-2023-2026-v1/HK_Traffic_Expanded_96_Prepared_Data_v1.zip"
+        },
+        {
+          "name": "HK_Traffic_Expanded_96_Prepared_Data_v1.zip.sha256",
+          "size": 111,
+          "digest": "sha256:339177c1b13de0bd41cc4689f1428619b2b91c5cb27b7fc924b31721cd205ad7",
+          "browser_download_url": "https://github.com/WYJbjtu/traffic/releases/download/data-expanded-96-2023-2026-v1/HK_Traffic_Expanded_96_Prepared_Data_v1.zip.sha256"
+        }
+      ]
+    },
+    {
+      "tag": "data-long-window-2023-2026-v1",
+      "url": "https://github.com/WYJbjtu/traffic/releases/tag/data-long-window-2023-2026-v1",
+      "assets": [
+        {
+          "name": "HK_Traffic_Long_Window_Prepared_Data.zip",
+          "size": 1669288966,
+          "digest": "sha256:53688e6e095798f50c124376da1f0f354ca4b2aedf9e83e960fef04fc7298bc9",
+          "browser_download_url": "https://github.com/WYJbjtu/traffic/releases/download/data-long-window-2023-2026-v1/HK_Traffic_Long_Window_Prepared_Data.zip"
+        },
+        {
+          "name": "HK_Traffic_Long_Window_Prepared_Data.zip.sha256",
+          "size": 108,
+          "digest": "sha256:f058fda90b4955fd639f2015a64a7826df7d32674d15489d572d3e946e711904",
+          "browser_download_url": "https://github.com/WYJbjtu/traffic/releases/download/data-long-window-2023-2026-v1/HK_Traffic_Long_Window_Prepared_Data.zip.sha256"
+        }
+      ]
+    }
+  ],
+  "local_zip_sha256_matches_original": true,
+  "github_server_digest_matches_local": true,
+  "public_release_metadata_accessible": true,
+  "download_checks": "Both data ZIPs were observed returning HTTP 200 after redirects; some HEAD requests returned intermittent gateway 504 responses. 24-lane HTTP 200 used ?download=1. Public release metadata and all asset digests verified.",
+  "zip_bytes_changed": false
+}

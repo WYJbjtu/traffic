@@ -1,6 +1,6 @@
 # Issue tracker: GitHub
 
-Issues and specifications for this repository live in GitHub Issues. Run GitHub CLI commands from this clone so `gh` infers `CityuHK-wyj/hk-traffic-recovery-prediction` from `origin`.
+Issues and specifications for this repository live in GitHub Issues. Run GitHub CLI commands from this clone so `gh` infers `WYJbjtu/traffic` from `origin`.
 
 ## Target check
 
@@ -10,7 +10,7 @@ Before the first write in a session, run:
 gh repo view --json nameWithOwner,url
 ```
 
-Proceed only when `nameWithOwner` is `CityuHK-wyj/hk-traffic-recovery-prediction`. This prevents filing work against an upstream repository when operating from a fork.
+Proceed only when `nameWithOwner` is `WYJbjtu/traffic`. This prevents filing work against an upstream repository when operating from a fork.
 
 ## Conventions
 
