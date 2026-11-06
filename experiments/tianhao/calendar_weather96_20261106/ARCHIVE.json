@@ -1,0 +1,28 @@
+{
+  "archive_name": "Tianhao_Calendar_Weather_96_20261106.zip",
+  "archive_bytes": 20822076,
+  "archive_sha256": "cdb5f9a9a704cd2bcd823e4a7ba2615319c026f0311e2be55fa998b0418513c0",
+  "parts": [
+    {
+      "name": "Tianhao_Calendar_Weather_96_20261106.zip.part01",
+      "bytes": 5242880,
+      "sha256": "ce74fb44805f43a1c0e438d98790455fd031ae0edd9eb15bb50e2d648fbd1bc3"
+    },
+    {
+      "name": "Tianhao_Calendar_Weather_96_20261106.zip.part02",
+      "bytes": 5242880,
+      "sha256": "cdea70ef61d73e940ba2087eac1fee9353182e0048c4bce4f174b32838bfc69b"
+    },
+    {
+      "name": "Tianhao_Calendar_Weather_96_20261106.zip.part03",
+      "bytes": 5242880,
+      "sha256": "4ec260add9741c7ce888b6e18966b5967c0f2d7d3757b01365867c28b06325e2"
+    },
+    {
+      "name": "Tianhao_Calendar_Weather_96_20261106.zip.part04",
+      "bytes": 5093436,
+      "sha256": "7b03ee5c70d6aa56ed606d1be0356ec957477f1256f3eac41b3def7d72bc9b9a"
+    }
+  ],
+  "reason": "GitHub connector returned HTTP500 for the complete ZIP; byte parts preserve identical full ZIP"
+}
