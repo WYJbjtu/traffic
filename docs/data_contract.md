@@ -1,5 +1,7 @@
 # Shared data contract — pilot interfaces, version 0.2 (review pending)
 
+**Independent Proposal data v2 for review:** [detector/direction handoff](proposal_member1_v2.md) adds an opt-in source-count/occupancy aggregation and recovery-start target. Its schema/IDs/reference differ from the immutable lane-confirmation Release below. Neither dataset nor model consumers switch implicitly. Original Proposal SHA and scientific choices are recorded there; joint review remains required.
+
 **Status:** TD parsing/cleaning, incremental Parquet coverage, provisional lane
 congestion/recovery labels and a small spatial matching pilot are implemented.
 These pilot interfaces are **not team-approved final scientific definitions**.
