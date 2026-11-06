@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "base_commit": "2d7538150954a7876b3d27f679ea893778aeb389",
+  "tests_passed": 275,
+  "tests_failed": 0,
+  "new_artifact_tests": 7,
+  "notebook_executed_from_fresh_extraction": true,
+  "notebook_code_cells": 6,
+  "notebook_figures": 1,
+  "member4_aligned_features": "passed; known27858;train13002;validation7848;test7008",
+  "original_data_table_sha_identical": true,
+  "external_release_alignment": "passed",
+  "source_cache_original_bytes_verified": 94,
+  "weather_monthly_zip_total_bytes": 582527183,
+  "archive_sha256": "cdb5f9a9a704cd2bcd823e4a7ba2615319c026f0311e2be55fa998b0418513c0",
+  "test_environment": "locked Python3.12 dependencies; PYTHONPATH points to current checkout src; macOS uses sklearn bundled OpenMP via command-scoped DYLD_LIBRARY_PATH",
+  "ci": "pending PR submission",
+  "initial_tests_passed": 262,
+  "integration_main": "993a9eb8828f30f59964522e01d940fc3cbb703d",
+  "new_main_preparation_source_and_lock_unchanged": true,
+  "integration_scope": "Member4 current input gates pass; unified96 remains F0/F4 only; C/W adjusted experiments not run",
+  "delivery": "4 authenticated byte parts; original complete ZIP SHA unchanged; Python auto-assembly/extraction"
+}
