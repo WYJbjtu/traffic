@@ -1,0 +1,2 @@
+# Preserve frozen spatial evidence bytes; output_sha256.json uses exact Git bytes.
+* -text
