@@ -18,12 +18,21 @@
 - 保留 15/60 分钟作为附加标签，30 分钟是 Proposal 主目标。事件不混入旧 lane-level ID；按独立版本生成稳定 ID。完整最大结果窗口加捕获闭合至少为 prediction +80 分钟，跨分组边界排除；输入窗也不能跨边界。
 - 在训练期 2023 年 3–12 月描述性检查 0.4/0.5/0.6 × 0.7/0.8/0.9 九组阈值，不看模型测试表现选阈值；主阈值保留 Proposal 初值。本检查输出事件数和正/负/未知变化，不冒充模型敏感性实验。
 
+## 覆盖敏感性：两个口径并列，不自动挑选
+
+完整十槽是本次保守实现选择，不是原 Proposal 明文规定。真实执行得到 strict10 **700 事件：训练 691、验证 9、测试 0**，不能据此执行约定的跨年模型比较。这是可行性限制，不能拿旧版 30,452 个事件填补。
+
+另提供 `sampled2/` 独立观测口径：每箱至少两个完整且正流量的三十秒槽，仍要求冻结的全部车道同时在场、有效，无冲突和新车道。没有填补其他缺失时槽；重新拟合训练期参考、重新生成标签、使用独立事件 ID 命名空间，并重新计算训练阈值敏感性。它提供**采样观测的持续恢复开始**，不声称物理连续性。两套结果同时发布，不因为测试期样本更多就默认为后者已获科学批准；需团队依据采样频率、误差和研究表述选择。`sampled2` 的参考/事件不能与 strict10 混用。
+
 ## 接口与复现
 
 Python 3.12，`uv sync --locked`。原始源分区由资料持有人保留，巨型源表不进 Git。
 
 ```text
 uv run --locked python -m scripts.prepare_proposal_data --capture-root <verified-continuity426>/processed/lane_snapshots --output <fresh-output>
+uv run --locked python -m scripts.proposal_coverage_sensitivity --strict-run <fresh-output> --output <fresh-sampled-output>
+uv run --locked python -m scripts.verify_proposal_handoff --bins <fresh-output>/bins --profile <fresh-output> --output <fresh-output>/outcome_verification.json
+uv run --locked python -m scripts.verify_proposal_handoff --bins <fresh-output>/bins --profile <fresh-sampled-output> --sampled --output <fresh-sampled-output>/outcome_verification.json
 uv run --locked pytest
 ```
 
@@ -35,3 +44,5 @@ uv run --locked pytest
 2. 对检测器/方向、车道历史连续性及源车辆计数单位的独立资料审核；原始 XML 与清洗规则支持区间计数，不能无依据转为 vehicles/hour。
 3. Member 1/4 审核聚合权重、参考窗口、稀疏/完整政策和事件边界后，再接入新目标模型。已公开的旧模型分数不能改成此版本的分数。
 4. 路网/合法上下游由 Member 2 主责，外部资料由对应成员主责。原 Proposal 的模型与空间实验不属于本次数据工程完成声明。
+
+科学采用检查单：[Issue #3](https://github.com/WYJbjtu/traffic/issues/3)。现有验证/测试时间段已在旧项目中被查看，本版本不是新获得的盲测。最终实际统计见 `reports/proposal_member1_v2/`，包含方向/月完整覆盖与速度参考漂移诊断；这些全期诊断不用于重选队列或阈值。

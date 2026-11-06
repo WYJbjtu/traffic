@@ -9,6 +9,13 @@ spec=importlib.util.spec_from_file_location('proposal_runner',Path(__file__).par
 runner=importlib.util.module_from_spec(spec)
 spec.loader.exec_module(runner)
 aggregate_day=runner.aggregate_day
+verify_spec=importlib.util.spec_from_file_location('proposal_verifier',Path(__file__).parents[1]/'scripts/verify_proposal_handoff.py')
+verifier=importlib.util.module_from_spec(verify_spec)
+verify_spec.loader.exec_module(verifier)
+# Import the report entrypoint too: syntax/import failures must fail ordinary CI.
+report_spec=importlib.util.spec_from_file_location('proposal_report',Path(__file__).parents[1]/'scripts/report_proposal_handoff.py')
+report_module=importlib.util.module_from_spec(report_spec)
+report_spec.loader.exec_module(report_module)
 from traffic_recovery.data.proposal import contextual_reference, proposal_events
 
 TZ='Asia/Hong_Kong'
@@ -158,3 +165,15 @@ def test_lane_inventory_and_zero_missing_distinction(tmp_path,case):
         assert pd.isna(b.speed_kmh)
     else:
         assert b.complete_30s_slots==0 and pd.isna(b.volume_observed_count)
+
+
+def test_verifier_checks_real_bin_values_not_only_saved_label(tmp_path):
+    b,r,s,e=series()
+    bins=tmp_path/'bins';profile=tmp_path/'profile';bins.mkdir();profile.mkdir()
+    b.to_parquet(bins/'day.parquet',index=False);r.to_parquet(profile/'reference.parquet',index=False)
+    proposal_events(b,r,start=s,end=e).to_parquet(profile/'events.parquet',index=False)
+    assert verifier.verify(bins,profile)['status']=='passed'
+    b.loc[13,'speed_kmh']=20  # destroys the sustained positive evidence
+    b.to_parquet(bins/'day.parquet',index=False)
+    with pytest.raises(ValueError,match='Unwitnessed positive'):
+        verifier.verify(bins,profile)

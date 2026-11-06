@@ -1,0 +1,79 @@
+stratum,split,events,positive_30m,negative_30m,unknown_30m,period,detector_id,direction
+split,train,691,93,116,482,,,
+split,validation,9,1,0,8,,,
+split+period,train,375,43,59,273,AM_peak,,
+split+period,train,95,27,14,54,PM_peak,,
+split+period,train,221,23,43,155,off_peak,,
+split+period,validation,5,1,0,4,AM_peak,,
+split+period,validation,2,0,0,2,PM_peak,,
+split+period,validation,2,0,0,2,off_peak,,
+split+detector_id+direction,train,1,0,0,1,,AID01103,South East
+split+detector_id+direction,train,1,0,0,1,,AID01104,North East
+split+detector_id+direction,train,4,1,0,3,,AID01105,North East
+split+detector_id+direction,train,15,3,1,11,,AID01106,South East
+split+detector_id+direction,train,7,0,0,7,,AID01107,North East
+split+detector_id+direction,train,58,6,13,39,,AID01108,North West
+split+detector_id+direction,train,6,0,2,4,,AID01111,North East
+split+detector_id+direction,train,2,0,1,1,,AID01112,North East
+split+detector_id+direction,train,1,1,0,0,,AID01114,North East
+split+detector_id+direction,train,49,8,3,38,,AID01117,North
+split+detector_id+direction,train,6,2,1,3,,AID01120,North
+split+detector_id+direction,train,8,1,1,6,,AID01124,North East
+split+detector_id+direction,train,9,2,1,6,,AID01126,North East
+split+detector_id+direction,train,1,0,0,1,,AID01129,North East
+split+detector_id+direction,train,1,0,0,1,,AID01134,North West
+split+detector_id+direction,train,1,0,0,1,,AID01135,North West
+split+detector_id+direction,train,4,0,1,3,,AID01136,North East
+split+detector_id+direction,train,1,0,0,1,,AID01201,South
+split+detector_id+direction,train,6,2,0,4,,AID01202,South East
+split+detector_id+direction,train,12,0,0,12,,AID01203,South
+split+detector_id+direction,train,29,5,6,18,,AID01204,South
+split+detector_id+direction,train,22,3,4,15,,AID01206,South
+split+detector_id+direction,train,1,1,0,0,,AID01209,South West
+split+detector_id+direction,train,11,0,1,10,,AID01210,South East
+split+detector_id+direction,train,34,2,3,29,,AID01211,South East
+split+detector_id+direction,train,6,0,1,5,,AID01212,South East
+split+detector_id+direction,train,157,14,54,89,,AID01213,South West
+split+detector_id+direction,train,2,0,0,2,,AID01214,South East
+split+detector_id+direction,train,2,0,0,2,,AID01215,South West
+split+detector_id+direction,train,16,6,0,10,,AID01216,South East
+split+detector_id+direction,train,2,0,0,2,,AID01219,South West
+split+detector_id+direction,train,24,6,3,15,,AID02108,North West
+split+detector_id+direction,train,31,4,4,23,,AID02109,North West
+split+detector_id+direction,train,24,3,1,20,,AID02110,North West
+split+detector_id+direction,train,8,0,2,6,,AID02111,North East
+split+detector_id+direction,train,2,0,1,1,,AID02112,West
+split+detector_id+direction,train,6,1,2,3,,AID02114,North
+split+detector_id+direction,train,3,1,0,2,,AID02115,North East
+split+detector_id+direction,train,6,2,0,4,,AID02116,North
+split+detector_id+direction,train,1,0,0,1,,AID02121,North
+split+detector_id+direction,train,1,1,0,0,,AID02124,North East
+split+detector_id+direction,train,2,0,0,2,,AID02125,North West
+split+detector_id+direction,train,1,0,0,1,,AID02127,North East
+split+detector_id+direction,train,5,1,0,4,,AID02205,South
+split+detector_id+direction,train,6,3,0,3,,AID02207,East
+split+detector_id+direction,train,9,2,1,6,,AID02208,South East
+split+detector_id+direction,train,9,3,1,5,,AID02209,South East
+split+detector_id+direction,train,5,1,0,4,,AID02210,South East
+split+detector_id+direction,train,1,0,0,1,,AID02212,South East
+split+detector_id+direction,train,2,1,0,1,,AID02213,North East
+split+detector_id+direction,train,4,2,1,1,,AID02214,North East
+split+detector_id+direction,train,13,2,3,8,,AID02215,South East
+split+detector_id+direction,train,1,0,0,1,,AID03101,North East
+split+detector_id+direction,train,2,1,0,1,,AID03103,West
+split+detector_id+direction,train,2,0,0,2,,AID03108,North West
+split+detector_id+direction,train,1,0,0,1,,AID03110,North West
+split+detector_id+direction,train,1,0,0,1,,AID03112,North West
+split+detector_id+direction,train,1,0,0,1,,AID03203,South East
+split+detector_id+direction,train,11,0,1,10,,AID03204,South East
+split+detector_id+direction,train,15,1,1,13,,AID03205,South East
+split+detector_id+direction,train,19,1,2,16,,AID03206,South East
+split+detector_id+direction,validation,1,1,0,0,,AID01117,North
+split+detector_id+direction,validation,1,0,0,1,,AID01126,North East
+split+detector_id+direction,validation,1,0,0,1,,AID01203,South
+split+detector_id+direction,validation,1,0,0,1,,AID01204,South
+split+detector_id+direction,validation,1,0,0,1,,AID01206,South
+split+detector_id+direction,validation,1,0,0,1,,AID01210,South East
+split+detector_id+direction,validation,1,0,0,1,,AID01213,South West
+split+detector_id+direction,validation,1,0,0,1,,AID02125,North West
+split+detector_id+direction,validation,1,0,0,1,,AID03103,West
