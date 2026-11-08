@@ -98,8 +98,16 @@ def network_map(out: Path) -> dict:
     fig,ax=plt.subplots(figsize=(9.5,6.8))
     vertices=[]
     for route,line in geometry.items():
-        xy=np.array(line.coords);ax.plot(xy[:,0],xy[:,1],color='#ced3d6',lw=1.2,zorder=1)
-        for i,(x,y,*_) in enumerate(line.coords):vertices.append({'route_id':route,'vertex':i,'easting_m':x,'northing_m':y,'selected_relation_segment':route in routes})
+        # Render-only 5cm generalization removes extremely dense background
+        # vertices. Model/path geometry and every selected segment stay original.
+        displayed = line if route in routes else line.intersection(extent).simplify(.05, preserve_topology=True)
+        for part_idx, part in enumerate(getattr(displayed, 'geoms', [displayed])):
+            if part.geom_type != 'LineString':
+                continue
+            xy=np.array(part.coords);ax.plot(xy[:,0],xy[:,1],color='#ced3d6',lw=1.2,zorder=1)
+            for i,(x,y,*_) in enumerate(part.coords):
+                vertices.append({'route_id':route,'part':part_idx,'vertex':i,'easting_m':x,'northing_m':y,
+                    'selected_relation_segment':route in routes,'render_simplification_m':0 if route in routes else .05})
     path_lengths=[]
     for row,color in zip(chosen.itertuples(),['#247e75','#795481']):
         arcs=row.arc_sequence.split('|'); total=0.
@@ -143,7 +151,8 @@ def network_map(out: Path) -> dict:
     pd.DataFrame(path_lengths).to_csv(out/'figure_data/02_path_length_check.csv',index=False)
     return {'target':target,'selection':'first lexicographic target with incoming/outgoing >=100m, all offsets <=25m',
         'official_sources':source_manifest['sources'],'geometry_tiles_sha256':tile_hashes,
-        'network_manifest_sha256':sha256_file(network/'manifest.json')}
+        'network_manifest_sha256':sha256_file(network/'manifest.json'),
+        'render_geometry_policy':'background clipped to axes and simplified at 0.05m for file size; selected road/path geometry unchanged; no network-rule or speed changes'}
 
 
 def event_case(run: Path, out: Path) -> dict:

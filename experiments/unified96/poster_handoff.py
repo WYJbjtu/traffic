@@ -290,9 +290,14 @@ def verify_package(folder: Path) -> dict:
     return {'status':'passed','files':sum(p.is_file() for p in folder.rglob('*')),'png_decoded':5,'svg_parsed':5,'pdf_headers_checked':5,'metric_rows_checked':64,'relative_html_references':len(links.links)}
 
 
+def archive_destination(out: Path) -> Path:
+    """Return absolute ZIP destination for relative or absolute handoff directories."""
+    return (out.parent.parent/f'poster_handoff_{out.name}.zip').resolve()
+
+
 def build(run: Path, analysis: Path, controls: Path, proposal: Path, cw: Path, out: Path) -> Path:
     if out.exists():raise FileExistsError(out)
-    archive=out.parent.parent/f'poster_handoff_{out.name}.zip'
+    archive=archive_destination(out)
     if archive.exists():raise FileExistsError(archive)
     _,metrics,manifest=verify_run(run)
     gains=pd.read_csv(analysis/'spatial_contrasts.csv')
@@ -354,7 +359,7 @@ def build(run: Path, analysis: Path, controls: Path, proposal: Path, cw: Path, o
             if z.testzip() is not None:raise ValueError('ZIP CRC failure')
             z.extractall(tmp)
         receipt=verify_package(Path(tmp)/out.name)
-    dump(archive.with_suffix('.verification.json'),{**receipt,'zip':str(archive.relative_to(ROOT)),
+    dump(archive.with_suffix('.verification.json'),{**receipt,'zip':str(archive.resolve().relative_to(ROOT)),
         'bytes':archive.stat().st_size,'sha256':sha256_file(archive),'actual_temporary_extraction':True,
         'image_review':'five preview PNGs opened and visually inspected before final package; same source-backed figure generation',
         'remote_writes':False})

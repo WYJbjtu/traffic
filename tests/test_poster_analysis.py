@@ -11,7 +11,14 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from experiments.unified96.run import ROOT, paired_bootstrap
 from experiments.unified96.poster_analysis import recompute, error_transitions, verify_run
 from experiments.unified96.poster_controls import pooled_s1
-from experiments.unified96.poster_handoff import verify_package
+from experiments.unified96.poster_handoff import verify_package, archive_destination
+
+
+def test_relative_output_zip_receipt_path(monkeypatch):
+    monkeypatch.chdir(ROOT)
+    path=archive_destination(Path('deliverables/poster_handoff/synthetic'))
+    assert path.is_absolute()
+    assert path.relative_to(ROOT)==Path('deliverables/poster_handoff_synthetic.zip')
 
 
 def test_cluster_bootstrap_repeats_drawn_detectors_with_correct_weights():
@@ -72,7 +79,7 @@ def test_real_32_arm_local_predictions_when_available():
 
 
 def test_published_poster_package_when_available():
-    folder=ROOT/'deliverables/poster_handoff/p1-cw-final-20261108-v1'
+    folder=ROOT/'deliverables/poster_handoff/p1-cw-final-20261108-v2'
     if not folder.is_dir():pytest.skip('Poster package not generated yet')
     receipt=verify_package(folder)
     assert receipt['status']=='passed' and receipt['metric_rows_checked']==64
