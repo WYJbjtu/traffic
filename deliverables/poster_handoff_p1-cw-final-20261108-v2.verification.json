@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "files": 64,
+  "png_decoded": 5,
+  "svg_parsed": 5,
+  "pdf_headers_checked": 5,
+  "metric_rows_checked": 64,
+  "relative_html_references": 29,
+  "zip": "deliverables/poster_handoff_p1-cw-final-20261108-v2.zip",
+  "bytes": 1584127,
+  "sha256": "ca99602acb5010b1e014862c164667c7e2554f7285e92e665ed2f00d98df7f4a",
+  "actual_temporary_extraction": true,
+  "image_review": "five preview PNGs opened and visually inspected before final package; same source-backed figure generation",
+  "remote_writes": false
+}

@@ -1,0 +1,9 @@
+experiment_id,dataset_version,population,target_version,horizon_min,model,feature_arm,split,threshold,event_id,prediction_time,detector_id,y_true,y_score,y_pred
+p1-cw-matrix-v2-20261108,expanded96-long-window-v1,INFERRED_EXPLORATORY,recovery_confirmation_v1,30,logistic_regression,F3,test,0.5,237614b88349c5712337,2026-01-02 08:35:00+08:00,AID02110,0,0.31734865716671945,0
+p1-cw-matrix-v2-20261108,expanded96-long-window-v1,INFERRED_EXPLORATORY,recovery_confirmation_v1,30,random_forest,F3,test,0.5,237614b88349c5712337,2026-01-02 08:35:00+08:00,AID02110,0,0.2465736113244461,0
+p1-cw-matrix-v2-20261108,expanded96-long-window-v1,INFERRED_EXPLORATORY,recovery_confirmation_v1,30,xgboost,F3,test,0.5,237614b88349c5712337,2026-01-02 08:35:00+08:00,AID02110,0,0.22482725977897644,0
+p1-cw-matrix-v2-20261108,expanded96-long-window-v1,INFERRED_EXPLORATORY,recovery_confirmation_v1,30,hist_gradient_boosting,F3,test,0.5,237614b88349c5712337,2026-01-02 08:35:00+08:00,AID02110,0,0.05727271736833053,0
+p1-cw-matrix-v2-20261108,expanded96-long-window-v1,INFERRED_EXPLORATORY,recovery_confirmation_v1,30,logistic_regression,F7,test,0.5,237614b88349c5712337,2026-01-02 08:35:00+08:00,AID02110,0,0.16013767851982882,0
+p1-cw-matrix-v2-20261108,expanded96-long-window-v1,INFERRED_EXPLORATORY,recovery_confirmation_v1,30,random_forest,F7,test,0.5,237614b88349c5712337,2026-01-02 08:35:00+08:00,AID02110,0,0.18662581521070687,0
+p1-cw-matrix-v2-20261108,expanded96-long-window-v1,INFERRED_EXPLORATORY,recovery_confirmation_v1,30,xgboost,F7,test,0.5,237614b88349c5712337,2026-01-02 08:35:00+08:00,AID02110,0,0.1723308265209198,0
+p1-cw-matrix-v2-20261108,expanded96-long-window-v1,INFERRED_EXPLORATORY,recovery_confirmation_v1,30,hist_gradient_boosting,F7,test,0.5,237614b88349c5712337,2026-01-02 08:35:00+08:00,AID02110,0,0.10030916321943334,0

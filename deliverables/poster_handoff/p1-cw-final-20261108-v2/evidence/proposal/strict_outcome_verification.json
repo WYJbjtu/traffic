@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "profile": "strict10",
+  "events": 700,
+  "positive_horizon_checks": 278,
+  "negative_horizon_checks": 384,
+  "exact_source_bin_checks": 3480,
+  "event_sha256": "ca269a44101816c0477cf91bf0ad5160d0978d96126b251067126183c6a30351",
+  "reference_sha256": "a2e753293f09d68bdbe8e981dc77c3b365de4bfabd3b7598c3a53d2da819c05e",
+  "verifier_sha256": "74ce58314618f0ae4b3be77e72b787c7dedd308c3e65bb62f2e8b6dbd7dffae6",
+  "does_not_certify_physical_continuity_or_identity": true
+}

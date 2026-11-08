@@ -1,0 +1,89 @@
+{
+  "version": "proposal-data-v2",
+  "status": "executed_awaiting_team_review",
+  "directions": 96,
+  "lane_inventory": 256,
+  "events": 700,
+  "source_manifest_sha256": "07ac98f011506bdff3b3d0a45d935d73632425777c76f9576811cd3a93f7a12b",
+  "fingerprint": "06bd10e00609248a4ad06dae949a3b23ef6126c8e0d374b534bbd39bd76f9943",
+  "min_complete_slots": 10,
+  "outputs": {
+    "events.parquet": "ca269a44101816c0477cf91bf0ad5160d0978d96126b251067126183c6a30351",
+    "frozen_lane_inventory.csv": "52ad205ed1aca8a8aef4240e0c1aeb6e0658ff14ed48af8b70b153a036ede0ec",
+    "label_exclusions.csv": "54b6a6dad7697c4728f8098edbe2408e65c0d476a9adebb7b7637c186a480ba2",
+    "reference.parquet": "a2e753293f09d68bdbe8e981dc77c3b365de4bfabd3b7598c3a53d2da819c05e",
+    "reuse_provenance.json": "19b8d7168cbe65ce1c48f0d0f1aadcb1e8696485be54d19557e8d89cbda0db21",
+    "training_threshold_sensitivity.csv": "258b5fe1cf7323ad81a3883ea1847df949a20076d54f0de3a945b7130040760a",
+    "unit_quality.csv": "79186c5434f8d05e1b70f8b3aa19c378e2bcacc781bf4277f86d3016d3852b9f"
+  },
+  "labels": [
+    {
+      "split": "train",
+      "horizon": 15,
+      "events": 691,
+      "positive": 58,
+      "negative": 226,
+      "unknown": 407,
+      "excluded_unknown_fraction": 0.5890014471780028
+    },
+    {
+      "split": "train",
+      "horizon": 30,
+      "events": 691,
+      "positive": 93,
+      "negative": 116,
+      "unknown": 482,
+      "excluded_unknown_fraction": 0.6975397973950795
+    },
+    {
+      "split": "train",
+      "horizon": 60,
+      "events": 691,
+      "positive": 124,
+      "negative": 42,
+      "unknown": 525,
+      "excluded_unknown_fraction": 0.7597684515195369
+    },
+    {
+      "split": "validation",
+      "horizon": 15,
+      "events": 9,
+      "positive": 1,
+      "negative": 0,
+      "unknown": 8,
+      "excluded_unknown_fraction": 0.8888888888888888
+    },
+    {
+      "split": "validation",
+      "horizon": 30,
+      "events": 9,
+      "positive": 1,
+      "negative": 0,
+      "unknown": 8,
+      "excluded_unknown_fraction": 0.8888888888888888
+    },
+    {
+      "split": "validation",
+      "horizon": 60,
+      "events": 9,
+      "positive": 1,
+      "negative": 0,
+      "unknown": 8,
+      "excluded_unknown_fraction": 0.8888888888888888
+    }
+  ],
+  "fit_window": [
+    "2023-01-01 00:00:00+08:00",
+    "2023-03-01 00:00:00+08:00"
+  ],
+  "evaluation_end": "2026-10-01 00:00:00+08:00",
+  "thresholds_selected_using_test": false,
+  "limitations": [
+    "Sparse observed slots do not establish continuous physical persistence",
+    "Jan-Feb 2023 reserved for reference, not evaluated",
+    "Source interval count unit requires TD specification review",
+    "Frozen first-week lane inventory is not independent historical hardware verification",
+    "Gap-censored train/validation episodes without observed separation are purged",
+    "Human curve, identity and joint scientific approval pending; no model refit"
+  ]
+}

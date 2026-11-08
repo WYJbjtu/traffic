@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "arms": 32,
+  "metric_rows_recomputed": 64,
+  "saved_predictions_checked": 275616,
+  "run_manifest_sha256": "548389a870a27b0450c2c226b78e05d498f56eec1b3377f0ede813481ce23731",
+  "preprocessing": "all 32 fitted imputers checked against train-only column means",
+  "metric_method": "independent sklearn recomputation; AP not trapezoidal PR-AUC; log loss clipped at 1e-7; XGBoost float32 mean losses checked within 1e-7 (observed max difference 3.29e-8)",
+  "bootstrap_limits": "fixed fitted models; shared neighbors not fully addressed; unadjusted multiple comparisons",
+  "files_sha256": {
+    "error_transitions.csv": "69078fd995f6be2d98949c65744c515e8b9770ec0eea36e33249951bee1a0995",
+    "paired_bootstrap.json": "56fd4fc6f36731233dc242c01339abba1f488b377164301e0cd5596c78253b6d",
+    "spatial_contrasts.csv": "4be611323581998e89b85f48f2ea7c2657aba50ba476a73d157e4969a2aa9517"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "version": "tianhao-expanded96-30m-v1",
+  "scientific_approval": "pending_team_review_user_authorized_exploration",
+  "unit": [
+    "detector_id",
+    "direction",
+    "lane_id"
+  ],
+  "event_key": "event_id",
+  "prediction_time": "prediction_time",
+  "horizons_minutes": [
+    30
+  ],
+  "split_boundaries": {
+    "validation_start": "2025-01-01T00:00:00+08:00",
+    "test_start": "2026-01-01T00:00:00+08:00",
+    "test_end": "2026-10-01T00:00:00+08:00"
+  },
+  "feature_groups": {
+    "local": [
+      "speed_kmh",
+      "speed_ratio",
+      "baseline_kmh",
+      "valid_slots",
+      "onset_observed_minutes"
+    ],
+    "history": [
+      "speed_change_15m_ratio",
+      "speed_mean_15m_ratio",
+      "speed_slope_15m_ratio_per_min",
+      "speed_trend_observed_bins"
+    ],
+    "calendar": [
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "is_weekend",
+      "is_public_holiday",
+      "is_day_before_holiday",
+      "is_day_after_holiday"
+    ],
+    "weather": [
+      "temperature_c",
+      "wind_speed_kmh",
+      "temperature_age_minutes",
+      "wind_age_minutes",
+      "temperature_missing",
+      "wind_missing"
+    ]
+  },
+  "availability_columns": [
+    "feature_max_available_at",
+    "speed_trend_max_available_at",
+    "calendar_max_source_available_at",
+    "weather_features_available_at"
+  ],
+  "availability_requirements": {
+    "feature_max_available_at": [
+      "speed_kmh",
+      "speed_ratio",
+      "baseline_kmh",
+      "valid_slots",
+      "onset_observed_minutes"
+    ],
+    "speed_trend_max_available_at": [
+      "speed_change_15m_ratio",
+      "speed_mean_15m_ratio",
+      "speed_slope_15m_ratio_per_min",
+      "speed_trend_observed_bins"
+    ],
+    "calendar_max_source_available_at": [
+      "hour_sin",
+      "hour_cos",
+      "dow_sin",
+      "dow_cos",
+      "is_weekend",
+      "is_public_holiday",
+      "is_day_before_holiday",
+      "is_day_after_holiday"
+    ],
+    "weather_features_available_at": [
+      "temperature_c",
+      "wind_speed_kmh",
+      "temperature_age_minutes",
+      "wind_age_minutes",
+      "temperature_missing",
+      "wind_missing"
+    ]
+  },
+  "outcome_only": [
+    "recovery_time",
+    "recovery_available_at",
+    "followup_end",
+    "termination_reason",
+    "episode_separated_at",
+    "label_15m",
+    "label_30m",
+    "label_60m",
+    "reason_15m",
+    "reason_30m",
+    "reason_60m"
+  ]
+}

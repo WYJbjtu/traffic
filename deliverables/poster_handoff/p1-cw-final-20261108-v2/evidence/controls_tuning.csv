@@ -1,0 +1,13 @@
+feature_arm,model,candidate,validation_log_loss
+CW_S1_directed,random_forest,0,0.4393414952285347
+CW_S1_directed,random_forest,1,0.42127771860744023
+CW_S1_directed,xgboost,0,0.4097084105014801
+CW_S1_directed,xgboost,1,0.40134596824645996
+CW_S1_undirected,random_forest,0,0.436864563798047
+CW_S1_undirected,random_forest,1,0.41925962640426884
+CW_S1_undirected,xgboost,0,0.4115549921989441
+CW_S1_undirected,xgboost,1,0.4034782350063324
+CW_S1_geographic,random_forest,0,0.450305161764343
+CW_S1_geographic,random_forest,1,0.43412798046219
+CW_S1_geographic,xgboost,0,0.4200945794582367
+CW_S1_geographic,xgboost,1,0.4107365310192108

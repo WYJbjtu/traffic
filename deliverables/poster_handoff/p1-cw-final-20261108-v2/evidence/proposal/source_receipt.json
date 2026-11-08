@@ -1,0 +1,16 @@
+{
+  "branch": "recovery/feature/member1-proposal-aligned-data-v2",
+  "commit": "b60c5951702657ac44a2654cb997adb06038498a",
+  "scope": "read-only tracked report/CSV audit; no new full-source reconstruction or adoption",
+  "paths": [
+    "docs/proposal_member1_v2.md",
+    "reports/proposal_member1_v2/strict_outcome_verification.json",
+    "reports/proposal_member1_v2/package_verification.json",
+    "reports/proposal_member1_v2/sampled2_label_exclusions.csv",
+    "reports/proposal_member1_v2/sampled2_outcome_verification.json",
+    "reports/proposal_member1_v2/unit_quality.csv",
+    "reports/proposal_member1_v2/manifest.json",
+    "reports/proposal_member1_v2/frozen_lane_inventory.csv",
+    "reports/proposal_member1_v2/report_zh.md"
+  ]
+}

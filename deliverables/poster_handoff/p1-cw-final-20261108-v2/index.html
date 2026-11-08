@@ -1,0 +1,301 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>DSC6004 — offline poster handoff</title><style>body{font:17px/1.55 system-ui,sans-serif;color:#233440;max-width:1150px;margin:2em auto;padding:0 1em}h1,h2{line-height:1.2}img{width:100%;height:auto}article,section{border-top:1px solid #ccd6da;padding:1.5em 0}pre{white-space:pre-wrap;font:inherit;background:#f5f7f8;padding:1em}a{color:#176d75}</style><h1>DSC6004 — Poster handoff</h1><p>本页离线可读，无需安装任何软件。版本：p1-cw-final-20261108-v2。优先使用图1–3；图4–5可选。可直接从下方复制英文文案及讲稿。</p><p><strong>Recovery confirmation, not recovery start. Retrospective P1, not a new blind test.</strong></p><ul><li><a href="00_先读我_给Poster同学.md">00_先读我_给Poster同学.md</a></li><li><a href="01_poster_copy_en.md">01_poster_copy_en.md</a></li><li><a href="02_claims_and_limits_zh.md">02_claims_and_limits_zh.md</a></li><li><a href="04_figure_captions_en.md">04_figure_captions_en.md</a></li><li><a href="05_presentation_4m30s_en.md">05_presentation_4m30s_en.md</a></li><li><a href="06_likely_questions_zh_en.md">06_likely_questions_zh_en.md</a></li><li><a href="08_reproduction.md">08_reproduction.md</a></li><li><a href="03_final_results.csv">Final results CSV</a></li><li><a href="07_evidence_manifest.json">Evidence manifest</a></li></ul><article><h2>Figure 1 — 01_spatial_gain_cw</h2><p>Main result; centre/right, largest result panel</p><a href="figures/01_spatial_gain_cw.png"><img src="figures/01_spatial_gain_cw.png" alt="01_spatial_gain_cw"></a><p>Paired F7 minus F3 ROC-AUC differences for 30-minute recovery confirmation on 3,933 identical P1 retrospective inferred-network test events. F3 includes local, history, observation quality, calendar, temperature and wind; F7 adds inferred spatial features. Bars are unadjusted 95% detector-cluster Bootstrap intervals (1,000 paired draws; 44 target detectors), conditional on fixed fitted models. Shared-neighbor dependence is not fully addressed.</p><p><a href="figures/01_spatial_gain_cw.svg">SVG</a> · <a href="figures/01_spatial_gain_cw.pdf">PDF</a></p></article><article><h2>Figure 2 — 02_real_directed_network</h2><p>Method; upper-left/centre</p><a href="figures/02_real_directed_network.png"><img src="figures/02_real_directed_network.png" alt="02_real_directed_network"></a><p>Official CENTERLINE polylines and real detector positions illustrate inferred directed relationships around AID01104. Colored paths follow adopted official road subsegments, not straight-line detector links. Dotted segments are mapping offsets. Geometry-based, score-independent selection; AID01103 remains ambiguously matched. A 2026 snapshot does not establish historical or legally verified connectivity.</p><p><a href="figures/02_real_directed_network.svg">SVG</a> · <a href="figures/02_real_directed_network.pdf">PDF</a></p></article><article><h2>Figure 3 — 03_real_event_case</h2><p>Data/label explanation; lower-left/centre</p><a href="figures/03_real_event_case.png"><img src="figures/03_real_event_case.png" alt="03_real_event_case"></a><p>The first eligible chronological P1 test event (237614b88349c5712337, AID02110, 2 January 2026 at 08:35 HKT), selected without prediction-score filtering. Speeds are ratios to each unit’s own frozen reference. Neighbor measurements are as-of points, not continuous curves; orange local observations were unavailable at prediction. Thresholds and the 30-minute outcome window are shown. The negative label means no qualifying recovery confirmation within the horizon, not permanent non-recovery.</p><p><a href="figures/03_real_event_case.svg">SVG</a> · <a href="figures/03_real_event_case.pdf">PDF</a></p></article><article><h2>Figure 4 — 04_full_matrix_auc</h2><p>Optional supplementary panel; omit if crowded</p><a href="figures/04_full_matrix_auc.png"><img src="figures/04_full_matrix_auc.png" alt="04_full_matrix_auc"></a><p>All 32 refitted model/feature arms on the same P1 test events. Base is local/history/observation quality; C is calendar, W is temperature/wind, and S is inferred spatial. Two fixed candidates per model/arm were selected by validation log loss. These previously examined test data do not select a new best model.</p><p><a href="figures/04_full_matrix_auc.svg">SVG</a> · <a href="figures/04_full_matrix_auc.pdf">PDF</a></p></article><article><h2>Figure 5 — 05_matched_structure_controls</h2><p>Optional small sensitivity panel</p><a href="figures/05_matched_structure_controls.png"><img src="figures/05_matched_structure_controls.png" alt="05_matched_structure_controls"></a><p>Current C/W-adjusted RF and XGBoost structure comparisons use F3 plus the same 12 S1 summary fields, not full F7. Directed and pooled representations use identical neighbor observations; geographic neighbors follow the frozen 250 m rule. Geographic availability is 67.2% of test events versus 100% for the other representations. The small directed–pooled differences do not establish a direction-specific effect; the vertical axis is explicitly zoomed.</p><p><a href="figures/05_matched_structure_controls.svg">SVG</a> · <a href="figures/05_matched_structure_controls.pdf">PDF</a></p></article><h1>Copy-ready documents</h1><section><h2>00_先读我_给Poster同学.md</h2><pre># 只用这个版本制作 Poster
+
+交付版本：`p1-cw-final-20261108-v2`。主实验：`p1-cw-matrix-v2-20261108`。离线双击 `index.html` 即可预览、复制文案；不用 Python、Streamlit、网络地图或现场运行。5分钟只讲 Poster，讲稿目标约4分30秒，必须自行排练。
+
+## 唯一数字来源
+
+本包 `03_final_results.csv`：同一 old96 / recovery_confirmation_v1 / 30分钟 / P1 inferred-network 群体。完整32臂，验证和测试共64行；主图只比较测试 F3/F7。训练7,611、验证4,680、测试3,933（689正、3,244负）；测试时段2026年1–9月曾被查看，是回溯探索而非新盲测。
+
+C/W不是缺失交接：Tianhao认证包已接收、核验并实际入模。C为日历，W仅京士柏温度/风速及质量字段，不是所有天气。不要将观察槽数Q称为车流量。
+
+## 必用三图（PNG 300 dpi；同名SVG/PDF可编辑）
+
+1. `figures/01_spatial_gain_cw.png`：主结果，占最大结果区域。**保留跨零区间和图下注释**。
+2. `figures/02_real_directed_network.png`：真实道路方法图，标注 inferred，不能改成官方认证上下游。
+3. `figures/03_real_event_case.png`：真实事件、时间可得性与标签；不是挑选的成功案例。
+
+可选：`04_full_matrix_auc.png`（完整矩阵）、`05_matched_structure_controls.png`（当前同维度结构对照）。篇幅不足就不放；不要挤小主图。每图英文图注见 `04_figure_captions_en.md`，数据源在 `figure_data/`。
+
+建议阅读顺序：问题与定义 → 方法图 → 事件图 → 主结果 → 限制。主文案 `01_poster_copy_en.md`，讲稿 `05_presentation_4m30s_en.md`，问答 `06_likely_questions_zh_en.md`。
+
+## 必须保留的结论边界
+
+四模型AUC点估计均增加，但检测器区间只有HGB不跨零；均未经多重比较校正。RF Recall略降，LR Brier/Log Loss变差。不要写“所有指标一致提升”“控制所有天气”“证明方向/因果关系”“全港泛化”“新盲测”或“已部署”。
+
+## 不得混用
+
+旧24车道、完整96车道A1/A2、PR #21 M0/M1、旧unified F0/F4、Tianhao原独立实验和新Proposal v2都不是本主结果。旧F0/F4区间不能移给F3/F7。新Proposal为detector/direction恢复开始标签，本包主结果为旧lane-level恢复确认。历史材料不用于补齐本表。
+
+## 交付前人工确认
+
+- 作者全部姓名、组号、课程模板要求：待组员填写；目前仅能确认DSC6004 / City University of Hong Kong，不能猜作者名单。
+- 团队明确同意以“恢复确认”作为本次实际主实验，并在Poster保留与原Proposal恢复开始的差异。
+- 新Proposal v2采用审核：Issue #3读取时仍OPEN，清单未勾选、无评论；不能伪造签字。
+- 本轮没有新Proposal模型、P3历史认证、完整90天气原档本机独立重建、新置换负对照或新远端CI；这些不妨碍本包已完成的回溯主实验，但限制其科学表述。
+
+文件哈希在 `07_evidence_manifest.json`、`SHA256SUMS`；完整逐事件概率在本地研究目录，不随包发送。请只手动发送本交接ZIP，不发送.git/.venv/原始交通档案。
+</pre></section><section><h2>01_poster_copy_en.md</h2><pre># Predicting 30-Minute Congestion Recovery Confirmation in Hong Kong
+
+**An exploratory evaluation of inferred spatial features after calendar and temperature/wind adjustment**
+
+Authors / group: **[TEAM TO CONFIRM]** · DSC6004 · City University of Hong Kong
+
+## Research Question
+Do inferred neighboring-road conditions improve recovery-confirmation prediction beyond local traffic history, observation quality, calendar and the included weather covariates?
+
+## Data and Target
+- Official archived traffic, 2023–September 2026: 96 selected lane units; 30,452 events in the frozen source release.
+- P1 retains known 30-minute labels with at least one available inferred neighbor: **7,611 train / 4,680 validation / 3,933 test** events; test positives **689 (17.5%)**.
+- Congestion: two usable five-minute bins at speed/reference ≤0.5. Recovery confirmation: three high bins at ≥0.8; confirmation occurs within the next 30 minutes. Gaps censor labels.
+- This differs from the original Proposal’s recovery-*start* target. Sparse observations do not establish continuous physical recovery.
+
+## Directed Network Construction
+Official CENTERLINE, INTERSECTION and TURN records support a candidate graph. Matching uses metre distance and directional compatibility; transitions check shared endpoints/elevation, intersection evidence and recorded turn restrictions. **2026 inferred relationships are not a verified historical network.**
+
+## Feature Engineering / Experimental Design
+- Base: local speed/state + past speed/trends + observation-quality counts (not vehicle flow).
+- C: calendar and official holidays. W: King’s Park temperature/wind, ages and missingness.
+- S: inferred upstream/downstream summaries, congestion contrasts, distance weighting and past changes.
+- Four algorithms × eight feature arms; identical events, train-only imputation/scaling, two candidates selected by validation log loss, no refit; threshold **0.5**.
+- Primary comparison: **F3 = Base+C+W; F7 = F3+S**. Chronological splits: 2023–24 / 2025 / 2026 Jan–Sep. The test period was previously examined.
+
+## Key Results
+| Model | F3 AUC | F7 AUC | Paired Δ AUC [95% interval] |
+|---|---:|---:|---|
+| Logistic regression | 0.6670 | 0.7033 | +0.0363 [-0.0039, +0.0737] |
+| Random forest | 0.8105 | 0.8151 | +0.0047 [-0.0133, +0.0269] |
+| XGBoost | 0.8189 | 0.8290 | +0.0101 [-0.0029, +0.0249] |
+| HistGradientBoosting | 0.8144 | 0.8302 | +0.0159 [+0.0027, +0.0291] |
+
+Intervals use 1,000 paired target-detector Bootstrap draws (44 detectors), without multiple-comparison adjustment. HGB’s interval excludes zero; the other three include zero. RF’s gain shrinks from **+0.0336 without C/W** to **+0.0047 with C/W**. HGB Macro-F1 improves **0.6786→0.6974** and Recall **0.4253→0.4702**. Improvements are not uniform: RF Recall slightly declines and LR probability losses worsen.
+
+## Limitations
+Retrospective test reuse; selected lane/neighbor cohort; sparse and censored observations; uncertain historical mappings; regional temperature/wind proxy, no rain or incidents. Bootstrap conditions on fitted models and does not fully address shared-neighbor dependence. No causal or citywide generalisation claim.
+
+## Conclusion
+Inferred spatial features provide **model-dependent retrospective incremental information** after the included calendar and temperature/wind covariates. Adjustment attenuates several gains; evidence does not support a universal improvement or certified road connectivity.
+
+## Sources
+Hong Kong Transport Department traffic archives and Road Network v2; Hong Kong Observatory temperature/wind archives; official annual General Holidays notices. Versioned data, features, probabilities and figure sources: `07_evidence_manifest.json`.
+</pre></section><section><h2>02_claims_and_limits_zh.md</h2><pre># 科学口径、结果与不得夸大的限制
+
+## 主结果（唯一口径）
+
+`p1-cw-matrix-v2-20261108`；expanded96-long-window-v1；recovery_confirmation_v1；P1；30分钟；test=3,933，44个目标检测器。32臂全部重新训练，未沿用旧F0/F4拟合结果。全部275,616条验证/测试预测具有同一事件身份、时刻和标签；指标独立复算。AP是sklearn Average Precision，不是梯形PR-AUC。
+
+| Model | F3 AUC | F7 AUC | Paired Δ AUC [95% interval] |
+|---|---:|---:|---|
+| Logistic regression | 0.6670 | 0.7033 | +0.0363 [-0.0039, +0.0737] |
+| Random forest | 0.8105 | 0.8151 | +0.0047 [-0.0133, +0.0269] |
+| XGBoost | 0.8189 | 0.8290 | +0.0101 [-0.0029, +0.0249] |
+| HistGradientBoosting | 0.8144 | 0.8302 | +0.0159 [+0.0027, +0.0291] |
+
+
+C/W加入后空间增量通常减小。不能将HGB从多个模型中事后挑出并包装成预先指定唯一最佳模型。HGB的单个未校正95%区间不跨零，不等于稳健的总体显著性定论。
+
+## 阈值0.5下并非全面改善
+
+- LR：only_spatial_correct=172、only_base_correct=302；AUC/Macro-F1/Recall升高但总正确数减少130，Brier和Log Loss变差。
+- RF：111 vs 91；总正确数增加20，但Recall 0.2380→0.2351，Brier/Log Loss略变差。
+- XGBoost：143 vs 149；总正确数减少6，Macro-F1/Recall及损失改善，但Precision略降。
+- HGB：176 vs 151；总正确数增加25，Macro-F1/Recall/Precision/Brier/Log Loss均改善。
+- 正、负例平均概率变化及四类完整计数见 `figure_data/error_transitions.csv`，混淆矩阵计数见最终结果CSV。不要只报AUC。
+
+## Bootstrap与敏感性
+
+主分析：44目标检测器、同抽样两臂、每模型1,000有效重复、0单类无效、seed=42。被重复抽到的检测器完整重复计入。是固定已拟合模型预测的条件区间，不包括重训练/调参的不确定性。不同目标可能共享邻居，跨群依赖未完全处理；四模型区间未多重比较校正。
+
+补充：固定HKT七天块，从2026-01-01锚定，39个非空块、1,000配对重复、seed=20261108。不同依赖假设下区间有变化；不能只选较窄区间替代主结果。原始记录 `evidence/paired_bootstrap.json`。
+
+## 当前结构对照，不冒充旧PR #21
+
+RF/XGB分别重训有向、相同邻居去方向、250m地理近邻，共6臂；三者都使用F3加相同12个S1特征，不用全S1–S4对比简化模型。测试AUC（地理/无向/有向）：RF 0.8103/0.8188/0.8201；XGB 0.8157/0.8279/0.8314。方向相对无向仅+0.0012/+0.0035，没有专门区间，不作方向效果显著性主张。地理观测覆盖67.2%，另两者100%，差异不能全归因拓扑。未新增置换；旧部分置换仅为旧实验的弱控制。
+
+## Proposal差异与实现进度（标签实现 ≠ 模型完成）
+
+已只读核验独立分支b60c5951702657ac44a2654cb997adb06038498a的实际报告/CSV/manifest及Issue #3。库存CSV为256行；unit_quality的bins合计36,099,990、96方向；strict10 700事件，691/9/0；sampled2的30m排除表合计26,306事件，11,865/7,512/6,929，测试已知1,981+3,961=5,942。Jan–Feb 2023同星期/小时参考。**恢复开始并满足随后十分钟条件的标签工程已完成；模型未训练，科学采用待审。**
+
+本次核验的是生产者报告/已发布审核记录，没有下载并重新计算新版本全部源箱。Issue #3读取时OPEN，未勾选、无评论；并非审批。strict10无测试事件，不能称原方案模型成功。sampled2是采样支持持续性，不是完整连续观测，不能接strict10参考或usable。旧C/W的event_id不能贴新事件，旧分数不能移新目标。资料副本在 `evidence/proposal/`。
+
+## 本机执行范围
+
+C/W全包哈希、Release身份、源快照关联、可用时间、冻结源码与当前代码一致性通过：30,452+30,452特征、43,387快照、94来源（90天气月档+4假期公告）。这是核验交付特征及生产者重建记录；**不是本机重新下载90天气ZIP并独立重建**。全队列缺温度18、风116；P1测试缺温度6、风40，保留缺失并仅训练拟合插补。天气年龄≤60分钟，retrieved_at仅溯源。
+
+README冲突内容已合并而非整份ours/theirs；冻结metrics原LF SHA未变。仓库外autocrlf=true精确复现CRLF失败后以目录范围-text修复并重验；不是新Windows CI。没有前端工作、GNN、扩车道或速度插值。P3仍NO-GO；没有部署。所有测试通过也不等于全部原档重建通过。
+
+## 还需人工确认
+
+作者/组号；课程格式；团队同意主Poster使用恢复确认并公开Proposal差异；Member 1/2/4新数据采用和独立地图/曲线审核。不得伪造审核人或把工程通过当科学签字。
+</pre></section><section><h2>04_figure_captions_en.md</h2><pre># Copy-ready figure captions
+
+## Figure 1: 01_spatial_gain_cw
+
+**Placement:** Main result; centre/right, largest result panel
+
+Paired F7 minus F3 ROC-AUC differences for 30-minute recovery confirmation on 3,933 identical P1 retrospective inferred-network test events. F3 includes local, history, observation quality, calendar, temperature and wind; F7 adds inferred spatial features. Bars are unadjusted 95% detector-cluster Bootstrap intervals (1,000 paired draws; 44 target detectors), conditional on fixed fitted models. Shared-neighbor dependence is not fully addressed.
+
+Files: `figures/01_spatial_gain_cw.png`, `.svg`, `.pdf`.
+
+## Figure 2: 02_real_directed_network
+
+**Placement:** Method; upper-left/centre
+
+Official CENTERLINE polylines and real detector positions illustrate inferred directed relationships around AID01104. Colored paths follow adopted official road subsegments, not straight-line detector links. Dotted segments are mapping offsets. Geometry-based, score-independent selection; AID01103 remains ambiguously matched. A 2026 snapshot does not establish historical or legally verified connectivity.
+
+Files: `figures/02_real_directed_network.png`, `.svg`, `.pdf`.
+
+## Figure 3: 03_real_event_case
+
+**Placement:** Data/label explanation; lower-left/centre
+
+The first eligible chronological P1 test event (237614b88349c5712337, AID02110, 2 January 2026 at 08:35 HKT), selected without prediction-score filtering. Speeds are ratios to each unit’s own frozen reference. Neighbor measurements are as-of points, not continuous curves; orange local observations were unavailable at prediction. Thresholds and the 30-minute outcome window are shown. The negative label means no qualifying recovery confirmation within the horizon, not permanent non-recovery.
+
+Files: `figures/03_real_event_case.png`, `.svg`, `.pdf`.
+
+## Figure 4: 04_full_matrix_auc
+
+**Placement:** Optional supplementary panel; omit if crowded
+
+All 32 refitted model/feature arms on the same P1 test events. Base is local/history/observation quality; C is calendar, W is temperature/wind, and S is inferred spatial. Two fixed candidates per model/arm were selected by validation log loss. These previously examined test data do not select a new best model.
+
+Files: `figures/04_full_matrix_auc.png`, `.svg`, `.pdf`.
+
+## Figure 5: 05_matched_structure_controls
+
+**Placement:** Optional small sensitivity panel
+
+Current C/W-adjusted RF and XGBoost structure comparisons use F3 plus the same 12 S1 summary fields, not full F7. Directed and pooled representations use identical neighbor observations; geographic neighbors follow the frozen 250 m rule. Geographic availability is 67.2% of test events versus 100% for the other representations. The small directed–pooled differences do not establish a direction-specific effect; the vertical axis is explicitly zoomed.
+
+Files: `figures/05_matched_structure_controls.png`, `.svg`, `.pdf`.
+</pre></section><section><h2>05_presentation_4m30s_en.md</h2><pre># Spoken script — rehearsal target 4m30s
+
+Actual script word count (regex tokens): **553**. Suggested pace: **122.9 words/minute**; reserve 30 seconds before the 5-minute hard limit. Not human-timed. Headers/this note excluded. Rehearse against the poster, no slides or live demo.
+
+&lt;!-- SCRIPT_START --&gt;
+Good afternoon. Our project asks whether neighboring road conditions help predict when congestion will recover in Hong Kong. We focus on a precise question: after including local traffic history, calendar, temperature and wind, do inferred spatial features still add predictive information?
+
+Please start with the data and event panel. Our frozen source release contains ninety-six selected lane units and thirty thousand, four hundred and fifty-two events. For this spatial comparison, we retain events with a known thirty-minute outcome and at least one available inferred neighbor. The resulting training, validation and test sets contain seven thousand, six hundred and eleven; four thousand, six hundred and eighty; and three thousand, nine hundred and thirty-three events.
+
+Our target is recovery confirmation, not recovery start. Two low five-minute bins establish congestion. Three usable bins above eighty percent of the frozen reference establish recovery confirmation. We predict whether that confirmation occurs within thirty minutes. Missing follow-up produces an unknown label, not an automatic negative. Sparse observations support sampled persistence, not proof of uninterrupted physical recovery.
+
+The network panel shows real official road geometry and real detector locations. We constructed inferred directed relationships using distance and direction compatibility, shared endpoints and elevation, intersection evidence, and recorded turn restrictions. The colored links follow road geometry. They are not straight-line geographic neighbors. However, a current official road map does not certify historical detector matching or legal movement. One illustrated upstream match remains ambiguous. We use engineered graph features, not a graph neural network.
+
+The event panel illustrates information timing. Blue local measurements were available at prediction. Orange measurements show retrospective context only. Neighbor observations are isolated points because we do not have a complete neighbor curve for this prediction. The event was selected by chronological order, not because the model performed well.
+
+We trained four algorithms across eight feature combinations, giving thirty-two arms. Every arm used identical events. Imputation and scaling were fitted only on training data. Each algorithm had two fixed candidates, selected using validation log loss. Classification used a common probability threshold of one half. Calendar and weather features were authenticated and joined by event identity and prediction time. Weather means King’s Park temperature and wind, not rainfall or all local road weather.
+
+Now look at the main result. Spatial features increased the AUC point estimate for all four algorithms after adjustment. But the uncertainty and other metrics matter. The random forest increment was only about zero point zero zero five, and the XGBoost increment about zero point zero one zero. Their detector-cluster intervals include zero. HistGradientBoosting improved by about zero point zero one six, with an interval above zero, but these intervals were not adjusted for multiple comparisons. Random forest recall slightly decreased, and logistic regression probability losses worsened.
+
+Our intervals use one thousand paired detector-cluster samples and fixed fitted models. Shared neighbors can create dependence across clusters. A supplementary weekly-block analysis also depends on its grouping assumptions. The test period was previously examined, so this is retrospective exploration rather than a fresh blind test.
+
+We conclude that inferred spatial information can provide model-dependent incremental value after the included calendar and temperature and wind variables, but not a universal improvement. The separate Proposal recovery-start labels are implemented; their models and adoption review remain unfinished. We do not claim causality, citywide generalisation, historical network certification, or deployment. Thank you.
+&lt;!-- SCRIPT_END --&gt;
+</pre></section><section><h2>06_likely_questions_zh_en.md</h2><pre># Poster Q&amp;A
+
+## 1. 为什么用图而非最近邻？ / Why a graph rather than geographic proximity?
+
+中：道路拓扑与方向可区分平行路、立交和潜在上下游，但当前推断仍会错；同维度对照差异小且地理覆盖不同，不能宣称图已被证明更优。
+
+EN: Topology and direction can distinguish proximity from plausible connectivity. Our inferred graph can still be wrong. Matched-summary controls show small directed–pooled differences and unequal geographic coverage, not a definitive proof of superiority.
+
+## 2. 是否用了GNN？ / Did you use a GNN?
+
+中：没有。使用真实图的工程化邻居特征加LR/RF/实际XGBoost/HGB。
+
+EN: No. We used engineered graph summaries with logistic regression, random forest, actual XGBoost and HistGradientBoosting.
+
+## 3. 如何防未来泄漏？ / How is future leakage prevented?
+
+中：双键连接，观测/可用时间不晚于预测、天气年龄≤60分钟、邻路年龄≤10分钟、训练拟合、时间分组与冻结purge。2026地图本身仍是回溯代理，不能说全部输入均历史已验证。
+
+EN: Event/time joins, observation and availability cutoffs, age limits, training-only fitting and frozen purged temporal splits protect dynamic features. The 2026 static graph is explicitly retrospective and not historically certified.
+
+## 4. 恢复开始与确认区别？ / Start versus confirmation?
+
+中：开始是连续高箱的第一箱；确认需要后续高箱见证。旧实验以确认时刻判30分钟；新Proposal以开始及随后持续条件判定，不能换名字套分数。
+
+EN: Start is the first high-bin endpoint; confirmation is observed only after the sustaining sequence. They can fall on different sides of the deadline. Our scores belong only to confirmation.
+
+## 5. 2026路网用于早期事件？ / Why use a 2026 network for earlier events?
+
+中：作为有明确限制的回溯推断代理；无法核实历史变更、硬件和合法转向。P3未批准。
+
+EN: It is a limited retrospective proxy, not proof of historical road or detector identity. The verified historical-network/P3 gate remains NO-GO.
+
+## 6. 稀疏数据持续恢复？ / How is persistence defined with sparse data?
+
+中：旧版每5分钟箱至少两个有效正流量槽，三高箱确认，缺口删失。不是完整连续观测。新strict10与sampled2另有规则不能混接。
+
+EN: Three consecutive usable high bins establish sampled confirmation. Gaps censor follow-up. Sparse slots do not establish continuous physical recovery. Proposal strict10 and sampled2 are separate definitions.
+
+## 7. 是否控制时间天气？ / Are time and weather controlled?
+
+中：主比较F3/F7已含8个日历和6个温度/风速质量字段；无雨量、事故或活动控制，不代表所有混杂已排除。
+
+EN: Yes, for the specified calendar and King’s Park temperature/wind covariates. This is not control of all weather, incidents, events, or unmeasured confounding.
+
+## 8. Bootstrap如何解释？ / What does the Bootstrap interval mean?
+
+中：同检测器事件成组抽、两臂同抽、重复抽中按重复权重；44群，1000次。固定模型，不包括训练不确定性；共享邻居跨群依赖与多重比较未完全处理。
+
+EN: Both arms share each draw, repeating all events when a detector is sampled again. It measures fixed-model test uncertainty. Shared neighbors and unadjusted multiple comparisons limit interpretation.
+
+## 9. 已完成与未完成？ / What is completed versus future work?
+
+中：32臂主实验、6臂结构对照、统计、图表已完成；新Proposal数据标签已实现但采用/模型未完成；P3、部署、未来盲测未完成。
+
+EN: The 32-arm confirmation study, six matched structural controls, audits and figures are complete. New Proposal labels exist, but adoption and models are pending; P3, deployment and future blind validation are not delivered.
+
+## 10. 最高AUC是唯一最佳模型吗？ / Is the highest test AUC the best model?
+
+中：不是预先选定唯一最佳；展示全矩阵和多指标，候选仅按验证log loss选。
+
+EN: No test-selected winner is claimed. Candidate selection used validation log loss, and all algorithms and trade-offs are reported.
+
+## 11. 原始天气是否全部重建？ / Did you independently rebuild all weather archives?
+
+中：没有。核验了已交付特征、来源元数据、源快照和值、冻结生产者重建记录及示例原字节；90月ZIP只有URL/SHA链。
+
+EN: No. We authenticated the delivered features, source snapshots, metadata, producer reconstruction records and supplied raw examples. We did not independently re-download all 90 monthly archives.
+
+## 12. 为什么不报accuracy为主？ / Why not focus on accuracy?
+
+中：测试正例17.5%，多数负类可使accuracy高；同时报告AUC、AP、Macro-F1、Recall、损失和混淆矩阵。
+
+EN: Only 17.5% of test events are positive. We report ranking, class-sensitive, calibration and confusion metrics rather than relying on majority-dominated accuracy.
+</pre></section><section><h2>08_reproduction.md</h2><pre># Reproduction and execution scope
+
+Poster users need only this package. Researchers use the repository at `https://github.com/WYJbjtu/traffic`, local finalization branch and code hashes in the evidence manifest. Python 3.12; committed uv.lock; no extra dependencies or browser run. Execute from repository root. Commands below never upload anything. New output paths **must not exist**.
+
+```text
+uv sync --locked
+uv run --locked pytest -q
+uv run --locked python experiments/tianhao/calendar_weather96_20261106/verify_archive.py --extract data/local/poster-reproduction/cw
+uv run --locked python data/local/poster-reproduction/cw/calendar_weather96/verify_handoff.py --events data/local/expanded96-release/prepared-v1/processed/events.parquet --repository .
+uv run --locked python -m experiments.unified96.run --context data/local/poster-reproduction/cw/calendar_weather96 --out data/local/unified96/poster-reproduction-matrix-v1
+uv run --locked python -m experiments.unified96.poster_analysis --run data/local/unified96/poster-reproduction-matrix-v1 --out data/local/unified96/poster-reproduction-analysis-v1
+uv run --locked python -m experiments.unified96.poster_controls --run data/local/unified96/poster-reproduction-matrix-v1 --out data/local/unified96/poster-reproduction-controls-v1
+uv run --locked python -m experiments.unified96.poster_handoff --run data/local/unified96/poster-reproduction-matrix-v1 --analysis data/local/unified96/poster-reproduction-analysis-v1 --controls data/local/unified96/poster-reproduction-controls-v1 --proposal data/local/poster-finalization/proposal-review-v1 --cw data/local/poster-reproduction/cw/calendar_weather96 --out deliverables/poster_handoff/reproduction-v1
+```
+
+## Required local evidence (not bundled large datasets)
+
+- Old96 Release, extracted event/bin tables and frozen history features at the paths recorded in `evidence/main_manifest.json`. Input SHA checks are mandatory. Current release: `https://github.com/WYJbjtu/traffic/releases/tag/data-expanded-96-2023-2026-v1`.
+- Authentic inferred-v2 features, lineage, geography controls, mappings and official geometry/index. These are existing ignored research artifacts; their hashes are in main/controls/figure manifests. Acquisition/graph reproduction is documented in repository `reports/spatial96_inferred_v2/network_methodology.md`; do not overwrite that frozen run.
+- Proposal evidence snapshots can be recreated with `git show b60c5951702657ac44a2654cb997adb06038498a:&lt;path&gt;` for the source paths in `evidence/proposal/source_receipt.json`; save bytes to a new ignored evidence directory. This is a document audit, not adoption or full Proposal reconstruction. Read-only Issue #3 snapshot is in this package.
+- The C/W verifier authenticates delivered features and producer records. No claim to independent complete monthly-weather download/rebuild is made.
+
+## This delivery actually executed
+
+Matrix `p1-cw-matrix-v2-20261108`: 32 selected fits, 64 candidate fits, 275,616 saved validation/test rows. F3/F7 were fitted first; all F0/F4 were refitted. Six selected matched-control fits (12 candidates) additionally executed. Independently recomputed ROC-AUC, AP, Macro-F1, balanced accuracy, precision, recall, Brier, clipped log loss and TN/FP/FN/TP; checked identical event/time/label populations and train-only imputer means. XGBoost float32 arithmetic causes at most about 3.3e-8 difference after float64 reload; mean losses use 1e-7 absolute audit tolerance, other metrics tighter.
+
+1,000 paired detector-cluster and 1,000 fixed-week-block replicates per model, with seeds recorded. No retraining bootstrap. No new threshold tuning, label permutation, Proposal-target training or live service.
+
+Training source hashes and dirty Git status at execution are preserved rather than misattributed to a later clean commit. The first partial v1 execution failed on serializing an XGBoost NaN parameter sentinel; it is not cited. Fixed serialization records that sentinel as a string; completed v2 uses unchanged candidate parameters. Source `poster_protocol.md` records this incident.
+
+The finalization tests include isolated `autocrlf=true` Git checkout. That is not actual Windows or new remote CI. Unit tests are not evidence of rebuilding the complete traffic/meteorological archives.
+
+## Package integrity
+
+`07_evidence_manifest.json` hashes every payload except itself and SHA256SUMS (avoids self-reference). `SHA256SUMS` also includes the manifest. A separate ZIP receipt records archive size/SHA and actual temporary extraction, file/image/table/reference checks. For metric meaning: ROC-AUC/AP/Macro-F1/Recall higher is better; Brier/Log Loss lower is better; AP is sklearn Average Precision, not trapezoidal PR-AUC. NA is not zero. Final-results paired deltas are spatial minus its matched base; intervals apply only to test F7−F3.
+</pre></section></html>
