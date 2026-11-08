@@ -1,0 +1,4 @@
+# Root .gitattributes is itself bound by Tianhao's historical publication hash.
+# Add scoped rules here without changing that frozen root file.
+.gitattributes -text
+runs/** -text

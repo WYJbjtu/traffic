@@ -1,0 +1,5 @@
+# Poster evidence manifests authenticate exact bytes, also on Windows checkout.
+.gitattributes -text
+poster_handoff/** -text
+*.zip -text
+*.verification.json -text
