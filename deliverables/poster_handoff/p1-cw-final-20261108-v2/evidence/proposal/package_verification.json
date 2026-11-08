@@ -1,0 +1,150 @@
+{
+  "archive": "HK_Traffic_Proposal_Detector_Direction_v2.zip",
+  "bytes": 286653317,
+  "sha256": "b288ba53398f266ab25e09711712a34ed7b238c035e045e1dcfefdb5b03ec13d",
+  "directions": 96,
+  "lane_inventory": 256,
+  "observed_bins": 36099990,
+  "events": 700,
+  "label_exclusions": [
+    {
+      "split": "train",
+      "horizon": 15,
+      "events": 691,
+      "positive": 58,
+      "negative": 226,
+      "unknown": 407,
+      "excluded_unknown_fraction": 0.5890014471780028
+    },
+    {
+      "split": "train",
+      "horizon": 30,
+      "events": 691,
+      "positive": 93,
+      "negative": 116,
+      "unknown": 482,
+      "excluded_unknown_fraction": 0.6975397973950795
+    },
+    {
+      "split": "train",
+      "horizon": 60,
+      "events": 691,
+      "positive": 124,
+      "negative": 42,
+      "unknown": 525,
+      "excluded_unknown_fraction": 0.7597684515195369
+    },
+    {
+      "split": "validation",
+      "horizon": 15,
+      "events": 9,
+      "positive": 1,
+      "negative": 0,
+      "unknown": 8,
+      "excluded_unknown_fraction": 0.8888888888888888
+    },
+    {
+      "split": "validation",
+      "horizon": 30,
+      "events": 9,
+      "positive": 1,
+      "negative": 0,
+      "unknown": 8,
+      "excluded_unknown_fraction": 0.8888888888888888
+    },
+    {
+      "split": "validation",
+      "horizon": 60,
+      "events": 9,
+      "positive": 1,
+      "negative": 0,
+      "unknown": 8,
+      "excluded_unknown_fraction": 0.8888888888888888
+    }
+  ],
+  "review_curves": 6,
+  "sampled2_events": 26306,
+  "sampled2_labels": [
+    {
+      "split": "test",
+      "horizon": 15,
+      "events": 6929,
+      "positive": 1082,
+      "negative": 4941,
+      "unknown": 906,
+      "excluded_unknown_fraction": 0.13075479867224707
+    },
+    {
+      "split": "test",
+      "horizon": 30,
+      "events": 6929,
+      "positive": 1981,
+      "negative": 3961,
+      "unknown": 987,
+      "excluded_unknown_fraction": 0.14244479722903738
+    },
+    {
+      "split": "test",
+      "horizon": 60,
+      "events": 6929,
+      "positive": 3213,
+      "negative": 2621,
+      "unknown": 1095,
+      "excluded_unknown_fraction": 0.15803146197142445
+    },
+    {
+      "split": "train",
+      "horizon": 15,
+      "events": 11865,
+      "positive": 2387,
+      "negative": 7580,
+      "unknown": 1898,
+      "excluded_unknown_fraction": 0.15996628739991572
+    },
+    {
+      "split": "train",
+      "horizon": 30,
+      "events": 11865,
+      "positive": 4304,
+      "negative": 5527,
+      "unknown": 2034,
+      "excluded_unknown_fraction": 0.17142857142857143
+    },
+    {
+      "split": "train",
+      "horizon": 60,
+      "events": 11865,
+      "positive": 6500,
+      "negative": 3179,
+      "unknown": 2186,
+      "excluded_unknown_fraction": 0.1842393594605984
+    },
+    {
+      "split": "validation",
+      "horizon": 15,
+      "events": 7512,
+      "positive": 1399,
+      "negative": 4890,
+      "unknown": 1223,
+      "excluded_unknown_fraction": 0.16280617678381257
+    },
+    {
+      "split": "validation",
+      "horizon": 30,
+      "events": 7512,
+      "positive": 2540,
+      "negative": 3641,
+      "unknown": 1331,
+      "excluded_unknown_fraction": 0.17718317358892438
+    },
+    {
+      "split": "validation",
+      "horizon": 60,
+      "events": 7512,
+      "positive": 3936,
+      "negative": 2154,
+      "unknown": 1422,
+      "excluded_unknown_fraction": 0.18929712460063897
+    }
+  ]
+}

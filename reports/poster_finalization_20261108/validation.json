@@ -1,0 +1,59 @@
+{
+  "checked_at_utc": "2026-11-08T15:46:30.626559+00:00",
+  "code_commit": "501779ccc00736b1f3d89f13eec37b4aced66c21",
+  "commands": [
+    "uv sync --locked",
+    "uv run --locked pytest -q"
+  ],
+  "tests": {
+    "passed": 294,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 1,
+    "seconds": 65.45
+  },
+  "pytest_log_sha256": "3a1b0a974c39dc9af78ad3d33af56a9f42bab8ed3376b1c61b94b0b70ed17648",
+  "old_unified_outputs_sha256_unchanged": {
+    "metrics.csv": "a263659e54dedefde9a3ce801dbff09d09c0e181b62ad5546d63b1cfa887dcbf",
+    "predictions.parquet": "3e61154d2395f247e446fd9813d6e8adb3433eb3cfe6e33074bb1a384afc5b1b",
+    "paired_bootstrap.json": "77a6def5ebefeac5749cd5f9b43aafc387ffbac5a7eab2fad53fc62f511cab99",
+    "validation_selection.json": "2e2677f9704009a7dcf0819d87baab54cf1f5d0dfbf0c475e34c9bcd7d135b0f"
+  },
+  "root_gitattributes_unchanged": true,
+  "cw_archive_sha256": "cdb5f9a9a704cd2bcd823e4a7ba2615319c026f0311e2be55fa998b0418513c0",
+  "main_run": "data/local/unified96/p1-cw-matrix-v2-20261108",
+  "model_arms": 32,
+  "matched_control_arms": 6,
+  "saved_main_predictions": 275616,
+  "detector_bootstrap_replicates_per_model": 1000,
+  "time_block_replicates_per_model": 1000,
+  "figures_visually_opened": 5,
+  "packet": {
+    "status": "passed",
+    "files": 64,
+    "png_decoded": 5,
+    "svg_parsed": 5,
+    "pdf_headers_checked": 5,
+    "metric_rows_checked": 64,
+    "relative_html_references": 29,
+    "zip": "deliverables/poster_handoff_p1-cw-final-20261108-v2.zip",
+    "bytes": 1584127,
+    "sha256": "ca99602acb5010b1e014862c164667c7e2554f7285e92e665ed2f00d98df7f4a",
+    "actual_temporary_extraction": true,
+    "image_review": "five preview PNGs opened and visually inspected before final package; same source-backed figure generation",
+    "remote_writes": false
+  },
+  "final_package_recheck": {
+    "status": "passed",
+    "files": 64,
+    "png_decoded": 5,
+    "svg_parsed": 5,
+    "pdf_headers_checked": 5,
+    "metric_rows_checked": 64,
+    "relative_html_references": 29
+  },
+  "windows_scope": "isolated Linux Git checkout with core.autocrlf=true; not Windows CI",
+  "full_staged_index_autocrlf_checkout": "passed: all original unified artifact hashes and all 64 final handoff files retained; package figures, tables and relative references revalidated",
+  "source_rebuild_scope": "authenticated delivered inputs and producer records; no full traffic/weather/Proposal rebuild",
+  "remote_operations": "read-only fetch recovery and read-only Issue #3; no remote writes"
+}

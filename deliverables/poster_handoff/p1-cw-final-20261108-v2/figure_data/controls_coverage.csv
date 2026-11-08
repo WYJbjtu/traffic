@@ -1,0 +1,10 @@
+control,split,n_events,any_neighbor_fraction
+CW_S1_directed,test,3933,1.0
+CW_S1_directed,train,7611,1.0
+CW_S1_directed,validation,4680,1.0
+CW_S1_undirected,test,3933,1.0
+CW_S1_undirected,train,7611,1.0
+CW_S1_undirected,validation,4680,1.0
+CW_S1_geographic,test,3933,0.6717518433765574
+CW_S1_geographic,train,7611,0.7670476941269215
+CW_S1_geographic,validation,4680,0.7175213675213675

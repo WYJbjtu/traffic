@@ -1,0 +1,257 @@
+detector_id,direction,lane_id
+AID01101,South East,Fast Lane
+AID01101,South East,Middle Lane
+AID01101,South East,Slow Lane
+AID01103,South East,Fast Lane
+AID01103,South East,Middle Lane
+AID01103,South East,Slow Lane
+AID01104,North East,Fast Lane
+AID01104,North East,Slow Lane
+AID01105,North East,Fast Lane
+AID01105,North East,Slow Lane
+AID01106,South East,Fast Lane
+AID01106,South East,Slow Lane
+AID01107,North East,Fast Lane
+AID01107,North East,Slow Lane
+AID01108,North West,Fast Lane
+AID01108,North West,Slow Lane
+AID01111,North East,Fast Lane
+AID01111,North East,Middle Lane 1
+AID01111,North East,Middle Lane 2
+AID01111,North East,Slow Lane
+AID01112,North East,Fast Lane
+AID01112,North East,Middle Lane 1
+AID01112,North East,Middle Lane 2
+AID01112,North East,Slow Lane
+AID01113,North West,Fast Lane
+AID01113,North West,Middle Lane
+AID01113,North West,Slow Lane
+AID01114,North East,Fast Lane
+AID01114,North East,Middle Lane
+AID01114,North East,Slow Lane
+AID01117,North,Fast Lane
+AID01117,North,Middle Lane 1
+AID01117,North,Middle Lane 2
+AID01117,North,Slow Lane
+AID01120,North,Fast Lane
+AID01120,North,Middle Lane
+AID01120,North,Slow Lane
+AID01124,North East,Fast Lane
+AID01124,North East,Slow Lane
+AID01126,North East,Fast Lane
+AID01126,North East,Slow Lane
+AID01127,North East,Fast Lane
+AID01127,North East,Slow Lane
+AID01129,North East,Fast Lane
+AID01129,North East,Slow Lane
+AID01131,North East,Fast Lane
+AID01131,North East,Slow Lane
+AID01133,North East,Fast Lane
+AID01133,North East,Slow Lane
+AID01134,North West,Fast Lane
+AID01134,North West,Slow Lane
+AID01135,North West,Fast Lane
+AID01135,North West,Slow Lane
+AID01136,North East,Fast Lane
+AID01136,North East,Slow Lane
+AID01201,South,Fast Lane
+AID01201,South,Slow Lane
+AID01202,South East,Fast Lane
+AID01202,South East,Slow Lane
+AID01203,South,Fast Lane
+AID01203,South,Slow Lane
+AID01204,South,Fast Lane
+AID01204,South,Middle Lane
+AID01204,South,Slow Lane
+AID01206,South,Fast Lane
+AID01206,South,Slow Lane
+AID01209,South West,Fast Lane
+AID01209,South West,Middle Lane
+AID01209,South West,Slow Lane
+AID01210,South East,Fast Lane
+AID01210,South East,Middle Lane
+AID01210,South East,Slow Lane
+AID01211,South East,Fast Lane
+AID01211,South East,Middle Lane
+AID01211,South East,Slow Lane
+AID01212,South East,Fast Lane
+AID01212,South East,Middle Lane
+AID01212,South East,Slow Lane
+AID01213,South West,Fast Lane
+AID01213,South West,Middle Lane 1
+AID01213,South West,Middle Lane 2
+AID01213,South West,Slow Lane
+AID01214,South East,Fast Lane
+AID01214,South East,Middle Lane
+AID01214,South East,Slow Lane
+AID01215,South West,Fast Lane
+AID01215,South West,Slow Lane
+AID01216,South East,Fast Lane
+AID01216,South East,Slow Lane
+AID01219,South West,Fast Lane
+AID01219,South West,Slow Lane
+AID01220,North West,Fast Lane
+AID01220,North West,Slow Lane
+AID01221,South West,Fast Lane
+AID01221,South West,Middle Lane
+AID01221,South West,Slow Lane
+AID01222,South West,Fast Lane
+AID01222,South West,Middle Lane
+AID01222,South West,Slow Lane
+AID01223,North West,Fast Lane
+AID01223,North West,Middle Lane
+AID01223,North West,Slow Lane
+AID02104,North West,Fast Lane
+AID02104,North West,Slow Lane
+AID02105,South West,Fast Lane
+AID02105,South West,Slow Lane
+AID02108,North West,Fast Lane
+AID02108,North West,Middle Lane
+AID02108,North West,Slow Lane
+AID02109,North West,Fast Lane
+AID02109,North West,Middle Lane
+AID02109,North West,Slow Lane
+AID02110,North West,Fast Lane
+AID02110,North West,Middle Lane
+AID02110,North West,Slow Lane
+AID02111,North East,Fast Lane
+AID02111,North East,Middle Lane
+AID02111,North East,Slow Lane
+AID02112,West,Fast Lane
+AID02112,West,Slow Lane
+AID02114,North,Fast Lane
+AID02114,North,Slow Lane
+AID02115,North East,Fast Lane
+AID02115,North East,Slow Lane
+AID02116,North,Fast Lane
+AID02116,North,Middle Lane
+AID02118,North West,Fast Lane
+AID02118,North West,Middle Lane 1
+AID02118,North West,Middle Lane 2
+AID02118,North West,Middle Lane 3
+AID02118,North West,Slow Lane
+AID02119,North East,Fast Lane
+AID02119,North East,Slow Lane
+AID02120,North,Fast Lane
+AID02120,North,Middle Lane 1
+AID02120,North,Middle Lane 2
+AID02120,North,Slow Lane
+AID02121,North,Fast Lane
+AID02121,North,Middle Lane
+AID02121,North,Slow Lane
+AID02123,North East,Fast Lane
+AID02123,North East,Middle Lane
+AID02123,North East,Slow Lane
+AID02124,North East,Fast Lane
+AID02124,North East,Slow Lane
+AID02125,North West,Fast Lane
+AID02125,North West,Slow Lane
+AID02127,North East,Fast Lane
+AID02127,North East,Slow Lane
+AID02202,South East,Fast Lane
+AID02202,South East,Slow Lane
+AID02203,South,Fast Lane
+AID02203,South,Slow Lane
+AID02205,South,Fast Lane
+AID02205,South,Slow Lane
+AID02207,East,Fast Lane
+AID02207,East,Middle Lane
+AID02207,East,Slow Lane
+AID02208,South East,Fast Lane
+AID02208,South East,Middle Lane
+AID02208,South East,Slow Lane
+AID02209,South East,Fast Lane
+AID02209,South East,Middle Lane
+AID02209,South East,Slow Lane
+AID02210,South East,Fast Lane
+AID02210,South East,Middle Lane
+AID02210,South East,Slow Lane
+AID02212,South East,Fast Lane
+AID02212,South East,Middle Lane
+AID02212,South East,Slow Lane
+AID02213,North East,Fast Lane
+AID02213,North East,Middle Lane
+AID02213,North East,Slow Lane
+AID02214,North East,Fast Lane
+AID02214,North East,Middle Lane 1
+AID02214,North East,Middle Lane 2
+AID02214,North East,Slow Lane
+AID02215,South East,Fast Lane
+AID02215,South East,Slow Lane
+AID03101,North East,Fast Lane
+AID03101,North East,Middle Lane
+AID03101,North East,Slow Lane
+AID03103,West,Fast Lane
+AID03103,West,Slow Lane
+AID03104,West,Fast Lane
+AID03106,North East,Fast Lane
+AID03106,North East,Middle Lane
+AID03106,North East,Slow Lane
+AID03107,North West,Fast Lane
+AID03107,North West,Middle Lane
+AID03107,North West,Slow Lane
+AID03108,North West,Fast Lane
+AID03108,North West,Middle Lane
+AID03108,North West,Slow Lane
+AID03110,North West,Fast Lane
+AID03110,North West,Middle Lane
+AID03110,North West,Slow Lane
+AID03112,North West,Fast Lane
+AID03112,North West,Middle Lane
+AID03112,North West,Slow Lane
+AID03113,North West,Fast Lane
+AID03113,North West,Middle Lane
+AID03113,North West,Slow Lane
+AID03114,North West,Fast Lane
+AID03114,North West,Middle Lane
+AID03114,North West,Slow Lane
+AID03115,North West,Fast Lane
+AID03115,North West,Middle Lane
+AID03115,North West,Slow Lane
+AID03116,North West,Fast Lane
+AID03116,North West,Middle Lane
+AID03116,North West,Slow Lane
+AID03117,North,Fast Lane
+AID03117,North,Middle Lane
+AID03117,North,Slow Lane
+AID03118,North West,Fast Lane
+AID03118,North West,Middle Lane
+AID03118,North West,Slow Lane
+AID03119,North West,Fast Lane
+AID03119,North West,Middle Lane
+AID03119,North West,Slow Lane
+AID03120,North West,Fast Lane
+AID03120,North West,Middle Lane
+AID03120,North West,Slow Lane
+AID03121,North West,Fast Lane
+AID03121,North West,Middle Lane
+AID03121,North West,Slow Lane
+AID03122,North West,Fast Lane
+AID03122,North West,Middle Lane
+AID03122,North West,Slow Lane
+AID03123,North West,Fast Lane
+AID03123,North West,Middle Lane
+AID03123,North West,Slow Lane
+AID03124,North West,Fast Lane
+AID03124,North West,Slow Lane
+AID03125,North,Fast Lane
+AID03125,North,Slow Lane
+AID03201,South East,Fast Lane
+AID03201,South East,Middle Lane
+AID03201,South East,Slow Lane
+AID03202,South East,Fast Lane
+AID03202,South East,Middle Lane 1
+AID03202,South East,Middle Lane 2
+AID03202,South East,Slow Lane
+AID03203,South East,Fast Lane
+AID03203,South East,Middle Lane
+AID03203,South East,Slow Lane
+AID03204,South East,Fast Lane
+AID03204,South East,Middle Lane
+AID03204,South East,Slow Lane
+AID03205,South East,Fast Lane
+AID03205,South East,Middle Lane
+AID03205,South East,Slow Lane
+AID03206,South East,Fast Lane
+AID03206,South East,Middle Lane
+AID03206,South East,Slow Lane

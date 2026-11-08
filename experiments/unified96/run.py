@@ -1,4 +1,4 @@
-"""Authenticated P1 F0/F4 retrospective comparison; no unverified C/W substitution.
+"""Authenticated P1 retrospective comparison; --context activates F0–F7.
 
 Run from repo root: uv run --locked python -m experiments.unified96.run --out data/local/unified96/f0-f4-p1-v1
 Output directory must not exist. Does not scan the 35m-row five-minute history.
@@ -31,7 +31,10 @@ Q = ["valid_slots", "history_observed_bins"]  # observation counts, NOT vehicle 
 L = [x for x in LOCAL if x != "valid_slots"]
 H = [x for x in HISTORY if x != "history_observed_bins"]
 S = S1 + S2 + S3 + S4
-ARMS = {"F0": L + H + Q, "F4": L + H + Q + S}
+from experiments.unified96.context import C, W
+
+ARMS = {f"F{i}": L + H + Q + (C if i % 4 in (1, 3) else [])
+        + (W if i % 4 in (2, 3) else []) + (S if i >= 4 else []) for i in range(8)}
 MODELS = ("logistic_regression", "random_forest", "xgboost", "hist_gradient_boosting")
 SPLITS = ("train", "validation", "test")
 
@@ -187,7 +190,7 @@ def run(output: Path, *, root: Path = ROOT) -> None:
     from time import perf_counter
     started = perf_counter()
     predictions, rows, selections = [], [], []
-    for arm, columns in ARMS.items():
+    for arm, columns in ((name, ARMS[name]) for name in ('F0', 'F4')):
         train, validation, test = (data.loc[data.split.eq(s)] for s in SPLITS)
         for model_name in MODELS:
             contenders = candidate_models()[model_name]
@@ -229,7 +232,7 @@ def run(output: Path, *, root: Path = ROOT) -> None:
         "target": "recovery_confirmation_v1", "population": "INFERRED_EXPLORATORY", "horizon_min": 30,
         "inputs_sha256": inputs, "split_event_ids_sha256": {s: event_hash(data.loc[data.split.eq(s), "event_id"]) for s in SPLITS},
         "split_counts": {s: int(data.split.eq(s).sum()) for s in SPLITS},
-        "feature_groups": {"L": L, "H": H, "Q": Q, "S": S}, "arms": ARMS, "excluded_groups": {
+        "feature_groups": {"L": L, "H": H, "Q": Q, "S": S}, "arms": {k: ARMS[k] for k in ('F0', 'F4')}, "excluded_groups": {
         "C": "verified official holiday event feature input unavailable locally",
         "W": "authenticated King's Park weather event/station input unavailable locally"},
         "selection": "two frozen candidates/model, minimum validation log loss, no refit; fixed threshold 0.5",
@@ -243,8 +246,14 @@ def run(output: Path, *, root: Path = ROOT) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, required=True, help="New output directory (must not exist)")
+    parser.add_argument('--context', type=Path, help='Authenticated calendar_weather96 bundle; activates new matrix runner')
+    parser.add_argument('--arms', nargs='+', choices=list(ARMS), default=['F3', 'F7', 'F0', 'F4', 'F1', 'F5', 'F2', 'F6'])
     args = parser.parse_args()
-    run(args.out)
+    if args.context is None:
+        run(args.out)  # original F0/F4 reproduction; frozen outputs never overwritten
+    else:
+        from experiments.unified96.matrix import run_matrix
+        run_matrix(args.out, args.context, args.arms)
 
 
 if __name__ == "__main__":

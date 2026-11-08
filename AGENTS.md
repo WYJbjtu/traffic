@@ -7,10 +7,14 @@ Authentic, traceable data and valid reproducible experiments outrank complexity.
 Core experiments: **November 4, 2026**. Poster: **November 6–7, 2026**.
 Outputs: audited datasets, justified event/label definitions, temporal evaluation,
 spatial ablation, documented limitations, reproducible reports and poster.
-Current delivery includes a frozen exploratory 96-lane confirmation-target experiment
-and a separate retrospective inferred-network spatial study. The strict verified
-historical-network/P3 gate is NO-GO; Proposal recovery-start is NOT RUN. Historical
-24-lane results and earlier pilots are separate. No live prediction service is claimed.
+Current delivery includes frozen 96-lane confirmation-target experiments and a
+retrospective inferred-network spatial study. The final poster handoff is
+`deliverables/poster_handoff/p1-cw-final-20261108-v2/`: new 32-arm C/W-adjusted P1
+run `p1-cw-matrix-v2-20261108`, plus six matched S1 controls. Do not overwrite it.
+The strict verified historical-network/P3 gate is NO-GO. Member 1's separate
+Proposal v2 recovery-start data/labels ARE implemented; scientific adoption and
+model experiments remain pending (Issue #3), not interchangeable with confirmation.
+Historical 24-lane results and earlier pilots are separate. No live service is claimed.
 
 ## Engineering
 - Python **3.12**, `uv`, `pyproject.toml` and committed `uv.lock`.
@@ -39,7 +43,8 @@ historical-network/P3 gate is NO-GO; Proposal recovery-start is NOT RUN. Histori
 - Do not change frozen congestion/recovery thresholds, cohort, labels, hashes,
   splits or published metrics under a refactor. Version new scientific definitions.
   Recovery within a horizon is not recovery at its endpoint. Do not equate
-  `recovery_confirmation_v1` with unimplemented `recovery_start_sustained_v1`.
+  `recovery_confirmation_v1` with the separate Proposal v2 recovery-start target;
+  that version's label engineering does not establish completed model experiments.
 - Inferred 2026 graph is not a validated historical network: P1/P2 are distinct
   retrospective subsets; P3 remains unapproved. Never fill missing speed with zero.
 

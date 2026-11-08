@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "events": 30452,
+  "known_30m": 27858,
+  "calendar_rows": 30452,
+  "weather_rows": 30452,
+  "station_snapshots": 43387,
+  "sources": 94,
+  "temperature_missing": 18,
+  "wind_missing": 116,
+  "release_alignment": "passed",
+  "repository_alignment": "passed",
+  "raw_weather_archives": "links/hashes only; no claim to recheck absent monthly ZIP bytes"
+}

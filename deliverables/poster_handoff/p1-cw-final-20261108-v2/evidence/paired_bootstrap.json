@@ -1,0 +1,210 @@
+[
+  {
+    "model": "logistic_regression",
+    "grouping": "target_detector",
+    "clusters": 44,
+    "events": 3933,
+    "replicates_requested": 1000,
+    "seed": 42,
+    "event_ids_sha256": "c6aaae1e81fd1fe9e1309d1068b5e05431823ddb49d3710f62b4ebddde554ef3",
+    "invalid_single_class": 0,
+    "roc_auc": {
+      "observed_delta": 0.03628894428745533,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.003889376389111956,
+        0.07369928631685096
+      ]
+    },
+    "average_precision": {
+      "observed_delta": 0.007479224134083751,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.03641148642725764,
+        0.05412585876226631
+      ]
+    }
+  },
+  {
+    "model": "logistic_regression",
+    "grouping": "fixed_7day_HKT_20260101",
+    "clusters": 39,
+    "events": 3933,
+    "replicates_requested": 1000,
+    "seed": 20261108,
+    "event_ids_sha256": "c6aaae1e81fd1fe9e1309d1068b5e05431823ddb49d3710f62b4ebddde554ef3",
+    "invalid_single_class": 0,
+    "roc_auc": {
+      "observed_delta": 0.03628894428745533,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        0.01738231467047624,
+        0.05713471323802656
+      ]
+    },
+    "average_precision": {
+      "observed_delta": 0.007479224134083751,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.029255201389304885,
+        0.04316308410539693
+      ]
+    }
+  },
+  {
+    "model": "random_forest",
+    "grouping": "target_detector",
+    "clusters": 44,
+    "events": 3933,
+    "replicates_requested": 1000,
+    "seed": 42,
+    "event_ids_sha256": "c6aaae1e81fd1fe9e1309d1068b5e05431823ddb49d3710f62b4ebddde554ef3",
+    "invalid_single_class": 0,
+    "roc_auc": {
+      "observed_delta": 0.004651212733477905,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.013311615237478267,
+        0.02693428264029429
+      ]
+    },
+    "average_precision": {
+      "observed_delta": 0.027922686959299392,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.008156326141315954,
+        0.06877202557427121
+      ]
+    }
+  },
+  {
+    "model": "random_forest",
+    "grouping": "fixed_7day_HKT_20260101",
+    "clusters": 39,
+    "events": 3933,
+    "replicates_requested": 1000,
+    "seed": 20261108,
+    "event_ids_sha256": "c6aaae1e81fd1fe9e1309d1068b5e05431823ddb49d3710f62b4ebddde554ef3",
+    "invalid_single_class": 0,
+    "roc_auc": {
+      "observed_delta": 0.004651212733477905,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.007681860410451635,
+        0.017666985500482672
+      ]
+    },
+    "average_precision": {
+      "observed_delta": 0.027922686959299392,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        0.004272516535246202,
+        0.05058333777219442
+      ]
+    }
+  },
+  {
+    "model": "xgboost",
+    "grouping": "target_detector",
+    "clusters": 44,
+    "events": 3933,
+    "replicates_requested": 1000,
+    "seed": 42,
+    "event_ids_sha256": "c6aaae1e81fd1fe9e1309d1068b5e05431823ddb49d3710f62b4ebddde554ef3",
+    "invalid_single_class": 0,
+    "roc_auc": {
+      "observed_delta": 0.010148466567283299,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.002942510715769822,
+        0.024913947962758524
+      ]
+    },
+    "average_precision": {
+      "observed_delta": 0.011903775231356328,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.016675730099417033,
+        0.04039357811918637
+      ]
+    }
+  },
+  {
+    "model": "xgboost",
+    "grouping": "fixed_7day_HKT_20260101",
+    "clusters": 39,
+    "events": 3933,
+    "replicates_requested": 1000,
+    "seed": 20261108,
+    "event_ids_sha256": "c6aaae1e81fd1fe9e1309d1068b5e05431823ddb49d3710f62b4ebddde554ef3",
+    "invalid_single_class": 0,
+    "roc_auc": {
+      "observed_delta": 0.010148466567283299,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        0.003076054878793896,
+        0.017368683558967275
+      ]
+    },
+    "average_precision": {
+      "observed_delta": 0.011903775231356328,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.012379268062103994,
+        0.03586421484196869
+      ]
+    }
+  },
+  {
+    "model": "hist_gradient_boosting",
+    "grouping": "target_detector",
+    "clusters": 44,
+    "events": 3933,
+    "replicates_requested": 1000,
+    "seed": 42,
+    "event_ids_sha256": "c6aaae1e81fd1fe9e1309d1068b5e05431823ddb49d3710f62b4ebddde554ef3",
+    "invalid_single_class": 0,
+    "roc_auc": {
+      "observed_delta": 0.01587031724527932,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        0.002659250914936293,
+        0.02910648253205565
+      ]
+    },
+    "average_precision": {
+      "observed_delta": 0.029438475671845765,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        0.0003061858278422627,
+        0.058062286373215484
+      ]
+    }
+  },
+  {
+    "model": "hist_gradient_boosting",
+    "grouping": "fixed_7day_HKT_20260101",
+    "clusters": 39,
+    "events": 3933,
+    "replicates_requested": 1000,
+    "seed": 20261108,
+    "event_ids_sha256": "c6aaae1e81fd1fe9e1309d1068b5e05431823ddb49d3710f62b4ebddde554ef3",
+    "invalid_single_class": 0,
+    "roc_auc": {
+      "observed_delta": 0.01587031724527932,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        0.005514442098985873,
+        0.026400096813665043
+      ]
+    },
+    "average_precision": {
+      "observed_delta": 0.029438475671845765,
+      "valid_resamples": 1000,
+      "ci_95_percentile": [
+        -0.0013326488657451187,
+        0.057576531151684575
+      ]
+    }
+  }
+]
